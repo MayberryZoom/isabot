@@ -19,6 +19,7 @@
             "sdi": { "id": 15, "content": "SDI is short for Smash Directional-Influence (oficially called hitstun shuffling). It is NOT DI (Directional Influence) and is a completely different mechanic. It is performed while pressing a direction repeatedly while in hitlag (also known as freeze frames). Each time you press a direction, you will move slightly in that direction **before** knockback. This allows you to escape multihit moves, such as rapid jabs.\n\nA more effective method in Smash 4 on the Gamecube Controller was to push the control stick to the notch of the direction you wanted to SDI in, then move it to the 2 notches beside it. For instance if you wanted to SDI up, you would do an input like this:\n\n⬆ ↖ ⬆ ↗ ⬆ \n\nIt is unknown if this is the most effective SDI method in SSBU." },
             "ledge grab limit": { "id": 16, "content": "https://www.youtube.com/watch?v=ZG-msKOIR9g" },
             "shac": { "id": 17, "content": "Short for ShortHop Autocancel. If a move can SHAC, it means it will autocancel in a shorthop. This is generally a good property for a move to have." }
+            "hitstun shuffling": { "id": 18, "content": "Hitstun Shuffling is the offical name for SDI." }
         },
         "data": {
             "name": "general",
