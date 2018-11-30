@@ -37,8 +37,8 @@
     },
     "Young Link": {
         "terms": {
-            "c4": { "id": 0, "content": "C4 is placing a bomb in a way that it lies on the ground with exploding. You can do this by performing either a forward toss or back toss. You can also perform it by z-dropping the bomb right after jumping or right before landing." }
-            "gsa": { "id": 1 "content": "A gSA is a Grounded Spin Attack. When grounded, Spin Attack is a multi-hit move that acts as a combo starter. Its main followup is UAir, but it is never a kill confirm." }
+            "c4": { "id": 0, "content": "C4 is placing a bomb in a way that it lies on the ground with exploding. You can do this by performing either a forward toss or back toss. You can also perform it by z-dropping the bomb right after jumping or right before landing." },
+            "gsa": { "id": 1 "content": "A gSA is a Grounded Spin Attack. When grounded, Spin Attack is a multi-hit move that acts as a combo starter. Its main followup is UAir, but it is never a kill confirm." },
             "asa": { "id": 2 "content": "An aSA is an Aerial Spin Attack. When aerial, Spin Attack is a multi-hit move that acts as a KO move. It can kill off the side, and its main setup is off of a Bomb." }
         },
         "data": {
