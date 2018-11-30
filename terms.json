@@ -44,7 +44,7 @@
     },
     "Pichu": {
         "terms": {
-            "pichu analysis": "https://docs.google.com/document/d/1K7McATah0unA3eS8YAJylicLSthcl-pwXyLiPxp5OaE/edit"
+            "pichu analysis": { "id": 0, "content": "https://docs.google.com/document/d/1K7McATah0unA3eS8YAJylicLSthcl-pwXyLiPxp5OaE/edit"
         },
         "data": {
             "name": "Pichu",
