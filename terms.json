@@ -1,19 +1,63 @@
 {
-	"run cancel": { "id": 0, "content": "A Run Cancel allows you to use any move out of a run. It is performed by returning the Control Stick to the neutral (default) position, then performing any move." },
-	"skid cancel": { "id": 1, "content": "A Skid Cancel, also known as RGR, is pretty much the grounded version of RAR. Due to SSBU's new dash mechanics, you can cancel a skid with any move. In turn, you can reverse your direction before any move during a dash." },
-	"sh": { "id": 2, "content": "A Short Hop, or a SH, is performed in 2 ways in SSBU:\n\n1) Pushing the jump button, then releasing it before becoming airborne\n2) Buffering an aerial during the jump startup\n\nA SH is a shorter version of a normal jump, allowing you to hit grounded opponents and land quicker.\n\nAfter performing a SH in SSBU, your aerial damage will be reduced to 0.85x its original damage. This applies until you jump or touch the ground. It is currently unknown if this applies to specials. It is also unknown if hitting an aerial, performing a special, performing an aerial, or being hit resets this." },
-	"faf": { "id": 3, "content": "FAF is the First Actionable Frame. It's basically the first frame you can perform an action during another one. For instance, if a move has a FAF of 24, the first frame you can act during it is frame 24, and the last frame you cannot act is frame 23." },
-	"jmu": { "id": 4, "content": "​​A JMU is a __J__oint __M__atch__U__p. During one, 2 Smashcords come together to discuss the MU between their characters and is a great opportunity to learn! Each Smashcord does it differently - some structure theirs on a schedule and some don't, some end theirs with a crew battle and some don't, etc." },
-	"oos": { "id": 5, "content": "OoS refers to your Out of Shield options, or the things you can do while shielding. These are, for any character:\n\n- Grab\n-Jump\n- JC USmash\n- JC Up Special\n- Any special used after a jump\n- Any aerial after a jump\n- Airdodge after a jump\n- Any move after a shield drop" },
-	"rar": { "id": 6, "content": "RAR stands for Reverse Aerial Rush. It is performed by running in one direction, then holding behind you so that you skid while facing the opposite direction. Because you can cancel this animation with a jump, you can then jump and perform aerials. This allows you to approach with a Back Air or retreat with a Forward Air, etc." },
-	"rar2": { "id": 7, "content": "RAR stands for Reverse Aerial Rush. It's a technique that exploits how the skid animation works; you can jump during a skid, allowing you to jump out of a dash facing the opposite direction you started. This is notably useful for moving forward using a Back Aerial." },
-	"rgr": { "id": 8, "content": "RGR, also known as a Skid Cancel, stands for Reverse Grounded Rush. It's pretty much the grounded version of RAR. Due to SSBU's new dash mechanics, you can cancel a skid with any move. In turn, you can reverse your direction before any move during a dash." },
-	"frame": { "id": 9, "content": "A frame is the smallest unit of time in Smash. There are 60 frames per second, and the speed of moves is usually measured in frames. For instance, in Smash 4, Little Mac's Jab 1 is Frame 1, which is instant. Mario's Jab 1 is Frame 2, which is almost instant, etc. The speed of a move is often abbreviated to Fx, where x is the frame the move comes out on. For example, Little Mac's Jab would be F1 and Mario's would be F2." },
-	"runbrake": { "id": 10, "content": "RunBrake is the technical name for a skid. This occurs when you enter Run, then return the control stick to neutral. Not to be confused with a turnaround skid, also known as a pivot, or run turnaround." },
-	"fh": { "id": 11, "content": "A Full Hop, or a FH, is the normal type of jump. It is performed when you do not buffer an aerial on your jump startup or you hold the jump button throughout your jump startup. Using a FH allows you to hit opponents on high platforms, hit opponents far above you, followup from certain moves, etc." },
-	"aa": { "id": 12, "content": "An AA is an anti-air, and it's basically a move that counters an aerial approach. It is typically disjointed and/or has a high hitbox. A traditional fighting game example is Ryu's Heavy Kick or Shoryuken in Street Fighter. A Smash Bros example is Cloud's Cross Slash." },
-	"rage": { "id": 13, "content": "Rage is a mechanic that increases the knockback dealt slightly by a fighter as their percent increases. It starts taking effect at 35% and gradually became stronger, maxing at 150%. It does not affect moves with WBKB (weight based knockback)." },
-	"wbkb": { "id": 14, "content": "WBKB is short for Weight Based Knockback. It is essentially set knockback, and it only changes based on a character's weight, hence the name." },
-	"sdi": { "id": 15, "content": "SDI is short for Smash Directional-Influence (oficially called hitstun shuffling). It is NOT DI (Directional Influence) and is a completely different mechanic. It is performed while pressing a direction repeatedly while in hitlag (also known as freeze frames). Each time you press a direction, you will move slightly in that direction **before** knockback. This allows you to escape multihit moves, such as rapid jabs.\n\nA more effective method in Smash 4 on the Gamecube Controller was to push the control stick to the notch of the direction you wanted to SDI in, then move it to the 2 notches beside it. For instance if you wanted to SDI up, you would do an input like this:\n\n⬆ ↖ ⬆ ↗ ⬆ \n\nIt is unknown if this is the most effective SDI method in SSBU." },
-	"ledge grab limit": { "id": 16, "content": "https://www.youtube.com/watch?v=ZG-msKOIR9g" }
+    "general": {
+        "terms": {
+            "run cancel": { "id": 0, "content": "A Run Cancel allows you to use any move out of a run. It is performed by returning the Control Stick to the neutral (default) position, then performing any move." },
+            "skid cancel": { "id": 1, "content": "A Skid Cancel, also known as RGR, is pretty much the grounded version of RAR. Due to SSBU's new dash mechanics, you can cancel a skid with any move. In turn, you can reverse your direction before any move during a dash." },
+            "sh": { "id": 2, "content": "A Short Hop, or a SH, is performed in 2 ways in SSBU:\n\n1) Pushing the jump button, then releasing it before becoming airborne\n2) Buffering an aerial during the jump startup\n\nA SH is a shorter version of a normal jump, allowing you to hit grounded opponents and land quicker.\n\nAfter performing a SH in SSBU, your aerial damage will be reduced to 0.85x its original damage. This applies until you jump or touch the ground. It is currently unknown if this applies to specials. It is also unknown if hitting an aerial, performing a special, performing an aerial, or being hit resets this." },
+            "faf": { "id": 3, "content": "FAF is the First Actionable Frame. It's basically the first frame you can perform an action during another one. For instance, if a move has a FAF of 24, the first frame you can act during it is frame 24, and the last frame you cannot act is frame 23." },
+            "jmu": { "id": 4, "content": "A JMU is a __J__oint __M__atch__U__p. During one, 2 Smashcords come together to discuss the MU between their characters and is a great opportunity to learn! Each Smashcord does it differently - some structure theirs on a schedule and some don't, some end theirs with a crew battle and some don't, etc." },
+            "oos": { "id": 5, "content": "OoS refers to your Out of Shield options, or the things you can do while shielding. These are, for any character:\n\n- Grab\n-Jump\n- JC USmash\n- JC Up Special\n- Any special used after a jump\n- Any aerial after a jump\n- Airdodge after a jump\n- Any move after a shield drop" },
+            "rar": { "id": 6, "content": "RAR stands for Reverse Aerial Rush. It is performed by running in one direction, then holding behind you so that you skid while facing the opposite direction. Because you can cancel this animation with a jump, you can then jump and perform aerials. This allows you to approach with a Back Air or retreat with a Forward Air, etc." },
+            "rar2": { "id": 7, "content": "RAR stands for Reverse Aerial Rush. It's a technique that exploits how the skid animation works; you can jump during a skid, allowing you to jump out of a dash facing the opposite direction you started. This is notably useful for moving forward using a Back Aerial." },
+            "rgr": { "id": 8, "content": "RGR, also known as a Skid Cancel, stands for Reverse Grounded Rush. It's pretty much the grounded version of RAR. Due to SSBU's new dash mechanics, you can cancel a skid with any move. In turn, you can reverse your direction before any move during a dash." },
+            "frame": { "id": 9, "content": "A frame is the smallest unit of time in Smash. There are 60 frames per second, and the speed of moves is usually measured in frames. For instance, in Smash 4, Little Mac's Jab 1 is Frame 1, which is instant. Mario's Jab 1 is Frame 2, which is almost instant, etc. The speed of a move is often abbreviated to Fx, where x is the frame the move comes out on. For example, Little Mac's Jab would be F1 and Mario's would be F2." },
+            "runbrake": { "id": 10, "content": "RunBrake is the technical name for a skid. This occurs when you enter Run, then return the control stick to neutral. Not to be confused with a turnaround skid, also known as a pivot, or run turnaround." },
+            "fh": { "id": 11, "content": "A Full Hop, or a FH, is the normal type of jump. It is performed when you do not buffer an aerial on your jump startup or you hold the jump button throughout your jump startup. Using a FH allows you to hit opponents on high platforms, hit opponents far above you, followup from certain moves, etc." },
+            "aa": { "id": 12, "content": "An AA is an anti-air, and it's basically a move that counters an aerial approach. It is typically disjointed and/or has a high hitbox. A traditional fighting game example is Ryu's Heavy Kick or Shoryuken in Street Fighter. A Smash Bros example is Cloud's Cross Slash." },
+            "rage": { "id": 13, "content": "Rage is a mechanic that increases the knockback dealt slightly by a fighter as their percent increases. It starts taking effect at 35% and gradually became stronger, maxing at 150%. It does not affect moves with WBKB (weight based knockback)." },
+            "wbkb": { "id": 14, "content": "WBKB is short for Weight Based Knockback. It is essentially set knockback, and it only changes based on a character's weight, hence the name." },
+            "sdi": { "id": 15, "content": "SDI is short for Smash Directional-Influence (oficially called hitstun shuffling). It is NOT DI (Directional Influence) and is a completely different mechanic. It is performed while pressing a direction repeatedly while in hitlag (also known as freeze frames). Each time you press a direction, you will move slightly in that direction **before** knockback. This allows you to escape multihit moves, such as rapid jabs.\n\nA more effective method in Smash 4 on the Gamecube Controller was to push the control stick to the notch of the direction you wanted to SDI in, then move it to the 2 notches beside it. For instance if you wanted to SDI up, you would do an input like this:\n\n⬆ ↖ ⬆ ↗ ⬆ \n\nIt is unknown if this is the most effective SDI method in SSBU." },
+            "ledge grab limit": { "id": 16, "content": "https://www.youtube.com/watch?v=ZG-msKOIR9g" }
+        },
+        "data": {
+            "name": "general",
+            "server": "all"
+        }
+    },
+    "Isabelle": {
+        "terms": {
+            "moveset doc": { "id": 0, "content": "https://docs.google.com/document/d/1odjhW1IWnWmhXSZ74K6BynElw8FTZfE6oTo_Cf_x0RU/edit?usp=sharing" }
+        },
+        "data": {
+            "name": "Isabelle",
+            "server": "489939754021027841"
+        }
+    },
+    "Young Link": {
+        "terms": {
+            "c4": { "id": 0, "content": "test" }
+        },
+        "data": {
+            "name": "Young Link",
+            "server": "456487360624984076"
+        }
+    },
+    "Pichu": {
+        "terms": {
+
+        },
+        "data": {
+            "name": "Pichu",
+            "server": "421442870864510976"
+        }
+    },
+    "none": {
+        "terms": {
+
+        },
+        "data": {
+            "name": "none",
+            "server": "none"
+        }
+    }
 }
