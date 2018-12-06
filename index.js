@@ -10,28 +10,6 @@ const { token } = require('../token.json');
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
-let termText;
-fs.readFile('./terms.json', 'utf8', function(err, data) {
-	if (err) throw err;
-	termText = data;
-  });
-fetch('https://raw.githubusercontent.com/Spexxtacular/isabot/master/terms.json')
-.then(termFetch => termFetch.text())
-.then(text => { if(text === termText) {
-	sendLog('No updates for terms.json!');
-	return;
-}
-else {
-	fs.writeFile('./terms.json', text, function(err) {
-		if(err) {
-			sendLog('There was an error! Logging it now...');
-			return console.log(err);
-		}
-	
-		sendLog("Updated terms.json!");
-	});
-}});
-
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
     client.commands.set(command.name, command);
