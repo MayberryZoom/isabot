@@ -5,7 +5,7 @@ const { prefix } = require('./config.json');
 const data = require('./data.js');
 for (const [k, v] of Object.entries(data)) global[k] = v;
 
-const { token } = require('../token.json');
+const { token } = require('./token.json');
 
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -18,18 +18,18 @@ for (const file of commandFiles) {
 client.on('message', message => {
 	global.msg = message;
 	if (!message.content.startsWith(prefix) || msg.author.bot) return;
-	
+
 	// variables
 	const msg3 = msg.content.toLowerCase()
 	const msg2 = msg.content
 	const args = msg2.slice(prefix.length).split(/ +/);
 	const commandName = args.shift().toLowerCase();
-	
+
 	// commands
 	const command = client.commands.get(commandName)
 	        || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 		if (!command) return;
-	
+
 	// 0 = respond and ignore
 	// 1 = ignore
 	if (command.guildOnly && msg.channel.type !== 'text') {
