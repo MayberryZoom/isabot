@@ -3,16 +3,16 @@ module.exports = {
 	description: 'Shows information about a server, user, or channel.',
 	usage: '<item> <instance>',
     arguments: '``me``, ``user``, ``server``, ``channel``, none',
-    execute(msg, args) {		
+    execute(msg, args) {
         if (!args[0]) {
 			const embedServer = new Discord.RichEmbed() .setTitle('``server``') .setColor('0xCF2BCF') .addField('``Description``', 'Shows information about the server.') .addField('Usage', '``>info server``') .addField('Arguments', 'None');
 			const embedUser = new Discord.RichEmbed() .setTitle('``user``') .setColor('0xCF2BCF') .addField('``Description``', 'Shows information about a user. If no arguments are provided, information will be shown about yourself.') .addField('Usage', '``>info user <mention>``') .addField('Arguments', 'Any user mention, none');
 			const embedMe = new Discord.RichEmbed() .setTitle('``me``') .setColor('0xCF2BCF') .addField('``Description``', 'Shows information about yourself.') .addField('Usage', '``>info me``') .addField('Arguments', 'None');
 			const embedChannel = new Discord.RichEmbed() .setTitle('``channel``') .setColor('0xCF2BCF') .addField('``Description``', 'Shows information about a channel. If no arguments are provided, information will be shown about the current channel.') .addField('Usage', '``>info channel <channel>``') .addField('Arguments', 'Any channel mention, ``this``, none');
 			msg.author.send(embedServer)
-			.then(msg.author.send(embedUser))
-			.then(msg.author.send(embedMe))
-			.then(msg.author.send(embedChannel));
+			.then(() => msg.author.send(embedUser))
+			.then(() => msg.author.send(embedMe))
+			.then(() => msg.author.send(embedChannel));
 		}
 		else if (msg.channel.type === 'dm') {
 			sendMsg('That command is not available in DMs.');

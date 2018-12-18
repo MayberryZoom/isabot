@@ -1,6 +1,16 @@
 Discord = require('discord.js');
 Client = require('discord.js');
-global.client = new Discord.Client();
+global.client = new Discord.Client({
+	messageCacheMaxSize: 1,
+	disabledEvents: [
+		'TYPING_START',
+		'PRESENCE_UPDATE',
+		'GUILD_MEMBER_UPDATE',
+		'MESSAGE_REACTION_ADD',
+		'GUILD_MEMBER_ADD',
+		'GUILD_MEMBER_REMOVE'
+	]
+});
 const { prefix } = require('./config.json');
 const data = require('./data.js');
 for (const [k, v] of Object.entries(data)) global[k] = v;
@@ -74,6 +84,13 @@ client.on('guildCreate', guild => {
 client.once('ready', () => {
     sendLog('Ready!');
 	client.user.setActivity('"' + prefix + '" is my prefix!')
+	setInterval(() => {
+		client.presences.clear();
+		for (const g of client.guilds.values()) {
+			g.members.clear();
+			g.presences.clear();
+		}
+	}, 1000 * 60);
 });
 
 client.login(token);
