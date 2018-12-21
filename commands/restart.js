@@ -1,6 +1,7 @@
 module.exports = {
     name: 'restart',
     description: '',
+    hidden: true,
     execute(msg, args) {
         if (checkOwner()) {
             const { token } = require('../../token.json');
