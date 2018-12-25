@@ -12,7 +12,7 @@ module.exports = {
 		const commandNames = commandList.map(command => command.name);
 
         if (!args.length) {
-			const toSend = commandList.map(command => command.name + ' - ' + command.description);
+			const toSend = commandList.map(command => '``' + command.name + '`` - ' + command.description);
 			return msg.author.send('List of commands:\n\n' + toSend.join('\n'), { split: true })
 			.then(() => {
 				if (msg.channel.type === 'dm') {

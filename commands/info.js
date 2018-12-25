@@ -9,7 +9,8 @@ module.exports = {
 			const embedUser = new Discord.RichEmbed() .setTitle('``user``') .setColor('0xCF2BCF') .addField('``Description``', 'Shows information about a user. If no arguments are provided, information will be shown about yourself.') .addField('Usage', '``>info user <mention>``') .addField('Arguments', 'Any user mention, none');
 			const embedMe = new Discord.RichEmbed() .setTitle('``me``') .setColor('0xCF2BCF') .addField('``Description``', 'Shows information about yourself.') .addField('Usage', '``>info me``') .addField('Arguments', 'None');
 			const embedChannel = new Discord.RichEmbed() .setTitle('``channel``') .setColor('0xCF2BCF') .addField('``Description``', 'Shows information about a channel. If no arguments are provided, information will be shown about the current channel.') .addField('Usage', '``>info channel <channel>``') .addField('Arguments', 'Any channel mention, ``this``, none');
-			msg.author.send(embedServer)
+			msg.author.send('__Help for ``>info``__')
+			.then(() => msg.author.send(embedServer))
 			.then(() => msg.author.send(embedUser))
 			.then(() => msg.author.send(embedMe))
 			.then(() => msg.author.send(embedChannel));
@@ -32,6 +33,7 @@ module.exports = {
 			sendLog(msg.author.tag + ' got ' + msg.guild.name + '\'s info');
 		}
 		else if (args[0] === 'me' || (args[0] === 'user' && args[1] === 'me') || (args[0] === 'user' && !args[1])) {
+			msg.guild.fetchMember(msg.author.id);
 			const u = msg.author;
 			const m = userToMember(u)
 			const createTime = u.createdAt;
@@ -47,7 +49,8 @@ module.exports = {
 		else if (args[0] === 'user') {
 			if (!msg.mentions.users.array().includes(userFromMention(args[1]))) { return msg.reply('please mention a user!'); }
 			const u = userFromMention(args[1]);
-			const m = userToMember(u)
+			msg.guild.fetchMember(u.id);
+			const m = userToMember(u);
 			const createTime = u.createdAt;
 			const joinTime = msg.guild.members.get(u.id).joinedAt;
 			let min; if (createTime.getMinutes().toString().length === 1) { min = '0' + createTime.getMinutes(); } else { min = createTime.getMinutes(); }
@@ -65,6 +68,7 @@ module.exports = {
 			sendLog(msg.author.tag + ' got info for ' + u.tag + ' in ' + msg.guild.name);
 		}
 		else if ((args[0] === 'channel' || (args[0] === 'channel' && args[1] === 'this')) && !args[1]) {
+			msg.guild.fetchMembers();
 			const c = msg.channel;
 			const createTime = c.createdAt;
 			let cTopic;

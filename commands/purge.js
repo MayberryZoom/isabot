@@ -11,7 +11,8 @@ module.exports = {
 			return;
         }
 
-        if (msg.channel.permissionsFor(msg.author).has('MANAGE_MESSAGES')) {
+        msg.guild.fetchMember(msg.author.id);
+        if (msg.channel.permissionsFor(msg.member).has('MANAGE_MESSAGES')) {
             const amount = parseInt(args[0]);
             if (!args.length) {
                 return sendMsg('Please provide an argument!');
@@ -28,7 +29,7 @@ module.exports = {
             }
             else {
                 sendLog(msg.author.tag + ' is purging ' + args[0] + ' messages in ' + msg.guild.name + '.');
-                msg.delete().then(function () { msg.channel.bulkDelete(args[0], true) });
+                msg.delete().then(() => { msg.channel.bulkDelete(args[0], true) });
             }
         }
         else {
