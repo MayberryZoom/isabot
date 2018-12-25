@@ -3,13 +3,12 @@ module.exports = {
     Discord: require('discord.js'),
     Client: require('discord.js'),
     RichEmbed: require('discord.js'),
-    logger: require('winston'),
     config: require('./config.json'),
     def: require('./terms.json'),
     prefix: require('./config.json'),
     client: new Discord.Client(),
     fs: require('fs'),
-    fetch: require('node-fetch'),
+    datatable: require('./movedata.json'),
 
     // constants
     ownerIDs: ['419688076076515328', '174758404571529216'],

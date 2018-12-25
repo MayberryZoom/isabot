@@ -45,7 +45,7 @@
     },
     "Isabelle": {
         "terms": {
-            "moveset doc": "https://docs.google.com/document/d/1odjhW1IWnWmhXSZ74K6BynElw8FTZfE6oTo_Cf_x0RU/edit?usp=sharing" 
+            "rod naming system": "Similar to DK's cargo throws, it is a system to easily abbreviate the 8 fishing rod throws. All abbreviations consist of 4 letters.\n\n1) A or G - Stands for aerial or grounded\n2) R - Stands for rod\n3) F or B or U or D - Stands for the throw direction, like normal throws\n4) T - Stands for throw\n\nFor example, a grounded rod forward throw would be GRFT."
         },
         "data": {
             "name": "Isabelle",
@@ -67,7 +67,8 @@
     },
     "Pichu": {
         "terms": {
-            "pichu analysis": "https://docs.google.com/document/d/1K7McATah0unA3eS8YAJylicLSthcl-pwXyLiPxp5OaE/edit"
+            "deletchu": "DThrow -> UAir -> Thunder, which is a kill confirm. Only works with no DI.",
+            "lightning loops": "Using Fullhop Fastfall Autocancel (FHFFAC) BAir dragdown to combo into UTilt or UAir, which can combo into another bair, and repeat the setup. To learn more, watch this video: https://youtu.be/xJyufyRb2F4"
         },
         "data": {
             "name": "Pichu",
