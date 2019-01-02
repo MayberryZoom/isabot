@@ -48,7 +48,7 @@ client.on('message', message => {
 		}
 	}
 
-	if(command.guilds) {
+	if(command.guild) {
 		if (!command.guild.includes(msg.guild.id)) {
 			return;
 		}
