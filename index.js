@@ -30,7 +30,6 @@ client.on('message', message => {
 	if (!message.content.startsWith(prefix) || msg.author.bot) return;
 
 	// variables
-	const msg3 = msg.content.toLowerCase()
 	const msg2 = msg.content
 	const args = msg2.slice(prefix.length).split(/ +/);
 	const commandName = args.shift().toLowerCase();
@@ -40,8 +39,6 @@ client.on('message', message => {
 	        || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 		if (!command) return;
 
-	// 0 = respond and ignore
-	// 1 = ignore
 	if (command.guildOnly && msg.channel.type !== 'text') {
 		if (command.guildOnly === 0) {
 			return msg.reply('That command is not available inside DMs!');
@@ -51,14 +48,14 @@ client.on('message', message => {
 		}
 	}
 
-	if (command.guild && msg.guild.id !== command.guild) {
+	if (!command.guild.includes(msg.guild.id)) {
 		return;
 	}
 
 	if (command.args && !args.length) {
 		let reply = 'Please provide an argument!';
 		if (command.usage) {
-			reply += '\nThe proper usage is ```${prefix}${command.name} ${command.usage}```';
+			reply += `\nThe proper usage is \`\`\`${prefix}${command.name} ${command.usage}\`\`\``;
 		}
 
         return msg.channel.send(reply);
@@ -67,18 +64,17 @@ client.on('message', message => {
 		command.execute(msg, args);
 	}
 	catch (error) {
-		console.error(error);
-		sendLog('<@&513807019048828929> there was an error!');
+		sendLog('<@&513807019048828929> there was an error!\n\n```' + error + '```');
 		msg.reply('there was an error trying to execute that command!');
 	}
 });
 
 client.on('guildCreate', guild => {
 	if (!config.guilds.includes(guild.id)) {
-		sendLog('Someone tried to add me to ' + guild.name + ', so I left.');
+		sendLog('<@&513807019048828929> someone tried to add me to ' + guild.name + ', so I left.');
 		return guild.leave();
 	}
-	else { sendLog('I joined ' + guild.name); }
+	else { sendLog('<@&513807019048828929> I joined ' + guild.name); }
 });
 
 client.once('ready', () => {

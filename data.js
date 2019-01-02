@@ -12,6 +12,7 @@ module.exports = {
 
     // constants
     ownerIDs: ['419688076076515328', '174758404571529216'],
+    zeroWidthSpace: '​',
 
     // functions
     sendMsg: function sendMsg(toSend) {
@@ -51,12 +52,13 @@ module.exports = {
         return msg.guild.members.get(usr.id);
     },
     loop: function loop(toSend, num) {
-        for(let i = 0; i < num; i++) { sendMsg(toSend); }
+        for(let i = 0; i < num; i++) {
+            sendMsg(toSend);
+        }
         return;
     },
-    roleEval: function roleEval(roleID) {
-        sendMsg("__Role - " + msg.guild.roles.get(roleID).name + "__");
-        sendMsg((new Discord.Permissions(msg.guild.roles.get(roleID).permissions).toArray()).join(", "));
+    rolePerms: function roleEval(roleID) {
+        codeMsg('Role - ' + msg.guild.roles.get(roleID).name + '\n\n' + (new Discord.Permissions(msg.guild.roles.get(roleID).permissions).toArray()).join("\n"));
     },
     guildList: function guildList() {
         const guildArr = client.guilds.map(g => g.id + ': ' + g.name);

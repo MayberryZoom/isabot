@@ -17,7 +17,7 @@ module.exports = {
     // undefined = disabled, 0 = response then ignore command, 1 = no response then ignore command
     guildOnly: 0,
     // Array of guild IDs this is exclusive to
-    guild: '',
+    guild: [],
     // Command itself
     execute(msg, args) {
 

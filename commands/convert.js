@@ -7,6 +7,9 @@ module.exports = {
         const vsMultiplier = 1.2;
         const shMultiplier = 0.85;
         const freshMultiplier = 1.05;
+        args.forEach(arg => {
+            arg = arg.toLowerCase();
+        });
 
         if (!args[0]) {
             const embed = new Discord.RichEmbed() .setTitle('``>convert``') .setColor('0xCF2BCF') .addField('Description', 'The convert command takes a value and converts it under the given multiplier.') .addField('Arguments', '``table`` - See a list of the damage multipliers in SSBU featured in the bot.\n``to 1v1`` - Converts the given damage value to its damage in 1v1, assuming the mode of the damage given is FFA.\n``to FFA`` - Converts the given damage value to its damage in FFA, assuming the mode of the damage given is 1v1.\n``to SH`` - Converts the given damage value to its damage in a shorthop, assuming the damage given is its base damage.\n``to FH`` - Converts the given damage value to its damage in a fullhop, assuming the damage given its SH damage.\n``to fresh`` - Converts the given damage to its damage when fresh, assuming it is the base damage, aka FFA damage\n');
