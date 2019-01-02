@@ -14,7 +14,7 @@ module.exports = {
 		}
 		const { err, stdout } = await execAsync('git fetch --all && git reset --hard origin/master');
 		if (err) {
-			await msg.channel.send(err.message, { code: '', split: { char: '\n' } });
+			return msg.channel.send(err.message, { code: '', split: { char: '\n' } });
 		}
 		else {
 			await msg.channel.send('Rebooting...');
