@@ -48,8 +48,10 @@ client.on('message', message => {
 		}
 	}
 
-	if (!command.guild.includes(msg.guild.id)) {
-		return;
+	if(command.guilds) {
+		if (!command.guild.includes(msg.guild.id)) {
+			return;
+		}
 	}
 
 	if (command.args && !args.length) {
