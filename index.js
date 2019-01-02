@@ -78,7 +78,7 @@ client.on('guildCreate', guild => {
 });
 
 client.once('ready', () => {
-    sendLog('Ready!');
+    sendLog('<@&513807019048828929> Ready!');
 	client.user.setActivity('"' + prefix + '" is my prefix!')
 	setInterval(() => {
 		client.presences.clear();
