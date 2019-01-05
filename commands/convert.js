@@ -7,6 +7,7 @@ module.exports = {
         const vsMultiplier = 1.2;
         const shMultiplier = 0.85;
         const freshMultiplier = 1.05;
+        const damage = Math.floor(args[2] * 1000);
         args.forEach(arg => {
             arg = arg.toLowerCase();
         });
@@ -21,43 +22,43 @@ module.exports = {
         }
         else if (args[0] === 'to') {
             if (args[1] === 'ffa') {
-                if (isNaN(args[2])) {
+                if (isNaN(damage)) {
                     sendMsg('Please enter a number!');
                 }
                 else {
-                    sendMsg((args[2] * (1 / vsMultiplier)) + '%');
+                    sendMsg(((damage * (1 / vsMultiplier)) + '%') / 1000);
                 }
             }
             else if (args[1] === '1v1') {
-                if (isNaN(args[2])) {
+                if (isNaN(damage)) {
                     sendMsg('Please enter a number!');
                 }
                 else {
-                    sendMsg(args[2] * vsMultiplier + '%');
+                    sendMsg((damage * vsMultiplier + '%') / 1000);
                 }
             }
             else if (args[1] === 'shorthop' || args[1] === 'sh') {
-                if (isNaN(args[2])) {
+                if (isNaN(damage)) {
                     sendMsg('Please enter a number!');
                 }
                 else {
-                    sendMsg(args[2] * shMultiplier + '%');
+                    sendMsg((damage * shMultiplier + '%') / 1000);
                 }
             }
             if (args[1] === 'fullhop' || args[1] === 'fh') {
-                if (isNaN(args[2])) {
+                if (isNaN(damage)) {
                     sendMsg('Please enter a number!');
                 }
                 else {
-                    sendMsg((args[2] * (1 / shMultiplier)) + '%');
+                    sendMsg(((damage * (1 / shMultiplier)) + '%') / 1000);
                 }
             }
             if (args[1] === 'fresh') {
-                if (isNaN(args[2])) {
+                if (isNaN(damage)) {
                     sendMsg('Please enter a number!');
                 }
                 else {
-                    sendMsg((args[2] * freshMultiplier) + '%');
+                    sendMsg(((damage * freshMultiplier) + '%') / 1000);
                 }
             }
         }
