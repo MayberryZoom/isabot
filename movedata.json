@@ -129,7 +129,7 @@
                 "keys": ["weight"],
                 "name": "Weight",
                 "value": "62",
-                "rank": "1st"
+                "rank": "77th (last)"
             },
             "run": {
                 "keys": ["run", "run speed", "runspeed"],
@@ -155,14 +155,14 @@
                 "value": "1.9",
                 "rank": "5th"
             },
-            "fastfallspeed": {
-                "keys": ["fastfallspeed", "fastfall speed"],
+            "ffspeed": {
+                "keys": ["fastfallspeed", "fastfall speed", "fastfall"],
                 "name": "Fastfall Speed",
                 "value": "2.5",
-                "rank": "45th"
+                "rank": "44th"
             },
-            "airacceleration": {
-                "keys": ["airacceleration", "air acceleration"],
+            "airaccel": {
+                "keys": ["airacceleration", "air acceleration", "air accel"],
                 "name": "Air Acceleration",
                 "value": "0.1",
                 "rank": "9th, tied with Pikachu, Mr. Game & Watch, Falco, and Ness"
