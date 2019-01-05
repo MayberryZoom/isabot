@@ -128,26 +128,44 @@
             "weight": {
                 "keys": ["weight"],
                 "name": "Weight",
-                "value": "",
-                "rank": ""
+                "value": "62",
+                "rank": "77th (last)"
             },
             "run": {
                 "keys": ["run", "run speed", "runspeed"],
                 "name": "Run Speed",
-                "value": "",
-                "rank": ""
+                "value": "1.892",
+                "rank": "25th"
             },
             "walk": {
                 "keys": ["walk", "walk speed", "walkspeed"],
                 "name": "Walk Speed",
-                "value": "",
-                "rank": ""
+                "value": "1.302",
+                "rank": "12th, tied with Pikachu"
             },
             "drift": {
                 "keys": ["drift", "air speed", "airspeed"],
                 "name": "Air Speed",
-                "value": "",
-                "rank": ""
+                "value": "1.029",
+                "rank": "45th, tied with Peach and Daisy"
+            },
+            "fallspeed": {
+                "keys": ["fallspeed", "fall speed"],
+                "name": "Fall Speed",
+                "value": "1.9",
+                "rank": "5th"
+            },
+            "ffspeed": {
+                "keys": ["fastfallspeed", "fastfall speed", "fastfall"],
+                "name": "Fastfall Speed",
+                "value": "2.5",
+                "rank": "44th"
+            },
+            "airaccel": {
+                "keys": ["airacceleration", "air acceleration", "air accel"],
+                "name": "Air Acceleration",
+                "value": "0.1",
+                "rank": "9th, tied with Pikachu, Mr. Game & Watch, Falco, and Ness"
             }
         },
         "moves": {}
