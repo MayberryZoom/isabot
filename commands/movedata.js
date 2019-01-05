@@ -6,6 +6,9 @@ module.exports = {
     arguments: 'Any character, then a move or stat',
     execute(msg, args) {
         const characters = Object.keys(datatable);
+        args.forEach(arg => {
+            arg = arg.toLowerCase();
+        });
 
         if (characters.includes(args[0])) {
             const char = datatable[args[0]];
