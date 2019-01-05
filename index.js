@@ -63,7 +63,9 @@ client.on('message', message => {
         return msg.channel.send(reply);
 	}
 	try {
-		command.execute(msg, args);
+		msg.guild.fetchMember(msg.author.id).then(() => {
+			command.execute(msg, args);
+		});
 	}
 	catch (error) {
 		sendLog('<@&513807019048828929> there was an error!\n\n```' + error + '```');

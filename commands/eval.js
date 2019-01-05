@@ -18,7 +18,7 @@ module.exports = {
 			if (typeof evaled !== "string")
 			evaled = require("util").inspect(evaled);
 
-			console.log(clean(evaled), {code:"xl"});
+			codeMsg(evaled);
 			if (msg.channel.type === 'dm') {
                 sendLog(msg.author.tag + ' evaled \'' + args.join(' ') + '\' in their DMs');
                 return;

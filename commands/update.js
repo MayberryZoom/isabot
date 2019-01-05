@@ -8,6 +8,7 @@ module.exports = {
 	description: 'Updates and restarts me. Owner only!',
 	usage: '',
 	arguments: 'None',
+	hidden: true,
 	async execute(msg) {
 		if (!checkOwner()) {
 			return msg.channel.send('Only the bot owners can use this command!');

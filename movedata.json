@@ -121,5 +121,35 @@
                 }
             }
         }
+    },
+    "pichu": {
+        "color": "0xF4E542",
+        "stats": {
+            "weight": {
+                "keys": ["weight"],
+                "name": "Weight",
+                "value": "",
+                "rank": ""
+            },
+            "run": {
+                "keys": ["run", "run speed", "runspeed"],
+                "name": "Run Speed",
+                "value": "",
+                "rank": ""
+            },
+            "walk": {
+                "keys": ["walk", "walk speed", "walkspeed"],
+                "name": "Walk Speed",
+                "value": "",
+                "rank": ""
+            },
+            "drift": {
+                "keys": ["drift", "air speed", "airspeed"],
+                "name": "Air Speed",
+                "value": "",
+                "rank": ""
+            }
+        },
+        "moves": {}
     }
 }
