@@ -26,7 +26,7 @@ module.exports = {
                     sendMsg('Please enter a number!');
                 }
                 else {
-                    sendMsg(((damage * (1 / vsMultiplier)) / 1000) + '%');
+                    sendMsg((Math.floor((damage * (1 / vsMultiplier))) / 1000) + '%');
                 }
             }
             else if (args[1] === '1v1') {
@@ -34,7 +34,7 @@ module.exports = {
                     sendMsg('Please enter a number!');
                 }
                 else {
-                    sendMsg((damage * vsMultiplier / 1000) + '%');
+                    sendMsg((Math.floor(damage * vsMultiplier) / 1000) + '%');
                 }
             }
             else if (args[1] === 'shorthop' || args[1] === 'sh') {
@@ -42,7 +42,7 @@ module.exports = {
                     sendMsg('Please enter a number!');
                 }
                 else {
-                    sendMsg((damage * shMultiplier / 1000) + '%');
+                    sendMsg((Math.floor(damage * shMultiplier) / 1000) + '%');
                 }
             }
             if (args[1] === 'fullhop' || args[1] === 'fh') {
@@ -50,7 +50,7 @@ module.exports = {
                     sendMsg('Please enter a number!');
                 }
                 else {
-                    sendMsg(((damage * (1 / shMultiplier)) / 1000) + '%');
+                    sendMsg((Math.floor(damage * (1 / shMultiplier)) / 1000) + '%');
                 }
             }
             if (args[1] === 'fresh') {
@@ -58,7 +58,7 @@ module.exports = {
                     sendMsg('Please enter a number!');
                 }
                 else {
-                    sendMsg(((damage * freshMultiplier) / 1000) + '%');
+                    sendMsg((Math.floor((damage * freshMultiplier)) / 1000) + '%');
                 }
             }
         }
