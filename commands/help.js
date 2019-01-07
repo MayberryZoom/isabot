@@ -22,7 +22,7 @@ module.exports = {
 				sendLog('Sent a DM to ' + msg.author.tag + ' with a list of commands from ' + msg.guild.name);
 			})
 			.catch(error => {
-				console.error(`Could not send help DM to ${msg.author.tag}.\n`, error);
+				sendLog(`Could not send help DM to ${msg.author.tag}.\n`, error);
 				msg.reply('it seems like I can\'t DM you! Do you have DMs disabled?');
 			});
 		}

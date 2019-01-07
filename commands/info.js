@@ -9,11 +9,18 @@ module.exports = {
 			const embedUser = new Discord.RichEmbed() .setTitle('``user``') .setColor('0xCF2BCF') .addField('``Description``', 'Shows information about a user. If no arguments are provided, information will be shown about yourself.') .addField('Usage', '``>info user <mention>``') .addField('Arguments', 'Any user mention, none');
 			const embedMe = new Discord.RichEmbed() .setTitle('``me``') .setColor('0xCF2BCF') .addField('``Description``', 'Shows information about yourself.') .addField('Usage', '``>info me``') .addField('Arguments', 'None');
 			const embedChannel = new Discord.RichEmbed() .setTitle('``channel``') .setColor('0xCF2BCF') .addField('``Description``', 'Shows information about a channel. If no arguments are provided, information will be shown about the current channel.') .addField('Usage', '``>info channel <channel>``') .addField('Arguments', 'Any channel mention, ``this``, none');
-			msg.author.send('__Help for ``>info``__')
-			.then(() => msg.author.send(embedServer))
-			.then(() => msg.author.send(embedUser))
-			.then(() => msg.author.send(embedMe))
-			.then(() => msg.author.send(embedChannel));
+			try {
+				msg.author.send('__Help for ``>info``__')
+				.then(() => msg.author.send(embedServer))
+				.then(() => msg.author.send(embedUser))
+				.then(() => msg.author.send(embedMe))
+				.then(() => msg.author.send(embedChannel))
+				.then(() => msg.reply(' I have DM\'d you the help command!'));
+			}
+			catch (error) {
+				sendLog('<@&513807019048828929> there was an error!\n\n```' + error + '```');
+				msg.reply('it seems like I can\'t DM you! Do you have DMs disabled?');
+			}
 		}
 		else if (msg.channel.type === 'dm') {
 			sendMsg('That command is not available in DMs.');
