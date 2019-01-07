@@ -169,5 +169,47 @@
             }
         },
         "moves": {}
+    },
+    "snake": {
+        "color": "0x12536C",
+        "stats": {
+            "weight": {
+                "keys": ["weight"],
+                "name": "Weight",
+                "value": "106",
+                "rank": "16th, tied with ROB"
+            },
+            "run": {
+                "keys": ["run", "run speed", "runspeed"],
+                "name": "Run Speed",
+                "value": "1.595",
+                "rank": "54th, tied with Peach, Daisy, Corrin, and Ivysaur"
+            },
+            "walk": {
+                "keys": ["walk", "walk speed", "walkspeed"],
+                "name": "Walk Speed",
+                "value": "0.882",
+                "rank": "70th"
+            },
+            "drift": {
+                "keys": ["drift", "air speed", "airspeed"],
+                "name": "Air Speed",
+                "value": "0.987",
+                "rank": "57th, tied with Villager"
+            },
+            "fallspeed": {
+                "keys": ["fallspeed", "fall speed"],
+                "name": "Fall Speed",
+                "value": "1.73",
+                "rank": "22nd"
+            },
+            "ffspeed": {
+                "keys": ["fastfallspeed", "fastfall speed", "fastfall"],
+                "name": "Fastfall Speed",
+                "value": "2.768",
+                "rank": "22nd"
+            }
+        },
+        "moves": {}
     }
 }
