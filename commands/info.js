@@ -15,7 +15,7 @@ module.exports = {
 				.then(() => msg.author.send(embedUser))
 				.then(() => msg.author.send(embedMe))
 				.then(() => msg.author.send(embedChannel))
-				.then(() => msg.reply(' I have DM\'d you the help command!'));
+				.then(() => msg.reply(' I have DM\'d you help for the ``>info`` command!'));
 			}
 			catch (error) {
 				sendLog('<@&513807019048828929> there was an error!\n\n```' + error + '```');
