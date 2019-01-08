@@ -4,7 +4,7 @@ module.exports = {
     usage: '',
     arguments: 'None',
     execute(msg, args) {
-        msg.channel.send('Join my server!\nhttps://discord.gg/YyYBRfF');
+        msg.channel.send('Join my server!\n' + serverLink);
         if (msg.channel.type === 'dm') {
 			sendLog(msg.author.tag + ' got my server link in their DMs');
 			return;

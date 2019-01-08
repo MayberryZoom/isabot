@@ -69,8 +69,8 @@ client.on('message', msg => {
 			command.execute(msg, args);
 	}
 	catch (error) {
-		sendLog('<@&513807019048828929> there was an error!\n\n```' + error + '```');
-		msg.reply('there was an error trying to execute that command!');
+		sendLog('<@&513807019048828929> there was an error!\nCommand:```' + command.name + '\nError:```' + error + '```\n');
+		msg.reply('there was an error trying to execute that command! You can report it here: ' + serverLink);
 	}
 });
 

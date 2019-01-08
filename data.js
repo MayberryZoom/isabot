@@ -13,6 +13,7 @@ module.exports = {
     // constants
     ownerIDs: ['419688076076515328', '174758404571529216'],
     zeroWidthSpace: '​',
+    serverLink: 'https://discord.gg/YyYBRfF',
 
     // functions
     sendLog: function sendLog(toSend) {
