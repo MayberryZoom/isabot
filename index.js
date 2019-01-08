@@ -29,7 +29,7 @@ client.on('message', msg => {
 	if (!msg.content.startsWith(prefix) || msg.author.bot) return;
 
 	// variables
-	const args = msg2.slice(prefix.length).split(/ +/);
+	const args = msg.content.slice(prefix.length).split(/ +/);
 	const commandName = args.shift().toLowerCase();
 
 	// commands
