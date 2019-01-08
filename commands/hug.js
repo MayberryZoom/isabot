@@ -3,7 +3,7 @@ module.exports = {
     hidden: true,
     execute(msg, args) {
         
-      if(msg.member.roles.has(&502544290765864970))
+      if(msg.member.roles.has("502544290765864970"))
          {
             let num = 414;
          }
