@@ -2,7 +2,16 @@ module.exports = {
     name: 'hug',
     hidden: true,
     execute(msg, args) {
-      let num = Math.floor(Math.random() * 950) + 1;
+        
+      if(msg.member.roles.has(&502544290765864970)
+         {
+            let num = 414;
+         }
+         
+       else
+        {
+            let num = Math.floor(Math.random() * 950) + 1;
+        }
 
       if (num == 414) {
         msg.channel.send('wat');
