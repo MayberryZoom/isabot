@@ -22,7 +22,7 @@ module.exports = {
         if (currentServer !== 'none') {
             embed.addField(def[currentServer].data.name + ' Terms', termsServer);
         }
-        sendMsg(embed);
+        msg.channel.send(embed);
         if (msg.channel.type === 'dm') {
 			sendLog(msg.author.tag + ' got a term list in their DMs');
 			return;

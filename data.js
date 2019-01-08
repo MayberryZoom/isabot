@@ -15,12 +15,6 @@ module.exports = {
     zeroWidthSpace: '​',
 
     // functions
-    sendMsg: function sendMsg(toSend) {
-        msg.channel.send(toSend);
-    },
-    codeMsg: function codeMsg(toSend) {
-        sendMsg('```' + toSend + '```');
-    },
     sendLog: function sendLog(toSend) {
         client.channels.get('520039319260495891').send(toSend);
     },
@@ -53,16 +47,16 @@ module.exports = {
     },
     loop: function loop(toSend, num) {
         for(let i = 0; i < num; i++) {
-            sendMsg(toSend);
+            msg.channel.send(toSend);
         }
         return;
     },
     rolePerms: function roleEval(roleID) {
-        codeMsg('Role - ' + msg.guild.roles.get(roleID).name + '\n\n' + (new Discord.Permissions(msg.guild.roles.get(roleID).permissions).toArray()).join("\n"));
+        msg.channel.send('```Role - ' + msg.guild.roles.get(roleID).name + '\n\n' + (new Discord.Permissions(msg.guild.roles.get(roleID).permissions).toArray()).join("\n") + '```');
     },
     guildList: function guildList() {
         const guildArr = client.guilds.map(g => g.id + ': ' + g.name);
-        codeMsg('Guild List\n\n' + guildArr.join("\n"));
+        msg.channel.send('```Guild List\n\n' + guildArr.join("\n") + '```');
     },
     checkOwner: function checkOwner() {
         if (ownerIDs.includes(msg.author.id)) { return true; } else { return false; }

@@ -18,14 +18,14 @@ module.exports = {
 			if (typeof evaled !== "string")
 			evaled = require("util").inspect(evaled);
 
-			codeMsg(evaled);
+			msg.channel.send('```' + evaled + '```');
 			if (msg.channel.type === 'dm') {
                 sendLog(msg.author.tag + ' evaled \'' + args.join(' ') + '\' in their DMs');
                 return;
             }
 			sendLog(msg.author.tag + ' evaled \'' + args.join(' ') + '\' in ' + msg.guild.name);
 		} catch (err) {
-			sendMsg(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+			msg.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
 		}
 	}
 };

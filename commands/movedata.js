@@ -28,10 +28,10 @@ module.exports = {
             if (Object.keys(characterStats).includes(args[1])) {
                 const stat = char.stats[characterStats[args[1]]];
                 const embed = new Discord.RichEmbed() .setColor(char.color) .addField(stat.name, 'Value: ' + stat.value + '\nRank: ' + stat.rank);
-                sendMsg(embed);
+                msg.channel.send(embed);
             }
             else if (Object.keys(characterMoves).includes(args[1])) {
-                sendMsg("That's a valid move, but this part of the command isn't ready yet!\n\nYou can find most move data here: https://docs.google.com/document/d/1odjhW1IWnWmhXSZ74K6BynElw8FTZfE6oTo_Cf_x0RU/edit#")
+                msg.channel.send("That's a valid move, but this part of the command isn't ready yet!\n\nYou can find most move data here: https://docs.google.com/document/d/1odjhW1IWnWmhXSZ74K6BynElw8FTZfE6oTo_Cf_x0RU/edit#")
                 /*const move = char.moves[characterMoves[args[1]]];
                 let fields = [];
                 let bits = [];
@@ -53,14 +53,14 @@ module.exports = {
                 fields.push(bits.join(''))
                 
                 const embed = new Discord.RichEmbed() .setColor(char.color) .addField(move.metadata.name, fields.join('\n'));
-                sendMsg(embed);*/
+                msg.channel.send(embed);*/
             }
             else {
-                sendMsg('Please enter a valid move or stat!')
+                msg.channel.send('Please enter a valid move or stat!')
             }
         }
         else {
-            sendMsg('Please enter a valid character!')
+            msg.channel.send('Please enter a valid character!')
         }
     }
 };

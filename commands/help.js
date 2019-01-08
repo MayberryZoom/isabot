@@ -29,13 +29,13 @@ module.exports = {
 		else if (commandNames.includes(commandName)) {
 			const { prefix } = require('../config.json');
 			const embed = new Discord.RichEmbed() .setTitle('>' + commandName) .setColor('0xCF2BCF') .addField('Description', commandList.get(commandName).description) .addField('Usage', '>' + commandName + ' ' + commandList.get(commandName).usage) .addField('Valid arguments', commandList.get(commandName).arguments);
-			sendMsg(embed);
+			msg.channel.send(embed);
 			if (msg.channel.type === 'dm') {
                 sendLog(msg.author.tag + ' got help for \'' + commandName + '\' in their DMs');
                 return;
             }
 			sendLog(msg.author.tag + ' got help for \'' + commandName + '\' in ' + msg.guild.name);
 		}
-		else { sendMsg('That\'s not a command!'); }
+		else { msg.channel.send('That\'s not a command!'); }
     }
 };

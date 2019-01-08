@@ -23,7 +23,7 @@ module.exports = {
 			}
 		}
 		else if (msg.channel.type === 'dm') {
-			sendMsg('That command is not available in DMs.');
+			msg.channel.send('That command is not available in DMs.');
 			return;
 		}
 		else if (args[0] === 'server') {
@@ -36,7 +36,7 @@ module.exports = {
 			let min; if (createTime.getMinutes().toString().length === 1) { min = '0' + createTime.getMinutes(); } else { min = createTime.getMinutes(); }
 			let sec; if (createTime.getSeconds().toString().length === 1) { sec = '0' + createTime.getSeconds(); } else { sec = createTime.getSeconds(); }
 			const embed = new Discord.RichEmbed() .setTitle(g.name) .setColor('0xCF2BCF') .setThumbnail(g.iconURL) .addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST') .addField('Owner', g.owner.user.tag) .addField('Members', g.memberCount) .addField('Channel Count', channelCount) .addField('Role Count', roleCount);
-			sendMsg(embed);
+			msg.channel.send(embed);
 			sendLog(msg.author.tag + ' got ' + msg.guild.name + '\'s info');
 		}
 		else if (args[0] === 'me' || (args[0] === 'user' && args[1] === 'me') || (args[0] === 'user' && !args[1])) {
@@ -49,7 +49,7 @@ module.exports = {
 			let minJ; if (joinTime.getMinutes().toString().length === 1) { minJ = '0' + joinTime.getMinutes(); } else { minJ = joinTime.getMinutes(); }
 			let secJ; if (joinTime.getSeconds().toString().length === 1) { secJ = '0' + joinTime.getSeconds(); } else { secJ = joinTime.getSeconds(); }
 			const embed = new Discord.RichEmbed() .setTitle(u.username) .setColor(userToMember(u).displayHexColor) .setThumbnail(u.avatarURL) .addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST') .addField('Guild Join Date', joinTime.toDateString() + ' at ' + joinTime.getHours() + ':' + minJ + ':' + secJ + ', EST') .addField('Roles', m.roles.map(r => r.name).join(', '));
-			sendMsg(embed);
+			msg.channel.send(embed);
 			sendLog(msg.author.tag + ' got their info in ' + msg.guild.name);
 		}
 		else if (args[0] === 'user') {
@@ -70,7 +70,7 @@ module.exports = {
 				else {
 					embed .setTitle(u.username) .setColor(m.displayHexColor) .setThumbnail(u.avatarURL) .addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST') .addField('Guild Join Date', joinTime.toDateString() + ' at ' + joinTime.getHours() + ':' + minJ + ':' + secJ + ', EST') .addField('Roles', m.roles.map(r => r.name).join(', '));
 				}
-				sendMsg(embed);
+				msg.channel.send(embed);
 				sendLog(msg.author.tag + ' got info for ' + u.tag + ' in ' + msg.guild.name);
 			});
 		}
@@ -83,7 +83,7 @@ module.exports = {
 				let min; if (createTime.getMinutes().toString().length === 1) { min = '0' + createTime.getMinutes(); } else { min = createTime.getMinutes(); }
 				let sec; if (createTime.getSeconds().toString().length === 1) { sec = '0' + createTime.getSeconds(); } else { sec = createTime.getSeconds(); }
 				const embed = new Discord.RichEmbed() .setTitle(c.name) .setColor('0xCF2BCF') .setThumbnail(msg.guild.iconURL) .addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST') .addField('Channel Topic', cTopic) .addField('Members', c.members.size);
-				sendMsg(embed);
+				msg.channel.send(embed);
 				sendLog(msg.author.tag + ' got info for ' + c.name + ' in ' + msg.guild.name);
 			});
 		}
@@ -97,7 +97,7 @@ module.exports = {
 				let min; if (createTime.getMinutes().toString().length === 1) { min = '0' + createTime.getMinutes(); } else { min = createTime.getMinutes(); }
 				let sec; if (createTime.getSeconds().toString().length === 1) { sec = '0' + createTime.getSeconds(); } else { sec = createTime.getSeconds(); }
 				const embed = new Discord.RichEmbed() .setTitle(c.name) .setColor('0xCF2BCF') .setThumbnail(msg.guild.iconURL) .addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST') .addField('Channel Topic', cTopic) .addField('Members', c.members.size);
-				sendMsg(embed);
+				msg.channel.send(embed);
 				sendLog(msg.author.tag + ' got info for ' + c.name + ' in ' + msg.guild.name);
 			});
 		}

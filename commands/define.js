@@ -5,9 +5,6 @@ module.exports = {
     usage: '<term>',
     arguments: 'Any term - See ``>terms``',
     execute(msg, args) {
-        function sendMsg(toSend) {
-            msg.channel.send(toSend);
-        }
         
         const def = require('../terms.json');
 
@@ -29,14 +26,14 @@ module.exports = {
         const commandListServer = Object.keys(def[currentServer].terms);
 
         if (!commandListFull.includes(term)) {
-            sendMsg('There is no term by that name!');
+            msg.channel.send('There is no term by that name!');
         }
         else {
             if (commandListGeneral.includes(term)) {
-                sendMsg(def.general.terms[term]);
+                msg.channel.send(def.general.terms[term]);
             }
             else if (commandListServer.includes(term)) {
-                sendMsg(def[currentServer].terms[term]);
+                msg.channel.send(def[currentServer].terms[term]);
             }
             if (msg.channel.type === 'dm') {
                 sendLog(msg.author.tag + ' defined \'' + args.join(' ') + '\' in their DMs');
