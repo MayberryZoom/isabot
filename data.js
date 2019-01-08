@@ -18,48 +18,12 @@ module.exports = {
     sendLog: function sendLog(toSend) {
         client.channels.get('520039319260495891').send(toSend);
     },
-    userFromMention: function userFromMention(mention) {
-        const matches = mention.match(/^<@!?(\d+)>$/);
-        if (matches) {
-            const id = matches[1];
-            return msg.guild.members.get(id).user;
-        }
-        else { return null; }
+    rolePerms: function roleEval(roleID, message = msg) {
+        message.channel.send('```Role - ' + msg.guild.roles.get(roleID).name + '\n\n' + (new Discord.Permissions(msg.guild.roles.get(roleID).permissions).toArray()).join("\n") + '```');
     },
-    roleFromMention: function roleFromMention(mention) {
-        const matches = mention.match(/^<@&(\d+)>$/);
-        if (matches) {
-            const id = matches[1];
-            return msg.guild.roles.get(id);
-        }
-        else { return null; }
-    },
-    channelFromMention: function channelFromMention(mention) {
-        const matches = mention.match(/^<#(\d+)>$/);
-        if (matches) {
-            const id = matches[1];
-            return msg.guild.channels.get(id);
-        }
-        else { return null; }
-    },
-    userToMember: function userToMember(usr) {
-        return msg.guild.members.get(usr.id);
-    },
-    loop: function loop(toSend, num) {
-        for(let i = 0; i < num; i++) {
-            msg.channel.send(toSend);
-        }
-        return;
-    },
-    rolePerms: function roleEval(roleID) {
-        msg.channel.send('```Role - ' + msg.guild.roles.get(roleID).name + '\n\n' + (new Discord.Permissions(msg.guild.roles.get(roleID).permissions).toArray()).join("\n") + '```');
-    },
-    guildList: function guildList() {
+    guildList: function guildList(message = msg) {
         const guildArr = client.guilds.map(g => g.id + ': ' + g.name);
-        msg.channel.send('```Guild List\n\n' + guildArr.join("\n") + '```');
-    },
-    checkOwner: function checkOwner() {
-        if (ownerIDs.includes(msg.author.id)) { return true; } else { return false; }
+        message.channel.send('```Guild List\n\n' + guildArr.join("\n") + '```');
     },
     sleep: function sleep(ms) {
         return new Promise(resolve => {

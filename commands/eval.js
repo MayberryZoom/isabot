@@ -10,7 +10,7 @@ module.exports = {
 			return text;
 		}
 		
-		if(!checkOwner()) { msg.channel.send('Only the bot owners can use this command!'); sendLog(msg.author.tag + ' tried to use eval but failed in ' + msg.guild.name); return; }
+		if(!ownerIDs.includes(msg.author.id)) { msg.channel.send('Only the bot owners can use this command!'); sendLog(msg.author.tag + ' tried to use eval but failed in ' + msg.guild.name); return; }
 		try {
 			const code = args.join(' ');
 			let evaled = eval(code);

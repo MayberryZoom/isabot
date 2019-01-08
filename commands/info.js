@@ -26,7 +26,36 @@ module.exports = {
 			msg.channel.send('That command is not available in DMs.');
 			return;
 		}
-		else if (args[0] === 'server') {
+
+		function userFromMention(mention) {
+			const matches = mention.match(/^<@!?(\d+)>$/);
+			if (matches) {
+				const id = matches[1];
+				return msg.guild.members.get(id).user;
+			}
+			else { return null; }
+		}
+		function roleFromMention(mention) {
+			const matches = mention.match(/^<@&(\d+)>$/);
+			if (matches) {
+				const id = matches[1];
+				return msg.guild.roles.get(id);
+			}
+			else { return null; }
+		}
+		function channelFromMention(mention) {
+			const matches = mention.match(/^<#(\d+)>$/);
+			if (matches) {
+				const id = matches[1];
+				return msg.guild.channels.get(id);
+			}
+			else { return null; }
+		}
+		function userToMember(usr) {
+			return msg.guild.members.get(usr.id);
+		}
+
+		if (args[0] === 'server') {
 			const g = msg.guild;
 			const createTime = g.createdAt;
 			let roleCount = 0;
@@ -74,7 +103,7 @@ module.exports = {
 				sendLog(msg.author.tag + ' got info for ' + u.tag + ' in ' + msg.guild.name);
 			});
 		}
-		else if ((args[0] === 'channel' || (args[0] === 'channel' && args[1] === 'this')) && !args[1]) {
+		else if ((args[0] === 'channel' && (!args[1])) || (args[0] === 'channel' && args[1] === 'this')) {
 			msg.guild.fetchMembers().then(() => {
 				const c = msg.channel;
 				const createTime = c.createdAt;

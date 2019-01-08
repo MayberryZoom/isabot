@@ -25,8 +25,8 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command);
 }
 
-client.on('message', message => {
-	msg = message;
+client.on('message', msg => {
+	data.msg = msg;
 	if (!msg.content.startsWith(prefix) || msg.author.bot) return;
 
 	// variables
@@ -62,9 +62,11 @@ client.on('message', message => {
         return msg.channel.send(reply);
 	}
 	try {
-		msg.guild.fetchMember(msg.author.id).then(() => {
+		msg.channel.type !== 'dm' ? 
+			msg.guild.fetchMember(msg.author.id).then(() => {
+				command.execute(msg, args);
+			}) :
 			command.execute(msg, args);
-		});
 	}
 	catch (error) {
 		sendLog('<@&513807019048828929> there was an error!\n\n```' + error + '```');

@@ -10,7 +10,7 @@ module.exports = {
 	arguments: 'None',
 	hidden: true,
 	async execute(msg) {
-		if (!checkOwner()) {
+		if (!ownerIDs.includes(message.author.id)) {
 			return msg.channel.send('Only the bot owners can use this command!');
 		}
 		const { err, stdout } = await execAsync('git fetch --all && git reset --hard origin/master');

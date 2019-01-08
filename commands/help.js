@@ -28,7 +28,7 @@ module.exports = {
 		}
 		else if (commandNames.includes(commandName)) {
 			const { prefix } = require('../config.json');
-			const embed = new Discord.RichEmbed() .setTitle('>' + commandName) .setColor('0xCF2BCF') .addField('Description', commandList.get(commandName).description) .addField('Usage', '>' + commandName + ' ' + commandList.get(commandName).usage) .addField('Valid arguments', commandList.get(commandName).arguments);
+			const embed = new Discord.RichEmbed() .setTitle(prefix + commandName) .setColor('0xCF2BCF') .addField('Description', commandList.get(commandName).description) .addField('Usage', prefix + commandName + ' ' + commandList.get(commandName).usage) .addField('Valid arguments', commandList.get(commandName).arguments);
 			msg.channel.send(embed);
 			if (msg.channel.type === 'dm') {
                 sendLog(msg.author.tag + ' got help for \'' + commandName + '\' in their DMs');
