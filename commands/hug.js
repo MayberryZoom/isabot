@@ -3,13 +3,11 @@ module.exports = {
     hidden: true,
     execute(msg, args) {
         
-      if(msg.member.roles.has('502544290765864970')&&msg.guild.id==='489939754021027841')
-         {
+      if(msg.member.roles.has('502544290765864970') && msg.guild.id === '489939754021027841') {
             let num = 414;
          }
          
-       else
-        {
+       else {
             let num = Math.floor(Math.random() * 950) + 1;
         }
 
