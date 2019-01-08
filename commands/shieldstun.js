@@ -17,20 +17,16 @@ module.exports = {
         console.log(dmg);
         console.log(mult);
         if (smults.includes(mult)) {
-            msg.channel.send(((dmg * 100000) * 80000 * smash) / 1000000000000000 + 2);
+            msg.channel.send(Math.floor(((dmg * 100000) * 80000 * smash) / 1000000000000000 + 2));
         }
         else if (amults.includes(mult)) {
-            msg.channel.send(((dmg * 100000) * 80000 * aerial) / 1000000000000000 + 2);
+            msg.channel.send(Math.floor(((dmg * 100000) * 80000 * aerial) / 1000000000000000 + 2));
         }
         else if (pmults.includes(mult)) {
-            msg.channel.send(((dmg * 100000) * 80000 * projectile) / 1000000000000000 + 2);
+            msg.channel.send(Math.floor(((dmg * 100000) * 80000 * projectile) / 1000000000000000 + 2));
         }
         else {
-            console.log(dmg * 100000);
-            console.log((dmg * 100000) * 80000);
-            console.log(((dmg * 100000) * 80000) / 10000000000);
-            console.log(((dmg * 100000) * 80000) / 10000000000 + 2);
-            msg.channel.send(((dmg * 100000) * 80000) / 10000000000 + 2);
+            msg.channel.send(Math.floor(((dmg * 100000) * 80000) / 10000000000 + 2));
         }
     }
 };
