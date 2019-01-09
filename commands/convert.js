@@ -3,7 +3,7 @@ module.exports = {
     description: 'Allows you convert damage values in SSBU. Use it without arguments for a more in depth description.',
     usage: '',
     arguments: '``table``, ``to 1v1``, ``to ffa``, ``to sh``, ``to fh``, ``to fresh``',
-    execute(message, args) {
+    execute(msg, args) {
         const vsMultiplier = 1.2;
         const shMultiplier = 0.85;
         const freshMultiplier = 1.05;
