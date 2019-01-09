@@ -8,6 +8,6 @@ module.exports = {
 		.then((msg) => {
 			msg.edit('Ping: ' + (Date.now() - msg.createdTimestamp + 'ms'))
 		});
-		sendLog(msg.author.tag + ' used >ping. The ping was ' + (Date.now() - msg.createdTimestamp + 'ms.'));
+		sendLog(msg.author.tag + ' got my ping. It was ' + (Date.now() - msg.createdTimestamp + 'ms.'));
     }
 };

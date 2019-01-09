@@ -75,11 +75,12 @@ client.on('message', msg => {
 });
 
 client.on('guildCreate', guild => {
-	if (!config.guilds.includes(guild.id)) {
+	/*if (!config.guilds.includes(guild.id)) {
 		sendLog('<@&513807019048828929> someone tried to add me to ' + guild.name + ', so I left.');
 		return guild.leave();
 	}
-	else { sendLog('<@&513807019048828929> I joined ' + guild.name); }
+	else { */
+	sendLog('<@&513807019048828929> I joined ' + guild.name);
 });
 
 client.once('ready', () => {

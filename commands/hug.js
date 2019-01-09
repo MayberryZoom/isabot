@@ -8,6 +8,6 @@ module.exports = {
         msg.channel.send('wat');
         sendLog(msg.author.tag + ' actually hugged me in ' + msg.guild.name + '!! <@&513807019048828929>');
       }
-      sendLog(msg.author.tag + ' failed to hug Isabelle in ' + msg.guild.name + '. ``num`` was ' + num);
+      sendLog(msg.author.tag + ' failed to hug Isabelle. ``num`` was ' + num);
     }
 };

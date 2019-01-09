@@ -6,10 +6,6 @@ module.exports = {
     arguments: 'None',
     execute(msg, args) {
         msg.channel.send('Hey there!');
-        if (msg.channel.type === 'dm') {
-            sendLog(msg.author.tag + ' said hello in their DMs');
-            return;
-        }
-        sendLog(msg.author.tag + ' said hello in ' + msg.guild.name);
+        sendLog(msg.author.tag + ' said hello!');
     }
 };
