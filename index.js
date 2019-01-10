@@ -1,5 +1,4 @@
 Discord = require('discord.js');
-Client = require('discord.js');
 global.client = new Discord.Client({
 	messageCacheMaxSize: 1,
 	disabledEvents: [

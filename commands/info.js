@@ -15,7 +15,7 @@ module.exports = {
 				.then(() => msg.author.send(embedUser))
 				.then(() => msg.author.send(embedMe))
 				.then(() => msg.author.send(embedChannel))
-				.then(() => msg.reply(' I have DM\'d you help for the ``>info`` command!'));
+				.then(() => msg.reply('I have DM\'d you help for the ``>info`` command!'));
 			}
 			catch (error) {
 				sendLog('<@&513807019048828929> there was an error!\n\n```' + error + '```');
@@ -58,10 +58,8 @@ module.exports = {
 		if (args[0] === 'server') {
 			const g = msg.guild;
 			const createTime = g.createdAt;
-			let roleCount = 0;
-			g.roles.map(r => roleCount++);
-			let channelCount = 0;
-			g.channels.map(c => channelCount++);
+			let roleCount = g.roles.size;
+			let channelCount = g.channels.size;
 			let min; if (createTime.getMinutes().toString().length === 1) { min = '0' + createTime.getMinutes(); } else { min = createTime.getMinutes(); }
 			let sec; if (createTime.getSeconds().toString().length === 1) { sec = '0' + createTime.getSeconds(); } else { sec = createTime.getSeconds(); }
 			const embed = new Discord.RichEmbed() .setTitle(g.name) .setColor('0xCF2BCF') .setThumbnail(g.iconURL) .addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST') .addField('Owner', g.owner.user.tag) .addField('Members', g.memberCount) .addField('Channel Count', channelCount) .addField('Role Count', roleCount);
