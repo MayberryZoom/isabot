@@ -9,8 +9,9 @@ module.exports = {
 			const matches = mention.match(/^<@!?(\d+)>$/);
 			if (matches) {
                 const id = matches[1];
-                msg.guild.fetchMember(id);
-				return msg.guild.members.get(id).user;
+                msg.guild.fetchMember(id).then(() => {
+                    return msg.guild.members.get(id).user;
+                });
 			}
 			else { return null; }
         }
