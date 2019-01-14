@@ -1,10 +1,11 @@
 module.exports = {
     name: 'hug',
     hidden: true,
+    aliases: ['embrace'],
     execute(msg, args) {
       let num = Math.floor(Math.random() * 950) + 1;
 
-      if (num == 414) {
+      if (num === 414) {
         msg.channel.send('wat');
         sendLog(msg.author.tag + ' actually hugged me in ' + msg.guild.name + '!! <@&513807019048828929>');
       }

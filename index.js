@@ -25,7 +25,6 @@ for (const file of commandFiles) {
 }
 
 client.on('message', msg => {
-	data.msg = msg;
 	if (!msg.content.startsWith(prefix) || msg.author.bot) return;
 
 	// variables
