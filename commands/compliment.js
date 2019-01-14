@@ -8,7 +8,8 @@ module.exports = {
         function userFromMention(mention) {
 			const matches = mention.match(/^<@!?(\d+)>$/);
 			if (matches) {
-				const id = matches[1];
+                const id = matches[1];
+                msg.guild.fetchMember(id);
 				return msg.guild.members.get(id).user;
 			}
 			else { return null; }
