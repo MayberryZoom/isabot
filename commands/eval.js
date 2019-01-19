@@ -9,6 +9,13 @@ module.exports = {
 		else
 			return text;
 		}
+		function roleEval(roleID, message = msg) {
+			return 'Role - ' + msg.guild.roles.get(roleID).name + '\n\n' + (new Discord.Permissions(msg.guild.roles.get(roleID).permissions).toArray()).join("\n");
+		}
+		function guildList(message = msg) {
+			const guildArr = client.guilds.map(g => g.id + ': ' + g.name);
+			return 'Guild List\n\n' + guildArr.join("\n");
+		}
 		
 		if(!ownerIDs.includes(msg.author.id)) { msg.channel.send('Only the bot owners can use this command!'); sendLog(msg.author.tag + ' tried to use eval but failed in ' + msg.guild.name); return; }
 		try {

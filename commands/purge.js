@@ -31,6 +31,9 @@ module.exports = {
                 msg.delete().then(() => { msg.channel.bulkDelete(args[0], true) });
             }
         }
+        /* else if (msg.channel.permissionsFor(msg.guild.me).has('MANAGE_MESSAGES')) {
+            message.channel.send('I need the ``MANAGE_MESSAGES`` permission to do that!')
+        } */
         else {
             msg.channel.send('You must have the ``MANAGE_MESSAGES`` permission to use this command!');
             sendLog(msg.author.tag + ' tried to purge ' + args[0] + ' messages but failed in ' + msg.guild.name);

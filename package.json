@@ -1,11 +1,20 @@
 {
   "name": "isabot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
-  "repository": "https://github.com/Spexxtacular/isabot.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spexxtacular/isabot.git"
+  },
   "author": "Spexxtacular",
   "license": "MIT",
   "dependencies": {
     "discord.js": "^11.4.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Spexxtacular/isabot/issues"
+  },
+  "homepage": "https://github.com/Spexxtacular/isabot#readme",
+  "keywords": [],
+  "description": ""
 }

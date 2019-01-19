@@ -26,7 +26,7 @@ module.exports = {
                     if (usr) user = '<@' + usr.id + '>';
                 }
             }
-            let compliments = [
+            const compliments = [
             `Hi ${user}, I hope you're having a wonderful day! Remember that everyone loves you! <:isaHeyyy:490255578061602828>`,
             `${user}, if you're ever feeling like a bad day is dreading, just come talk to me, Isabelle! Never shy to talk to a person that's wonderful like yourself!`,
             `You're a sweet person, ${user}. <:isaGlee:513917768568143882>`,

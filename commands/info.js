@@ -51,38 +51,49 @@ module.exports = {
 			}
 			else { return null; }
 		}
+		function stringToEmoji(emoji) {
+			const matches = emoji.match(/^<a?:(\w+):(\d+)>$/);
+			if (matches) {
+				const emoji = {
+					name: matches[1],
+					id: matches[2]
+				}
+				return emoji;
+			}
+			else { return null; }
+		}
 		function userToMember(usr) {
 			return msg.guild.members.get(usr.id);
 		}
 
-		if (args[0] === 'server') {
-			const g = msg.guild;
-			const createTime = g.createdAt;
-			let roleCount = g.roles.size;
-			let channelCount = g.channels.size;
-			let min; if (createTime.getMinutes().toString().length === 1) { min = '0' + createTime.getMinutes(); } else { min = createTime.getMinutes(); }
-			let sec; if (createTime.getSeconds().toString().length === 1) { sec = '0' + createTime.getSeconds(); } else { sec = createTime.getSeconds(); }
-			const embed = new Discord.RichEmbed() .setTitle(g.name) .setColor('0xCF2BCF') .setThumbnail(g.iconURL) .addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST') .addField('Owner', g.owner.user.tag) .addField('Members', g.memberCount) .addField('Channel Count', channelCount) .addField('Role Count', roleCount);
-			msg.channel.send(embed);
-			sendLog(msg.author.tag + ' got ' + msg.guild.name + '\'s info');
-		}
-		else if (args[0] === 'me' || (args[0] === 'user' && args[1] === 'me') || (args[0] === 'user' && !args[1])) {
-			const u = msg.author;
-			const m = userToMember(u)
-			const createTime = u.createdAt;
-			const joinTime = msg.member.joinedAt;
-			let min; if (createTime.getMinutes().toString().length === 1) { min = '0' + createTime.getMinutes(); } else { min = createTime.getMinutes(); }
-			let sec; if (createTime.getSeconds().toString().length === 1) { sec = '0' + createTime.getSeconds(); } else { sec = createTime.getSeconds(); }
-			let minJ; if (joinTime.getMinutes().toString().length === 1) { minJ = '0' + joinTime.getMinutes(); } else { minJ = joinTime.getMinutes(); }
-			let secJ; if (joinTime.getSeconds().toString().length === 1) { secJ = '0' + joinTime.getSeconds(); } else { secJ = joinTime.getSeconds(); }
-			const embed = new Discord.RichEmbed() .setTitle(u.username) .setColor(userToMember(u).displayHexColor) .setThumbnail(u.avatarURL) .addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST') .addField('Guild Join Date', joinTime.toDateString() + ' at ' + joinTime.getHours() + ':' + minJ + ':' + secJ + ', EST') .addField('Roles', m.roles.map(r => r.name).join(', '));
-			msg.channel.send(embed);
-			sendLog(msg.author.tag + ' got their info in ' + msg.guild.name);
-		}
-		else if (args[0] === 'user') {
-			if (!msg.mentions.users.array().includes(userFromMention(args[1]))) { return msg.reply('please mention a user!'); }
-			const u = userFromMention(args[1]);
-			msg.guild.fetchMember(u.id).then(() => {
+		msg.guild.fetchMembers().then(() => {
+			if (args[0] === 'server') {
+				const g = msg.guild;
+				const createTime = g.createdAt;
+				let roleCount = g.roles.size;
+				let channelCount = g.channels.size;
+				let min; if (createTime.getMinutes().toString().length === 1) { min = '0' + createTime.getMinutes(); } else { min = createTime.getMinutes(); }
+				let sec; if (createTime.getSeconds().toString().length === 1) { sec = '0' + createTime.getSeconds(); } else { sec = createTime.getSeconds(); }
+				const embed = new Discord.RichEmbed() .setTitle(g.name) .setColor('0xCF2BCF') .setThumbnail(g.iconURL) .addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST') .addField('Owner', g.owner.user.tag) .addField('Members', g.memberCount) .addField('Channel Count', channelCount) .addField('Role Count', roleCount);
+				msg.channel.send(embed);
+				sendLog(msg.author.tag + ' got ' + msg.guild.name + '\'s info');
+			}
+			else if (args[0] === 'me' || (args[0] === 'user' && args[1] === 'me') || (args[0] === 'user' && !args[1])) {
+				const u = msg.author;
+				const m = userToMember(u)
+				const createTime = u.createdAt;
+				const joinTime = msg.member.joinedAt;
+				let min; if (createTime.getMinutes().toString().length === 1) { min = '0' + createTime.getMinutes(); } else { min = createTime.getMinutes(); }
+				let sec; if (createTime.getSeconds().toString().length === 1) { sec = '0' + createTime.getSeconds(); } else { sec = createTime.getSeconds(); }
+				let minJ; if (joinTime.getMinutes().toString().length === 1) { minJ = '0' + joinTime.getMinutes(); } else { minJ = joinTime.getMinutes(); }
+				let secJ; if (joinTime.getSeconds().toString().length === 1) { secJ = '0' + joinTime.getSeconds(); } else { secJ = joinTime.getSeconds(); }
+				const embed = new Discord.RichEmbed() .setTitle(u.username) .setColor(userToMember(u).displayHexColor) .setThumbnail(u.avatarURL) .addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST') .addField('Guild Join Date', joinTime.toDateString() + ' at ' + joinTime.getHours() + ':' + minJ + ':' + secJ + ', EST') .addField('Roles', m.roles.map(r => r.name).join(', '));
+				msg.channel.send(embed);
+				sendLog(msg.author.tag + ' got their info in ' + msg.guild.name);
+			}
+			else if (args[0] === 'user') {
+				if (!msg.mentions.users.array().includes(userFromMention(args[1]))) { return msg.reply('please mention a user!'); }
+				const u = userFromMention(args[1]);
 				const m = userToMember(u);
 				const createTime = u.createdAt;
 				const joinTime = msg.guild.members.get(u.id).joinedAt;
@@ -99,10 +110,8 @@ module.exports = {
 				}
 				msg.channel.send(embed);
 				sendLog(msg.author.tag + ' got info for ' + u.tag + ' in ' + msg.guild.name);
-			});
-		}
-		else if ((args[0] === 'channel' && (!args[1])) || (args[0] === 'channel' && args[1] === 'this')) {
-			msg.guild.fetchMembers().then(() => {
+			}
+			else if ((args[0] === 'channel' && (!args[1])) || (args[0] === 'channel' && args[1] === 'this')) {
 				const c = msg.channel;
 				const createTime = c.createdAt;
 				let cTopic;
@@ -112,11 +121,9 @@ module.exports = {
 				const embed = new Discord.RichEmbed() .setTitle(c.name) .setColor('0xCF2BCF') .setThumbnail(msg.guild.iconURL) .addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST') .addField('Channel Topic', cTopic) .addField('Members', c.members.size);
 				msg.channel.send(embed);
 				sendLog(msg.author.tag + ' got info for ' + c.name + ' in ' + msg.guild.name);
-			});
-		}
-		else if (args[0] === 'channel') {
-			if (!msg.mentions.channels.array().includes(channelFromMention(args[1]))) { return msg.reply('please mention a channel!'); }
-			msg.guild.fetchMembers().then(() => {
+			}
+			else if (args[0] === 'channel') {
+				if (!msg.mentions.channels.array().includes(channelFromMention(args[1]))) { return msg.reply('please mention a channel!'); }
 				const c = channelFromMention(args[1]);
 				const createTime = c.createdAt;
 				let cTopic;
@@ -126,10 +133,33 @@ module.exports = {
 				const embed = new Discord.RichEmbed() .setTitle(c.name) .setColor('0xCF2BCF') .setThumbnail(msg.guild.iconURL) .addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST') .addField('Channel Topic', cTopic) .addField('Members', c.members.size);
 				msg.channel.send(embed);
 				sendLog(msg.author.tag + ' got info for ' + c.name + ' in ' + msg.guild.name);
-			});
-		}
-		else if (args[0] === 'emoji' || args[0] === 'emote') {
-			return;
-		}
+			}
+			else if (args[0] === 'emoji' || args[0] === 'emote') {
+				if (!/^<a?:(\w+):(\d+)>$/.test(args[1])) return msg.channel.send('Please provide a custom emoji!');
+				let e = stringToEmoji(args[1]);
+				const x = /^<a:(\w+):(\d+)>$/.test(args[1]) ? '.gif' : '.png';
+				const link = `https://cdn.discordapp.com/emojis/${e.id}${x}`;
+				let embed = new Discord.RichEmbed() .setTitle(`:${e.name}:`) .setColor('0xCF2BCF') .addField('ID', e.id);
+				if (client.emojis.get(e.id)) {
+					e = client.emojis.get(e.id);
+					const createTime = e.createdAt;
+						let min; if (createTime.getMinutes().toString().length === 1) { min = '0' + createTime.getMinutes(); } else { min = createTime.getMinutes(); }
+						let sec; if (createTime.getSeconds().toString().length === 1) { sec = '0' + createTime.getSeconds(); } else { sec = createTime.getSeconds(); }
+						embed.addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST') .addField('Guild', e.guild);
+					/*try {
+						let creator; e.fetchAuthor().then(u => creator = u.username).then(() => {
+							embed.addField('Created By', creator)
+						}).then(() => { return msg.channel.send(embed).then(() => sendLog(msg.author.tag + ' got info for ' + e.name + ' in ' + msg.guild.name)); });
+					}
+					catch(e) {
+						if (e instanceof )
+						sendLog(`\`\`\`${e}\`\`\``);
+						return msg.channel.send(embed).then(() => sendLog(msg.author.tag + ' got info for ' + e.name + ' in ' + msg.guild.name));
+					}*/
+				}
+				embed.addField('Link', link) .setImage(link);
+				msg.channel.send(embed).then(() => sendLog(msg.author.tag + ' got info for :' + e.name + ': in ' + msg.guild.name));
+			}
+		});
     }
 };

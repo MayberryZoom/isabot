@@ -19,13 +19,6 @@ module.exports = {
     sendLog: function sendLog(toSend) {
         client.channels.get('520039319260495891').send(toSend);
     },
-    rolePerms: function roleEval(roleID, message = msg) {
-        message.channel.send('```Role - ' + msg.guild.roles.get(roleID).name + '\n\n' + (new Discord.Permissions(msg.guild.roles.get(roleID).permissions).toArray()).join("\n") + '```');
-    },
-    guildList: function guildList(message = msg) {
-        const guildArr = client.guilds.map(g => g.id + ': ' + g.name);
-        message.channel.send('```Guild List\n\n' + guildArr.join("\n") + '```');
-    },
     sleep: function sleep(ms) {
         return new Promise(resolve => {
             setTimeout(resolve, ms)
