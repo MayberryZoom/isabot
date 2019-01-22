@@ -9,10 +9,10 @@ module.exports = {
 		else
 			return text;
 		}
-		function roleEval(roleID, message = msg) {
+		function roleEval(roleID) {
 			return 'Role - ' + msg.guild.roles.get(roleID).name + '\n\n' + (new Discord.Permissions(msg.guild.roles.get(roleID).permissions).toArray()).join("\n");
 		}
-		function guildList(message = msg) {
+		function guildList() {
 			const guildArr = client.guilds.map(g => g.id + ': ' + g.name);
 			return 'Guild List\n\n' + guildArr.join("\n");
 		}
