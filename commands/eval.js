@@ -1,5 +1,6 @@
 module.exports = {
 	name: 'eval',
+	aliases: ['evalr'],
 	description: '',
 	hidden: true,
 	execute(msg, args) {
@@ -21,7 +22,8 @@ module.exports = {
 		try {
 			const code = args.join(' ');
 			let evaled = eval(code);
-			
+			if (msg.content.startsWith('>evalr')) return;
+
 			if (typeof evaled !== "string")
 			evaled = require("util").inspect(evaled);
 

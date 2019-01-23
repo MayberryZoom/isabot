@@ -1,15 +1,13 @@
 module.exports = {
     name: 'purge',
-    alises: ['p', 'delete'],
+    aliases: ['p', 'delete'],
     description: 'Purges a certain amount of messages. Requires the manage messages permission.',
     args: true,
     usage: '<limit>',
-    guildOnly: 0,
     arguments: 'An integer between 1 and 100',
     execute(msg, args) {        
 		if (msg.channel.type === 'dm') {
-			msg.channel.send('That command is not available in DMs.');
-			return;
+			return msg.channel.send('That command is not available in DMs.');
         }
 
         if (msg.channel.permissionsFor(msg.member).has('MANAGE_MESSAGES')) {
