@@ -1,0 +1,26 @@
+{
+    "sh": {
+        "name": "Shorthop",
+        "multiplier": "0.85"
+    },
+    "fh": {
+        "name": "Fullhop",
+        "multiplier": "1 / 0.85"
+    },
+    "vs": {
+        "name": "1v1",
+        "multiplier": "1.2"
+    },
+    "ffa": {
+        "name": "Base/Free For All",
+        "multiplier": "1 / 1.2"
+    },
+    "fresh": {
+        "name": "Fresh",
+        "multiplier": "1.05"
+    },
+    "charged": {
+        "name": "Charged",
+        "multiplier": "1.4"
+    }
+}

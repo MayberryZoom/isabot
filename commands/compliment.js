@@ -6,19 +6,12 @@ module.exports = {
     arguments: 'A user mention',
     execute(msg, args) {
         msg.guild.fetchMembers().then(() => {
-            function userFromMention(mention) {
-                const matches = mention.match(/^<@!?(\d+)>$/);
-                if (matches) {
-                    const id = matches[1];
-                    return msg.guild.members.get(id).user;
-                }
-                else { return null; }
-            }
+            const conversions = require('../conversions.js');
             
             let user;
             if (args[0]) {
-                if (msg.mentions.users.array().includes(userFromMention(args[0]))) {
-                    let usr = userFromMention(args[0]);
+                if (msg.mentions.users.array().includes(conversions.userFromMention(args[0], msg))) {
+                    let usr = conversions.userFromMention(args[0], msg);
                     user = '<@' + usr.id + '>';
                 }
                 else {
@@ -64,7 +57,7 @@ module.exports = {
                 `Hiya Mayor ${user}, it's always great to see you!`,
                 `${user}, I know you weren't originally supposed to be the Mayor, but it's the happiest mistake I've ever made! <:isaHeyyy:490255578061602828>`,
                 `If you ever need a hand with anything ${user}, just let me know! I'm always happy to help!`,
-                `I'm not the best at fighting, so thank you for helping me improve ${user}! <:isaBashful:490255571774079000>`,
+                `I'm not the best at fighting, so thank you for helping me improve, ${user}! <:isaThonk:537312545682489345>`,
                 `${user}, did you know that you're beautiful?`,
                 `Can't imagine a town without someone as precious as you, Mayor ${user}!`,
                 `${user}, you're so cute when you blush, heehee!`,
