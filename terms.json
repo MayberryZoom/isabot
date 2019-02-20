@@ -38,7 +38,11 @@
             "survival di": "Survival DI allows you to survive kill moves by changing your launch angle in a way that makes you take more time to reach the blast zones. For instance, against Mewtwo's up throw, you can DI away from him to survive longer. See also - DI, Combo DI, LSI",
             "lsi": "LSI, short for Launch Speed Influence, is a mechanic that allows you to change the speed you are launched at. It only applies if the launch angle is between 65 and 295 degrees. The method to perform it is simple- hold up to fly faster, hold down to fly slower! However, its applications are much more complicated. This comes from the fact that you can use both DI and LSI at the same time. This matters because *DIing down is not good* in most situations. There's 2 reasons for this: 1) DIing down makes it harder to recover, because you have less time to drift and 2) it makes you reach the blast zone quicker.\n\nTo avoid this problem, you must find the angle that takes advantage of both good DI and good LSI. On more horizontal moves, this is usually simply in, which only takes advantage of DI. On diagonal launch angles, however, this is usually down and in. The down part is for LSI, the in part is for DI. Breaking it down further, the down input slows your momentum and the in part makes you take longer to reach the blast zone.\n\nThere is another mechanic related to LSI that makes certain moves kill at much later percents- LSI is applied after DI. This means if a move launches you outside of the LSI range originally (i.e. at 70 degrees) and you DI it into the LSI range, you can also begin to LSI it. For example, Charizard's Smash 4 UThrow had an angle of 70 degrees and you could hold down and away to remove most of its kill potential. Not only is this angle perfect to bring it into LSI range, but it also DIs the *vertical* half of it, by DIing away from Charizard as well.\n\nFinally, if you played Melee, you will know the optimal survival DI for diagonal or horizontal moves was up. In SSBU, **this will kill you. Do not do it.** While this angle is the correct *DI*, it is the incorrect *LSI*. In this situation, LSI takes more effect, and you die sooner. Make sure whenever you DI something, your DI \"agrees\" with your LSI. See also - DI",
             "bnb": "Short for Bread and Butter, which is a character's main damage racking combos.",
-            "cqc": "Short for close quarters combat, which is the game when two players are close to each other. Some characters are good at CQC, some are not."
+            "cqc": "Short for close quarters combat, which is the game when two players are close to each other. Some characters are good at CQC, some are not.",
+            "mu": "matchup. The discussion and understanding of how the game plays out between two specific characters.",
+            "crew battle": "crew battle. Where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks over against the next opponent. Last team with stocks left wins."."cb": "crew battle. Where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks over against the next opponent. Last team with stocks left wins.",
+            "jmu": "joint matchup discussion. Where two character discords come together to discuss the matchup between their two characters for a week or so. These often end in a crew battle.",
+            "dashback": "when you are facing one way, and then input a dash in the other direction, it is called a dashback."
         },
         "data": {
             "name": "general",
@@ -80,6 +84,21 @@
     },
     "Ice Climbers": {
         "terms": {
+            "uaft": "Up angled forward tilt.",
+            "nut": "synced dthrow > (buffer roll) > nair > (squall) > regrab. Can be extended into a 0-death or many other things, particularly cheerless fthrow (fairspike) at ledge.\nhttps://twitter.com/v23God/status/1096525627094650880",
+            "yeet": "cheerless bthrow (nana fsmash). Can also be applied to cheerless fthrow (fsmash).",
+            "desync": "any situation or setup that involves having nana and popo acting independantly of one another, usually though buffering an input for one while the other is busy.",
+            "cheerless": "If you get a synced grab with ICs, when you input a throw Nana will do a taunt (called cheer). This means she cannot act while you are throwing. Certain setups can allow you to get a cheerless throw, where Nana will be able to buffer an option as you throw, before she cheers. An example of this is the yeet.",
+            "synced": "When nana and popo are synchronized, and are acting at the same time doing the same thing.",
+            "semisync": "a state of being where nana will sometimes be under popo's control, and sometimes not. \nhttps://gfycat.com/MellowTerribleFawn",
+            "belay": "ICs up special.",
+            "blizz": "Blizzard - ICs down special.",
+            "squall": "Squall Hammer - ICs side special.",
+            "IB": "Ice Block/Ice Shot - ICs neutral special.",
+            "heave-ho": "synced dthrow > uair. Kills in a narrow window.",
+            "tilt turn": "https://twitter.com/madmonk12345/status/1089084293241061378",
+            "blizzard wavedash": "https://twitter.com/madmonk12345/status/1089084293241061378",
+            "jab interrupt": "https://twitter.com/Savestate/status/1077064481233088512"
             
         },
         "data": {
