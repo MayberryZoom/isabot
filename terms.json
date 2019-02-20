@@ -40,7 +40,8 @@
             "bnb": "Short for Bread and Butter, which is a character's main damage racking combos.",
             "cqc": "Short for close quarters combat, which is the game when two players are close to each other. Some characters are good at CQC, some are not.",
             "mu": "matchup. The discussion and understanding of how the game plays out between two specific characters.",
-            "crew battle": "crew battle. Where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks over against the next opponent. Last team with stocks left wins."."cb": "crew battle. Where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks over against the next opponent. Last team with stocks left wins.",
+            "crew battle": "crew battle. Where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks over against the next opponent. Last team with stocks left wins.",
+            "cb": "crew battle. Where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks over against the next opponent. Last team with stocks left wins.",
             "jmu": "joint matchup discussion. Where two character discords come together to discuss the matchup between their two characters for a week or so. These often end in a crew battle.",
             "dashback": "when you are facing one way, and then input a dash in the other direction, it is called a dashback."
         },
