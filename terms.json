@@ -40,10 +40,9 @@
             "bnb": "Short for Bread and Butter, which is a character's main damage racking combos.",
             "cqc": "Short for close quarters combat, which is the game when two players are close to each other. Some characters are good at CQC, some are not.",
             "mu": "matchup. The discussion and understanding of how the game plays out between two specific characters.",
-            "crew battle": "crew battle. Where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks over against the next opponent. Last team with stocks left wins.",
-            "cb": "crew battle. Where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks over against the next opponent. Last team with stocks left wins.",
-            "jmu": "joint matchup discussion. Where two character discords come together to discuss the matchup between their two characters for a week or so. These often end in a crew battle.",
-            "dashback": "when you are facing one way, and then input a dash in the other direction, it is called a dashback."
+            "crew battle": "Crew battle. Where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks over against the next opponent. Last team with stocks left wins.",
+            "cb": "Crew battle. Where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks over against the next opponent. Last team with stocks left wins.",
+            "dashback": "When you are facing one way, and then input a dash in the other direction, it is called a dashback."
         },
         "data": {
             "name": "general",
@@ -88,10 +87,10 @@
             "uaft": "Up angled forward tilt.",
             "nut": "synced dthrow > (buffer roll) > nair > (squall) > regrab. Can be extended into a 0-death or many other things, particularly cheerless fthrow (fairspike) at ledge.\nhttps://twitter.com/v23God/status/1096525627094650880",
             "yeet": "cheerless bthrow (nana fsmash). Can also be applied to cheerless fthrow (fsmash).",
-            "desync": "any situation or setup that involves having nana and popo acting independantly of one another, usually though buffering an input for one while the other is busy.",
+            "desync": "Any situation or setup that involves having nana and popo acting independantly of one another, usually though buffering an input for one while the other is busy.",
             "cheerless": "If you get a synced grab with ICs, when you input a throw Nana will do a taunt (called cheer). This means she cannot act while you are throwing. Certain setups can allow you to get a cheerless throw, where Nana will be able to buffer an option as you throw, before she cheers. An example of this is the yeet.",
             "synced": "When nana and popo are synchronized, and are acting at the same time doing the same thing.",
-            "semisync": "a state of being where nana will sometimes be under popo's control, and sometimes not. \nhttps://gfycat.com/MellowTerribleFawn",
+            "semisync": "A state of being where nana will sometimes be under popo's control, and sometimes not. \nhttps://gfycat.com/MellowTerribleFawn",
             "belay": "ICs up special.",
             "blizz": "Blizzard - ICs down special.",
             "squall": "Squall Hammer - ICs side special.",
