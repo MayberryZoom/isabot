@@ -1,5 +1,6 @@
 module.exports = {
-    name: 'info',
+	name: 'info',
+	aliases: ['i'],
 	description: 'Shows information about a server, user, or channel.',
 	usage: '<item> <instance>',
     arguments: '``me``, ``user``, ``server``, ``channel``, none',

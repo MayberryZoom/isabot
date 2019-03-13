@@ -2,7 +2,7 @@ module.exports = {
     name: 'welcome',
     description: 'Welcome!',
     hidden: true,
-    guildOnly: 1,
+    dmDisabled: 1,
     execute(msg, args) {
         const conversions = require('../conversions.js');
         
