@@ -9,7 +9,6 @@ module.exports = {
     client: new Discord.Client(),
     fs: require('fs'),
     datatable: require('./movedata.json'),
-    average: require('image-average-color'),
 
     // constants
     ownerIDs: ['419688076076515328', '174758404571529216'],
