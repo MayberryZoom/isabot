@@ -1,0 +1,34 @@
+{
+    "sh": {
+        "mname": "Shorthop Multiplier",
+        "multiplier": "0.85",
+        "args": "Converts the given damage value to its damage in a shorthop, assuming the damage given is its base damage.",
+        "table": "When performing an aerial in a shorthop, the damage will be modified by 0.8x."
+    },
+    "fh": {
+        "multiplier": "1 / 0.85",
+        "args": "Converts the given damage value to its damage in a fullhop, assuming the damage given its SH damage."
+    },
+    "1v1": {
+        "mname": "1v1 Multiplier",
+        "multiplier": "1.2",
+        "args": "Converts the given damage value to its damage in 1v1, assuming the mode of the damage given is FFA.",
+        "table": "When playing in a 1v1, all damage **taken** will be modified by 1.2x."
+    },
+    "ffa": {
+        "multiplier": "1 / 1.2",
+        "args": "Converts the given damage value to its damage in FFA, assuming the mode of the damage given is 1v1."
+    },
+    "fresh": {
+        "mname": "Freshness Bonus",
+        "multiplier": "1.05",
+        "args": "Converts the given damage to its damage when fresh, assuming it is the base damage, aka FFA damage.",
+        "table": "When landing a move that is not in the staling queue, its damage will be modified by 1.05x."
+    },
+    "charged": {
+        "mname": "Charged Smash Attack",
+        "multiplier": "1.4",
+        "args": "Converts the given damage to the damage dealt when fully charged, assuming it was base damage. The value returned does not include the 1v1 multiplier.",
+        "table": "When a smash attack is fully charged, its damage will be multiplied by 1.4x."
+    }
+}

@@ -13,11 +13,11 @@ module.exports = {
     arguments: '',
     // Specifies if the command is hidden from >help
     hidden: false,
-    // Specifies the guildOnly type (can it be used in DMs?).
-    // undefined = disabled, 0 = response then ignore command, 1 = no response then ignore command
-    guildOnly: 0,
+    // Specifies if the command is enabled in DMs
+    // undefined = enabled, 0 = response then ignore command, 1 = no response then ignore command
+    dmDisabled: 0,
     // Array of guild IDs this is exclusive to
-    guild: [],
+    guilds: [],
     // Command itself
     execute(msg, args) {
 

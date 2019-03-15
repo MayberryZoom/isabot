@@ -12,8 +12,8 @@ global.client = new Discord.Client({
 	disableEveryone: true
 });
 const { prefix } = require('./config.json');
-const data = require('./data.js');
-for (const [k, v] of Object.entries(data)) global[k] = v;
+const globals = require('./globals.js');
+for (const [k, v] of Object.entries(globals)) global[k] = v;
 
 const { token } = require('./token.json');
 
@@ -37,17 +37,17 @@ client.on('message', msg => {
 	        || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 		if (!command) return;
 
-	if (command.guildOnly && msg.channel.type !== 'text') {
-		if (command.guildOnly === 0) {
+	if (command.dmDisabled && msg.channel.type === 'dm') {
+		if (command.dmDisabled === 0) {
 			return msg.reply('That command is not available inside DMs!');
 		}
-		else if (command.guildOnly === 1) {
+		else if (command.dmDisabled === 1) {
 			return;
 		}
 	}
 
-	if(command.guild) {
-		if (!command.guild.includes(msg.guild.id)) {
+	if(command.guilds) {
+		if (!command.guilds.includes(msg.guild.id)) {
 			return;
 		}
 	}
