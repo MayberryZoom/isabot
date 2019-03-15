@@ -22,7 +22,7 @@ module.exports = {
 		try {
 			const code = args.join(' ');
 			let evaled = eval(code);
-			if (msg.content.startsWith('>evalr')) return;
+			if (msg.content.toLowerCase().startsWith('>evalr')) return;
 
 			if (typeof evaled !== "string")
 			evaled = require("util").inspect(evaled);

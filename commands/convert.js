@@ -1,5 +1,6 @@
 module.exports = {
     name: 'convert',
+    aliases: ['c'],
     description: 'Allows you convert damage values in SSBU. Use it without arguments for a more in depth description.',
     usage: '',
     arguments: '``table``, '  + Object.keys(require('../multipliers.json')).map(m => '``to ' + m + '``').join(', '),

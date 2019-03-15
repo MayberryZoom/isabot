@@ -1,5 +1,6 @@
 module.exports = {
     name: 'define',
+    aliases: ['d'],
     description: 'Defines a Smash term. A list of terms can be found using the ``terms`` command.',
     args: true,
     usage: '<term>',

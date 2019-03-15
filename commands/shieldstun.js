@@ -1,5 +1,6 @@
 module.exports = {
     name: 'shieldstun',
+    aliases: ['s'],
     description: 'Calculates the shieldstun a move does. Please do not include the 1v1 multiplier in the damage value.',
     usage: '<damage> <type>',
     args: true,

@@ -1,5 +1,6 @@
 module.exports = {
-    name: 'help',
+	name: 'help',
+	aliases: ['h'],
 	description: 'DMs the help message! If you provide a command as an argument, it will show you an in-depth description of it.',
 	aliases: ['commands'],
 	usage: '<command>',
