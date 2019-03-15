@@ -98,8 +98,9 @@
             "heave-ho": "synced dthrow > uair. Kills in a narrow window.",
             "tilt turn": "https://twitter.com/madmonk12345/status/1089084293241061378",
             "blizzard wavedash": "https://twitter.com/madmonk12345/status/1089084293241061378",
-            "jab interrupt": "https://twitter.com/Savestate/status/1077064481233088512"
-            
+            "jab interrupt": "https://twitter.com/Savestate/status/1077064481233088512",
+            "skid turn desync": "Skid turn desynch aka \"soymilk\": Dash in one direction until you enter run, then let go of the control stick to enter skid, then move the control stick in the opposite direction so Popo enters turn, and quickly interrupt the turning animation with any grounded move. If done correctly, Popo will perform the move and Nana will perform a short dash forward.\n\nTechnical details: Just like with other run turn desynchs, you have to input the move before Nana goes into turn so that she interprets the turn input as a dash forward. Out of skid, dash interrupts as early as frame 8. So you have to skid, turn, and then input a move at least 8 frames after the original skid, but less than 6 frames after the turn",
+            "soymilk": : "Skid turn desynch aka \"soymilk\": Dash in one direction until you enter run, then let go of the control stick to enter skid, then move the control stick in the opposite direction so Popo enters turn, and quickly interrupt the turning animation with any grounded move. If done correctly, Popo will perform the move and Nana will perform a short dash forward.\n\nTechnical details: Just like with other run turn desynchs, you have to input the move before Nana goes into turn so that she interprets the turn input as a dash forward. Out of skid, dash interrupts as early as frame 8. So you have to skid, turn, and then input a move at least 8 frames after the original skid, but less than 6 frames after the turn"
         },
         "data": {
             "name": "Ice Climbers",
