@@ -42,7 +42,9 @@
             "mu": "matchup. The discussion and understanding of how the game plays out between two specific characters.",
             "crew battle": "Crew battle. Where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks over against the next opponent. Last team with stocks left wins.",
             "cb": "Crew battle. Where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks over against the next opponent. Last team with stocks left wins.",
-            "dashback": "When you are facing one way, and then input a dash in the other direction, it is called a dashback."
+            "dashback": "When you are facing one way, and then input a dash in the other direction, it is called a dashback.",
+            "atkc": "Attack Cancel. You can jump out of the startup of tilts and dash attacks which can be useful. https://youtu.be/v1kjQtMaPkE",
+            "attack cancel": "Attack Cancel. You can jump out of the startup of tilts and dash attacks which can be useful. https://youtu.be/v1kjQtMaPkE"
         },
         "data": {
             "name": "general",
