@@ -98,7 +98,7 @@
             "squall": "Squall Hammer - ICs side special.",
             "ib": "Ice Block/Ice Shot - ICs neutral special.",
             "heave-ho": "synced dthrow > uair. Kills in a narrow window.",
-            "tilt turn": "https://twitter.com/madmonk12345/status/1089084293241061378",
+            "tilt turn": "The second hardest, and also second most useful neutral desync, second in both ways only to Blizzard Wavedash.\nhttps://twitter.com/v23God/status/1114949522256539648",
             "blizzard wavedash": "https://twitter.com/madmonk12345/status/1089084293241061378",
             "jab interrupt": "https://twitter.com/Savestate/status/1077064481233088512",
             "skid turn desync": "Skid turn desynch aka \"soymilk\": Dash in one direction until you enter run, then let go of the control stick to enter skid, then move the control stick in the opposite direction so Popo enters turn, and quickly interrupt the turning animation with any grounded move. If done correctly, Popo will perform the move and Nana will perform a short dash forward.\n\nTechnical details: Just like with other run turn desynchs, you have to input the move before Nana goes into turn so that she interprets the turn input as a dash forward. Out of skid, dash interrupts as early as frame 8. So you have to skid, turn, and then input a move at least 8 frames after the original skid, but less than 6 frames after the turn",
@@ -108,7 +108,8 @@
             "corner carry": "Alternative name for Nut or any of its derivatives that carry the opponent to the corner for a cheerless conversion.",
             "ruri combo": "A solid conversion off of synced grab at mid percents. https://twitter.com/ruripikaics/status/1105443229095190529",
             "WWW Doc": "What Works on Who Doc. A doc that has which characters different setups work on. Work in progress, contact techy#5973 for editing access/corrections.",
-            "squall desync": "At the end of squall, you can buffer an option just for nana, and then buffer something for popo, so that they perform two different things. \nBasics: <https://twitter.com/v23God/status/1102950879672627207>\nTechnical Details: <https://www.youtube.com/watch?v=xVuxZxmc358>"
+            "squall desync": "At the end of squall, you can buffer an option just for nana, and then buffer something for popo, so that they perform two different things. \nBasics: <https://twitter.com/v23God/status/1102950879672627207>\nTechnical Details: <https://www.youtube.com/watch?v=xVuxZxmc358>",
+            "nanatrump": "While trumping is only mediocre for a lot of characters in this game, since the opponent can DI in or away from the stage and limit your options for directly punishing it, Ice Climbers has what is likely the best trump punishes in the game. The answer is to make nana trump the opponent, while immdiately hitting ledge with popo fsmash. This is called nanatrump.\nThere are two main ways to do this - \n1. Run towards ledge and pivot grab towards center stage right before you reach ledge. While popo is in the endlag from the pivot grab, you can trump with nana.\n2. You can jump towards ledge, and if you space your landing just right, nana will grab ledge but popo will land on stage.\n\nAs nana trumps the opponent, you must immediately fsmash the ledge with popo. If done properly, they will get hit by the fsmash immediately after breaking contact with the ledge, which guarantees the fsmash.\nExample: https://twitter.com/bigd_ssb/status/1086753626670809088"
         },
         "data": {
             "name": "Ice Climbers",
