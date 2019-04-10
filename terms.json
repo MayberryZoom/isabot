@@ -44,7 +44,8 @@
             "cb": "Crew battle. Where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks over against the next opponent. Last team with stocks left wins.",
             "dashback": "When you are facing one way, and then input a dash in the other direction, it is called a dashback.",
             "atkc": "Attack Cancel. You can jump out of the startup of tilts and dash attacks which can be useful. https://youtu.be/v1kjQtMaPkE",
-            "attack cancel": "Attack Cancel. You can jump out of the startup of tilts and dash attacks which can be useful. https://youtu.be/v1kjQtMaPkE"
+            "attack cancel": "Attack Cancel. You can jump out of the startup of tilts and dash attacks which can be useful. https://youtu.be/v1kjQtMaPkE",
+            "dashgrab dashthrough": "If you initiate a dash, then wait 6 frames for nana to initiate her dash, and then grab an opponent during nana's initial dash animation, and continue to hold forward, nana will keep running (foxtrotting technically) forward  past popo until she is out of control range. Very similar to semisync, and technically this sets up a cheerless, though its uses are more limited, such as the following - https://gfycat.com/marvelousobesecranefly"
         },
         "data": {
             "name": "general",
