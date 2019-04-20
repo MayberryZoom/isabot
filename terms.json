@@ -136,8 +136,8 @@
             "dthrow desync": "When you do a synced, cheered dthrow, you can buffer an option for Nana that Popo will not read in a 3 frame window, after Nana's cheer. This means that you can dthrow with Popo, and have Nana buffer just about anything, such as jump, blizzard, and roll (which is that is used to perform the Nut combo).",
             "blizz confirms": "Kill Confirms out of a synced blizzard freeze: https://twitter.com/techyCoder81/status/1119463888410562560",
             "cheer cancel": "You can buffer certain options for nana as popo's grab is coming out but before it actually lands. This is called cheer cancel, and the easiest method is to press down right before you input a standing grab or initial dash grab. Better video coming soon. https://twitter.com/v23God/status/1118746540468776960\nSee also: DCC, SCC",
-            "DCC": "Dash Cheer Cancel. This is when you perform a cheer cancel out of your initial dash. See also: cheer cancel, SCC",
-            "SCC": "Standing Cheer Cancel. This is when you perform a cheer cancel while standing. See also: cheer cancel, DCC"
+            "dcc": "Dash Cheer Cancel. This is when you perform a cheer cancel out of your initial dash. See also: cheer cancel, SCC",
+            "scc": "Standing Cheer Cancel. This is when you perform a cheer cancel while standing. See also: cheer cancel, DCC"
         },
         "data": {
             "name": "Ice Climbers",
