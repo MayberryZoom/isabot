@@ -81,10 +81,7 @@
             "asa": "An aSA is an Aerial Spin Attack. When aerial, Spin Attack is a multi-hit move that acts as a KO move. It can kill off the side, and its main setup is off of a Bomb.",
             "soft toss": "A soft toss is where you toss a bomb that does not explode upon hitting the ground, but rather does a little bounce and then sits there, as an item, until it explodes. This is performed by simply tossing a bomb with no directional input in front of you. To soft toss behind you, you can press tilt stick behind you, if you have the cstick set to tilt. This can be useful for a number of reasons. Our relatively short bomb timer can remain as a threat to players who are not actively keeping up with its explosion timer. In addition, if you space yourself perfectly, you can soft toss a bomb such that it bounces right off the edge of the stage, and then falls almost straight down, which can sometimes stage spike.",
             "rr": "The hitbox on Young Link's Boomerang when it starts to return to him. The Returning Boomerang hitbox has set knockback and is an excellent pressure and combo tool. Applies to all Links.",
-            "hitboxes": "Hixboxes: https://www.youtube.com/watch?v=UgNBwLvWhW8",
-            "cheer cancel": "You can buffer certain options for nana as popo's grab is coming out but before it actually lands. This is called cheer cancel, and the easiest method is to press down slightly before you input a standing grab or initial dash grab. Better video coming soon. https://twitter.com/v23God/status/1118746540468776960\nSee also: DCC, SCC",
-            "DCC": "Dash Cheer Cancel. This is when you perform a cheer cancel out of your initial dash. See also: cheer cancel, SCC",
-            "SCC": "Standing Cheer Cancel. This is when you perform a cheer cancel while standing. See also: cheer cancel, DCC"
+            "hitboxes": "Hixboxes: https://www.youtube.com/watch?v=UgNBwLvWhW8"
         },
         "data": {
             "name": "Young Link",
@@ -137,7 +134,10 @@
             "hitboxes": "https://youtu.be/rjf-8i44DgY",
             "notation": "__**Ice Climbers combo notation:**__\n**Fair** - this is a synced Fair, performed by both climbers\n**(Fair)** - this is a desynced Fair, performed by Nana (secondary climber) only\n**[Fair]** - this is a desynced Fair, performed by Popo [primary climber] only\n**DThrow** - this is a synced, cheered DThrow\n**[DThrow]** - this is a desynced, cheerless DThrow\nUsing arrows between components (DThrow > Uair) is helpful but not necessary. Use them to convey a sense of timing, where arrows represent inputs that are not performed almost simultaneously.",
             "dthrow desync": "When you do a synced, cheered dthrow, you can buffer an option for Nana that Popo will not read in a 3 frame window, after Nana's cheer. This means that you can dthrow with Popo, and have Nana buffer just about anything, such as jump, blizzard, and roll (which is that is used to perform the Nut combo).",
-            "blizz confirms": "Kill Confirms out of a synced blizzard freeze: https://twitter.com/techyCoder81/status/1119463888410562560"
+            "blizz confirms": "Kill Confirms out of a synced blizzard freeze: https://twitter.com/techyCoder81/status/1119463888410562560",
+            "cheer cancel": "You can buffer certain options for nana as popo's grab is coming out but before it actually lands. This is called cheer cancel, and the easiest method is to press down slightly before you input a standing grab or initial dash grab. Better video coming soon. https://twitter.com/v23God/status/1118746540468776960\nSee also: DCC, SCC",
+            "DCC": "Dash Cheer Cancel. This is when you perform a cheer cancel out of your initial dash. See also: cheer cancel, SCC",
+            "SCC": "Standing Cheer Cancel. This is when you perform a cheer cancel while standing. See also: cheer cancel, DCC"
         },
         "data": {
             "name": "Ice Climbers",
