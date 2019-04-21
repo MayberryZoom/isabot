@@ -135,9 +135,9 @@
             "notation": "__**Ice Climbers combo notation:**__\n**Fair** - this is a synced Fair, performed by both climbers\n**(Fair)** - this is a desynced Fair, performed by Nana (secondary climber) only\n**[Fair]** - this is a desynced Fair, performed by Popo [primary climber] only\n**DThrow** - this is a synced, cheered DThrow\n**[DThrow]** - this is a desynced, cheerless DThrow\nUsing arrows between components (DThrow > Uair) is helpful but not necessary. Use them to convey a sense of timing, where arrows represent inputs that are not performed almost simultaneously.",
             "dthrow desync": "When you do a synced, cheered dthrow, you can buffer an option for Nana that Popo will not read in a 3 frame window, after Nana's cheer. This means that you can dthrow with Popo, and have Nana buffer just about anything, such as jump, blizzard, and roll (which is that is used to perform the Nut combo).",
             "blizz confirms": "Kill Confirms out of a synced blizzard freeze: https://twitter.com/techyCoder81/status/1119463888410562560",
-            "cheer cancel": "You can buffer certain options for nana as popo's grab is coming out but before it actually lands. This is called cheer cancel, and the easiest method is to press down right before you input a standing grab or initial dash grab. Better video coming soon. https://twitter.com/v23God/status/1118746540468776960\nSee also: DCC, SCC",
-            "dcc": "Dash Cheer Cancel. This is when you perform a cheer cancel out of your initial dash. See also: cheer cancel, SCC",
-            "scc": "Standing Cheer Cancel. This is when you perform a cheer cancel while standing. See also: cheer cancel, DCC"
+            "cheer cancel": "You can buffer certain options for nana as popo's grab is coming out but before it actually lands. This is called cheer cancel, and the easiest method is to press down right before you input a standing grab or initial dash grab. Better video coming soon. https://www.youtube.com/watch?v=m-NKjph9fFI&feature=youtu.be",
+            "dcc": "Dash Cheer Cancel. This is when you perform a cheer cancel out of your initial dash. https://www.youtube.com/watch?v=m-NKjph9fFI&feature=youtu.be\nSee also: cheer cancel, SCC",
+            "scc": "Standing Cheer Cancel. This is when you perform a cheer cancel while standing. https://www.youtube.com/watch?v=m-NKjph9fFI&feature=youtu.be\nSee also: cheer cancel, DCC"
         },
         "data": {
             "name": "Ice Climbers",
