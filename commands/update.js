@@ -18,11 +18,11 @@ module.exports = {
 				.catch((e) => reject(e));
 			}
 			else {
-				msg.channel.send('Rebooting...')
+				await msg.channel.send('Rebooting...')
 				.then(resolve())
 				.catch((e) => reject(e));
+				process.exit(0);
 			}
-			process.exit(0);
 		});
 	}
 };

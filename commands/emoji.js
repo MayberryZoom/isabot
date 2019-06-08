@@ -22,7 +22,8 @@ module.exports = {
                 embed.addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST', true)
                     .addField('Guild', e.guild.name, true);
 
-                if (e.guild.me.hasPermission('MANAGE_EMOJIS')) {
+                const me = e.guild.fetchMember(client.user.id);
+                if (me.hasPermission('MANAGE_EMOJIS')) {
                     const u = await e.fetchAuthor();
                     embed.addField('Created By', u.tag, true);
                 }
