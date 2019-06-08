@@ -1,42 +1,37 @@
+const { prefix } = require('../config.json');
+
 module.exports = {
 	name: 'help',
 	aliases: ['h'],
 	description: 'DMs the help message! If you provide a command as an argument, it will show you an in-depth description of it.',
-	aliases: ['commands'],
+	aliases: ['commands', 'h'],
 	usage: '<command>',
-	arguments: 'Any command',
     execute(msg, args) {
-		const commandName = args.join(' ');
+		return new Promise((resolve, reject) => {
+			const commandsf = client.commands.filter(c => !c.hidden);
+			const cmdName = args.join(' ').toLowerCase();
 
-		const { commands } = msg.client;
-		const commandList = commands.filter(command => !command.hidden);
-		const commandNames = commandList.map(command => command.name);
+			if (!args.length) {
+				const toSend = commandsf.map(cmd => '``' + cmd.name + '`` - ' + cmd.description);
+				return msg.author.send('List of commands:\n\n' + toSend.join('\n'), { split: true })
+				.then(msg.channel.send("I've sent you a list of my commands! <:isaHeyyy:490255578061602828>"))
+				.then(resolve('Sent ' + msg.author.tag + ' a list of commands'))
+				.catch((e) => reject(e))
+			}
 
-        if (!args.length) {
-			const toSend = commandList.map(command => '``' + command.name + '`` - ' + command.description);
-			return msg.author.send('List of commands:\n\n' + toSend.join('\n'), { split: true })
-			.then(() => {
-				if (msg.channel.type === 'dm') {
-					sendLog('Sent a DM to ' + msg.author.tag + ' with a list of commands from their DMs');
-					return;
-				}
-				sendLog('Sent a DM to ' + msg.author.tag + ' with a list of commands from ' + msg.guild.name);
-			})
-			.catch(error => {
-				sendLog(`Could not send help DM to ${msg.author.tag}.\n`, error);
-				msg.reply('it seems like I can\'t DM you! Do you have DMs disabled?');
-			});
-		}
-		else if (commandNames.includes(commandName)) {
-			const { prefix } = require('../config.json');
-			const embed = new Discord.RichEmbed() .setTitle(prefix + commandName) .setColor('0xCF2BCF') .addField('Description', commandList.get(commandName).description) .addField('Usage', prefix + commandName + ' ' + commandList.get(commandName).usage) .addField('Valid arguments', commandList.get(commandName).arguments);
-			msg.channel.send(embed);
-			if (msg.channel.type === 'dm') {
-                sendLog(msg.author.tag + ' got help for \'' + commandName + '\' in their DMs');
-                return;
-            }
-			sendLog(msg.author.tag + ' got help for \'' + commandName + '\' in ' + msg.guild.name);
-		}
-		else { msg.channel.send('That\'s not a command!'); }
+			const command = commandsf.get(cmdName) || commandsf.find(cmd => cmd.aliases && cmd.aliases.includes(cmdName));
+
+			if (command) {
+				const embed = new Discord.RichEmbed() .setTitle(prefix + command.name) .setColor('0xCF2BCF') .addField('Description', command.description) .addField('Aliases', command.aliases.join(', '), true) .addField('Usage', '`' + prefix + command.name + ' ' + command.usage + '`', true);
+				return msg.channel.send(embed)
+				.then(resolve(msg.author.tag + ' got help for `' + command.name + '`'))
+				.catch((e) => reject(e));
+			}
+			else {
+				return msg.channel.send('That\'s not a command!')
+				.then(resolve())
+				.catch((e) => reject(e));
+			}
+		});
     }
 };

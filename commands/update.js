@@ -7,19 +7,22 @@ module.exports = {
 	aliases: ['restart', 'reboot'],
 	description: 'Updates and restarts me. Owner only!',
 	usage: '',
-	arguments: 'None',
 	hidden: true,
-	async execute(msg) {
-		if (!ownerIDs.includes(msg.author.id)) {
-			return msg.channel.send('Only the bot owners can use this command!');
-		}
-		const { err, stdout } = await execAsync('git fetch --all && git reset --hard origin/master');
-		if (err) {
-			return msg.channel.send(err.message, { code: '', split: { char: '\n' } });
-		}
-		else {
-			await msg.channel.send('Rebooting...');
-		}
-		process.exit(0);
+	ownerOnly: true,
+	execute(msg) {
+		return new Promise(async (resolve, reject) => {
+			const { err, stdout } = await execAsync('git fetch --all && git reset --hard origin/master');
+			if (err) {
+				return msg.channel.send(err.message, { code: '', split: { char: '\n' } })
+				.then(resolve())
+				.catch((e) => reject(e));
+			}
+			else {
+				msg.channel.send('Rebooting...')
+				.then(resolve())
+				.catch((e) => reject(e));
+			}
+			process.exit(0);
+		});
 	}
 };

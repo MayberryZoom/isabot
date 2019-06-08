@@ -9,8 +9,6 @@ module.exports = {
     usage: '',
     // Specifies if the command must have an argument
     args: false,
-    // Specifies the command's arguments. Used in the help command.
-    arguments: '',
     // Specifies if the command is hidden from >help
     hidden: false,
     // Specifies if the command is enabled in DMs
@@ -18,6 +16,10 @@ module.exports = {
     dmDisabled: 0,
     // Array of guild IDs this is exclusive to
     guilds: [],
+    // Permissions required by the bot to execute this command
+    botPermissions: [],
+    // Permissions required by the user to execute this command
+    userPermissions: [],
     // Command itself
     execute(msg, args) {
 

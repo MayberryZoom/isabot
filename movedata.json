@@ -1,6 +1,6 @@
 {
     "isabelle": {
-        "color": "0xCF2BCF",
+        "color": "0xF3EE51",
         "stats": {
             "weight": {
                 "keys": ["weight"],
@@ -25,100 +25,6 @@
                 "name": "Air Speed",
                 "value": "1.02, more than Villy by 0.033",
                 "rank": "49th"
-            }
-        },
-        "moves": {
-            "jab": {
-                "metadata": {
-                    "keys": ["jab"],
-                    "name": "Jab"
-                },
-                "movedata": {
-                    "general": {
-                        "iasa": "13",
-                        "faf": "20",
-                        "landing": null,
-                        "autocancel": null
-                    },
-                    "1": {
-                        "name": null,
-                        "frames": "3 - 4",
-                        "ssafety": "-14",
-                        "bdamage": "2%",
-                        "vdamage": "2.4%",
-                        "angle": "361°",
-                        "bkb": "~41",
-                        "kbg": "~38"
-                    }
-                }
-            },
-            "ftilt": {
-                "metadata": {
-                    "keys": ["ftilt"],
-                    "name": "FTilt"
-                },
-                "movedata": {
-                    "general": {
-                        "iasa": null,
-                        "faf": "37",
-                        "landing": null,
-                        "autocancel": null
-                    },
-                    "1": {
-                        "name": null,
-                        "frames": "8",
-                        "ssafety": "-20",
-                        "bdamage": "9%",
-                        "vdamage": "10.8%",
-                        "angle": "Horizontal",
-                        "bkb": "?",
-                        "kbg": "?"
-                    }
-                }
-            },
-            "fair": {
-                "metadata": {
-                    "keys": ["fair"],
-                    "name": "FAir"
-                },
-                "movedata": {
-                    "general": {
-                        "iasa": null,
-                        "faf": "40",
-                        "landing": "14",
-                        "autocancel": null
-                    },
-                    "1": {
-                        "name": "Clean",
-                        "frames": "10 - 12",
-                        "ssafety": "-14",
-                        "bdamage": "7%",
-                        "vdamage": "8.4%",
-                        "angle": "Horizontal",
-                        "bkb": "?",
-                        "kbg": "?"
-                    },
-                    "2": {
-                        "name": "Mid",
-                        "frames": "13 - 18",
-                        "ssafety": "-14",
-                        "bdamage": "4%",
-                        "vdamage": "4.8%",
-                        "angle": null,
-                        "bkb": "?",
-                        "kbg": "?"
-                    },
-                    "3": {
-                        "name": "Late",
-                        "frames": "19  - 23",
-                        "ssafety": "-14",
-                        "bdamage": "2.5%",
-                        "vdamage": "3%",
-                        "angle": null,
-                        "bkb": "?",
-                        "kbg": "?"
-                    }
-                }
             }
         }
     },
@@ -167,8 +73,7 @@
                 "value": "0.1",
                 "rank": "9th, tied with Pikachu, Mr. Game & Watch, Falco, and Ness"
             }
-        },
-        "moves": {}
+        }
     },
     "snake": {
         "color": "0x12536C",
@@ -209,7 +114,6 @@
                 "value": "2.768",
                 "rank": "22nd"
             }
-        },
-        "moves": {}
+        }
     }
 }

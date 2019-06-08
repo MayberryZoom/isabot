@@ -4,35 +4,43 @@ module.exports = {
     description: 'Purges a certain amount of messages. Requires the manage messages permission.',
     args: true,
     usage: '<limit>',
-    arguments: 'An integer between 1 and 100',
-    execute(msg, args) {        
-		if (msg.channel.type === 'dm') {
-			return msg.channel.send('That command is not available in DMs.');
-        }
+    dmDisabled: 1,
+/*    botPermissions: ['MANAGE_MESSAGES'],
+    userPermissions: ['MANAGE_MESSAGES'],*/
+    execute(msg, args) {
+        return new Promise(async (resolve, reject) => {
+            const me = await msg.guild.fetchMember(client.user.id).catch((e) => reject(e));
+            if (!msg.channel.permissionsFor(me).has('MANAGE_MESSAGES')) return msg.channel.send('I don\'t have the `MANAGE_MESSAGES` permission!').then(resolve()).catch((e) => reject(e));
 
-        if (msg.channel.permissionsFor(msg.member).has('MANAGE_MESSAGES')) {
-            const amount = parseInt(args[0]);
-            if (!args.length) {
-                return msg.channel.send('Please provide an argument!');
-            }
-            else if (typeof(amount) !== 'number') {
-                msg.channel.send('Please enter a number!');
-            }
-            else if (amount < 1 || amount > 100) {
-                msg.channel.send('Please enter an integer between the limit! (1 - 100)')
-            }
-            else if (amount === 1) {
-                sendLog(msg.author.tag + ' is purging 1 message in ' + msg.guild.name + '.');
-                msg.channel.bulkDelete(2, true);
+            const user = await msg.guild.fetchMember(msg.author.id).catch((e) => reject(e));
+            if (msg.channel.permissionsFor(user).has('MANAGE_MESSAGES')) {
+                const amount = parseInt(args[0]);
+                if (isNaN(amount)) {
+                    msg.channel.send('Please enter a number!')
+                    .then(resolve())
+                    .catch((e) => reject(e));
+                }
+                else if (amount < 1 || amount > 100) {
+                    msg.channel.send('Please enter an integer between the limit! (1 - 100)')
+                    .then(resolve())
+                    .catch((e) => reject(e));
+                }
+                else if (amount === 1) {
+                    msg.channel.bulkDelete(2, true)
+                    .then(resolve(msg.author.tag + ' purged 1 message in ' + msg.guild.name + '.'))
+                    .catch((e) => reject(e));
+                }
+                else {
+                    msg.delete().then(msg.channel.bulkDelete(args[0], true))
+                    .then(resolve(msg.author.tag + ' purged ' + args[0] + ' messages in ' + msg.guild.name + '.'))
+                    .catch((e) => reject(e));
+                }
             }
             else {
-                sendLog(msg.author.tag + ' is purging ' + args[0] + ' messages in ' + msg.guild.name + '.');
-                msg.delete().then(() => { msg.channel.bulkDelete(args[0], true) });
+                msg.channel.send('You must have the `MANAGE_MESSAGES` permission to use this command!')
+                .then(resolve(msg.author.tag + ' tried to purge ' + args[0] + ' messages but failed in ' + msg.guild.name))
+                .catch((e) => reject(e));
             }
-        }
-        else {
-            msg.channel.send('You must have the ``MANAGE_MESSAGES`` permission to use this command!');
-            sendLog(msg.author.tag + ' tried to purge ' + args[0] + ' messages but failed in ' + msg.guild.name);
-        }
+        });
     }
 };
