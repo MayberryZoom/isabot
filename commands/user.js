@@ -3,6 +3,7 @@ const conversions = require('../conversions.js');
 module.exports = {
     name: 'user',
     aliases: ['member', 'u'],
+    usage: '<user>',
     description: 'Shows information about a user. If no arguments are provided, information will be shown about yourself.',
     execute: (msg, args) => {
         return new Promise(async (resolve, reject) => {
@@ -12,19 +13,13 @@ module.exports = {
             .catch(e => reject(e));
             const m = await conversions.userToMember(u, msg);
 
-            const createTime = u.createdAt;
-            const joinTime = m.joinedAt;
-            const min = createTime.getMinutes().toString().length === 1 ? '0' + createTime.getMinutes() : createTime.getMinutes();
-            const sec = createTime.getSeconds().toString().length === 1 ? '0' + createTime.getSeconds() : createTime.getSeconds();
-            const minJ = joinTime.getMinutes().toString().length === 1 ? '0' + joinTime.getMinutes() : joinTime.getMinutes();
-            const secJ = joinTime.getSeconds().toString().length === 1 ? '0' + joinTime.getSeconds() : joinTime.getSeconds();
             const roles = m.roles.map(r => r.toString()); roles.shift();
             const embed = new Discord.RichEmbed()
                 .setTitle(u.tag + ' (' + u.id + ')')
                 .setColor(m.displayHexColor)
                 .setThumbnail(u.avatarURL)
-                .addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST')
-                .addField('Guild Join Date', joinTime.toDateString() + ' at ' + joinTime.getHours() + ':' + minJ + ':' + secJ + ', EST')
+                .addField('Created At', u.createdAt.toUTCString())
+                .addField('Guild Join Date', m.joinedAt.toUTCString())
                 .addField('Nickname', m.nickname ? m.nickname : 'None', true)
                 .addField('Game', m.user.presence.game? m.user.presence.game : 'None', true)
                 .addField(`Roles (${roles.length})`, !roles.length ? 'No roles' : roles.join(', '));

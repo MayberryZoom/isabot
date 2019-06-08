@@ -35,7 +35,8 @@ new Response('source', 'I\'m open source, so you can see all my code here!\n<htt
 new Response('pet', 'Please don\'t pet me! <:Isabadday:490255608923291660>', `msg.author.tag + ' petted me (and I didn\'t like it!)'`, '', ['pat', 'headpat'], true, 2, ['489939754021027841']);
 new Response('panda', '<https://goo.gl/A1XpL9>', undefined, 'Gets a cute panda picture', [], true, 2, ['489939754021027841']);
 new Response('hug', '*hugs* <:isaGlee:513917768568143882>', `msg.author.tag + ' hugged me in ' + msg.guild.name`, '', ['embrace', 'huggle', 'huggles'], true);
-new Response('hitboxes', 'https://youtu.be/rjf-8i44DgY', undefined, 'Gets the Ice Climbers\' hitboxes', ['hitbox'], true, true, ['456665686966796299']);
+new Response('hitboxes', 'https://youtu.be/rjf-8i44DgY', undefined, 'Gets the Ice Climbers\' hitboxes.', ['hitbox'], true, 2, ['456665686966796299']);
+new Response('changelog', "- Added this command\n- Separated `>info`  into 4 commands (`>channel`, `>emoji`, `>server`, `>user`), also improved all 4 commands\n- Overhauled `>define`. Now get terms by using `>define` without arguments. Also allows you to access any character's terms from any server.\n- Added some Wii Fit Trainer terms\n- Removed `>data`'s move component and made it only grab stats using `>stats` (still unfinished :<)\n- Fixed some bugs with `>purge`\n- Added alises to a command's message with `>help`, also made it possible to access a command's help with its aliases\n- New fun command, `>cursed`\n- Improved `>convert`\n- Various performance optimizations", undefined, 'List of my recent changes!', ['changes']);
 
 client.on('message', async msg => {
 	if (!msg.content.startsWith(prefix || client.user.toString()) || msg.author.bot) return;
@@ -75,7 +76,7 @@ client.on('message', async msg => {
 	}
 
 	command.execute(msg, args)
-	.then(log => { log ? sendLog(log) : sendLog(`${msg.author.tag} used \`${command.name}\`.`); })
+	.then(log => { log ? sendLog(log) : sendLog(`${msg.author.tag} used \`${command.name}\` in ${msg.guild.name}.`); })
 	.catch(error => {
 		sendLog(
 			'<@&513807019048828929> there was an error!\n\nCommand:```' + command.name +

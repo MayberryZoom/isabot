@@ -7,16 +7,14 @@ module.exports = {
             const conversions = require('../conversions.js');
 
             const c = await conversions.parseChannel(msg, args.join(' '));
-            const createTime = c.createdAt;
-            const min = createTime.getMinutes().toString().length === 1 ? '0' + createTime.getMinutes() : createTime.getMinutes();
-            const sec = createTime.getSeconds().toString().length === 1 ? '0' + createTime.getSeconds() : createTime.getSeconds();
+            const g = await msg.guild.fetchMembers();
             const embed = new Discord.RichEmbed()
                 .setTitle(c.name + ' (' + c.id + ')' + (c.nsfw ? ' ⚠' : ''))
                 .setColor('0xCF2BCF')
-                .addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST')
+                .addField('Created At', c.createdAt.toUTCString())
                 .addField('Category', c.parent.name, true)
-                .addField('Channel Topic', c.topic ? cTopic = c.topic : cTopic = 'No channel topic', true)
-                .addField('Members', c.members.size, true);
+                .addField('Channel Topic', c.topic ? c.topic : 'No channel topic', true)
+                .addField('Members', g.channels.get(c.id).members.size, true);
             msg.channel.send(embed)
             .then(resolve(msg.author.tag + ' got info for ' + c.name + ' in ' + msg.guild.name))
             .catch((e) => reject(e));

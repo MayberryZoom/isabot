@@ -176,6 +176,10 @@ module.exports = {
     { definition:
        'To Glyroid, first plant a lloid. Then, upon dashing, press down B while still holding in the direction of the dash, it will make Isabelle slide a considerable distance while doing the animation of manually triggering the mine. You cannot B-Reverse this. Found by Vinylic.',
       character: 'Isabelle' },
+   'eviction notice': {
+      definition: '(Thre,ad): https://twitter.com/Spexx_/status/1072250448537677824',
+      character: 'Isabelle'
+   },
  
     // young link
    c4:

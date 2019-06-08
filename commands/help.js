@@ -22,7 +22,12 @@ module.exports = {
 			const command = commandsf.get(cmdName) || commandsf.find(cmd => cmd.aliases && cmd.aliases.includes(cmdName));
 
 			if (command) {
-				const embed = new Discord.RichEmbed() .setTitle(prefix + command.name) .setColor('0xCF2BCF') .addField('Description', command.description) .addField('Aliases', command.aliases.join(', '), true) .addField('Usage', '`' + prefix + command.name + ' ' + command.usage + '`', true);
+				const embed = new Discord.RichEmbed()
+					.setTitle(prefix + command.name)
+					.setColor('0xCF2BCF')
+					.addField('Description', command.description)
+					.addField('Usage', '`' + prefix + command.name + ' ' + command.usage + '`', true);
+				if (command.aliases) embed.addField('Aliases', command.aliases.join(', '), true)
 				return msg.channel.send(embed)
 				.then(resolve(msg.author.tag + ' got help for `' + command.name + '`'))
 				.catch((e) => reject(e));

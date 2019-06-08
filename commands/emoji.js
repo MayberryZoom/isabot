@@ -16,10 +16,7 @@ module.exports = {
                 .setColor(color);
 
             if (e.guild) {
-                const createTime = e.createdAt;
-                const min = createTime.getMinutes().toString().length === 1 ? '0' + createTime.getMinutes() : createTime.getMinutes();
-                const sec = createTime.getSeconds().toString().length === 1 ? '0' + createTime.getSeconds() : createTime.getSeconds();
-                embed.addField('Created At', createTime.toDateString() + ' at ' + createTime.getHours() + ':' + min + ':' + sec + ', EST', true)
+                embed.addField('Created At', e.createdAt.toUTCString(), true)
                     .addField('Guild', e.guild.name, true);
 
                 const me = await e.guild.fetchMember(client.user.id);

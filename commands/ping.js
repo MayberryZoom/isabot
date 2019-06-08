@@ -6,8 +6,8 @@ module.exports = {
         return new Promise((resolve, reject) => {
             const time = Date.now();
             msg.channel.send('Pinging...')
-            .then((msg) => {
-                msg.edit('Ping: ' + (time - msg.createdTimestamp + 'ms'))
+            .then((m) => {
+                m.edit('Ping: ' + (time - msg.createdTimestamp + 'ms'))
             })
             .then(resolve(msg.author.tag + ' got my ping. It was ' + (time - msg.createdTimestamp + 'ms.')))
             .catch((e) => reject(e));
