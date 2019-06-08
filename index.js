@@ -34,7 +34,8 @@ new Response('invite', 'Invite me to your server!\n<https://discordapp.com/oauth
 new Response('source', 'I\'m open source, so you can see all my code here!\n<https://github.com/Spexxtacular/isabot>', `msg.author.tag + ' got my source code!'`, 'Gets the link to my source code on GitHub!', []);
 new Response('pet', 'Please don\'t pet me! <:Isabadday:490255608923291660>', `msg.author.tag + ' petted me (and I didn\'t like it!)'`, '', ['pat', 'headpat'], true, 2, ['489939754021027841']);
 new Response('panda', '<https://goo.gl/A1XpL9>', undefined, 'Gets a cute panda picture', [], true, 2, ['489939754021027841']);
-new Response ('hug', '*hugs* <:isaGlee:513917768568143882>', `msg.author.tag + ' hugged me in ' + msg.guild.name`, '', ['embrace', 'huggle', 'huggles'], true);
+new Response('hug', '*hugs* <:isaGlee:513917768568143882>', `msg.author.tag + ' hugged me in ' + msg.guild.name`, '', ['embrace', 'huggle', 'huggles'], true);
+new Response('hitboxes', 'https://youtu.be/rjf-8i44DgY', undefined, 'Gets the Ice Climbers\' hitboxes', ['hitbox'], true, true, ['456665686966796299']);
 
 client.on('message', async msg => {
 	if (!msg.content.startsWith(prefix || client.user.toString()) || msg.author.bot) return;
