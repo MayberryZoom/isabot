@@ -16,7 +16,7 @@ let characters = {
 module.exports = {
     name: 'define',
     aliases: ['d', 'term'],
-    description: 'Defines a Smash term. A list of terms can be found using the ``terms`` command.',
+    description: 'Defines a Smash term. If used without an argument, a list of terms will be provided.',
     usage: '<term>',
     execute(msg, args) {
         return new Promise((resolve, reject) => {
