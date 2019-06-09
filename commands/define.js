@@ -1,7 +1,6 @@
 const terms = require('../terms.js');
 const termNames = Object.keys(terms);
 const generalNames = termNames.filter(t => terms[t].character === 'General');
-let termsEmbed = new Discord.RichEmbed() .setTitle('Terms for `>define`') .setColor('0xCF2BCF') .addField('General Terms', generalNames.join(', '));
 
 let characters = {
     '489939754021027841': 'Isabelle',
@@ -25,6 +24,7 @@ module.exports = {
             if (currentChar) charNames = termNames.filter(t => terms[t].character === currentChar);
 
             if (!args.length) {
+                let termsEmbed = new Discord.RichEmbed() .setTitle('Terms for `>define`') .setColor('0xCF2BCF') .addField('General Terms', generalNames.join(', '));
                 if (charNames) termsEmbed .addField (currentChar + ' Terms', charNames.join(', '));
                 return msg.channel.send(termsEmbed);
             }
