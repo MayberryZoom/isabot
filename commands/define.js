@@ -2,7 +2,7 @@ const terms = require('../terms.js');
 const termNames = Object.keys(terms);
 const generalNames = termNames.filter(t => terms[t].character === 'General');
 
-let characters = {
+const characters = {
     '489939754021027841': 'Isabelle',
     '456487360624984076': 'Young Link',
     '421442870864510976': 'Pichu',
@@ -14,7 +14,7 @@ let characters = {
 
 module.exports = {
     name: 'define',
-    aliases: ['d', 'term', 'terms'],
+    aliases: ['d'],
     description: 'Defines a Smash term. If used without an argument, a list of terms will be provided.',
     usage: '<term>',
     execute(msg, args) {

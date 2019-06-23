@@ -18,7 +18,7 @@ module.exports = {
      character: 'General' },
   jmu:
    { definition:
-      'A JMU is a __J__oint __M__atch__U__p. During one, 2 Smashcords come together to discuss the MU between their characters and is a great opportunity to learn! Each Smashcord does it differently - some structure theirs on a schedule and some don\'t, some end theirs with a crew battle and some don\'t, etc.',
+      'A JMU is a __J__oint __M__atch__U__p. During one, 2 Smashcords come together to discuss the MU between their characters. It\'s a great opportunity to learn! Each Smashcord does it differently - some structure theirs on a schedule and some don\'t, some end theirs with a crew battle and some don\'t, etc.',
      character: 'General' },
   oos:
    { definition:
@@ -230,11 +230,11 @@ module.exports = {
    // isabelle
   'rod naming system':
    { definition:
-      'Similar to DK\'s cargo throws, it is a system to easily abbreviate the 8 fishing rod throws. All abbreviations consist of 4 letters.\n\n1) A or G - Stands for aerial or grounded\n2) R - Stands for rod\n3) F or B or U or D - Stands for the throw direction, like normal throws\n4) T - Stands for throw\n\nFor example, a grounded rod forward throw would be GRFT.',
+      '(Uncommon) Similar to DK\'s cargo throws, it is a system to easily abbreviate the 8 fishing rod throws. All abbreviations consist of 4 letters.\n\n1) A or G - Stands for aerial or grounded\n2) R - Stands for rod\n3) F or B or U or D - Stands for the throw direction, like normal throws\n4) T - Stands for throw\n\nFor example, a grounded rod forward throw would be GRFT.',
      character: 'Isabelle' },
   glyroid:
    { definition:
-      'To Glyroid, first plant a lloid. Then, upon dashing, press down B while still holding in the direction of the dash, it will make Isabelle slide a considerable distance while doing the animation of manually triggering the mine. You cannot B-Reverse this. Found by Vinylic.',
+      'To Glyroid, first plant a lloid. Then, upon dashing, press down B and then hold in the direction of the dash, it will make Isabelle slide a considerable distance while doing the animation of manually triggering the mine. You cannot B-Reverse this. Found by Vinylic.',
      character: 'Isabelle' },
   'eviction notice':
    { definition:
@@ -336,10 +336,6 @@ module.exports = {
      'skid turn':
      { definition:
         'Skid turn desync aka "Soymilk": Dash in one direction until you enter run, then let go of the control stick to enter skid, then move the control stick in the opposite direction so Popo enters turn, and quickly interrupt the turning animation with any grounded move. If done correctly, Popo will perform the move and Nana will perform a short dash forward.\n\nTechnical details: Just like with other run turn desynchs, you have to input the move before Nana goes into turn so that she interprets the turn input as a dash forward. Out of skid, dash interrupts as early as frame 8. So you have to skid, turn, and then input a move at least 8 frames after the original skid, but less than 6 frames after the turn',
-       character: 'Ice Climbers' },
-    tom:
-     { definition:
-        'This is my tom. There are many like it, but this one is mine.\nMy tom is my best friend. It is my life. I must master it as I must master my life.\nWithout me, my tom is useless. Without my tom, I am useless. I must fire my tom true. I must shoot straighter than my enemy who is trying to kill me. I must shoot him before he shoots me. I will ...\nBefore God, I swear this creed. My tom and myself are the defenders of my country. We are the masters of our enemy. We are the saviors of my life.\nSo be it, until there is no enemy, but peace. Amen.',
        character: 'Ice Climbers' },
     gimfinite:
      { definition: 'https://youtu.be/BCovjXUecDw',

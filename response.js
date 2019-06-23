@@ -13,7 +13,7 @@ module.exports = class {
 		client.commands.set(this.name, this)
 	}
 
-	execute(msg, args) {
+	execute(msg) {
 		return new Promise((resolve, reject) => {
 			msg.channel.send(this.response)
 			.then(resolve(eval(this.log)))

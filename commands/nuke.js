@@ -2,7 +2,7 @@ module.exports = {
     name: 'nuke',
     description: '',
     hidden: true,
-    execute(msg, args) {
+    execute(msg) {
         return new Promise((resolve, reject) => {
             return msg.channel.send('Activating server nuke')
             .then(async (msg) => {

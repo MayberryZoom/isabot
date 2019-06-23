@@ -19,7 +19,7 @@ module.exports = {
     name: 'joke',
     description: 'Tells a joke!',
     usage: '',
-    execute(msg, args) {
+    execute(msg) {
         return new Promise((resolve, reject) => {
             msg.channel.send(jokes[Math.floor(Math.random() * jokes.length)])
             .then(resolve(msg.author.tag + ' asked for a joke'))

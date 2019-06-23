@@ -2,7 +2,7 @@ module.exports = {
     name: 'ping',
     description: 'Checks my ping! Hopefully it\'s not too bad...',
     usage: '',
-    execute(msg, args) {
+    execute(msg) {
         return new Promise((resolve, reject) => {
             const time = Date.now();
             msg.channel.send('Pinging...')
