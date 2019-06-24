@@ -19,13 +19,13 @@ module.exports = {
     usage: '<term>',
     execute(msg, args) {
         return new Promise((resolve, reject) => {
-            const currentChar = characters[msg.guild.id];
+            const currentChar = msg.channel.type === 'dm' ? undefined : characters[msg.guild.id];
             let charNames;
             if (currentChar) charNames = termNames.filter(t => terms[t].character === currentChar);
 
             if (!args.length) {
-                let termsEmbed = new Discord.RichEmbed() .setTitle('Terms for `>define`') .setColor('0xCF2BCF') .addField('General Terms', generalNames.join(', '));
-                if (charNames) termsEmbed .addField (currentChar + ' Terms', charNames.join(', '));
+                let termsEmbed = new Discord.RichEmbed() .setTitle('Terms for `>define`') .setColor('0xCF2BCF') .addField('General Terms', generalNames.sort().join(', '));
+                if (charNames) termsEmbed .addField (currentChar + ' Terms', charNames.sort().join(', '));
                 return msg.channel.send(termsEmbed);
             }
 

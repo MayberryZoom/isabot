@@ -15,17 +15,17 @@ const characters = new Discord.Collection(
 
 module.exports = {
     name: 'terms',
-    description: 'Gets a character\'s terms',
+    description: 'Gets a character\'s terms.',
     usage: '<character>',
     execute(msg, args) {
         return new Promise((resolve, reject) => {
             if (!args.length) {
-                const currentChar = characters[msg.guild.id];
+                const currentChar = msg.channel.type === 'dm' ? undefined : characters[msg.guild.id];
                 let charNames;
                 if (currentChar) charNames = termNames.filter(t => terms[t].character === currentChar);
 
-                let termsEmbed = new Discord.RichEmbed() .setTitle('Terms for `>define`') .setColor('0xCF2BCF') .addField('General Terms', generalNames.join(', '));
-                if (charNames) termsEmbed .addField (currentChar + ' Terms', charNames.join(', '));
+                let termsEmbed = new Discord.RichEmbed() .setTitle('Terms for `>define`') .setColor('0xCF2BCF') .addField('General Terms', generalNames.sort().join(', '));
+                if (charNames) termsEmbed .addField (currentChar + ' Terms', charNames.sort().join(', '));
                 return msg.channel.send(termsEmbed);
             }
 
@@ -33,7 +33,7 @@ module.exports = {
             const character = characters.find(c => c.includes(argsFixed));
             const charTerms = termNames.filter(t => terms[t].character.toLowerCase()  === character[0]);
             if (charTerms.length !== 0) {
-                msg.channel.send(new Discord.RichEmbed() .setTitle(terms[charTerms[0]].character + ' Terms') .setColor('0xCF2BCF') .setDescription(charTerms.join(', ')))
+                msg.channel.send(new Discord.RichEmbed() .setTitle(terms[charTerms[0]].character + ' Terms') .setColor('0xCF2BCF') .setDescription(charTerms.sort().join(', ')))
                 .then(resolve())
                 .catch(e => reject(e));
             }
