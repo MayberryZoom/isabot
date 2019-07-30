@@ -42,6 +42,42 @@ module.exports = [
         file: "https://i.imgur.com/F55AjwH.gif"
     },
     {
+        move: "neutral aerial",
+        aliases: ['neutral air', 'nair'],
+        character: "pichu",
+        file: "https://i.imgur.com/XoEQM6o.gif"
+    },
+    {
+        move: "forward aerial",
+        aliases: ['forward air', 'fair'],
+        character: "pichu",
+        file: "https://i.imgur.com/T6QQF8u.gif"
+    },
+    {
+        move: "back aerial",
+        aliases: ['back air', 'bair'],
+        character: "pichu",
+        file: "https://i.imgur.com/XRTBMKO.gif"
+    },
+    {
+        move: "up aerial",
+        aliases: ['up air', 'uair', 'upair'],
+        character: "pichu",
+        file: "https://i.imgur.com/lgXS6jp.gif"
+    },
+    {
+        move: "down aerial",
+        aliases: ['down air', 'dair'],
+        character: "pichu",
+        file: "https://i.imgur.com/jAs9Vgy.gif"
+    },
+    {
+        move: "landing down aerial",
+        aliases: ['landing down air', 'landing dair'],
+        character: "pichu",
+        file: "https://i.imgur.com/6IFPS0F.png"
+    },
+    {
         move: "side special",
         aliases: ['sideb', 'side b', 'skull bash'],
         character: "pichu",
