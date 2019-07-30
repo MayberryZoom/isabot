@@ -36,7 +36,7 @@ new Response('panda', '<https://goo.gl/A1XpL9>', undefined, 'Gets a cute panda p
 new Response('hug', '*hugs* <:isaGlee:513917768568143882>', `msg.author.tag + ' hugged me in ' + msg.guild.name`, '', ['embrace', 'huggle', 'huggles'], true);
 new Response('hitboxes', 'https://youtu.be/rjf-8i44DgY', undefined, 'Gets the Ice Climbers\' hitboxes.', ['hitbox'], true, 2, ['456665686966796299']);
 new Response('tom', 'This is my tom. There are many like it, but this one is mine.\nMy tom is my best friend. It is my life. I must master it as I must master my life.\nWithout me, my tom is useless. Without my tom, I am useless. I must fire my tom true. I must shoot straighter than my enemy who is trying to kill me. I must shoot him before he shoots me. I will ...\nBefore God, I swear this creed. My tom and myself are the defenders of my country. We are the masters of our enemy. We are the saviors of my life.\nSo be it, until there is no enemy, but peace. Amen.', undefined, 'tom', [], true, 2, ['456665686966796299']);
-new Response('changelog', "- Minor improvements\n-Fixed bug where `>user` would not update a user's pfp\n- Added `>hitbox`, which can grab a move's hitbox. Currently missing many moves!", undefined, 'List of my recent changes!', ['changes']);
+new Response('changelog', "- Minor improvements\n- Fixed bug where `>user` would not update a user's pfp\n- Added `>hitbox`, which can grab a move's hitbox. Currently missing many moves!", undefined, 'List of my recent changes!', ['changes']);
 
 client.on('message', async msg => {
 	if (!msg.content.startsWith(prefix || client.user.toString()) || msg.author.bot) return;
