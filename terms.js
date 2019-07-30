@@ -226,6 +226,10 @@ module.exports = {
    { definition:
       'Hitlag (also known as a freeze frame) is a period of time after being hit that you, an opponent or both freeze in place. Hitlag can vary between moves or part of certain moves, such as electricity which causes 1.5x what the hitlag would normally be. For more info, read here: <https://www.ssbwiki.com/Freeze_frame>.\nNot to be confused with: hitstun',
      character: 'General' },
+   'blast zone': {
+      definition: "The blast zone is the area of the stage where you will be immediately KO'd if you touch it. It always surrounds the entire stage, off (but not far from) the visible screen. Different stages have differently sized blast zones, affecting a character's kill percents. This is most notable in stages with higher/lower top blast zones, aka ceilings. Other stage elements which can instantly KO you such as lava are not considered blast zones.",
+      character: 'General'
+   },
 
    // isabelle
   'rod naming system':
@@ -279,7 +283,7 @@ module.exports = {
      character: 'Ice Climbers' },
   nut:
    { definition:
-      'Developed by **Iggy**\ndthrow > (roll) > ftilt > (sideb) > grab-dthrow > (roll) > nair > (sideb) > grab-dthrow > (fair).\n*Note: Nut is its own thing. It cannot be truly extended into a 0-death or many other things. Links embedded for space reasons. \n<https://youtu.be/KmbBGbuMTZI?t=27>* \n<https://twitter.com/v23God/status/1096525627094650880>',
+      'Developed by **Iggy**\ndthrow > (roll) > ftilt > (sideb) > grab-dthrow > (roll) > nair > (sideb) > grab-dthrow > (fair).\n*Note: Nut is its own thing. It cannot be truly extended into a 0-death or many other things. Links not embedded for space reasons. \n<https://youtu.be/KmbBGbuMTZI?t=27>* \n<https://twitter.com/v23God/status/1096525627094650880>',
      character: 'Ice Climbers' },
   yeet:
    { definition:

@@ -2,4 +2,3 @@ node_modules/
 token.json
 package-lock.json
 commands/flair.js
-config.json

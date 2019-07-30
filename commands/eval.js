@@ -8,7 +8,8 @@ const roleEval = (guild, roleID) => {
 const guildList = () => {
 	return 'Guild List\n\n' + client.guilds.map(g => g.id + ': ' + g.name).join("\n");
 }
-const { inspect } = require("util");
+const { inspect } = require('util');
+const { prefix } = require('../config.json');
 
 module.exports = {
 	name: 'eval',
@@ -19,7 +20,7 @@ module.exports = {
 	async execute(msg, args) {
 		try {
 			let evaled = await new Promise(resolve => resolve(eval(args.join(' '))));
-			if (msg.content.toLowerCase().startsWith('>evalr')) return;
+			if (msg.content.toLowerCase().startsWith(prefix + 'evalr')) return;
 
 			if (typeof evaled !== "string")
 			evaled = inspect(evaled);

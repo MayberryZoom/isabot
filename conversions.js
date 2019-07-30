@@ -1,4 +1,5 @@
 module.exports = {
+    // converts a user mention to a user object
     userFromMention: (mention, msg) => {
         const matches = mention.match(/^<@!?(\d+)>$/);
         if (matches) {
@@ -8,6 +9,7 @@ module.exports = {
         else { return null; }
     },
 
+    // converts a role mention to a role object
     roleFromMention: (mention, msg) => {
         const matches = mention.match(/^<@&(\d+)>$/);
         if (matches) {
@@ -17,6 +19,7 @@ module.exports = {
         else { return null; }
     },
     
+    // converts a channel mention to a channel object
     channelFromMention: (mention, msg) => {
         const matches = mention.match(/^<#(\d+)>$/);
         if (matches) {
@@ -26,13 +29,16 @@ module.exports = {
         else { return null; }
     },
 
+    // converts a user object to a member object for the given message's guild
     userToMember: (u, msg) => {
         return new Promise(async (resolve) => {
-            await msg.guild.fetchMembers();
-            resolve(msg.guild.members.get(u.id));
+            const g = await msg.guild.fetchMembers();
+            resolve(g.members.get(u.id));
         });
     },
 
+    // parses a user object from a string. works for ids, names, and user mention.
+    // if string is undefined returns the message's author
     parseUser: (msg, string) => {
         return new Promise(async (resolve) => {
             const conversions = require('./conversions.js');
@@ -56,6 +62,8 @@ module.exports = {
         });
     },
 
+    // parses a channel object from a string. works for ids, names, and channel mention.
+    // if string is undefined, returns the message's channel
     parseChannel: (msg, string) => {
         return new Promise(async (resolve) => {
             const conversions = require('./conversions.js');
@@ -78,6 +86,8 @@ module.exports = {
         });
     },
 
+    // parses an emoji object from Emoji.toString(). if the client doesn't have
+    // the emoji, tries its best to fill properties and create a pseudo-emoji object
     parseEmoji: (client, string) => {
         return new Promise(async (resolve) => {
             const matches = string.match(/^<(a)?:(\w+):(\d+)>$/);
