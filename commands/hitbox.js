@@ -19,7 +19,7 @@ module.exports = {
             const hitbox = filtered.find(x => x.move === move || x.aliases.includes(move));
             if (hitbox) {
                 const formatted = capitalize(`${hitbox.character} ${hitbox.move}`, [' ', '(', '/']);
-                let embed = new Discord.RichEmbed() .setTitle(formatted) .setImage(hitbox.file) .setColor(colors[character]) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
+                let embed = new Discord.RichEmbed() .setTitle(formatted) .setImage(hitbox.file) .setColor(colors[character.toLowerCase()]) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
                 if (hitbox.comment) embed.setDescription(hitbox.comment);
                 msg.channel.send(embed)
                 .then(resolve())
