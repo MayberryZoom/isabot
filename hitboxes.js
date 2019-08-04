@@ -109,13 +109,13 @@ module.exports = [
     },
     {
         move: 'dash attack (clean)',
-        aliases: ['clean da', 'dash attack', 'da', 'dash attack clean', 'da clean'],
+        aliases: ['clean da', 'dash attack', 'da', 'dash attack clean', 'da clean', 'pot', 'pot clean', 'clean pot'],
         character: 'isabelle',
         file: 'https://i.imgur.com/P7OfDcG.png'
     },
     {
         move: 'dash attack (late)',
-        aliases: ['dash attack late', 'da late', 'dash attack late', 'late da', 'da2', 'da 2'],
+        aliases: ['dash attack late', 'da late', 'dash attack late', 'late da', 'da2', 'da 2', 'pot late', 'late pot'],
         character: 'isabelle',
         file: 'https://i.imgur.com/En2FAsN.png'
     },
@@ -213,7 +213,8 @@ module.exports = [
         move: 'up smash',
         aliases: ['usmash', 'stop'],
         character: 'isabelle',
-        file: 'https://i.imgur.com/XzWoBux.gif'
+        file: 'https://i.imgur.com/XzWoBux.gif',
+        comment: 'Apparently missing USmash 2'
     },
     {
         move: 'up tilt',
