@@ -22,7 +22,9 @@ module.exports = {
                 .addField('Guild Join Date', m.joinedAt.toUTCString())
                 .addField('Nickname', m.nickname ? m.nickname : 'None', true)
                 .addField('Game', m.user.presence.game? m.user.presence.game : 'None', true)
-                .addField(`Roles (${roles.length})`, !roles.length ? 'No roles' : roles.join(', '));
+                .addField(`Roles (${roles.length})`, !roles.length ? 'No roles' : roles.join(', '))
+                .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
+                .setTimestamp();
             if (u.id === client.user.id) embed.addField('Other Information', 'The best! <:isaThonk:537312545682489345>');
             console.log(embed);
             return msg.channel.send(embed)

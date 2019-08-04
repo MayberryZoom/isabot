@@ -26,7 +26,9 @@ module.exports = {
 					.setTitle(prefix + command.name)
 					.setColor('0xCF2BCF')
 					.addField('Description', command.description)
-					.addField('Usage', '`' + prefix + command.name + ' ' + command.usage + '`', true);
+					.addField('Usage', '`' + prefix + command.name + ' ' + command.usage + '`', true)
+					.setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
+					.setTimestamp();
 				if (command.aliases) embed.addField('Aliases', command.aliases.join(', '), true)
 				return msg.channel.send(embed)
 				.then(resolve(msg.author.tag + ' got help for `' + command.name + '`'))

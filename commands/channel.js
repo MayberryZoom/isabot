@@ -14,7 +14,9 @@ module.exports = {
                 .addField('Created At', c.createdAt.toUTCString())
                 .addField('Category', c.parent.name, true)
                 .addField('Channel Topic', c.topic ? c.topic : 'No channel topic', true)
-                .addField('Members', g.channels.get(c.id).members.size, true);
+                .addField('Members', g.channels.get(c.id).members.size, true)
+                .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
+                .setTimestamp();
             msg.channel.send(embed)
             .then(resolve(msg.author.tag + ' got info for ' + c.name + ' in ' + msg.guild.name))
             .catch((e) => reject(e));

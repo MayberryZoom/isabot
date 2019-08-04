@@ -17,8 +17,8 @@ module.exports = {
             const move = args.join(' ').toLowerCase();
             const hitbox = filtered.find(x => x.move === move || x.aliases.includes(move));
             if (hitbox) {
-                const formatted = (`${hitbox.character} ${hitbox.move}`).split(' ').map(x => x.charAt(0).toUpperCase() + x.substring(1)).join(' ');
-                msg.channel.send(new Discord.RichEmbed() .setTitle(formatted) .setImage(hitbox.file) .setColor(colors[character]))
+                const formatted = capitalize(`${hitbox.character} ${hitbox.move}`, [' ', '(', '/']);
+                msg.channel.send(new Discord.RichEmbed() .setTitle(formatted) .setImage(hitbox.file) .setColor(colors[character]) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp())
                 .then(resolve())
                 .catch(e => reject(e));
             }

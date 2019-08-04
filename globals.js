@@ -14,5 +14,11 @@ module.exports = {
         return new Promise(resolve => {
             setTimeout(resolve, ms)
         })
+    },
+
+    capitalize: (text, split) => {
+        let newText = text;
+        split.forEach(x => newText = newText.split(x).map(y => y.charAt(0).toUpperCase() + y.substring(1)).join(x));
+        return newText;
     }
 };

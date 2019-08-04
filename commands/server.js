@@ -13,7 +13,9 @@ module.exports = {
                 .addField('Owner', g.owner.user.tag, true)
                 .addField('Channels', `📁 ${g.channels.filter(c => c.type === 'category').size}\u2001⌨ ${g.channels.filter(c => c.type === 'text').size}\u2001🔊 ${g.channels.filter(c => c.type === 'voice').size}`, true)
                 .addField('Members', `${g.memberCount} (👤 ${g.members.filter(m => !m.user.bot).size}\u2001🤖 ${g.members.filter(m => m.user.bot).size})`, true)
-                .addField('Roles', g.roles.size - 1, true);
+                .addField('Roles', g.roles.size - 1, true)
+                .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
+                .setTimestamp();
             return msg.channel.send(embed)
             .then(resolve(msg.author.tag + ' got ' + msg.guild.name + '\'s info'))
             .catch((e) => reject(e));

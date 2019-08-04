@@ -21,7 +21,7 @@ module.exports = {
 
                 if (Object.keys(characterStats).includes(args[1])) {
                     const stat = char.stats[characterStats[args[1]]];
-                    const embed = new Discord.RichEmbed() .setColor(char.color) .addField(stat.name, 'Value: ' + stat.value + '\nRank: ' + stat.rank);
+                    const embed = new Discord.RichEmbed() .setColor(char.color) .addField(stat.name, 'Value: ' + stat.value + '\nRank: ' + stat.rank) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
                     return msg.channel.send(embed)
                     .then(resolve())
                     .catch((e) => reject(e));

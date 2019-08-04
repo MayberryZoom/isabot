@@ -13,7 +13,9 @@ module.exports = {
 
             let embed = new Discord.RichEmbed()
                 .setTitle(`:${e.name}: (${e.id})`)
-                .setColor(color);
+                .setColor(color)
+                .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
+                .setTimestamp();
 
             if (e.guild) {
                 embed.addField('Created At', e.createdAt.toUTCString(), true)
