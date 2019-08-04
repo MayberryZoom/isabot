@@ -1,6 +1,7 @@
 const hitboxes = require('../hitboxes.js');
 const colors = {
-    pichu: '0xebdb34'
+    pichu: '0xebdb34',
+    isabelle: '0xF3EE51'
 }
 
 module.exports = {
