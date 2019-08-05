@@ -234,7 +234,7 @@ module.exports = {
    // isabelle
   'rod naming system':
    { definition:
-      '(Uncommon) Similar to DK\'s cargo throws, it is a system to easily abbreviate the 8 fishing rod throws. All abbreviations consist of 4 letters.\n\n1) A or G - Stands for aerial or grounded\n2) R - Stands for rod\n3) F or B or U or D - Stands for the throw direction, like normal throws\n4) T - Stands for throw\n\nFor example, a grounded rod forward throw would be GRFT.',
+      '[Uncommon] Similar to DK\'s cargo throws, it is a system to easily abbreviate the 8 fishing rod throws. All abbreviations consist of 4 letters.\n\n1) A or G - Stands for aerial or grounded\n2) R - Stands for rod\n3) F or B or U or D - Stands for the throw direction, like normal throws\n4) T - Stands for throw\n\nFor example, a grounded rod forward throw would be GRFT.',
      character: 'Isabelle' },
   glyroid:
    { definition:
@@ -270,7 +270,7 @@ module.exports = {
    // pichu
   deletchu:
    { definition:
-      'UAir -> Fastfall Thunder, a kill confirm that can be set up with multiple options. Works on all DI, but the UAir has to be crossed up on DI out.',
+      '[Archaic] UAir -> Fastfall Thunder, a kill confirm that can be set up with multiple options. Works on all DI, but the UAir has to be crossed up on DI out.',
      character: 'Pichu' },
   'lightning loops':
    { definition:

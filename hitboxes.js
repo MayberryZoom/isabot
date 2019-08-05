@@ -9,7 +9,7 @@ module.exports = [
         move: 'forward tilt',
         aliases: ['ftilt'],
         character: 'pichu',
-        file: 'https://i.imgur.com/EzeLmp1.gif'
+        file: 'https://i.imgur.com/569xtrr.gif'
     },
     {
         move: 'down tilt',
@@ -22,6 +22,12 @@ module.exports = [
         aliases: ['utilt'],
         character: 'pichu',
         file: 'https://i.imgur.com/28AJgrl.gif'
+    },
+    {
+        move: 'dash attack',
+        aliases: ['da'],
+        character: 'pichu',
+        file: 'https://imgur.com/5B6lgsP'
     },
     {
         move: 'forward smash',
@@ -221,5 +227,29 @@ module.exports = [
         aliases: ['utilt'],
         character: 'isabelle',
         file: 'https://i.imgur.com/x9Ajomm.gif'
-    }
+    },
+    {
+        move: 'neutral aerial',
+        aliases: ['neutral air', 'nair'],
+        character: 'isabelle',
+        file: 'https://i.imgur.com/ykQGnmC.gif'
+    }/*,
+    {
+        move: 'up taunt',
+        aliases: ['up taunt'],
+        character: 'isabelle',
+        file: ''
+    },
+    {
+        move: 'side taunt',
+        aliases: ['up taunt'],
+        character: 'isabelle',
+        file: ''
+    },
+    {
+        move: 'down taunt',
+        aliases: ['up taunt'],
+        character: 'isabelle',
+        file: ''
+    }*/
 ];

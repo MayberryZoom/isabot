@@ -26,7 +26,6 @@ module.exports = {
                 .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
                 .setTimestamp();
             if (u.id === client.user.id) embed.addField('Other Information', 'The best! <:isaThonk:537312545682489345>');
-            console.log(embed);
             return msg.channel.send(embed)
             .then(resolve(msg.author.tag + ' got info for ' + u.tag + ' in ' + msg.guild.name))
             .catch((e) => reject(e));
