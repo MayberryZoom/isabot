@@ -27,7 +27,7 @@ module.exports = [
         move: 'dash attack',
         aliases: ['da'],
         character: 'pichu',
-        file: 'https://imgur.com/5B6lgsP'
+        file: 'https://i.imgur.com/5B6lgsP.gif'
     },
     {
         move: 'forward smash',
@@ -232,6 +232,7 @@ module.exports = [
         move: 'neutral aerial',
         aliases: ['neutral air', 'nair'],
         character: 'isabelle',
+        comment: 'Does not properly display sourspot/late hit. Sourspot is actually both hitboxes on frames 8-25.',
         file: 'https://i.imgur.com/ykQGnmC.gif'
     }/*,
     {
