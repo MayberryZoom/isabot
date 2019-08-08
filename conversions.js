@@ -51,13 +51,13 @@ module.exports = {
             else if (msg.mentions.users.array().length !== 0) {
                 user = conversions.userFromMention(string, msg);
             }
-            else if (!isNaN(parseInt(string))) {
+            else if (/^\d+$/.test(string)) {
                 let x = msg.guild.members.get(string);
                 if (x) user = x.user;
             }
             else {
                 string = string.toLowerCase();
-                let x = msg.guild.members.find(m => m.user.username.toLowerCase() === string || m.user.tag.toLowerCase() === string || m.nickname === string);
+                let x = msg.guild.members.find(m => m.user.username.toLowerCase() === string || m.user.tag.toLowerCase() === string || m.displayName.toLowerCase() === string);
                 if (x) user = x.user;
             }
             resolve(user);
