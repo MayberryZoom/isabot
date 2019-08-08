@@ -10,7 +10,7 @@ module.exports = {
             const g = await msg.guild.fetchMembers();
             const embed = new Discord.RichEmbed()
                 .setTitle(c.name + ' (' + c.id + ')' + (c.nsfw ? ' ⚠' : ''))
-                .setColor('0xCF2BCF')
+                .setColor(isabotColor)
                 .addField('Created At', c.createdAt.toUTCString())
                 .addField('Category', c.parent.name, true)
                 .addField('Channel Topic', c.topic ? c.topic : 'No channel topic', true)

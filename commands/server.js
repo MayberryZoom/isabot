@@ -7,7 +7,7 @@ module.exports = {
             const g = await msg.guild.fetchMembers();
             const embed = new Discord.RichEmbed()
                 .setTitle(g.name + ' (' + g.id + ')')
-                .setColor(color)
+                .setColor(isabotColor)
                 .setThumbnail(g.iconURL)
                 .addField('Created At', g.createdAt.toUTCString())
                 .addField('Owner', g.owner.user.tag, true)

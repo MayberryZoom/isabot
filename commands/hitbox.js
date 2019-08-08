@@ -17,10 +17,14 @@ module.exports = {
     execute(msg, args) {
         return new Promise((resolve, reject) => {
             if (args[0] === 'credit' || args[0] === 'credits') return msg.channel.send(credits).then(resolve()).catch(e => reject(e));
-            let character = args.shift(); character = characters.get(character) || characters.find(c => c.aliases.includes(character));
+
+            let character = args.shift().toLowerCase(); character = characters.get(character) || characters.find(c => c.aliases.includes(character));
+            if (character === null) return msg.channel.send('That character is either not valid, or not included yet!').then(resolve()).catch(e => reject(e));
+
             const filtered = hitboxes.filter(x => x.character === character.name);
             if (!filtered.length) return msg.channel.send('That character is either not valid, or not included yet!').then(resolve()).catch(e => reject(e));
             if (!args[0]) return msg.channel.send('Please provide a move!').then(resolve()).catch(e => reject(e));
+            
             const move = args.join(' ').toLowerCase();
             const hitbox = filtered.find(x => x.move === move || x.aliases.includes(move));
             if (hitbox) {

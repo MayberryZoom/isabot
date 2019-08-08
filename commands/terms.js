@@ -24,7 +24,7 @@ module.exports = {
                 let charNames;
                 if (currentChar) charNames = termNames.filter(t => terms[t].character === currentChar);
 
-                let termsEmbed = new Discord.RichEmbed() .setTitle('Terms for `>define`') .setColor('0xCF2BCF') .addField('General Terms', generalNames.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
+                let termsEmbed = new Discord.RichEmbed() .setTitle('Terms for `>define`') .setColor(isabotColor) .addField('General Terms', generalNames.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
                 if (charNames) termsEmbed .addField(currentChar + ' Terms', charNames.sort().join(', '));
                 return msg.channel.send(termsEmbed);
             }
@@ -37,7 +37,7 @@ module.exports = {
             .catch(e => reject(e));
 
             const charTerms = termNames.filter(t => terms[t].character.toLowerCase()  === character.aliases[0]);
-            msg.channel.send(new Discord.RichEmbed() .setTitle(terms[charTerms[0]].character + ' Terms') .setColor('0xCF2BCF') .setDescription(charTerms.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp())
+            msg.channel.send(new Discord.RichEmbed() .setTitle(terms[charTerms[0]].character + ' Terms') .setColor(isabotColor) .setDescription(charTerms.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp())
             .then(resolve())
             .catch(e => reject(e));
         });

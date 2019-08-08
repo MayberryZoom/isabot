@@ -13,7 +13,7 @@ module.exports = {
 
             let embed = new Discord.RichEmbed()
                 .setTitle(`:${e.name}: (${e.id})`)
-                .setColor(color)
+                .setColor(isabotColor)
                 .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
                 .setTimestamp();
 

@@ -24,7 +24,7 @@ module.exports = {
 			if (command) {
 				const embed = new Discord.RichEmbed()
 					.setTitle(prefix + command.name)
-					.setColor('0xCF2BCF')
+					.setColor(isabotColor)
 					.addField('Description', command.description)
 					.addField('Usage', '`' + prefix + command.name + ' ' + command.usage + '`', true)
 					.setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)

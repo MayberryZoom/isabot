@@ -8,9 +8,7 @@ module.exports = {
     execute: (msg, args) => {
         return new Promise(async (resolve, reject) => {
             const u = await conversions.parseUser(msg, args.join(' '));
-            if (!u) return msg.channel.send('Please provide a valid argument!')
-            .then(resolve(msg.author.tag + ' didn\'t provide an argument for user'))
-            .catch(e => reject(e));
+            if (!u) return msg.channel.send('Please provide a valid argument!').then(resolve(msg.author.tag + ' didn\'t provide an argument for user')).catch(e => reject(e));
             const m = await conversions.userToMember(u, msg);
 
             const roles = m.roles.map(r => r.toString()); roles.shift();
