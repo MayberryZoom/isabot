@@ -15,11 +15,7 @@ module.exports = {
             const user = await msg.guild.fetchMember(msg.author.id).catch((e) => reject(e));
             if (msg.channel.permissionsFor(user).has('MANAGE_MESSAGES')) {
                 const amount = parseInt(args[0]);
-                if (isNaN(amount)) {
-                    msg.channel.send('Please enter a number!')
-                    .then(resolve())
-                    .catch((e) => reject(e));
-                }
+                if (isNaN(amount)) msg.channel.send('Please enter a number!').then(resolve()).catch((e) => reject(e));
                 else if (amount < 1 || amount > 100) {
                     msg.channel.send('Please enter an integer between the limit! (1 - 100)')
                     .then(resolve())
@@ -31,7 +27,8 @@ module.exports = {
                     .catch((e) => reject(e));
                 }
                 else {
-                    msg.delete().then(msg.channel.bulkDelete(args[0], true))
+                    await msg.delete()
+                    msg.channel.bulkDelete(args[0], true)
                     .then(resolve(msg.author.tag + ' purged ' + args[0] + ' messages in ' + msg.guild.name + '.'))
                     .catch((e) => reject(e));
                 }
