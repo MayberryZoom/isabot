@@ -234,7 +234,7 @@ module.exports = [
         character: 'isabelle',
         comment: 'Does not properly display sourspot/late hit. Sourspot is actually both hitboxes on frames 8-25.',
         file: 'https://i.imgur.com/ykQGnmC.gif'
-    }/*,
+    },/*,
     {
         move: 'up taunt',
         aliases: ['up taunt'],
@@ -252,229 +252,217 @@ module.exports = [
         aliases: ['up taunt'],
         character: 'isabelle',
         file: ''
-    }*/
+    },*/
     {
         move: 'jab 1',
-        aliases: [],
+        aliases: ['jab1', 'jab'],
         character: 'piranha plant',
-        file: 'https://imgur.com/2OO67hY'
+        file: 'https://i.imgur.com/2OO67hY.gif'
     },
     {
         move: 'jab 2',
-        aliases: [],
+        aliases: ['jab2'],
         character: 'piranha plant',
-        file: 'https://imgur.com/SksOmrC'
+        file: 'https://i.imgur.com/SksOmrC.gif'
     },
     {
         move: 'jab 3',
-        aliases: [],
+        aliases: ['jab3'],
         character: 'piranha plant',
-        file: 'https://imgur.com/NafXoID'
+        file: 'https://i.imgur.com/NafXoID.gif'
     },
     {
         move: 'rapid jab',
-        aliases: [],
+        aliases: ['rapidjab'],
         character: 'piranha plant',
-        file: 'https://imgur.com/EsTslV3'
+        file: 'https://i.imgur.com/EsTslV3.gif'
     },
     {
         move: 'rapid jab finisher',
         aliases: ['jab finisher'],
         character: 'piranha plant',
-        file: 'https://imgur.com/lbHLwRG'
+        file: 'https://i.imgur.com/lbHLwRG.gif'
     },
     {
         move: 'dash attack',
         aliases: ['da'],
         character: 'piranha plant',
-        file: 'https://imgur.com/0lNPpmi'
+        file: 'https://i.imgur.com/0lNPpmi.gif'
     },
     {
         move: 'forward tilt 1',
-        aliases: ['ftilt 1'],
+        aliases: ['ftilt 1', 'ftilt1', 'ftilt'],
         character: 'piranha plant',
-        file: 'https://imgur.com/HS0rb1V'
+        file: 'https://i.imgur.com/HS0rb1V.gif'
     },
     {
         move: 'forward tilt 2',
-        aliases: ['ftilt 2'],
+        aliases: ['ftilt 2', 'ftilt2'],
         character: 'piranha plant',
-        file: 'https://imgur.com/PFV3BHm'
+        file: 'https://i.imgur.com/PFV3BHm.gif'
     },
     {
         move: 'up tilt',
         aliases: ['utilt'],
         character: 'piranha plant',
-        file: 'https://imgur.com/fOQafQO'
+        file: 'https://i.imgur.com/fOQafQO.gif'
     },
     {
         move: 'down tilt',
         aliases: ['dtilt'],
         character: 'piranha plant',
-        file: 'https://imgur.com/oLnVi6u'
+        file: 'https://i.imgur.com/oLnVi6u.gif'
     },
     {
         move: 'forward smash',
         aliases: ['fsmash'],
         character: 'piranha plant',
-        file: 'https://imgur.com/lR8cy6b'
+        file: 'https://i.imgur.com/lR8cy6b.gif'
     },
     {
         move: 'up smash',
         aliases: ['usmash'],
         character: 'piranha plant',
-        file: 'https://imgur.com/MX4GUGJ'
+        file: 'https://i.imgur.com/MX4GUGJ.gif'
     },
     {
         move: 'down smash',
         aliases: ['dsmash'],
         character: 'piranha plant',
-        file: 'https://imgur.com/eCN3EZY'
+        file: 'https://i.imgur.com/eCN3EZY.gif'
     },
     {
-        move: 'neutral air',
-        aliases: ['nair', 'neutral aerial'],
+        move: 'neutral aerial',
+        aliases: ['nair', 'neutral air'],
         character: 'piranha plant',
-        file: 'https://imgur.com/hiiV3pu'
+        file: 'https://i.imgur.com/hiiV3pu.gif'
     },
     {
-        move: 'forward air',
-        aliases: ['fair', 'forward aerial'],
+        move: 'forward aerial',
+        aliases: ['fair', 'forward air'],
         character: 'piranha plant',
-        file: 'https://imgur.com/8qr4V2D'
+        file: 'https://i.imgur.com/8qr4V2D.gif'
     },
     {
-        move: 'back air',
-        aliases: ['bair', 'back aerial'],
+        move: 'back aerial',
+        aliases: ['bair', 'back air'],
         character: 'piranha plant',
-        file: 'https://imgur.com/43tWPHX'
+        file: 'https://i.imgur.com/43tWPHX.gif'
     },
     {
-        move: 'up air',
-        aliases: ['uair', 'up aerial'],
+        move: 'up aerial',
+        aliases: ['uair', 'up air'],
         character: 'piranha plant',
-        file: 'https://imgur.com/0KNLspm'
+        file: 'https://i.imgur.com/0KNLspm.gif'
     },
     {
-        move: 'down air',
-        aliases: ['dair', 'down aerial'],
+        move: 'down aerial',
+        aliases: ['dair', 'down air'],
         character: 'piranha plant',
-        file: 'https://imgur.com/8wify9T'
-    },
-    {
-        move: 'down air',
-        aliases: ['dair', 'down aerial'],
-        character: 'piranha plant',
-        file: 'https://imgur.com/8wify9T'
+        file: 'https://i.imgur.com/8wify9T.gif'
     },
     {
         move: 'pummel',
         aliases: ['neutral throw'],
         character: 'piranha plant',
-        file: 'https://imgur.com/bC3R8eR'
+        file: 'https://i.imgur.com/bC3R8eR.gif'
     },
     {
         move: 'forward throw',
         aliases: ['fthrow'],
         character: 'piranha plant',
-        file: 'https://imgur.com/N7L0P7c'
+        file: 'https://i.imgur.com/N7L0P7c.gif'
     },
     {
         move: 'back throw',
         aliases: ['bthrow'],
         character: 'piranha plant',
-        comment: 'Does not  have a hitbox.'
-        file: 'https://imgur.com/eG4NsQx'
+        comment: 'Does not  have a hitbox.',
+        file: 'https://i.imgur.com/eG4NsQx.gif'
     },
     {
         move: 'up throw',
         aliases: ['uthrow'],
         character: 'piranha plant',
-        file: 'https://imgur.com/kFm9Ssf'
+        file: 'https://i.imgur.com/kFm9Ssf.gif'
     },
     {
         move: 'down throw',
         aliases: ['dthrow'],
         character: 'piranha plant',
-        file: 'https://imgur.com/CKBj5RN'
+        file: 'https://i.imgur.com/CKBj5RN.gif'
     },
     {
         move: 'neutral special',
         aliases: ['ptooie', 'god'],
         character: 'piranha plant',
-        file: 'https://imgur.com/GjxejXK'
+        file: 'https://i.imgur.com/GjxejXK.gif'
     },
     {
         move: 'side special',
         aliases: ['poisonbreath', 'poison'],
         character: 'piranha plant',
-        comment: 'Only windbox is available.'
-        file: 'https://imgur.com/Ar3mmPt'
+        comment: 'Only windbox is available.',
+        file: 'https://i.imgur.com/Ar3mmPt.gif'
     },
     {
         move: 'up special',
         aliases: ['piranhacopter', 'sicko mode'],
         character: 'piranha plant',
-        file: 'https://imgur.com/qgf7RYB'
+        file: 'https://i.imgur.com/qgf7RYB.gif'
     },
     {
         move: 'down special',
         aliases: ['long-stem strike', 'lss'],
         character: 'piranha plant',
-        file: 'https://imgur.com/dh7zu7W'
+        file: 'https://i.imgur.com/dh7zu7W.gif'
     },
     {
         move: 'standing grab',
         aliases: ['grab', 'grabs'],
         character: 'piranha plant',
-        file: 'https://imgur.com/vR2Jw1I'
+        file: 'https://i.imgur.com/vR2Jw1I.gif'
     },
     {
         move: 'dash grab',
         aliases: ['grabd'],
         character: 'piranha plant',
-        file: 'https://imgur.com/0q1wvpF'
+        file: 'https://i.imgur.com/0q1wvpF.gif'
     },
     {
         move: 'pivot grab',
         aliases: ['grabp'],
         character: 'piranha plant',
-        file: 'https://imgur.com/xPdUroa'
+        file: 'https://i.imgur.com/xPdUroa.gif'
     },
     {
         move: 'footstool attack',
         aliases: ['meme'],
         character: 'piranha plant',
-        file: 'https://imgur.com/dG8t8H9'
+        file: 'https://i.imgur.com/dG8t8H9.gif'
     },
     {
         move: 'getup attack up',
         aliases: [],
         character: 'piranha plant',
-        file: 'https://imgur.com/XOSQjfc'
+        file: 'https://i.imgur.com/XOSQjfc.gif'
     },
     {
         move: 'getup attack down',
         aliases: [],
         character: 'piranha plant',
-        file: 'https://imgur.com/42xZofz'
-    },
-    {
-        move: 'getup attack down',
-        aliases: [],
-        character: 'piranha plant',
-        file: 'https://imgur.com/42xZofz'
+        file: 'https://i.imgur.com/42xZofz.gif'
     },
     {
         move: 'ledge attack',
         aliases: [],
         character: 'piranha plant',
-        file: 'https://imgur.com/4DJD002'
+        file: 'https://i.imgur.com/4DJD002.gif'
     },
     {
         move: 'trip attack',
         aliases: [],
         character: 'piranha plant',
-        file: 'https://imgur.com/EXku7MQ'
+        file: 'https://i.imgur.com/EXku7MQ.gif'
     }
 ];
