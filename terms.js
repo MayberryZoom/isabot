@@ -230,6 +230,10 @@ module.exports = {
       definition: "The blast zone is the area of the stage where you will be immediately KO'd if you touch it. It always surrounds the entire stage, off (but not far from) the visible screen. Different stages have differently sized blast zones, affecting a character's kill percents. This is most notable in stages with higher/lower top blast zones, aka ceilings. Other stage elements which can instantly KO you such as lava are not considered blast zones.",
       character: 'General'
    },
+   'rcg': {
+      definition: "A Roll Cancel Grab (RCG) is a technique that allows characters to perform an extended version of their dash grab. It is performed by buffering a roll from an initial dash, and then cancelling the first few frames of the roll with an attack or grab input. While on certain characters the range gained is minimal, other characters burst forward a large distance, and can even travel through opponents. This can be used in a variation of this technique- the Roll Cancel Pivot Grab. It is the same input as a normal RCG, but after the grab, hold back to perform a pivot grab. Both of these are viable burst options for certain characters, such as Pichu.",
+      character: 'General'
+   },
 
    // isabelle
   'rod naming system':
