@@ -20,6 +20,7 @@ module.exports = {
 	async execute(msg, args) {
 		try {
 			let evaled = await new Promise(resolve => resolve(eval(args.join(' '))));
+			//let evaled = await new Promise(resolve => resolve(eval('(async () => {' + args.join(' ') + ' })()')));
 			if (msg.content.toLowerCase().startsWith(prefix + 'evalr')) return;
 
 			if (typeof evaled !== "string")
@@ -29,10 +30,9 @@ module.exports = {
 				split: true,
 				code: 'js',
 			});
-			if (msg.channel.type === 'dm') {
-                return sendLog(msg.author.tag + ' evaled \'' + args.join(' ') + '\' in their DMs');
-            }
-			sendLog(msg.author.tag + ' evaled \'' + args.join(' ') + '\' in ' + msg.guild.name);
+			return sendLog( msg.channel.type === 'dm' ?
+				msg.author.tag + ' evaled \'' + args.join(' ') + '\' in their DMs':
+				msg.author.tag + ' evaled \'' + args.join(' ') + '\' in ' + msg.guild.name);
 		} catch (err) {
 			msg.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
 		}
