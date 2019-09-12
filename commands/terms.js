@@ -21,21 +21,19 @@ module.exports = {
     execute(msg, args) {
         return new Promise((resolve, reject) => {
             if (!args.length) {
-                const currentChar = msg.channel.type === 'dm' ? undefined : characters.find(c => c.id === msg.guild.id).aliases[0];
+                let currentChar = msg.channel.type === 'dm' ? undefined : characters.find(c => c.id === msg.guild.id);
                 let charNames;
-                if (currentChar) charNames = termNames.filter(t => terms[t].character === currentChar);
+                if (currentChar) charNames = termNames.filter(t => terms[t].character === currentChar.aliases[0]);
 
                 let termsEmbed = new Discord.RichEmbed() .setTitle('Terms for `>define`') .setColor(isabotColor) .addField('General Terms', generalNames.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
-                if (charNames) termsEmbed .addField(currentChar + ' Terms', charNames.sort().join(', '));
-                return msg.channel.send(termsEmbed);
+                if (charNames && charNames.length) termsEmbed .addField(currentChar.aliases[0] + ' Terms', charNames.sort().join(', '));
+                return msg.channel.send(termsEmbed).then(resolve()).catch(e => reject(e));
             }
 
             const argsFixed = args.map(f => f.toLowerCase()).join(' ');
 
             const character = characters.find(c => c.aliases.includes(argsFixed));
-            if (character === null) msg.channel.send('That is not a valid character!')
-            .then(resolve())
-            .catch(e => reject(e));
+            if (character === null) msg.channel.send('That is not a valid character!').then(resolve()).catch(e => reject(e));
 
             const charTerms = termNames.filter(t => terms[t].character.toLowerCase()  === character.aliases[0]);
             msg.channel.send(new Discord.RichEmbed() .setTitle(terms[charTerms[0]].character + ' Terms') .setColor(isabotColor) .setDescription(charTerms.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp())
