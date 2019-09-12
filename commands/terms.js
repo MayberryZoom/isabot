@@ -1,6 +1,6 @@
 const terms = require('../terms.js');
 const termNames = Object.keys(terms);
-const generalNames = termNames.filter(t => terms[t].character === 'General');
+const generalNames = termNames.filter(t => terms[t].character === 'general');
 
 const characters = new Discord.Collection(
     [
@@ -23,10 +23,10 @@ module.exports = {
             if (!args.length) {
                 let currentChar = msg.channel.type === 'dm' ? undefined : characters.find(c => c.id === msg.guild.id);
                 let charNames;
-                if (currentChar) charNames = termNames.filter(t => terms[t].character === currentChar.aliases[0]);
+                if (currentChar) { currentChar = currentChar.aliases[0]; charNames = termNames.filter(t => terms[t].character === currentChar) }
 
                 let termsEmbed = new Discord.RichEmbed() .setTitle('Terms for `>define`') .setColor(isabotColor) .addField('General Terms', generalNames.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
-                if (charNames && charNames.length) termsEmbed .addField(currentChar.aliases[0] + ' Terms', charNames.sort().join(', '));
+                if (charNames && charNames.length) termsEmbed .addField(capitalize(currentChar, [' ']) + ' Terms', charNames.sort().join(', '));
                 return msg.channel.send(termsEmbed).then(resolve()).catch(e => reject(e));
             }
 
