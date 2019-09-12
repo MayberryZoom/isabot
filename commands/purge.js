@@ -5,6 +5,7 @@ module.exports = {
     args: true,
     usage: '<limit>',
     dmDisabled: 1,
+    category: 'mod',
 /*    botPermissions: ['MANAGE_MESSAGES'],
     userPermissions: ['MANAGE_MESSAGES'],*/
     execute(msg, args) {

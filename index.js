@@ -19,24 +19,12 @@ for (const [k, v] of Object.entries(globals)) global[k] = v;
 const { token } = require('./token.json');
 
 client.commands = new Discord.Collection();
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+global.commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
     client.commands.set(command.name, command);
 }
-
-// Response commands
-const Response = require('./response.js');
-new Response('hello', 'Hey there!', undefined, 'Makes me say "Hey there!"', ['hey', 'greetings', 'hi', 'what\'s', 'wassup', 'heyo', 'henlo', 'hiya', 'hoi', 'hewwo', 'oi', 'sup', 'yo', 'hola', 'whats', 'salut', 'ciao', 'salutations', 'bonjour']);
-new Response('invite', 'Invite me to your server!\n<https://discordapp.com/oauth2/authorize?&client_id=513515391155175424&scope=bot&permissions=67497025>\nJoin my server!\n' + serverLink, `msg.author.tag + ' got my invite link!'`, 'Gets the link to invite me!', ['join']);
-new Response('source', 'I\'m open source, so you can see all my code here!\n<https://github.com/Spexxtacular/isabot>', `msg.author.tag + ' got my source code!'`, 'Gets the link to my source code on GitHub!', []);
-new Response('pet', 'Please don\'t pet me! <:isaBadDay:562485951558057984>', `msg.author.tag + " pet me (and I didn't like it!)"`, '', ['pat', 'headpat'], true, 2, ['489939754021027841', '513806689787445261']);
-new Response('panda', '<https://goo.gl/A1XpL9>', undefined, 'Gets a cute panda picture', [], true, 2, ['489939754021027841']);
-new Response('hug', '*hugs* <:isaGlee:513917768568143882>', `msg.author.tag + ' hugged me in ' + msg.guild.name`, '', ['embrace', 'huggle', 'huggles'], true);
-new Response('hitboxes', 'https://youtu.be/rjf-8i44DgY', undefined, 'Gets the Ice Climbers\' hitboxes.', ['hitbox'], true, 2, ['456665686966796299']);
-new Response('tom', 'This is my tom. There are many like it, but this one is mine.\nMy tom is my best friend. It is my life. I must master it as I must master my life.\nWithout me, my tom is useless. Without my tom, I am useless. I must fire my tom true. I must shoot straighter than my enemy who is trying to kill me. I must shoot him before he shoots me. I will ...\nBefore God, I swear this creed. My tom and myself are the defenders of my country. We are the masters of our enemy. We are the saviors of my life.\nSo be it, until there is no enemy, but peace. Amen.', undefined, 'tom', [], true, 2, ['456665686966796299']);
-new Response('changelog', "- Minor improvements\n- Added `>hitbox`, which can grab a move's hitbox. Currently missing many moves!\n- Added aliases to `>terms`\n- Added a footer to embeds\n- Added `>avatar`", undefined, 'List of my recent changes!', ['changes']);
 
 client.on('message', async msg => {
 	if (!msg.content.startsWith(prefix || client.user.toString()) || msg.author.bot) return;
@@ -51,6 +39,13 @@ client.on('message', async msg => {
 	        || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 		if (!command) return;
 
+	if (command.args && !args.length) {
+		let reply = 'Please provide an argument!';
+		if (command.usage) reply += `\nThe proper usage is \`\`\`${prefix}${command.name} ${command.usage}\`\`\``;
+
+		return msg.channel.send(reply);
+	}
+
 	if (command.ownerOnly && !owners.includes(msg.author.id)) return msg.channel.send('Only the bot owners can use this command!');
 
 	if (command.dmDisabled && msg.channel.type === 'dm') {
@@ -63,16 +58,9 @@ client.on('message', async msg => {
 	}
 
 	if(command.guilds) {
-		if (!command.guilds.includes(msg.guild.id)) {
+		if (!command.guilds.includes(msg.guild.id) && !owners.includes(msg.author.id)) {
 			return;
 		}
-	}
-
-	if (command.args && !args.length) {
-		let reply = 'Please provide an argument!';
-		if (command.usage) reply += `\nThe proper usage is \`\`\`${prefix}${command.name} ${command.usage}\`\`\``;
-
-        return msg.channel.send(reply);
 	}
 
 	command.execute(msg, args)

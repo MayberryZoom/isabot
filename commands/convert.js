@@ -3,8 +3,8 @@ const multipliers = require('../multipliers.json');
 module.exports = {
     name: 'convert',
     aliases: ['c'],
-    description: 'Allows you convert damage values in SSBU. Use it without arguments for a more in depth description.',
-    usage: '',
+    description: 'Converts damage values in SSBU. Use it without arguments for a more in depth description.',
+    category: 'smash',
     execute(msg, args) {
         return new Promise((resolve, reject) => {
             const damage = isNaN(args[0]) ? Math.floor(args[2] * 1000) : Math.floor(args.shift() * 1000);

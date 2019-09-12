@@ -61,6 +61,7 @@ module.exports = {
     description: 'Compliments a user.',
     usage: '<user>',
     args: true,
+    category: 'fun',
     execute(msg, args) {
         return new Promise(async (resolve, reject) => {
             const user = await parseUser(msg, args.join(' '));

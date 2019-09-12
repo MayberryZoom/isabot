@@ -6,30 +6,37 @@ module.exports = {
 	description: 'DMs the help message! If you provide a command as an argument, it will show you an in-depth description of it.',
 	aliases: ['commands', 'h'],
 	usage: '<command>',
+	category: 'info',
     execute(msg, args) {
 		return new Promise((resolve, reject) => {
-			const commandsf = client.commands.filter(c => !c.hidden);
+			const commands = owners.includes(msg.author.id) ? client.commands : client.commands.filter(c => !c.hidden).filter(c => msg.channel.type !== 'dm' ? c.guilds ? c.guilds.includes(msg.guild.id) : true : !c.guilds );
+			commands.forEach(c => { if (!c.category) c.category = 'misc' });
 			const cmdName = args.join(' ').toLowerCase();
 
 			if (!args.length) {
-				const toSend = commandsf.map(cmd => '``' + cmd.name + '`` - ' + cmd.description);
-				return msg.author.send('List of commands:\n\n' + toSend.join('\n'), { split: true })
-				.then(msg.channel.send("I've sent you a list of my commands! <:isaHeyyy:490255578061602828>"))
+				let categories = [];
+				commands.map(c => { if (!categories.includes(c.category)) categories.push(c.category) });
+				let mapped = categories.map(x => `__${x.charAt(0).toUpperCase() + x.substring(1)} Commands__\n${commands.filter(c => c.category === x).map(c => c.name + ' - ' + c.description + (msg.channel.type !== 'dm' && c.guilds && !owners.includes(msg.author.id) ? ` (Exclusive to ${msg.guild.name}!)` : '') + (c.hidden ? ' (🔒)' : '')).sort().join('\n')}`);
+				return msg.author.send('List of commands:\n\n' + mapped.sort().join('\n\n'), { split: true })
+				.then(() => { if (msg.channel.type !== 'dm') msg.channel.send("I've sent you a list of my commands! <:isaHeyyy:490255578061602828>") })
 				.then(resolve('Sent ' + msg.author.tag + ' a list of commands'))
 				.catch((e) => reject(e))
 			}
 
-			const command = commandsf.get(cmdName) || commandsf.find(cmd => cmd.aliases && cmd.aliases.includes(cmdName));
+			const command = commands.get(cmdName) || commands.find(cmd => cmd.aliases && cmd.aliases.includes(cmdName));
 
 			if (command) {
 				const embed = new Discord.RichEmbed()
-					.setTitle(prefix + command.name)
+					.setTitle(prefix + command.name + (msg.channel.type !== 'dm' && command.guilds && !owners.includes(msg.author.id) ? ` (Exclusive to ${msg.guild.name}!)` : '') + (command.hidden ? ' (🔒)' : ''))
 					.setColor(isabotColor)
-					.addField('Description', command.description)
-					.addField('Usage', '`' + prefix + command.name + ' ' + command.usage + '`', true)
+					.addField('Description', command.description ? command.description : 'N/A')
+					.addField('Category', command.category.charAt(0).toUpperCase() + command.category.substring(1), true)
+					.addField('Usage', '`' + prefix + command.name + ' ' + (command.usage ? command.usage : '') + '`', true)
 					.setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
 					.setTimestamp();
-				if (command.aliases) embed.addField('Aliases', command.aliases.join(', '), true)
+				if (command.aliases) embed.addField('Aliases', command.aliases.join(', '), true);
+				if (command.cooldown) embed.addField('Cooldown', command.cooldown + ' seconds', true);
+				if (owners.includes(msg.author.id) && command.guilds) embed.addField('Guilds', command.guilds.join(', '), true);
 				return msg.channel.send(embed)
 				.then(resolve(msg.author.tag + ' got help for `' + command.name + '`'))
 				.catch((e) => reject(e));

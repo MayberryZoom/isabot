@@ -12,6 +12,7 @@ module.exports = {
     usage: '<damage> <type>',
     args: true,
     arguments: 'A damage value, then a type ("proejctile", "smash", or "aerial")',
+    category: 'smash',
     execute(msg, args) {
         return new Promise((resolve, reject) => {
             const dmg = !isNaN(args[0]) ? parseInt(args.shift()) : undefined;

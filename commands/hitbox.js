@@ -17,6 +17,7 @@ module.exports = {
     description: 'Grabs a hitbox visualization for a move. Currently missing many moves!',
     usage: '<character> <move>',
     args: true,
+    category: 'smash',
     execute(msg, args) {
         return new Promise((resolve, reject) => {
             if (args[0] === 'credit' || args[0] === 'credits') return msg.channel.send(credits).then(resolve()).catch(e => reject(e));

@@ -14,9 +14,10 @@ const { prefix } = require('../config.json');
 module.exports = {
 	name: 'eval',
 	aliases: ['evalr'],
-	description: '',
+	description: 'pls fix me',
 	hidden: true,
 	ownerOnly: true,
+	category: 'owner',
 	async execute(msg, args) {
 		try {
 			let evaled = await new Promise(resolve => resolve(eval(args.join(' '))));

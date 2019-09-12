@@ -1,7 +1,8 @@
 module.exports = {
     name: 'nuke',
-    description: '',
+    description: 'the most spammable command',
     hidden: true,
+    category: 'fun',
     execute(msg) {
         return new Promise((resolve, reject) => {
             return msg.channel.send('Activating server nuke')

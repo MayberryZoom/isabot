@@ -6,6 +6,7 @@ module.exports = {
     description: 'Shows information about a custom emoji. I need the "Manage Emojis" permission to show the most info!',
     usage: '<emoji>',
     args: true,
+    category: 'info',
     execute(msg, args) {
         return new Promise(async (resolve, reject) => {
             const e = await conversions.parseEmoji(client, args.join(' '));

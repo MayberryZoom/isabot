@@ -3,9 +3,11 @@ const characters = Object.keys(datatable);
 
 module.exports = {
     name: 'stat',
+    aliases: ['stats'],
     description: 'Grabs the given character\'s stats. Currently missing MANY characters and data values.',
     usage: '<character> <stat>',
     args: true,
+    category: 'smash',
     execute(msg, args) {
         return new Promise((resolve, reject) => {
             args.forEach(arg => arg = arg.toLowerCase());

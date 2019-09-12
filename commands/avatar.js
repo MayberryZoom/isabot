@@ -5,6 +5,7 @@ module.exports = {
     description: "Gets a user's avatar.",
     usage: '<user>',
     dmDisabled: 1,
+    category: 'info',
     execute(msg, args) {
         return new Promise(async (resolve, reject) => {
             const user = await parseUser(msg, args.join(' '));

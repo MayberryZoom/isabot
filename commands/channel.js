@@ -2,6 +2,7 @@ module.exports = {
     name: 'channel',
     description: 'Shows information about a channel. If no  are provided, information will be shown about the current channel.',
     dmDisabled: 1,
+    category: 'info',
     execute(msg, args) {
         return new Promise(async (resolve, reject) => {
             const conversions = require('../conversions.js');

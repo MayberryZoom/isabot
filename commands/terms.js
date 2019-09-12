@@ -17,10 +17,11 @@ module.exports = {
     name: 'terms',
     description: 'Gets a character\'s terms.',
     usage: '<character>',
+    category: 'smash',
     execute(msg, args) {
         return new Promise((resolve, reject) => {
             if (!args.length) {
-                const currentChar = msg.channel.type === 'dm' ? undefined : characters.find(c => c.id === msg.guild.id);
+                const currentChar = msg.channel.type === 'dm' ? undefined : characters.find(c => c.id === msg.guild.id).aliases[0];
                 let charNames;
                 if (currentChar) charNames = termNames.filter(t => terms[t].character === currentChar);
 
