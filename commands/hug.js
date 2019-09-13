@@ -1,9 +1,15 @@
 module.exports = {
     name: 'hug',
-    hidden: true,
     aliases: ['embrace', 'huggle', 'huggles'],
-    execute(msg, args) {
-      msg.channel.send('*hugs* <:isaGlee:513917768568143882>');
-      sendLog(msg.author.tag + ' hugged me in ' + msg.guild.name);
+    description: 'Hug the doggo!',
+    hidden: true,
+    dmDisabled: 2,
+    guilds: ['489939754021027841'],
+    execute(msg) {
+        return new Promise((resolve, reject) => {
+            msg.channel.send('*hugs* <:isaGlee:513917768568143882>')
+            .then(resolve(msg.author.tag + ' hugged me in ' + msg.guild.name))
+            .catch(e => reject(e));
+        })
     }
 };

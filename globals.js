@@ -1,27 +1,24 @@
 module.exports = {
-    // requires
-    Discord: require('discord.js'),
-    Client: require('discord.js'),
-    RichEmbed: require('discord.js'),
-    config: require('./config.json'),
-    def: require('./terms.json'),
-    prefix: require('./config.json'),
-    client: new Discord.Client(),
-    fs: require('fs'),
-    datatable: require('./movedata.json'),
-
     // constants
-    ownerIDs: ['419688076076515328', '174758404571529216'],
-    zeroWidthSpace: '​',
+    owners: ['419688076076515328', '174758404571529216'],
+    zeroWidthSpace: '\u200B',
     serverLink: 'https://discord.gg/YyYBRfF',
+    isabotColor: '0xF3EE51',
 
     // functions
-    sendLog: function sendLog(toSend) {
-        client.channels.get('520039319260495891').send(toSend, { disableEveryone: true});
+    sendLog: (toSend) => {
+        client.channels.get('520039319260495891').send(toSend);
     },
-    sleep: function sleep(ms) {
+
+    sleep: (ms) => {
         return new Promise(resolve => {
             setTimeout(resolve, ms)
         })
+    },
+
+    capitalize: (text, split) => {
+        let newText = text;
+        split.forEach(x => newText = newText.split(x).map(y => y.charAt(0).toUpperCase() + y.substring(1)).join(x));
+        return newText;
     }
 };

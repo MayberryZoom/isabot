@@ -1,38 +1,39 @@
+const clean = text => {
+	if (typeof(text) === "string") return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+	else return text;
+}
+const roleEval = (guild, roleID) => {
+	return 'Role - ' + guild.roles.get(roleID).name + '\n\n' + (new Discord.Permissions(guild.roles.get(roleID).permissions).toArray()).join("\n");
+}
+const guildList = () => {
+	return 'Guild List\n\n' + client.guilds.map(g => g.id + ': ' + g.name).join("\n");
+}
+const { inspect } = require('util');
+const { prefix } = require('../config.json');
+
 module.exports = {
 	name: 'eval',
 	aliases: ['evalr'],
-	description: '',
+	description: 'pls fix me',
 	hidden: true,
-	execute(msg, args) {
-		const clean = text => {
-		if (typeof(text) === "string")
-			return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-		else
-			return text;
-		}
-		function roleEval(roleID) {
-			return 'Role - ' + msg.guild.roles.get(roleID).name + '\n\n' + (new Discord.Permissions(msg.guild.roles.get(roleID).permissions).toArray()).join("\n");
-		}
-		function guildList() {
-			const guildArr = client.guilds.map(g => g.id + ': ' + g.name);
-			return 'Guild List\n\n' + guildArr.join("\n");
-		}
-		
-		if(!ownerIDs.includes(msg.author.id)) { msg.channel.send('Only the bot owners can use this command!'); sendLog(msg.author.tag + ' tried to use eval but failed in ' + msg.guild.name); return; }
+	ownerOnly: true,
+	category: 'owner',
+	async execute(msg, args) {
 		try {
-			const code = args.join(' ');
-			let evaled = eval(code);
-			if (msg.content.toLowerCase().startsWith('>evalr')) return;
+			let evaled = await new Promise(resolve => resolve(eval(args.join(' '))));
+			//let evaled = await new Promise(resolve => resolve(eval('(async () => {' + args.join(' ') + ' })()')));
+			if (msg.content.toLowerCase().startsWith(prefix + 'evalr')) return;
 
 			if (typeof evaled !== "string")
-			evaled = require("util").inspect(evaled);
+			evaled = inspect(evaled);
 
-			msg.channel.send('```' + evaled + '```');
-			if (msg.channel.type === 'dm') {
-                sendLog(msg.author.tag + ' evaled \'' + args.join(' ') + '\' in their DMs');
-                return;
-            }
-			sendLog(msg.author.tag + ' evaled \'' + args.join(' ') + '\' in ' + msg.guild.name);
+			msg.channel.send(evaled, {
+				split: true,
+				code: 'js',
+			});
+			return sendLog( msg.channel.type === 'dm' ?
+				msg.author.tag + ' evaled \'' + args.join(' ') + '\' in their DMs':
+				msg.author.tag + ' evaled \'' + args.join(' ') + '\' in ' + msg.guild.name);
 		} catch (err) {
 			msg.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
 		}

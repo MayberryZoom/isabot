@@ -1,24 +1,20 @@
+const conversions = require('../conversions.js');
+
 module.exports = {
     name: 'welcome',
     description: 'Welcome!',
-    hidden: true,
+    usage: '<user>',
     dmDisabled: 1,
     execute(msg, args) {
-        const conversions = require('../conversions.js');
-        
-        let text = '';
-        if (args[0]) {
-            if (msg.mentions.users.array().includes(userFromMention(args[0]))) {
-                let usr = conversions.userFromMention(args[0], msg);
-                text = ' ' + usr.username;
+        return new Promise (async (resolve, reject) => {
+            let text;
+            if (args[0]) {
+                text = await conversions.parseUser(msg, args.join(' '));
             }
-            else {
-                let usr = msg.guild.members.find(m => m.user.username === args.join(' '));
-                if (usr) text = ' ' + usr.user.username;
-            }
-        }
-        msg.channel.send('Welcome' + text + '! <:isaHeyyy:490255578061602828>')
-        sendLog(msg.author.tag + ' welcomed someone!');
-        
+            if (!text) text = '';
+            msg.channel.send('Welcome' + text + '! <:isaHeyyy:490255578061602828>')
+            .then(resolve(msg.author.tag + ' welcomed someone!'))
+            .catch((e) => reject(e));
+        });
     }
 };

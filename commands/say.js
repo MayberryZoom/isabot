@@ -1,11 +1,14 @@
 module.exports = {
     name: 'say',
-    description: '',
+    description: 'She\'s alive!',
     hidden: true,
-    execute(msg, args) {        
-        if(!ownerIDs.includes(msg.author.id)) { msg.channel.send('Only the bot owners can use this command!'); sendLog(msg.author.tag + ' tried to say something, but failed in ' + msg.guild.name); } else {
-            client.channels.get('489939754717151233').send(args.join(" "));
-			sendLog(msg.author.tag + ' said ' + args.join(' '));
-        }
+    ownerOnly: true,
+    category: 'owner',
+    execute(msg, args) {
+        return new Promise((resolve, reject) => {
+            client.channels.get('489939754717151233').send(args.join(" "))
+            .then(resolve(msg.author.tag + ' said ' + args.join(' ')))
+            .catch((e) => reject(e));
+        });
     }
 };

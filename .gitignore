@@ -2,7 +2,3 @@ node_modules/
 token.json
 package-lock.json
 commands/flair.js
-commands/rule.js
-rules.json
-commands/shieldstun.js
-config.json

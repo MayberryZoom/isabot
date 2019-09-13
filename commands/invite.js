@@ -1,9 +1,12 @@
 module.exports = {
     name: 'invite',
+    aliases: ['join'],
     description: 'Gets the link to invite me!',
-    arguments: 'None',
-    execute(msg, args) {
-        msg.channel.send('Invite me!\nhttps://discordapp.com/oauth2/authorize?&client_id=513515391155175424&scope=bot&permissions=67497025')
-        sendLog(msg.author.tag + ' got my invite link!');
+    execute(msg) {
+        return new Promise((resolve, reject) => {
+            msg.channel.send('Invite me to your server!\n<https://discordapp.com/oauth2/authorize?&client_id=513515391155175424&scope=bot&permissions=67497025>\nJoin my server!\n' + serverLink + '!')
+            .then(resolve(msg.author.tag + ' got my invite link!'))
+            .catch(e => reject(e));
+        })
     }
 };
