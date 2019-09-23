@@ -22,7 +22,7 @@ module.exports = {
      character: 'general' },
   oos:
    { definition:
-      'OoS refers to your Out of Shield options, or the things you can do while shielding. These are, for any character:\n\n- Grab\n-Jump\n- JC USmash\n- JC Up Special\n- Any special used after a jump\n- Any aerial after a jump\n- Airdodge after a jump\n- Any move after a shield drop. See also: JC',
+      'OoS refers to your Out of Shield options, or the things you can do while shielding. These are, for any character:\n\n- Grab\n- Jump\n- USmash\n- Up Special\n- Any  move after a jump\n- Any move after a shield drop.\n\nIn games prior to Ultimate, USmash/Up Special need to be jump cancelled.',
      character: 'general' },
   rar:
    { definition:
@@ -112,7 +112,7 @@ module.exports = {
      character: 'general' },
   jc:
    { definition:
-      'In Smash 4, a Jump Cancel, or JC, is commonly used to refer to when you jump and then cancel that jump into something else before you leave the ground. During Jumpsquat (JS), you can input an Up Special, Up Smash, or Item Toss, and it will cancel your jump into that action. Some techs like JC item toss have, in previous games, caused you to slide while tossing. JC Usmash is how you do an Usmash OOS, and JC UpB is how you can do an UpB OOS, since you can jump straight out of shielding. See also: OOS, JS',
+      '[Smash 4] A Jump Cancel, or JC, is commonly used to refer to when you jump and then cancel that jump into something else before you leave the ground. During Jumpsquat (JS), you can input an Up Special, Up Smash, or Item Toss, and it will cancel your jump into that action. Some techs like JC item toss have, in previous games, caused you to slide while tossing. JC Usmash is how you do an Usmash OOS, and JC UpB is how you can do an UpB OOS, since you can jump straight out of shielding. See also: OOS, JS',
      character: 'general' },
   js:
    { definition:
