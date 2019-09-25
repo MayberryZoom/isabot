@@ -1,6 +1,8 @@
 module.exports = {
     // Command name used for the command handler and >help
     name: '',
+    // Aliases for this command
+    aliases: [],
     // Command description used for >help
     description: '',
     // Specifies the command's usage. This is the format of
@@ -26,6 +28,8 @@ module.exports = {
     userPermissions: [],
     // Command itself
     execute(msg, args) {
+        return new Promsie((resolve, reject) => {
 
+        });
     }
 };
