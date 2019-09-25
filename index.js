@@ -39,13 +39,6 @@ client.on('message', async msg => {
 	        || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 		if (!command) return;
 
-	if (command.args && !args.length) {
-		let reply = 'Please provide an argument!';
-		if (command.usage) reply += `\nThe proper usage is \`\`\`${prefix}${command.name} ${command.usage}\`\`\``;
-
-		return msg.channel.send(reply);
-	}
-
 	if (command.ownerOnly && !owners.includes(msg.author.id)) return msg.channel.send('Only the bot owners can use this command!');
 
 	if (command.dmDisabled && msg.channel.type === 'dm') {
@@ -61,6 +54,13 @@ client.on('message', async msg => {
 		if (!command.guilds.includes(msg.guild.id) && !owners.includes(msg.author.id)) {
 			return;
 		}
+	}
+
+	if (command.args && !args.length) {
+		let reply = 'Please provide an argument!';
+		if (command.usage) reply += `\nThe proper usage is \`\`\`${prefix}${command.name} ${command.usage}\`\`\``;
+
+		return msg.channel.send(reply);
 	}
 
 	command.execute(msg, args)

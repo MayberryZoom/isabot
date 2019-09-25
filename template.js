@@ -28,7 +28,7 @@ module.exports = {
     userPermissions: [],
     // Command itself
     execute(msg, args) {
-        return new Promsie((resolve, reject) => {
+        return new Promise((resolve, reject) => {
 
         });
     }
