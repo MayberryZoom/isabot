@@ -316,7 +316,7 @@ module.exports = [
    {
       name: 'wobbelle',
       aliases: ['isa wobble', 'soap mouthwasher'],
-      definition: '',
+      definition: 'Methods:\n- Tap A, then move the control stick forward to buffer the walk. You can go completely forward as long as it\'s early enough. After you walk for 2-4 frames, release forward and repeat.\n- There is a sweet spot area of the control stick, near a quarter-way out, that will make you walk but still jab when you press A. It\'s easier to find using a diagonal. If you can find that sweet spot, then hold it there and tap A repeatedly, allowing 2-4 frames of walk after every jab.\n\nVideo - https://youtu.be/S2grkRvHHqI',
       character: 'isabelle'
    },
 
