@@ -246,7 +246,7 @@ module.exports = {
      character: 'isabelle' },
   'eviction notice':
    { definition:
-      '(Thread): https://twitter.com/Spexx_/status/1072250448537677824',
+      '(Thread): https://twitter.com/_Isachu_/status/1072250448537677824',
      character: 'isabelle' },
 
    // young link
