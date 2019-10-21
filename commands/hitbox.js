@@ -10,7 +10,8 @@ const characters = new Discord.Collection(
 const credits = `Struggleton (<:twitter:607841501279420416> @Struggleton <:discord:607841509253054464>@Struggleton#4071) - Pichu, Plant (hitboxes)
 Invy (<:twitter:607841501279420416>@isolatedinvy <:discord:607841509253054464>@invy#7828) - Isabelle (all except otherwise noted)
 Lewdcario (<:twitter:607841501279420416>@Lewdicario <:discord:607841509253054464>@Lewdcario#0448) - Isabelle (NAir)
-EyeDonutz (<:twitter:1001753037004722176>@theEyeDonutz <discord:298239475996426241>@EyeDonutz#0151) - Plant (commands)`;
+EyeDonutz (<:twitter:1001753037004722176>@theEyeDonutz <discord:298239475996426241>@EyeDonutz#0151) - Plant (commands)
+Silvirio (<:twitter:1178551726233796608>@HonestSilvie <discord:526572938963451925>@Silvirio#4846) - Greninja (commands)`;
 
 module.exports = {
     name: 'hitbox',
