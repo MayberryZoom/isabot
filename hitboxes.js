@@ -464,5 +464,221 @@ module.exports = [
         aliases: [],
         character: 'piranha plant',
         file: 'https://i.imgur.com/EXku7MQ.gif'
+    },
+       {
+        move: 'back aerial',
+        aliases: ['bair'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/ECRYtBI.gif'
+    },
+    {
+        move: 'dash attack',
+        aliases: ['da'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/wlv5Vik.gif'
+    },
+    {
+        move: 'dash grab',
+        aliases: ['grabd'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/0yv6Yji.gif'
+    },
+    {
+        move: 'down aerial',
+        aliases: ['dair'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/XcAd3P5.gif'
+    },
+    {
+        move: 'down smash',
+        aliases: ['dsmash'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/qWjtKgm.gif'
+    },
+    {
+        move: 'down taunt',
+        aliases: ['dtaunt'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/4lCJjHp.gif',
+    },
+    {
+        move: 'down tilt',
+        aliases: ['dtilt'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/Nkj3BFs.gif'
+    },
+    {
+        move: 'forward aerial',
+        aliases: ['fair'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/9bnJpI1.gif'
+    },
+    {
+        move: 'forward smash',
+        aliases: ['fsmash'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/EhsK5Ay.gif'
+    },
+    {
+        move: 'forward throw',
+        aliases: ['fthrow'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/mjk9G7L.gif'
+    },
+    {
+        move: 'down angled forward tilt',
+        aliases: ['daft', 'downftilt', 'dftilt'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/FtJpGN8.gif'
+    },
+    {
+        move: 'up angled forward tilt',
+        aliases: ['uaft', 'upftilt', 'uftilt'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/rpjj4ha.gif'
+    },
+    {
+        move: 'forward tilt',
+        aliases: ['ftilt'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/kJSQ2Rm.gif'
+    },
+    {
+        move: 'down facing getup attack',
+        aliases: ['dfga', 'dga', 'downgetup', 'dgetup'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/6ZlWM9a.gif'
+    },
+    {
+        move: 'up facing getup attack',
+        aliases: ['ufga', 'uga', 'upgetup', 'ugetup'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/LamuLF0.gif'
+    },
+    {
+        move: 'jab 1',
+        aliases: ['jab1', 'jab'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/ZLKDO6K.gif'
+    },
+    {
+        move: 'jab 2',
+        aliases: ['jab2'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/ItKfyni.gif'
+    },
+    {
+        move: 'jab 3',
+        aliases: ['jab3'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/m37CU7w.gif'
+    },
+    {
+        move: 'ledge attack',
+        aliases: ['la', 'ledgetilt', 'ledgehit'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/WlxAshH.gif'
+    },
+    {
+        move: 'neutral air',
+        aliases: ['nair'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/jKBwl96.gif'
+    },
+    {
+        move: 'pivot grab',
+        aliases: ['pgrab', 'pg', 'pgrab'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/9pQzEyJ.gif'
+    },
+    {
+        move: 'pummel',
+        aliases: ['neutral throw', 'nthrow'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/fh7JYMW.gif'
+    },
+    {
+        move: 'rapid jab finisher',
+        aliases: ['jab finisher'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/ReIeiWS.gif'
+    },
+    {
+        move: 'rapid jab',
+        aliases: ['rapidjab', 'rjab'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/85NOnCV.gif'
+    },
+    {
+        move: 'Shadow Sneak Forward',
+        aliases: ['ssf', 'Forward Sneak', 'Shadow Sneak'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/b6GwBfL.gif'
+    },
+    {
+        move: 'standing grab',
+        aliases: ['grab', 'grabs'],
+        character:'greninja',
+        file: 'https://i.imgur.com/5uTWZmp.gif'
+    },
+    {
+        move: 'substitute diagonally down (attack)',
+        aliases: ['diagonal down', 'substitute diagonally down', 'diagonally down counter'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/XdcQbTc.gif'
+    },
+    {
+        move: 'substitute diagonally up (attack)',
+        aliases: ['diagonally up', 'substitute diagonally down', 'diagonally up counter'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/fhRWRer.gif'
+    },
+    {
+        move: 'substitute down (attack)',
+        aliases: ['substitute down', 'down counter'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/9JInPHA.gif'
+    },
+    {
+        move: 'substitute forward (attack)',
+        aliases: ['substitute forward', 'forward counter'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/mnFLpN6.gif'
+    },
+    {
+        move: 'substitute up (attack)',
+        aliases: ['substitute up', 'up counter'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/eGiLoyL.gif'
+    },
+    {
+        move: 'substitute',
+        aliases: ['counter'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/mtq1j2o.gif',
+    },
+    {
+        move: 'trip attack',
+        aliases: ['getup', 'get up'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/pIijMjL.gif'
+    },
+    {
+        move: 'up aerial',
+        aliases: ['uair'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/2jZh6wR.gif'
+    },
+    {
+        move: 'up smash', 
+        aliases: ['usmash'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/N0aO3Y0.gif'
+    },
+    {
+        move: 'up tilt',
+        aliases: ['utilt'],
+        character: 'greninja',
+        file: 'https://i.imgur.com/AI4JfQw.gif'
     }
 ];
