@@ -32,7 +32,7 @@ const moves = [
     {
         name: 'pocket',
         frame: 9,
-        description: 'True at the same percents as FTilt/DSmash, but usually a better followup due to the pocket damage multiplier. Can kill pretty much as soon as it\'s true, depending on which move is pocketed. Very effective with moves like Charge Shot, Ptooie, Shadow Ball, etc.'
+        description: 'Very strong, but works later than FTilt/DSmash. Can kill pretty much as soon as it\'s true, depending on which move is pocketed. Very effective with moves like Charge Shot, Ptooie, Shadow Ball, etc.'
     },
     {
         name: 'down tilt',
