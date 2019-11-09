@@ -31,7 +31,7 @@ const moves = [
     },
     {
         name: 'pocket',
-        frame: 8,
+        frame: 9,
         description: 'True at the same percents as FTilt/DSmash, but usually a better followup due to the pocket damage multiplier. Can kill pretty much as soon as it\'s true, depending on which move is pocketed. Very effective with moves like Charge Shot, Ptooie, Shadow Ball, etc.'
     },
     {
