@@ -1,7 +1,7 @@
 module.exports = [
     {
         move: 'jab',
-        aliases: [],
+        aliases: ['neutral tilt'],
         character: 'pichu',
         file: 'https://i.imgur.com/2U1LG2y.gif'
     },
@@ -31,7 +31,7 @@ module.exports = [
     },
     {
         move: 'forward smash',
-        aliases: ['fsmash'],
+        aliases: ['fsmash', 'side smash'],
         character: 'pichu',
         file: 'https://i.imgur.com/WroKxze.gif'
     },
@@ -85,13 +85,13 @@ module.exports = [
     },
     {
         move: 'side special',
-        aliases: ['sideb', 'side b', 'skull bash'],
+        aliases: ['side b', 'skull bash'],
         character: 'pichu',
         file: 'https://i.imgur.com/68OeJLu.gif'
     },
     {
         move: 'down special',
-        aliases: ['downb', 'down b', 'thunder'],
+        aliases: ['down b', 'thunder'],
         character: 'pichu',
         file: 'https://i.imgur.com/BHddDp0.png'
     },
@@ -121,7 +121,7 @@ module.exports = [
     },
     {
         move: 'dash attack (late)',
-        aliases: ['dash attack late', 'da late', 'dash attack late', 'late da', 'da2', 'da 2', 'pot late', 'late pot'],
+        aliases: ['dash attack late', 'da late', 'dash attack late', 'late da', 'da 2', 'pot late', 'late pot'],
         character: 'isabelle',
         file: 'https://i.imgur.com/En2FAsN.png'
     },
@@ -157,7 +157,7 @@ module.exports = [
     },
     {
         move: 'forward smash',
-        aliases: ['fsmash', 'tada'],
+        aliases: ['fsmash', 'tada', 'side smash'],
         character: 'isabelle',
         file: 'https://i.imgur.com/TRVfclN.gif'
     },
@@ -169,7 +169,7 @@ module.exports = [
     },
     {
         move: 'jab',
-        aliases: ['ban hammer', 'inb4 patched'],
+        aliases: ['ban hammer', 'inb4 patched', 'neutral tilt'],
         character: 'isabelle',
         file: 'https://i.imgur.com/PAkNMk0.gif'
     },
@@ -181,7 +181,7 @@ module.exports = [
     },
     {
         move: 'neutral special',
-        aliases: ['neutral b', 'neutralb', 'pocket'],
+        aliases: ['neutral b', 'pocket'],
         character: 'isabelle',
         file: 'https://i.imgur.com/iEtIpN0.png'
     },
@@ -255,25 +255,22 @@ module.exports = [
     },*/
     {
         move: 'jab 1',
-        aliases: ['jab1', 'jab'],
+        aliases: ['jab', 'neutral tilt'],
         character: 'piranha plant',
         file: 'https://i.imgur.com/2OO67hY.gif'
     },
     {
         move: 'jab 2',
-        aliases: ['jab2'],
         character: 'piranha plant',
         file: 'https://i.imgur.com/SksOmrC.gif'
     },
     {
         move: 'jab 3',
-        aliases: ['jab3'],
         character: 'piranha plant',
         file: 'https://i.imgur.com/NafXoID.gif'
     },
     {
         move: 'rapid jab',
-        aliases: ['rapidjab'],
         character: 'piranha plant',
         file: 'https://i.imgur.com/EsTslV3.gif'
     },
@@ -291,13 +288,13 @@ module.exports = [
     },
     {
         move: 'forward tilt 1',
-        aliases: ['ftilt 1', 'ftilt1', 'ftilt'],
+        aliases: ['ftilt 1', 'ftilt'],
         character: 'piranha plant',
         file: 'https://i.imgur.com/HS0rb1V.gif'
     },
     {
         move: 'forward tilt 2',
-        aliases: ['ftilt 2', 'ftilt2'],
+        aliases: ['ftilt 2',],
         character: 'piranha plant',
         file: 'https://i.imgur.com/PFV3BHm.gif'
     },
@@ -315,7 +312,7 @@ module.exports = [
     },
     {
         move: 'forward smash',
-        aliases: ['fsmash'],
+        aliases: ['fsmash', 'side smash'],
         character: 'piranha plant',
         file: 'https://i.imgur.com/lR8cy6b.gif'
     },
@@ -400,7 +397,7 @@ module.exports = [
     },
     {
         move: 'side special',
-        aliases: ['poisonbreath', 'poison'],
+        aliases: ['poison breath', 'poison'],
         character: 'piranha plant',
         comment: 'Only windbox is available.',
         file: 'https://i.imgur.com/Ar3mmPt.gif'
@@ -442,26 +439,23 @@ module.exports = [
         file: 'https://i.imgur.com/dG8t8H9.gif'
     },
     {
-        move: 'getup attack up',
-        aliases: [],
+        move: 'get-up attack up',
+        aliases: ['get-up attack'],
         character: 'piranha plant',
         file: 'https://i.imgur.com/XOSQjfc.gif'
     },
     {
-        move: 'getup attack down',
-        aliases: [],
+        move: 'get-up attack down',
         character: 'piranha plant',
         file: 'https://i.imgur.com/42xZofz.gif'
     },
     {
         move: 'ledge attack',
-        aliases: [],
         character: 'piranha plant',
         file: 'https://i.imgur.com/4DJD002.gif'
     },
     {
         move: 'trip attack',
-        aliases: [],
         character: 'piranha plant',
         file: 'https://i.imgur.com/EXku7MQ.gif'
     },
