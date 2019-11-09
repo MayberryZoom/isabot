@@ -16,7 +16,7 @@ module.exports = {
 	category: 'owner',
 	execute(msg, args) {
 		return new Promise(async (resolve, reject) => {
-			if (args[0]) {
+			if (args.length !== 0) {
 				if (commandFiles.includes(args[0] + '.js')) {
 					client.commands.set(args[0], refresh(`./${args[0]}.js`));
 					return msg.channel.send('Reloaded command `' + args[0] + '` successfully.').then(resolve()).catch((e) => reject(e));
