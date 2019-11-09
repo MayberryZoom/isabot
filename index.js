@@ -79,7 +79,7 @@ client.on('guildCreate', guild => {
 });
 
 client.once('ready', () => {
-    sendLog('<@&513807019048828929> Ready!');
+    if (client.user.id === '513515391155175424') sendLog('<@&513807019048828929> Ready!');
 	client.user.setActivity('"' + prefix + '" is my prefix!')
 	setInterval(() => {
 		for (const g of client.guilds.values()) {

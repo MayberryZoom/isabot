@@ -41,13 +41,12 @@ module.exports = {
             
             const move = toOneWord(args.slice(x - 1).join(' ').toLowerCase());
             const hitbox = filtered.find(x => toOneWord(x.move) === move || (x.aliases && x.aliases.map(y => toOneWord(y)).includes(move)));
+            
             if (hitbox) {
                 const formatted = capitalize(`${hitbox.character} ${hitbox.move}`, [' ', '(', '/']);
                 let embed = new Discord.RichEmbed() .setTitle(formatted) .setImage(hitbox.file) .setColor(character.color) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
                 if (hitbox.comment) embed.setDescription(hitbox.comment);
-                msg.channel.send(embed)
-                .then(resolve())
-                .catch(e => reject(e));
+                msg.channel.send(embed).then(resolve()).catch(e => reject(e));
             }
             else msg.channel.send('That move is either not valid, or not included yet!').then(resolve()).catch(e => reject(e));
         });
