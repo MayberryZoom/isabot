@@ -1,13 +1,23 @@
-const changes = `- Optimization and bug fixes
-- Added \`>isabelle\` and \`>digby\`
-- Added \`>info\`
-- Added \`>credits\`
-    - Added indicator to \`>user\` for dev/contributor/tester
-- Buffed \`>help\`
-    - Added command categories
-    - Added a few more neat things
-- Buffed \`>server\`
-    - Added an optional argument to get specific server properties`;
+const changes = `- Behind the scenes improvements
+
+- Improved \`>hitbox\`
+    - Ignores spaces, dashes, underscores, etc.
+    - Now case insensitive
+
+- Improved \`>define\`
+    - Ignores spaces, dashes, underscores, etc.
+    - Has alias support
+    - Added/fixed some terms
+
+- Improved \`>stat\`
+    - Added the rest of the characters!
+    - Has a thumbnail showing the character's render
+    - Characters now have aliases
+
+- Added \`>jab\`
+    - Calculates a followup for Isabelle's jab
+    - When provided with a move, shows when it is true on Mario and describes it briefly
+    - When provided with a character, shows when the most common followups are true on that character`;
 
 module.exports = {
     name: 'changelog',
