@@ -7,8 +7,8 @@ const moves = [
         description: 'Can be used at percents where there are no good followups, and the opponent is pushing an offensive option.'
     },
     {
-        name: 'up tilt',
-        aliases: ['utilt'],
+        name: 'reverse up tilt',
+        aliases: ['uptilt', 'utilt'],
         frame: 6,
         description: 'Only works if you turn around before the UTilt. The easiest way to do this is to push up and slightly back on the c-stick with tilt stick. Great mid percent jab followup that racks up damage well.'
     },
