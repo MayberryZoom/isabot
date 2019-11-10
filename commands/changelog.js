@@ -3,6 +3,7 @@ const changes = `- Behind the scenes improvements
 - Improved \`>hitbox\`
     - Ignores spaces, dashes, underscores, etc.
     - Now case insensitive
+    - Added Greninja
 
 - Improved \`>define\`
     - Ignores spaces, dashes, underscores, etc.

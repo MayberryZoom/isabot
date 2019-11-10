@@ -3,7 +3,8 @@ const characters = new Discord.Collection(
     [
         ['isabelle', { name: 'isabelle', aliases: ['isa', 'izzy', 'issy'], color: '0xebdb34' }],
         ['pichu', { name: 'pichu', aliases: ['nerfed'], color: '0xF3EE51' }],
-        ['piranha plant', { name: 'piranha plant', aliases: ['plant'], color: '0x1D7A36'}]
+        ['piranha plant', { name: 'piranha plant', aliases: ['plant'], color: '0x1D7A36'}],
+        ['greninja', { name: 'greninja', aliases: ['gren'], color: '0x5673a5'}]
     ]
 );
 
@@ -15,7 +16,8 @@ const credits =
 Invy (${twitter}@isolatedinvy ${discord}invy#7828) - Isabelle (all hitboxes except otherwise noted)
 Struggleton (${twitter}@Struggleton ${discord}Struggleton#4071) - Pichu, Plant (hitboxes)
 Lewdcario (${twitter}@Lewdicario ${discord}Lewdcario#0448) - Isabelle (NAir)
-EyeDonutz (${twitter}@theEyeDonutz ${discord}EyeDonutz#0151) - Plant (commands)`;
+EyeDonutz (${twitter}@theEyeDonutz ${discord}EyeDonutz#0151) - Plant (commands)
+Silvirio (${twitter}@HonestSilvie ${discord}@Silvirio#4846) - Greninja (commands)`;
 
 module.exports = {
     name: 'hitbox',
