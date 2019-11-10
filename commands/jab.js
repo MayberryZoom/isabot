@@ -7,8 +7,8 @@ const moves = [
         description: 'Can be used at percents where there are no good followups, and the opponent is pushing an offensive option.'
     },
     {
-        name: 'up tilt',
-        aliases: ['utilt'],
+        name: 'reverse up tilt',
+        aliases: ['uptilt', 'utilt'],
         frame: 6,
         description: 'Only works if you turn around before the UTilt. The easiest way to do this is to push up and slightly back on the c-stick with tilt stick. Great mid percent jab followup that racks up damage well.'
     },
@@ -31,8 +31,8 @@ const moves = [
     },
     {
         name: 'pocket',
-        frame: 8,
-        description: 'True at the same percents as FTilt/DSmash, but usually a better followup due to the pocket damage multiplier. Can kill pretty much as soon as it\'s true, depending on which move is pocketed. Very effective with moves like Charge Shot, Ptooie, Shadow Ball, etc.'
+        frame: 9,
+        description: 'Very strong, but works later than FTilt/DSmash. Can kill pretty much as soon as it\'s true, depending on which move is pocketed. Very effective with moves like Charge Shot, Ptooie, Shadow Ball, etc.'
     },
     {
         name: 'down tilt',
