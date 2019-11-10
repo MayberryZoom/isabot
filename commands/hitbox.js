@@ -4,7 +4,8 @@ const characters = new Discord.Collection(
         ['isabelle', { name: 'isabelle', aliases: ['isa', 'izzy', 'issy'], color: '0xebdb34' }],
         ['pichu', { name: 'pichu', aliases: ['nerfed'], color: '0xF3EE51' }],
         ['piranha plant', { name: 'piranha plant', aliases: ['plant'], color: '0x1D7A36'}],
-        ['greninja', { name: 'greninja', aliases: ['gren'], color: '0x5673a5'}]
+        ['greninja', { name: 'greninja', aliases: ['gren'], color: '0x5673a5'}],
+        ['hero', { name: 'hero', aliases: ['the hero', 'rng'], color: '#c592d6'}]
     ]
 );
 
@@ -13,11 +14,12 @@ const discord = '<:discord:607841509253054464>';
 
 const credits =
 `Isachu (${twitter}@\\_Isachu\\_ ${discord}Izzybelle#0415 - Everything not listed below
-Invy (${twitter}@isolatedinvy ${discord}invy#7828) - Isabelle (all hitboxes except otherwise noted)
-Struggleton (${twitter}@Struggleton ${discord}Struggleton#4071) - Pichu, Plant (hitboxes)
+Invy (${twitter}@isolatedinvy ${discord}invy#7828) - Isabelle, Hero (all hitboxes except otherwise noted)
+Struggleton (${twitter}@Struggleton ${discord}Struggleton#4071) - Pichu, Plant, Hero (hitboxes)
 Lewdcario (${twitter}@Lewdicario ${discord}Lewdcario#0448) - Isabelle (NAir)
 EyeDonutz (${twitter}@theEyeDonutz ${discord}EyeDonutz#0151) - Plant (commands)
-Silvirio (${twitter}@HonestSilvie ${discord}@Silvirio#4846) - Greninja (commands)`;
+Silvirio (${twitter}@HonestSilvie ${discord}@Silvirio#4846) - Greninja, Hero (commands)
+Meshima (${twitter}@Meshima_) - Hero (hitboxes)`;
 
 module.exports = {
     name: 'hitbox',
