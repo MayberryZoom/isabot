@@ -674,5 +674,211 @@ module.exports = [
         aliases: ['utilt'],
         character: 'greninja',
         file: 'https://i.imgur.com/AI4JfQw.gif'
+    },
+    {
+        move: 'back aerial',
+        aliases: ['bair', 'back air'],
+        character: 'hero',
+        file: 'https://i.imgur.com/IisBPbJ.gif'
+    },
+    {
+        move: 'dash attack',
+        aliases: ['da'],
+        character: 'hero',
+        file: 'https://i.imgur.com/t100cXU.gif'
+    },
+    {
+        move: 'dash grab',
+        character: 'hero',
+        file: 'https://i.imgur.com/0bFJtcU.gif'
+    },
+    {
+        move: 'down aerial',
+        aliases: ['dair', 'down air'],
+        character: 'hero',
+        file: 'https://i.imgur.com/waWScW7.gif'
+    },
+    {
+        move: 'down smash',
+        aliases: ['dsmash'],
+        character: 'hero',
+        file: 'https://i.imgur.com/HaSuV2i.gif'
+    },
+    {
+        move: 'down tilt',
+        aliases: ['dtilt'],
+        character: 'hero',
+        file: 'https://i.imgur.com/0Ne6Xx2.gif'
+    },
+    {
+        move: 'flame slash',
+        aliases: ['fire slash', 'flae slash'],
+        comment: 'same or similar hitbox to kacrackle slash.',
+        character: 'hero',
+        file: 'https://i.imgur.com/FQBGSs7.gif'
+    },
+    {
+        move: 'forward tilt 1',
+        aliases: ['ftilt1', 'forard tilt 1'],
+        character: 'hero',
+        file: 'https://i.imgur.com/rd5WO1Z.gif'
+    },
+    {
+        move: 'forward tilt 2',
+        aliases: ['ftilt2', 'forard tilt 2'],
+        character: 'hero',
+        file: 'https://i.imgur.com/FQbznQW.gif',
+    },
+    {
+        move: 'hatchet man',
+        aliases: ['hatcet man', 'hachet man'],
+        character: 'hero',
+        file: 'https://i.imgur.com/7UCSpA4.gif'
+    },
+    {
+        move: 'jab 1',
+        aliases: ['j1'],
+        character: 'hero',
+        file: 'https://i.imgur.com/M5i4csc.gif'
+    },
+    {
+        move: 'jab 2',
+        aliases: ['j2'],
+        character: 'hero',
+        file: 'https://i.imgur.com/6H2Upos.gif'
+    },
+    {
+        move: 'jab 3',
+        character: 'hero',
+        file: 'https://i.imgur.com/ySgBC8O.gif'
+    },
+    {
+        move: 'kaboom',
+        character: 'hero',
+        comment: 'hero hurtbox is visible',
+        file: 'https://i.imgur.com/aA4Rf2f.gif'
+    },
+    {
+        move: 'kaclang',
+        aliases: ['kaklang', 'kaclan'],
+        character: 'hero',
+        comment: 'hitbox when used in air, still image.',
+        file: 'https://i.imgur.com/xxyNEwG.png'
+    },
+    {
+        move: 'kacrackle slash',
+        aliases: ['kakrackle slash', 'kacracle slash', 'ice slash', 'kakrakle slash'],
+        character: 'hero',
+        comment: 'same or similar hitbox to flame slash.',
+        file: 'https://i.imgur.com/J4kJs7b.gif'
+    },
+    {
+        move: 'kamikazee',
+        aliases: ['kamikaze', 'stock explosion'],
+        character: 'hero',
+        file: 'https://i.imgur.com/qbZK3kQ.gif'
+    },
+    {
+        move: 'kazap',
+        aliases: ['strong side b', 'kaza'],
+        character: 'hero',
+        file: 'https://i.imgur.com/VGEN2wu.gif'
+    },
+    {
+        move: 'magic burst',
+        aliases: ['magi burst', 'magic explosion', 'magic bomb'],
+        character: 'hero',
+        file: 'https://i.imgur.com/XdqxVAr.gif',
+    },
+    {
+        move: 'metal slash',
+        aliases: ['metal killer', 'metal attack', 'meta slash'],
+        character: 'hero',
+        comment: 'instakills metal opponents or does a tiny bit of damage to regular opponents.',
+        file: 'https://i.imgur.com/B28WqHW.gif',
+    },
+    {
+        move: 'neutral air',
+        aliases: ['nair', 'netral air'],
+        character: 'hero',
+        file: 'https://i.imgur.com/6gBcmeL.gif'
+    },
+    {
+        move: 'pivot grab',
+        aliases: ['pgrab', 'pivo grab', 'pvot grab'],
+        character: 'hero',
+        file: 'https://i.imgur.com/vnw0PPQ.gif',
+    },
+    {
+        move: 'pummel',
+        aliases: ['pmmel', 'pumme'],
+        character: 'hero',
+        file: 'https://i.imgur.com/gs3Ndma.gif'
+    },
+    {
+        move: 'sizzle',
+        aliases: ['sizz'],
+        character: 'hero',
+        file: 'https://i.imgur.com/OQzR04V.gif',
+    },
+    {
+        move: 'standing grab',
+        aliases: ['stand grab'],
+        character: 'hero',
+        file: 'https://i.imgur.com/QgdvNwQ.gif',
+    },
+    {
+        move: 'thwack',
+        aliases: ['instakill', 'thack', 'twack'],
+        character: 'hero',
+        file: 'https://i.imgur.com/MuqTSgJ.png'
+    },
+    {
+        move: 'up aerial',
+        aerial: ['uair', 'up air'],
+        character: 'hero',
+        file: 'https://i.imgur.com/kOs0iZa.gif',
+    },
+    {
+        move: 'up smash',
+        aliases: ['usmash', 'up strong'],
+        character: 'hero', 
+        file: 'https://i.imgur.com/mrIabOk.gif',
+    },
+    {
+        move: 'up tilt',
+        aliases: ['utilt'],
+        character: 'hero',
+        file: 'https://i.imgur.com/ueUTzNo.gif'
+    },
+    {
+        move: 'zap (fail)',
+        aliases: ['failed zap', 'zap no mp'],
+        character: 'hero',
+        file: 'https://i.imgur.com/uSZ0Lr0.gif',
+    },
+    {
+        move: 'zap',
+        aliases: ['weak side b', 'za'],
+        character: 'hero',
+        file: 'https://i.imgur.com/fQYqgdj.gif',
+    },
+    {
+        move: 'forward smash',
+        aliases: ['side smash', 'forard smash'],
+        character: 'hero', 
+        file: 'https://i.imgur.com/uloac36.gif'
+    },
+    {
+        move: 'forward aerial',
+        aliases: ['fair', 'forard aerial'],
+        character: 'hero',
+        file: 'https://i.imgur.com/08Rf0W3.gif',
+    },
+    {
+        move: 'zapple',
+        aliases: ['zaple', 'medium side b'],
+        character: 'hero',
+        file: 'https://i.imgur.com/oKnGrSX.gif'
     }
 ];
