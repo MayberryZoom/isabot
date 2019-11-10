@@ -3,7 +3,8 @@ const characters = new Discord.Collection(
     [
         ['isabelle', { name: 'isabelle', aliases: ['isa', 'izzy', 'issy'], color: '0xebdb34' }],
         ['pichu', { name: 'pichu', aliases: ['nerfed'], color: '0xF3EE51' }],
-        ['piranha plant', { name: 'piranha plant', aliases: ['plant'], color: '0x1D7A36'}]
+        ['piranha plant', { name: 'piranha plant', aliases: ['plant'], color: '0x1D7A36'}],
+        ['greninja', { name: 'greninja', aliases: ['gren'], color: '0x5673a5'}]
     ]
 );
 

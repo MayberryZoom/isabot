@@ -459,7 +459,7 @@ module.exports = [
         character: 'piranha plant',
         file: 'https://i.imgur.com/EXku7MQ.gif'
     },
-       {
+    {
         move: 'back aerial',
         aliases: ['bair'],
         character: 'greninja',
@@ -581,13 +581,13 @@ module.exports = [
     },
     {
         move: 'pivot grab',
-        aliases: ['pgrab', 'pg', 'pgrab'],
+        aliases: ['grabp'],
         character: 'greninja',
         file: 'https://i.imgur.com/9pQzEyJ.gif'
     },
     {
         move: 'pummel',
-        aliases: ['neutral throw', 'nthrow'],
+        aliases: ['neutral throw'],
         character: 'greninja',
         file: 'https://i.imgur.com/fh7JYMW.gif'
     },
@@ -599,13 +599,13 @@ module.exports = [
     },
     {
         move: 'rapid jab',
-        aliases: ['rapidjab', 'rjab'],
+        aliases: ['rapidjab'],
         character: 'greninja',
         file: 'https://i.imgur.com/85NOnCV.gif'
     },
     {
         move: 'Shadow Sneak Forward',
-        aliases: ['ssf', 'Forward Sneak', 'Shadow Sneak'],
+        aliases: ['ssf', 'forward sneak', 'shadow sneak'],
         character: 'greninja',
         file: 'https://i.imgur.com/b6GwBfL.gif'
     },
@@ -617,31 +617,31 @@ module.exports = [
     },
     {
         move: 'substitute diagonally down (attack)',
-        aliases: ['diagonal down', 'substitute diagonally down', 'diagonally down counter'],
+        aliases: ['substitute attack diagonally down', 'diagonally down substitute attack', 'substitute diagonally down', 'diagonally down substitute', 'counter diagonally down', 'diagonally down counter', 'counter attack diagonally down', 'diagonally down counter attack'],
         character: 'greninja',
         file: 'https://i.imgur.com/XdcQbTc.gif'
     },
     {
         move: 'substitute diagonally up (attack)',
-        aliases: ['diagonally up', 'substitute diagonally down', 'diagonally up counter'],
+        aliases: ['substitute attack diagonally up', 'diagonally up substitute attack', 'substitute diagonally up', 'diagonally up substitute', 'counter diagonally up', 'diagonally up counter', 'counter attack diagonally up', 'diagonally up counter attack'],
         character: 'greninja',
         file: 'https://i.imgur.com/fhRWRer.gif'
     },
     {
         move: 'substitute down (attack)',
-        aliases: ['substitute down', 'down counter'],
+        aliases: ['substitute attack down', 'down substitute attack', 'substitute down', 'down substitute', 'counter down', 'down counter', 'counter attack down', 'down counter attack'],
         character: 'greninja',
         file: 'https://i.imgur.com/9JInPHA.gif'
     },
     {
         move: 'substitute forward (attack)',
-        aliases: ['substitute forward', 'forward counter'],
+        aliases: ['substitute attack forward', 'forward substitute attack', 'substitute forward', 'forward substitute', 'counter forward', 'forward counter', 'counter attack forward', 'forward counter attack'],
         character: 'greninja',
         file: 'https://i.imgur.com/mnFLpN6.gif'
     },
     {
         move: 'substitute up (attack)',
-        aliases: ['substitute up', 'up counter'],
+        aliases: ['substitute attack up', 'up substitute attack', 'substitute up', 'up substitute', 'counter up', 'up counter', 'counter attack up', 'up counter attack'],
         character: 'greninja',
         file: 'https://i.imgur.com/eGiLoyL.gif'
     },
@@ -653,7 +653,7 @@ module.exports = [
     },
     {
         move: 'trip attack',
-        aliases: ['getup', 'get up'],
+        aliases: ['getup'],
         character: 'greninja',
         file: 'https://i.imgur.com/pIijMjL.gif'
     },
