@@ -4,6 +4,7 @@ const changes = `- Behind the scenes improvements
     - Ignores spaces, dashes, underscores, etc.
     - Now case insensitive
     - Added Greninja
+    - Added Hero
 
 - Improved \`>define\`
     - Ignores spaces, dashes, underscores, etc.
