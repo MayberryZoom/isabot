@@ -1,25 +1,4 @@
-const changes = `- Behind the scenes improvements
-
-- Improved \`>hitbox\`
-    - Ignores spaces, dashes, underscores, etc.
-    - Now case insensitive
-    - Added Greninja
-    - Added Hero
-
-- Improved \`>define\`
-    - Ignores spaces, dashes, underscores, etc.
-    - Has alias support
-    - Added/fixed some terms
-
-- Improved \`>stat\`
-    - Added the rest of the characters!
-    - Has a thumbnail showing the character's render
-    - Characters now have aliases
-
-- Added \`>jab\`
-    - Calculates a followup for Isabelle's jab
-    - When provided with a move, shows when it is true on Mario and describes it briefly
-    - When provided with a character, shows when the most common followups are true on that character`;
+const changes = `- Added optional argument to \`>source\` that provides the source for a specific command.`;
 
 module.exports = {
     name: 'changelog',
