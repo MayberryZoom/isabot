@@ -1,7 +1,7 @@
 module.exports = {
     name: 'source',
     description: 'Gets the link to my source code on GitHub! Use without an argument for the source homepage, use with an argument to find a specific command\'s source.',
-    usage: '<command>',
+    usage: ['<command>'],
     execute(msg, args) {
         return new Promise((resolve, reject) => {
             if (args.length === 0) {

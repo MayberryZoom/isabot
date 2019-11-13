@@ -10,7 +10,7 @@ module.exports = {
 	name: 'update',
 	aliases: ['restart', 'reboot', 'reload'],
 	description: 'Update bot/reload commands',
-	usage: '<command>',
+	usage: ['<command>'],
 	hidden: true,
 	ownerOnly: true,
 	category: 'owner',

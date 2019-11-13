@@ -17,7 +17,7 @@ const calculateBoost = (guild) => {
 module.exports = {
     name: 'server',
     description: 'Shows information about the current server. Use with an argument to get a specific property from the server.',
-    usage: 'property',
+    usage: ['property'],
     dmDisabled: 1,
     category: 'info',
     execute(msg, args) {

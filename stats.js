@@ -4025,7 +4025,7 @@ module.exports = [
     {
         "name": "duck hunt duo",
         "aliases": [
-            "duck hunt"
+            "duckhunt"
         ],
         "color": "#8c5d3a",
         "stats": [
@@ -5205,8 +5205,9 @@ module.exports = [
         "name": "mr. game & watch",
         "color": "#000000",
         "aliases": [
-            "mrgameandwatch",
-            "g&w"
+            'mrgameandwatch',
+            'g&w',
+            'gameandwatch'
         ],
         "stats": [
             {

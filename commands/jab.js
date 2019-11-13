@@ -46,12 +46,14 @@ const getAdvantage = (weight, opponentPercent, playerPercent) => {
     return Math.floor(0.4 * (((((((56 * (opponentPercent + 2)) / (weight + 100)) + 18) * 30) / 100) + 14) * (1 + (((playerPercent - 35) * 0.1) / 115)))) - 1 + 14 - 16;
 }
 
-const findStartingPercent = (move, opponent) => {
+const findStartingPercent = (move, opponent, r) => {
     return new Promise(async (resolve) => {
         const weight = opponent.stats.find(s => s.name === 'Weight').value;
+        if (!r || r < 35) r = 35;
+        if (r > 150) r = 150;
 
         for (let p = 0; ; p++) {
-            if (getAdvantage(weight, p, 35) >= move.frame) {
+            if (getAdvantage(weight, p, r) >= move.frame) {
                 resolve(p);
                 break;
             }
@@ -59,12 +61,12 @@ const findStartingPercent = (move, opponent) => {
     });
 }
 
-const findPercents = (opponent) => {
+const findPercents = (opponent, rage) => {
     return new Promise(async (resolve) => {
         let movePercents = [];
 
         for (let i = 0; ; i++) {
-            const p = await findStartingPercent(moves[i], opponent)
+            const p = await findStartingPercent(moves[i], opponent, rage)
             movePercents.push(capitalize(moves[i].name, [' ']) + ' - **' + p + '%**');
 
             if (i >= moves.length - 1) {
@@ -77,24 +79,52 @@ const findPercents = (opponent) => {
 
 module.exports = {
     name: 'jab',
-    description: 'Calculates a followup for Isabelle\'s Jab. If a move is provided, it shows info about it as a jab followup. If a character is provided, it shows when followups are true against them.',
-    usage: '<character or move>',
+    detailedDescription: 'Calculates a followup for Isabelle\'s Jab.\nAdd a character to see when common followups are true against them.\nAdd a move and character to see when that move is true against that character.\nAdd a number at the end of the command to calculate as if that was Isabelle\'s current percent (used for rage).',
+    usage: ['<move> <character>', '<move> <character> <number>', '<character>', '<character> <number>'],
     category: 'smash',
     execute(msg, args) {
         return new Promise(async (resolve, reject) => {
-            let argsFixed = toOneWord(args.join(' '));
-            const move = moves.find(m => toOneWord(m.name) === argsFixed || (m.aliases && m.aliases.includes(argsFixed)));
-            const character = stats.find(c => toOneWord(c.name) === argsFixed || (c.aliases && c.aliases.includes(argsFixed)));
+            let character, move, x = args.length;
+            while (!(character || move) && x > 0) {
+                x--
+                character = toOneWord(args.slice(0, x + 1).join(' ').toLowerCase());
+                move = toOneWord(args.slice(0, x + 1).join(' ').toLowerCase());
+                character = stats.find(c => toOneWord(c.name) === character || (c.aliases && c.aliases.includes(character)));
+                move = moves.find(m => toOneWord(m.name) === move || (m.aliases && m.aliases.includes(move)));
+            }
 
-            if (!move && !character) return msg.channel.send('Please provide a valid character or move!');
+            if (!(character || move)) return msg.channel.send('Please provide a valid character or move!');
 
             if (move) {
-                const percent = await findStartingPercent(move, stats.find(s => s.name === 'mario'));
-                return msg.channel.send('True on Mario starting at **' + percent + '%**\n\n' + move.description).then(resolve()).catch((e) => reject(e));
+                let newArgs = args.slice(x + 1);
+                let rage;
+                if (!isNaN(parseInt(newArgs[newArgs.length - 1]))) rage = parseInt(newArgs.pop().match(/(\d+)%?/));
+
+                character = toOneWord(newArgs.join(' ').toLowerCase());
+                character = stats.find(c => toOneWord(c.name) === character || (c.aliases && c.aliases.includes(character)));
+
+                const invalidText = newArgs.length > 0 ? character ? '' : 'Invalid character! Defaulting to Mario...\n' : 'No character provided! Defaulting to Mario...\n';
+                if (!character) character = stats.find(c => c.name === 'mario');
+
+                const percent = await findStartingPercent(move, character, rage);
+                return msg.channel.send(invalidText + 'True on **' + capitalize(character.name, [' ', '-']) + '** starting at **' + percent + '%**\n\n' + move.description).then(resolve()).catch((e) => reject(e));
             }
             else {
-                const movePercents = await findPercents(character);
-                return msg.channel.send('__Jab followups on ' + capitalize(character.name, [' ', '-']) + '__\n\n' + movePercents.join('\n')).then(resolve()).catch(e => reject(e));
+                let newArgs = args.slice(x + 1);
+                let rage;
+                if (!isNaN(parseInt(newArgs[newArgs.length - 1]))) rage = parseInt(newArgs.pop().match(/(\d+)%?/));
+
+                move = toOneWord(newArgs.join(' ').toLowerCase());
+                move = moves.find(m => toOneWord(m.name) === move || (m.aliases && m.aliases.includes(move)));
+
+                if (move) {
+                    const percent = await findStartingPercent(move, character, rage);
+                    return msg.channel.send('True on **' + capitalize(character.name, [' ', '-']) + '** starting at **' + percent + '%**\n\n' + move.description).then(resolve()).catch((e) => reject(e));
+                }
+                else {
+                    const movePercents = await findPercents(character, rage);
+                    return msg.channel.send('__Jab followups on ' + capitalize(character.name, [' ', '-']) + '__\n\n' + movePercents.join('\n')).then(resolve()).catch(e => reject(e));
+                }
             }
         });
     }

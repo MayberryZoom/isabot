@@ -3,7 +3,7 @@ const conversions = require('../conversions.js');
 module.exports = {
     name: 'welcome',
     description: 'Welcome!',
-    usage: '<user>',
+    usage: ['<user>'],
     dmDisabled: 1,
     execute(msg, args) {
         return new Promise (async (resolve, reject) => {

@@ -10,7 +10,7 @@ module.exports = {
     name: 'stat',
     aliases: ['stats'],
     description: 'Grabs the given character\'s stats. All data from Kurogane Hammer.',
-    usage: '<character> <stat>',
+    usage: ['<character> <stat>'],
     args: true,
     category: 'smash',
     execute(msg, args) {

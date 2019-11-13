@@ -3,7 +3,7 @@ module.exports = {
     aliases: ['p', 'delete'],
     description: 'Purges a certain amount of messages. Requires the manage messages permission.',
     args: true,
-    usage: '<limit>',
+    usage: ['<limit>'],
     dmDisabled: 1,
     category: 'mod',
 /*    botPermissions: ['MANAGE_MESSAGES'],

@@ -15,7 +15,7 @@ const characters = new Discord.Collection(
 module.exports = {
     name: 'terms',
     description: 'Gets a character\'s terms.',
-    usage: '<character>',
+    usage: ['<character>'],
     category: 'smash',
     execute(msg, args) {
         return new Promise((resolve, reject) => {

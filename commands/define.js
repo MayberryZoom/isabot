@@ -15,7 +15,7 @@ module.exports = {
     name: 'define',
     aliases: ['d'],
     description: 'Defines a Smash term. If used without an argument, a list of terms will be provided.',
-    usage: '<term>',
+    usage: ['<term>'],
     category: 'smash',
     execute(msg, args) {
         return new Promise((resolve, reject) => {

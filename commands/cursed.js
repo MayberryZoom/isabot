@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'cursed',
 	description: 'cursed',
-    usage: '<text>',
+    usage: ['<text>'],
     args: true,
     category: 'fun',
     execute(msg, args) {

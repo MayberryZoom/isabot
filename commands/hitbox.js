@@ -24,7 +24,7 @@ Meshima (${twitter}@Meshima_) - Hero (hitboxes)`;
 module.exports = {
     name: 'hitbox',
     description: 'Grabs a hitbox visualization for a move. Currently missing many moves!',
-    usage: '<character> <move>',
+    usage: ['<character> <move>'],
     args: true,
     category: 'smash',
     execute(msg, args) {
