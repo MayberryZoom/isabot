@@ -6,7 +6,12 @@ const changes = `- Added optional argument to \`>source\` that provides the sour
 
 - Improved \`>help\` __(11/13/19)__
     - Now supports multiple syntax examples
-    - Fixed a bug where it was impossible to see help for server specific commands`;
+    - Fixed a bug where it was impossible to see help for server specific commands
+
+- Added \`>item\` __(11/14/19)__
+    - Shows item for any item in the Smash series
+    - Use no argument for a list of items
+    - Provide a smash game as an argument for a list of items from that game`;
 
 module.exports = {
     name: 'changelog',
