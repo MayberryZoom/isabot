@@ -13,7 +13,10 @@ const changes = `- Added optional argument to \`>source\` that provides the sour
     - Use no argument for a list of items
     - Provide a smash game as an argument for a list of items from that game
 
-- Updated Isabelle USmash in \`>hitbox\` to properly display its hitboxes`;
+- Updated Isabelle USmash in \`>hitbox\` to properly display its hitboxes __(11/14/19)__
+
+- Added \`>tip\` __(11/15/19)__
+    - Provides a random bit of smash advice`;
 
 module.exports = {
     name: 'changelog',

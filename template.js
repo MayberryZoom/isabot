@@ -5,10 +5,10 @@ module.exports = {
     aliases: [],
     // Command description used for >help
     description: '',
-    // Specifies the command's usage. This is the format of
+    // Specifies the command's usages. This is the format of
     // '<argument desc> <another argument desc (if applicable)>'.
     // If none are given, replies with this. Also used in >help
-    usage: '',
+    usage: [],
     // Specifies if the command must have an argument
     args: false,
     // Specifies if the command is hidden from >help
