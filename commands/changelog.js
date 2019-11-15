@@ -11,7 +11,9 @@ const changes = `- Added optional argument to \`>source\` that provides the sour
 - Added \`>item\` __(11/14/19)__
     - Shows item for any item in the Smash series
     - Use no argument for a list of items
-    - Provide a smash game as an argument for a list of items from that game`;
+    - Provide a smash game as an argument for a list of items from that game
+
+- Updated Isabelle USmash in \`>hitbox\` to properly display its hitboxes`;
 
 module.exports = {
     name: 'changelog',

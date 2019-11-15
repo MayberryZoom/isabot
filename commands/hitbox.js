@@ -13,13 +13,15 @@ const twitter = '<:twitter:607841501279420416>';
 const discord = '<:discord:607841509253054464>';
 
 const credits =
-`Isachu (${twitter}@\\_Isachu\\_ ${discord}Izzybelle#0415 - Everything not listed below
+`Isachu (${twitter}@\\_Isachu\\_ ${discord}~Isachu~#0415 - Everything not listed below
 Invy (${twitter}@isolatedinvy ${discord}invy#7828) - Isabelle, Hero (all hitboxes except otherwise noted)
 Struggleton (${twitter}@Struggleton ${discord}Struggleton#4071) - Pichu, Plant, Hero (hitboxes)
 Lewdcario (${twitter}@Lewdicario ${discord}Lewdcario#0448) - Isabelle (NAir)
 EyeDonutz (${twitter}@theEyeDonutz ${discord}EyeDonutz#0151) - Plant (commands)
 Silvirio (${twitter}@HonestSilvie ${discord}@Silvirio#4846) - Greninja, Hero (commands)
-Meshima (${twitter}@Meshima_) - Hero (hitboxes)`;
+Meshima (${twitter}@Meshima_) - Hero (hitboxes)
+RandyJ (${discord}@RandyJ#0775) - Isabelle (USmash recording)
+blurple (${twitter}@b1urple ${discord}@blurple#9999) - Isabelle (removing USmash background)`;
 
 module.exports = {
     name: 'hitbox',

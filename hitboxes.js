@@ -219,8 +219,7 @@ module.exports = [
         move: 'up smash',
         aliases: ['usmash', 'stop'],
         character: 'isabelle',
-        file: 'https://i.imgur.com/XzWoBux.gif',
-        comment: 'Apparently missing USmash 2'
+        file: 'https://i.imgur.com/hFf4oQV.gif'
     },
     {
         move: 'up tilt',
