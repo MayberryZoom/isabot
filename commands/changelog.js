@@ -16,7 +16,18 @@ const changes = `- Added optional argument to \`>source\` that provides the sour
 - Updated Isabelle USmash in \`>hitbox\` to properly display its hitboxes __(11/14/19)__
 
 - Added \`>tip\` __(11/15/19)__
-    - Provides a random bit of smash advice`;
+    - Provides a random bit of smash advice
+
+- Added \`>coin\` __(11/16/19)__
+    - Flips a coin, landing on either heads or tails
+
+- Added \`>dice\` __(11/16/19)__
+    - Rolls a die
+    - Provide a number of sides for it to have
+
+- Added \`>rps\` __(11/16/19)__
+    - Play Rock Paper Scissors
+    - Provide an option to use`;
 
 module.exports = {
     name: 'changelog',
