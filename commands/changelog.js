@@ -27,7 +27,12 @@ const changes = `- Added optional argument to \`>source\` that provides the sour
 
 - Added \`>rps\` __(11/16/19)__
     - Play Rock Paper Scissors
-    - Provide an option to use`;
+    - Provide an option to use
+
+- Added \`>stage\` __(11/17/19)__
+    - Shows information about any stage in the Smash series
+    - Use no argument for a list of stages
+    - Provide a smash game as an argument for a list of stages from that game`;
 
 module.exports = {
     name: 'changelog',
