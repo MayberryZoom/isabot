@@ -1,6 +1,4 @@
-const changes = `- Added optional argument to \`>source\` that provides the source for a specific command __(11/12/19)__
-
-- Improved \`>jab\` __(11/13/19)__
+const changes = `- Improved \`>jab\` __(11/13/19)__
     - Now supports character and move arguments at same time
     - Now supports rage
 
@@ -32,14 +30,17 @@ const changes = `- Added optional argument to \`>source\` that provides the sour
 - Added \`>stage\` __(11/17/19)__
     - Shows information about any stage in the Smash series
     - Use no argument for a list of stages
-    - Provide a smash game as an argument for a list of stages from that game`;
+    - Provide a smash game as an argument for a list of stages from that game
+
+- Added \`>report\` __(11/18/19)__
+    - Reports a bug with the bot
+    - Optionally provide an image to send with report`;
 
 module.exports = {
     name: 'changelog',
     aliases: ['changes'],
     description: 'List of my recent changes!',
     dmDisabled: 2,
-    guilds: ['456665686966796299'],
     category: 'info',
     execute(msg) {
         return new Promise((resolve, reject) => {
