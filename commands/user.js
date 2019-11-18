@@ -27,7 +27,7 @@ const getRank = (user) => {
 module.exports = {
     name: 'user',
     aliases: ['member', 'u'],
-    usage: '<user>',
+    usage: ['<user>'],
     description: 'Shows information about a user. If no arguments are provided, information will be shown about yourself.',
     category: 'info',
     execute: (msg, args) => {

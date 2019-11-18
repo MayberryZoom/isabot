@@ -1,6 +1,7 @@
 module.exports = {
     name: 'channel',
     description: 'Shows information about a channel. If no  are provided, information will be shown about the current channel.',
+    usage: ['<channel>'],
     dmDisabled: 1,
     category: 'info',
     execute(msg, args) {

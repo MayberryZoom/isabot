@@ -3,7 +3,7 @@ module.exports = [
     { 
         name: 'assist trophy',
         url: 'https://www.ssbwiki.com/images/f/f7/SSBU_Assist_Figure.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Summoning',
@@ -14,7 +14,7 @@ module.exports = [
     {
         name: 'back shield',
         url: 'https://www.ssbwiki.com/images/4/4b/BackShieldSSBU.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Kid Icarus',
         debut: 'Kid Icarus: Uprising',
         class: 'Status',
@@ -25,7 +25,7 @@ module.exports = [
     {
         name: 'banana gun',
         url: 'https://www.ssbwiki.com/images/3/30/SSBUBananaGun.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Ultimate',
         class: 'Shooting',
@@ -36,7 +36,7 @@ module.exports = [
     {
         name: 'banana peel',
         url: 'https://www.ssbwiki.com/images/thumb/7/7a/BananaPeelWiiU.png/180px-BananaPeelWiiU.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Mario Kart',
         debut: 'Super Mario Kart',
         class: 'Throwing',
@@ -47,7 +47,7 @@ module.exports = [
     {
         name: 'barrel',
         url: 'https://www.ssbwiki.com/images/5/50/SSBUBarrel.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. 64',
         class: 'Container',
@@ -58,7 +58,7 @@ module.exports = [
     {
         name: 'barrel cannon',
         url: 'https://www.ssbwiki.com/images/b/b6/Barrel_Cannon_-_Donkey_Kong_Country_Tropical_Freeze.png',
-        smash: ['Melee'],
+        games: ['Melee'],
         series: 'Donkey Kong',
         debut: 'Donkey Kong Country',
         class: 'Throwing',
@@ -69,7 +69,7 @@ module.exports = [
     {
         name: 'beam sword',
         url: 'https://www.ssbwiki.com/images/a/ac/SSBUBeamSword.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. 64',
         class: 'Battering',
@@ -80,7 +80,7 @@ module.exports = [
     {
         name: 'beastball',
         url: 'https://www.ssbwiki.com/images/4/4a/SSBUBeastball.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Ultimate',
         class: 'Throwing',
@@ -91,7 +91,7 @@ module.exports = [
     {
         name: 'beehive',
         url: 'https://www.ssbwiki.com/images/9/94/BeehiveSSBU.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Animal Crossing',
         debut: 'Animal Crossing (N64)',
         class: 'Throwing',
@@ -102,7 +102,7 @@ module.exports = [
     {
         name: 'beetle',
         url: 'https://www.ssbwiki.com/images/thumb/b/ba/SSBUBeetle.png/180px-SSBUBeetle.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'The Legend of Zelda',
         debut: 'The Legend of Zelda: Skyward Sword',
         class: 'Throwing',
@@ -113,7 +113,7 @@ module.exports = [
     {
         name: 'black hole',
         url: 'https://www.ssbwiki.com/images/b/ba/SSBUBlackHole.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Ultimate',
         class: 'Throwing',
@@ -124,7 +124,7 @@ module.exports = [
     {
         name: 'blast box',
         url: 'https://www.ssbwiki.com/images/3/3f/BlastBoxSSBU.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Explosive',
@@ -135,7 +135,7 @@ module.exports = [
     {
         name: 'bob-omb',
         url: 'https://www.ssbwiki.com/images/thumb/5/5f/SSBUBobOmb.png/180px-SSBUBobOmb.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Yume Kōjō: Doki Doki Panic',
         class: 'Explosive/Throwing',
@@ -146,7 +146,7 @@ module.exports = [
     {
         name: 'bombchu',
         url: 'https://www.ssbwiki.com/images/e/ea/Bombchu2.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'The Legend of Zelda',
         debut: 'The Legend of Zelda: Ocarina of Time',
         class: 'Explosive/Throwing',
@@ -157,7 +157,7 @@ module.exports = [
     {
         name: 'bomber',
         url: 'https://www.ssbwiki.com/images/e/e3/SSBUBomber.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Kirby',
         debut: 'Kirby\'s Adventure',
         class: 'Explosive',
@@ -168,7 +168,7 @@ module.exports = [
     {
         name: 'boomerang',
         url: 'https://www.ssbwiki.com/images/7/79/SSBUBoomerang.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Super Mario Bros. 3',
         class: 'Throwing',
@@ -179,7 +179,7 @@ module.exports = [
     {
         name: 'boss galaga',
         url: 'https://www.ssbwiki.com/images/9/9f/SSBUBossGalaga.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Galaxian',
         debut: 'Galaga',
         class: 'Throwing',
@@ -190,7 +190,7 @@ module.exports = [
     {
         name: 'bullet bill',
         url: 'https://www.ssbwiki.com/images/0/01/Bullet_Bill_%28Super_Smash_Bros._Ultimate%29.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Super Mario Bros.',
         class: 'Transformation',
@@ -201,7 +201,7 @@ module.exports = [
     {
         name: 'bumper',
         url: 'https://www.ssbwiki.com/images/4/42/SSBUBumper.png',
-        smash: ['64', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. 64',
         class: 'Throwing',
@@ -212,7 +212,7 @@ module.exports = [
     {
         name: 'bunny hood',
         url: 'https://www.ssbwiki.com/images/f/fd/SSBUBunnyHood.png',
-        smash: ['Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['Melee', 'Brawl', '4', 'Ultimate'],
         series: 'The Legend of Zelda',
         debut: 'The Legend of Zelda: Ocarina of Time',
         class: 'Status',
@@ -223,7 +223,7 @@ module.exports = [
     {
         name: 'capsule',
         url: 'https://www.ssbwiki.com/images/a/a9/SSBUCapsule.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. 64',
         class: 'Container',
@@ -234,7 +234,7 @@ module.exports = [
     {
         name: 'cloaking device',
         url: 'https://www.ssbwiki.com/images/3/30/PerDarCloDev.jpg',
-        smash: ['Melee'],
+        games: ['Melee'],
         series: 'Perfect Dark',
         debut: 'Perfect Dark (N64)',
         class: 'Status',
@@ -245,7 +245,7 @@ module.exports = [
     {
         name: 'cracker launcher',
         url: 'https://www.ssbwiki.com/images/a/a1/Crackerlauncher.jpg',
-        smash: ['Brawl'],
+        games: ['Brawl'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Shooting',
@@ -256,7 +256,7 @@ module.exports = [
     {
         name: 'crate',
         url: 'https://www.ssbwiki.com/images/b/b2/Crates.jpg',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Container',
@@ -267,7 +267,7 @@ module.exports = [
     {
         name: 'cucco',
         url: 'https://www.ssbwiki.com/images/b/b1/SSBUCucco.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'The Legend of Zelda',
         debut: 'The Legend of Zelda: A Link to the Past',
         class: 'Throwing',
@@ -278,7 +278,7 @@ module.exports = [
     {
         name: 'daybreak',
         url: 'https://www.ssbwiki.com/images/e/e3/SSBUDaybreakParts.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Kid Icarus',
         debut: 'Kid Icarus: Uprising',
         class: 'Combining/Shooting',
@@ -289,7 +289,7 @@ module.exports = [
     {
         name: 'death\'s scythe',
         url: 'https://www.ssbwiki.com/images/4/40/Death%27s_Scythe.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Castlevania',
         debut: 'Castlevania (NES/Famicom)',
         class: 'Battering',
@@ -300,7 +300,7 @@ module.exports = [
     {
         name: 'deku nut',
         url: 'https://www.ssbwiki.com/images/c/c7/DekuNut.jpg',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'The Legend of Zelda',
         debut: 'The Legend of Zelda: Ocarina of Time',
         class: 'Throwing',
@@ -311,7 +311,7 @@ module.exports = [
     {
         name: 'dragoon',
         url: 'https://www.ssbwiki.com/images/4/45/SSBUDragoonParts.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Kirby',
         debut: 'Kirby Air Ride',
         class: 'Combining',
@@ -322,7 +322,7 @@ module.exports = [
     {
         name: 'drill',
         url: 'https://www.ssbwiki.com/images/5/5c/DrillTrophyWiiU.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Kid Icarus/Super Smash Bros.',
         debut: 'Kid Icarus: Uprising/Super Smash Bros. 4',
         class: 'Shooting/Throwing',
@@ -333,7 +333,7 @@ module.exports = [
     {
         name: 'fairy bottle',
         url: 'https://www.ssbwiki.com/images/5/5b/FairyBottleTrophyWiiU.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'The Legend of Zelda',
         debut: 'The Legend of Zelda: A Link to the Past',
         class: 'Throwing/Recovery',
@@ -344,7 +344,7 @@ module.exports = [
     {
         name: 'fake smash ball',
         url: 'https://www.ssbwiki.com/images/9/93/Fakesmashball.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Ultimate',
         class: 'Explosive',
@@ -355,7 +355,7 @@ module.exports = [
     {
         name: 'fan',
         url: 'https://www.ssbwiki.com/images/3/32/Fan.jpg',
-        smash: ['64', 'Melee', 'Brawl'],
+        games: ['64', 'Melee', 'Brawl'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. 64',
         class: 'Battering',
@@ -366,7 +366,7 @@ module.exports = [
     {
         name: 'fire bar',
         url: 'https://www.ssbwiki.com/images/d/d0/FireBarTrophyWiiU.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Super Mario Bros.',
         class: 'Battering',
@@ -377,7 +377,7 @@ module.exports = [
     {
         name: 'fire flower',
         url: 'https://www.ssbwiki.com/images/4/4a/FireFlowerIconSSB.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Super Mario Bros.',
         class: 'Shooting',
@@ -388,7 +388,7 @@ module.exports = [
     {
         name: 'flipper',
         url: 'https://www.ssbwiki.com/images/c/cb/Ssbmitemsflipper.jpg',
-        smash: ['Melee'],
+        games: ['Melee'],
         series: 'Balloon Fight',
         debut: 'Balloon Fight',
         class: 'Throwing',
@@ -399,7 +399,7 @@ module.exports = [
     {
         name: 'food',
         url: 'https://www.ssbwiki.com/images/4/4c/FoodTrophyWiiU.png',
-        smash: ['Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Melee',
         class: 'Recovery',
@@ -410,7 +410,7 @@ module.exports = [
     {
         name: 'franklin badge',
         url: 'https://www.ssbwiki.com/images/7/7e/SSBUFranklinBadge.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'EarthBound/Mother',
         debut: 'EarthBound Beginnings/Mother',
         class: 'Status',
@@ -421,7 +421,7 @@ module.exports = [
     {
         name: 'freezie',
         url: 'https://www.ssbwiki.com/images/6/6d/FreezieSM3DW.png',
-        smash: ['Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Mario Bros.',
         class: 'Throwing',
@@ -432,7 +432,7 @@ module.exports = [
     {
         name: 'golden hammer',
         url: 'https://www.ssbwiki.com/images/6/6e/GoldenHammerTrophyWiiU.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Wrecking Crew',
         debut: 'Wrecking Crew',
         class: 'Battering',
@@ -443,7 +443,7 @@ module.exports = [
     {
         name: 'gooey bomb',
         url: 'https://www.ssbwiki.com/images/4/49/GooeyBombSSBU.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Throwing/Explosive',
@@ -454,7 +454,7 @@ module.exports = [
     {
         name: 'green shell',
         url: 'https://www.ssbwiki.com/images/1/19/GreenShellIconSSB.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Super Mario Bros.',
         class: 'Throwing',
@@ -465,7 +465,7 @@ module.exports = [
     {
         name: 'gust bellows',
         url: 'https://www.ssbwiki.com/images/4/46/Gust_Bellow_-_Skyward_Sword.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'The Legend of Zelda',
         debut: 'The Legend of Zelda: Skyward Sword',
         class: 'Shooting',
@@ -476,7 +476,7 @@ module.exports = [
     {
         name: 'hammer',
         url: 'https://www.ssbwiki.com/images/8/85/SSBUHammer.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Donkey Kong',
         debut: 'Donkey Kong',
         class: 'Battering',
@@ -487,7 +487,7 @@ module.exports = [
     {
         name: 'healing field',
         url: 'https://www.ssbwiki.com/images/8/83/SSBUHealingField.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Ultimate',
         class: 'Throwing/Recovery',
@@ -498,7 +498,7 @@ module.exports = [
     {
         name: 'healing sprout',
         url: 'https://www.ssbwiki.com/images/a/a3/SSBUHealingSprout.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Ultimate',
         class: 'Throwing',
@@ -509,7 +509,7 @@ module.exports = [
     {
         name: 'heart container',
         url: 'https://www.ssbwiki.com/images/8/82/Heart_Container_Skyward_Sword.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'The Legend of Zelda',
         debut: 'The Legend of Zelda',
         class: 'Recovery',
@@ -520,7 +520,7 @@ module.exports = [
     {
         name: 'hocotate bomb',
         url: 'https://www.ssbwiki.com/images/e/ef/SSBUHocotateBomb.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Pikmin',
         debut: 'Pikmin 2',
         class: 'Throwing/Explosive',
@@ -531,7 +531,7 @@ module.exports = [
     {
         name: 'home-run bat',
         url: 'https://www.ssbwiki.com/images/f/f9/SSBUHomeRunBat.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. 64',
         class: 'Battering',
@@ -542,7 +542,7 @@ module.exports = [
     {
         name: 'hothead',
         url: 'https://www.ssbwiki.com/images/5/5e/SSBUHothead.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Super Mario World',
         class: 'Throwing',
@@ -553,7 +553,7 @@ module.exports = [
     {
         name: 'killer eye',
         url: 'https://www.ssbwiki.com/images/0/08/KillerEyeTrophyWiiU.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Kid Icarus',
         debut: 'Kid Icarus: Uprising',
         class: 'Throwing/Shooting',
@@ -564,7 +564,7 @@ module.exports = [
     {
         name: 'killing edge',
         url: 'https://www.ssbwiki.com/images/5/57/Killing_Edge.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Fire Emblem',
         debut: 'Fire Emblem: Shadow Dragon and the Blade of Light',
         class: 'Battering',
@@ -575,7 +575,7 @@ module.exports = [
     {
         name: 'lightning bolt',
         url: 'https://www.ssbwiki.com/images/d/db/LightningBoltTrophyWiiU.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Mario Kart',
         debut: 'Super Mario Kart',
         class: 'Status',
@@ -586,7 +586,7 @@ module.exports = [
     {
         name: 'lip\'s stick',
         url: 'https://www.ssbwiki.com/images/2/21/SSBULipstick.png',
-        smash: ['Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Panel de Pon',
         debut: 'Panel de Pon',
         class: 'Battering',
@@ -597,7 +597,7 @@ module.exports = [
     {
         name: 'master ball',
         url: 'https://www.ssbwiki.com/images/b/b7/SSBUMasterBall.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Pokémon',
         debut: 'Pokémon Red/Green',
         class: 'Throwing/Summoning',
@@ -608,7 +608,7 @@ module.exports = [
     {
         name: 'maxim tomato',
         url: 'https://www.ssbwiki.com/images/7/78/SSBUMaximTomato.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Kirby',
         debut: 'Kirby\'s Dream Land',
         class: 'Recovery',
@@ -619,7 +619,7 @@ module.exports = [
     {
         name: 'metal box',
         url: 'https://www.ssbwiki.com/images/9/96/MetalBoxTrophyWiiU.png',
-        smash: ['Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Super Mario 64',
         class: 'Status',
@@ -630,7 +630,7 @@ module.exports = [
     {
         name: 'motion-sensor bomb',
         url: 'https://www.ssbwiki.com/images/a/a6/SensorBombSSBU.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'GoldenEye/Perfect Dark/Super Smash Bros.',
         debut: 'Super Smash Bros. 64',
         class: 'Throwing/Explosive',
@@ -641,7 +641,7 @@ module.exports = [
     {
         name: 'mr. saturn',
         url: 'https://www.ssbwiki.com/images/8/8f/SSBUMrSaturn.png',
-        smash: ['Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['Melee', 'Brawl', '4', 'Ultimate'],
         series: 'EarthBound/Mother',
         debut: 'Earthbound/Mother 2',
         class: 'Throwing',
@@ -652,7 +652,7 @@ module.exports = [
     {
         name: 'ore club',
         url: 'https://www.ssbwiki.com/images/7/79/OreClubTrophyWiiU.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Kid Icarus',
         debut: 'Kid Icarus: Uprising',
         class: 'Battering',
@@ -663,7 +663,7 @@ module.exports = [
     {
         name: 'parasol',
         url: 'https://www.ssbwiki.com/images/8/8d/Parasol_Trophy_Melee.png',
-        smash: ['Melee'],
+        games: ['Melee'],
         series: 'Kirby',
         debut: 'Kirby\'s Dream Land',
         class: 'Battering',
@@ -674,7 +674,7 @@ module.exports = [
     {
         name: 'party ball',
         url: 'https://www.ssbwiki.com/images/3/3a/PartyBallTrophyWiiU.png',
-        smash: ['Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Melee',
         class: 'Throwing',
@@ -685,7 +685,7 @@ module.exports = [
     {
         name: 'pitfall',
         url: 'https://www.ssbwiki.com/images/2/25/PitfallTrophyWiiU.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Animal Crossing',
         debut: 'Animal Crossing (N64)',
         class: 'Throwing',
@@ -696,7 +696,7 @@ module.exports = [
     {
         name: 'poison mushroom',
         url: 'https://www.ssbwiki.com/images/1/14/PoisonMushroomTrophyWiiU.png',
-        smash: ['Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Super Mario Bros. 2 (JP)',
         class: 'Status',
@@ -707,7 +707,7 @@ module.exports = [
     {
         name: 'poké ball',
         url: 'https://www.ssbwiki.com/images/b/b1/Ssbu_pokeball.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Pokémon',
         debut: 'Pokémon Red/Green',
         class: 'Throwing/Summoning',
@@ -716,9 +716,9 @@ module.exports = [
     },
 
     {
-        name: 'POW block',
+        name: 'pow block',
         url: 'https://www.ssbwiki.com/images/9/96/POWBlockTrophyWiiU.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Mario Bros',
         class: 'Throwing',
@@ -729,7 +729,7 @@ module.exports = [
     {
         name: 'rage blaster',
         url: 'https://www.ssbwiki.com/images/7/7d/SSBU-Item-RageBlaster.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Ultimate',
         class: 'Shooting',
@@ -740,7 +740,7 @@ module.exports = [
     {
         name: 'ramblin\' evil mushroom',
         url: 'https://www.ssbwiki.com/images/4/40/RamblinEvilMushroom.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Earthbound/Mother',
         debut: 'Earthbound/Mother 2',
         class: 'Shooting',
@@ -751,7 +751,7 @@ module.exports = [
     {
         name: 'ray gun',
         url: 'https://www.ssbwiki.com/images/8/89/SSBURayGun.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. 64',
         class: 'Shooting',
@@ -762,7 +762,7 @@ module.exports = [
     {
         name: 'red shell',
         url: 'https://www.ssbwiki.com/images/9/99/RedShellIconSSB.png',
-        smash: ['64', 'Melee', 'Brawl', '3DS'],
+        games: ['64', 'Melee', 'Brawl', '3DS'],
         series: 'Super Mario',
         debut: 'Super Mario Bros.',
         class: 'Throwing',
@@ -773,7 +773,7 @@ module.exports = [
     {
         name: 'rocket belt',
         url: 'https://www.ssbwiki.com/images/4/45/RocketBeltTrophyWiiU.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Pilotwings',
         debut: 'Pilotwings',
         class: 'Status',
@@ -784,7 +784,7 @@ module.exports = [
     {
         name: 'rolling crate',
         url: 'https://www.ssbwiki.com/images/1/1e/RollingCratesTrophyWiiU.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Container',
@@ -795,7 +795,7 @@ module.exports = [
     {
         name: 'sandbag',
         url: 'https://www.ssbwiki.com/images/4/4f/Sandbag_Spirit.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Melee',
         class: 'Container',
@@ -806,7 +806,7 @@ module.exports = [
     {
         name: 'screw attack',
         url: 'https://www.ssbwiki.com/images/5/54/SSBUScrewAttack.png',
-        smash: ['Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Metroid',
         debut: 'Metroid',
         class: 'Status/Throwing',
@@ -817,7 +817,7 @@ module.exports = [
     {
         name: 'smart bomb',
         url: 'https://www.ssbwiki.com/images/8/86/AssaultSmartBomb.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Star Fox',
         debut: 'Star Fox',
         class: 'Explosive/Throwing',
@@ -828,7 +828,7 @@ module.exports = [
     {
         name: 'smash ball',
         url: 'https://www.ssbwiki.com/images/1/11/SSBUSmashBall.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Special',
@@ -839,7 +839,7 @@ module.exports = [
     {
         name: 'smoke ball',
         url: 'https://www.ssbwiki.com/images/d/d4/SmokeBallTrophyWiiU.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Throwing',
@@ -850,7 +850,7 @@ module.exports = [
     {
         name: 'soccer ball',
         url: 'https://www.ssbwiki.com/images/7/72/SoccerBallTrophyWiiU.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'NES Sports Series/Super Mario Strikers',
         debut: 'Soccer (NES)',
         class: 'Special',
@@ -861,7 +861,7 @@ module.exports = [
     {
         name: 'special flag',
         url: 'https://www.ssbwiki.com/images/e/ea/SpecialFlag.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Rally-X',
         debut: 'Rally-X',
         class: 'Special',
@@ -873,7 +873,7 @@ module.exports = [
         name: 'spiny shell',
         aliases: ['blue shell'],
         url: 'https://www.ssbwiki.com/images/b/b3/SSBUSpinyShell.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Mario Kart',
         debut: 'Mario Kart 64',
         class: 'Throwing/Explosive',
@@ -884,7 +884,7 @@ module.exports = [
     {
         name: 'spring',
         url: 'https://www.ssbwiki.com/images/4/41/SpringTrophyWiiU.png',
-        smash: ['Brawl', '4'],
+        games: ['Brawl', '4'],
         series: 'Donkey Kong',
         debut: 'Donkey Kong Jr.',
         class: 'Throwing',
@@ -895,7 +895,7 @@ module.exports = [
     {
         name: 'staff',
         url: 'https://www.ssbwiki.com/images/9/9e/SSBU-Item-Staff.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Kid Icarus',
         debut: 'Kid Icarus: Uprising',
         class: 'Shooting',
@@ -906,7 +906,7 @@ module.exports = [
     {
         name: 'star rod',
         url: 'https://www.ssbwiki.com/images/d/d3/SSBUStarRod.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Kirby',
         debut: 'Kirby\'s Adventure',
         class: 'Battering/Shooting',
@@ -917,7 +917,7 @@ module.exports = [
     {
         name: 'steel diver',
         url: 'https://www.ssbwiki.com/images/5/57/SteelDiverGunTrophyWiiU.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Steel Diver',
         debut: 'Steel Diver',
         class: 'Shooting',
@@ -928,7 +928,7 @@ module.exports = [
     {
         name: 'super launch star',
         url: 'https://www.ssbwiki.com/images/e/eb/SSBULaunchStar.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Super Mario',
         debut: 'Super Mario Galaxy',
         class: 'Throwing',
@@ -939,7 +939,7 @@ module.exports = [
     {
         name: 'super leaf',
         url: 'https://www.ssbwiki.com/images/1/14/SSBUSuperLeaf.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Super Mario Bros. 3',
         class: 'Status',
@@ -950,7 +950,7 @@ module.exports = [
     {
         name: 'super mushroom',
         url: 'https://www.ssbwiki.com/images/0/04/SSBUSuperMushroom.png',
-        smash: ['Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Super Mario Bros.',
         class: 'Status',
@@ -961,7 +961,7 @@ module.exports = [
     {
         name: 'super scope',
         url: 'https://www.ssbwiki.com/images/a/a3/SSBUSuperScope.png',
-        smash: ['Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['Melee', 'Brawl', '4', 'Ultimate'],
         series: 'SNES Accessories',
         debut: 'Super Scope 6',
         class: 'Shooting',
@@ -972,7 +972,7 @@ module.exports = [
     {
         name: 'super star',
         url: 'https://www.ssbwiki.com/images/6/6e/Super_Star_%28Super_Smash_Bros._Ultimate%29.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Super Mario Bros.',
         class: 'Status',
@@ -983,7 +983,7 @@ module.exports = [
     {
         name: 'superspicy curry',
         url: 'https://www.ssbwiki.com/images/5/55/SuperspicyCurryTrophyWiiU.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Kirby',
         debut: 'Kirby\'s Dream Land',
         class: 'Status/Shooting',
@@ -994,7 +994,7 @@ module.exports = [
     {
         name: 'team healer',
         url: 'https://www.ssbwiki.com/images/0/03/TeamHealerTrophyWiiU.png',
-        smash: ['Brawl', '4'],
+        games: ['Brawl', '4'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Throwing/Recovery',
@@ -1005,7 +1005,7 @@ module.exports = [
     {
         name: 'timer',
         url: 'https://www.ssbwiki.com/images/f/fd/SSBUTimer.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Status',
@@ -1016,7 +1016,7 @@ module.exports = [
     {
         name: 'unira',
         url: 'https://www.ssbwiki.com/images/9/91/UniraTrophyWiiU.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Clu Clu Land',
         debut: 'Clu Clu Land',
         class: 'Throwing',
@@ -1027,7 +1027,7 @@ module.exports = [
     {
         name: 'warp star',
         url: 'https://www.ssbwiki.com/images/5/57/Warp_Star_%28Super_Smash_Bros._Ultimate%29.png',
-        smash: ['Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Kirby',
         debut: 'Kirby\'s Adventure',
         class: 'Special/Explosive',
@@ -1038,7 +1038,7 @@ module.exports = [
     {
         name: 'x bomb',
         url: 'https://www.ssbwiki.com/images/c/c8/SSBUXBomb.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Kid Icarus',
         debut: 'Meteos/Kid Icarus: Uprising',
         class: 'Explosive/Throwing',
@@ -1049,7 +1049,7 @@ module.exports = [
     {
         name: 'cd',
         url: 'https://www.ssbwiki.com/images/2/2b/CDTrophyWiiU.png',
-        smash: ['Brawl', 'Wii U'],
+        games: ['Brawl', 'Wii U'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Collectable',
@@ -1060,7 +1060,7 @@ module.exports = [
     {
         name: 'custom part',
         url: 'https://www.ssbwiki.com/images/7/7b/CustomPartsTrophy3DS.png',
-        smash: ['4'],
+        games: ['4'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. 4',
         class: 'Collectable',
@@ -1071,7 +1071,7 @@ module.exports = [
     {
         name: 'sticker',
         url: 'https://www.ssbwiki.com/images/9/93/Stickers_-_Brawl_Trophy.png',
-        smash: ['Brawl'],
+        games: ['Brawl'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Collectable',
@@ -1082,7 +1082,7 @@ module.exports = [
     {
         name: 'trophy',
         url: 'https://www.ssbwiki.com/images/a/a0/BrawlTrophy.jpg',
-        smash: ['Melee', 'Brawl', '4'],
+        games: ['Melee', 'Brawl', '4'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Melee',
         class: 'Collectable',
@@ -1093,7 +1093,7 @@ module.exports = [
     {
         name: 'arrow',
         url: 'https://www.ssbwiki.com/images/8/8c/SSBUWebsite30.jpg',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'The Legend of Zelda',
         debut: 'The Legend of Zelda',
         class: 'Throwing',
@@ -1104,7 +1104,7 @@ module.exports = [
     {
         name: 'burst grenade',
         url: 'https://www.ssbwiki.com/images/3/36/SSB4_-_Sheik_Screen-4.jpg',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'The Legend of Zelda',
         debut: 'Super Smash Bros. 4',
         class: 'Throwing/Explosive',
@@ -1115,7 +1115,7 @@ module.exports = [
     {
         name: 'bomb',
         url: 'https://www.ssbwiki.com/images/0/04/LinkBombModelSSBM.png',
-        smash: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['64', 'Melee', 'Brawl', '4', 'Ultimate'],
         series: 'The Legend of Zelda',
         debut: 'The Legend of Zelda',
         class: 'Throwing/Explosive',
@@ -1126,7 +1126,7 @@ module.exports = [
     {
         name: 'bonsly',
         url: 'https://www.ssbwiki.com/images/f/ff/Bonsly_Brawl.jpg',
-        smash: ['Brawl'],
+        games: ['Brawl'],
         series: 'Pokémon',
         debut: 'Pokémon XD: Gale of Darkness',
         class: 'Throwing',
@@ -1137,7 +1137,7 @@ module.exports = [
     {
         name: 'bonus fruit',
         url: 'https://www.ssbwiki.com/images/3/3d/Bonus_Fruit_Spirit.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'PAC-MAN',
         debut: 'PAC-MAN (Arcade)/Galaxian/Mappy',
         class: 'Throwing',
@@ -1148,7 +1148,7 @@ module.exports = [
     {
         name: 'cardboard box',
         url: 'https://www.ssbwiki.com/images/8/85/Cardboardbox_1.jpg',
-        smash: ['Brawl', 'Ultimate'],
+        games: ['Brawl', 'Ultimate'],
         series: 'Metal Gear',
         debut: 'Metal Gear',
         class: 'Throwing',
@@ -1159,7 +1159,7 @@ module.exports = [
     {
         name: 'crown',
         url: 'https://www.ssbwiki.com/images/8/85/King_K_Rool_SSBU_Skill_Preview_Side_Special.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Donkey Kong',
         debut: 'Donkey Kong Country',
         class: 'Throwing',
@@ -1170,7 +1170,7 @@ module.exports = [
     {
         name: 'electrode',
         url: 'https://www.ssbwiki.com/images/a/af/SSBUElectrode.png',
-        smash: ['Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Pokémon',
         debut: 'Pokémon Red/Green',
         class: 'Explosive/Throwing',
@@ -1181,7 +1181,7 @@ module.exports = [
     {
         name: 'gyro',
         url: 'https://www.ssbwiki.com/images/0/00/ROB_SSBU_Skill_Preview_Down_Special.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'NES Robot Series',
         debut: 'Gyromite',
         class: 'Throwing',
@@ -1192,7 +1192,7 @@ module.exports = [
     {
         name: 'hand grenade',
         url: 'https://www.ssbwiki.com/images/a/a6/HandGrenadeSoftThrow.jpg',
-        smash: ['Brawl', 'Ultimate'],
+        games: ['Brawl', 'Ultimate'],
         series: 'Metal Gear',
         debut: 'Metal Gear',
         class: 'Throwing/Explosive',
@@ -1203,7 +1203,7 @@ module.exports = [
     {
         name: 'holy water',
         url: 'https://www.ssbwiki.com/images/1/10/SSBUWebsiteSimon5.jpg',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Castlevania',
         debut: 'Castlevania (NES/Famicom)',
         class: 'Throwing/Explosive',
@@ -1214,7 +1214,7 @@ module.exports = [
     {
         name: 'mechakoopa',
         url: 'https://www.ssbwiki.com/images/c/ca/Bowser_Jr_SSBU_Skill_Preview_Down_Special.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Super Mario World',
         class: 'Throwing/Explosive',
@@ -1225,7 +1225,7 @@ module.exports = [
     {
         name: 'metal blade',
         url: 'https://www.ssbwiki.com/images/e/e9/Mega_Man_SSBU_Skill_Preview_Neutral_Special.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Mega Man',
         debut: 'Mega Man 2',
         class: 'Throwing',
@@ -1236,7 +1236,7 @@ module.exports = [
     {
         name: 'peanut',
         url: 'https://www.ssbwiki.com/images/b/b5/Peanut_Popgun.jpg',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'Donkey Kong',
         debut: 'Donkey Kong 64',
         class: 'Throwing/Recovery',
@@ -1247,7 +1247,7 @@ module.exports = [
     {
         name: 'power suit piece',
         url: 'https://www.ssbwiki.com/images/f/f5/Power_Suit_Samus_-_Brawl_Trophy.png',
-        smash: ['Brawl'],
+        games: ['Brawl'],
         series: 'Metroid',
         debut: 'Metroid',
         class: 'Throwing',
@@ -1258,7 +1258,7 @@ module.exports = [
     {
         name: 'pyukumuku',
         url: 'https://www.ssbwiki.com/images/1/1c/SSBUPyukumuku.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Pokémon',
         debut: 'Pokémon Sun/Moon',
         class: 'Throwing',
@@ -1269,7 +1269,7 @@ module.exports = [
     {
         name: 'grenade egg',
         url: 'https://www.ssbwiki.com/images/7/7a/Banjo_%26_Kazooie_SSBU_Skill_Preview_Down_Special.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Banjo Kazooie',
         debut: 'Banjo Kazooie',
         class: 'Throwing/Explosive',
@@ -1280,7 +1280,7 @@ module.exports = [
     {
         name: 'remote bomb',
         url: 'https://www.ssbwiki.com/images/4/48/Link_SSBU_Skill_Preview_Down_Special.png',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'The Legend of Zelda',
         debut: 'The Legend of Zelda: Breath of the Wild',
         class: 'Throwing/Explosive',
@@ -1291,7 +1291,7 @@ module.exports = [
     {
         name: 'vegetable',
         url: 'https://www.ssbwiki.com/images/6/6f/Daisy_SSBU_Skill_Preview_Down_Special.png',
-        smash: ['Melee', 'Brawl', '4', 'Ultimate'],
+        games: ['Melee', 'Brawl', '4', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Yume Kōjō: Doki Doki Panic',
         class: 'Throwing',
@@ -1302,7 +1302,7 @@ module.exports = [
     {
         name: 'wario bike',
         url: 'https://www.ssbwiki.com/images/f/f2/Wario_SSBU_Skill_Preview_Side_Special.png',
-        smash: ['Brawl', '4', 'Ultimate'],
+        games: ['Brawl', '4', 'Ultimate'],
         series: 'WarioWare',
         debut: 'WarioWare Inc.: Mega Microgame$!',
         class: 'Throwing',
@@ -1313,7 +1313,7 @@ module.exports = [
     {
         name: 'wario bike wheels',
         url: 'https://www.ssbwiki.com/images/3/3a/Wario_SSBU_Skill_Preview_Extra_1.png',
-        smash: ['Brawl'],
+        games: ['Brawl'],
         series: 'WarioWare',
         debut: 'WarioWare Inc.: Mega Microgame$!',
         class: 'Throwing',
@@ -1324,7 +1324,7 @@ module.exports = [
     {
         name: 'wood chip',
         url: 'https://www.ssbwiki.com/images/c/c1/Villager_SSBU_Skill_Preview_Down_Special.png',
-        smash: ['4', 'Ultimate'],
+        games: ['4', 'Ultimate'],
         series: 'Animal Crossing',
         debut: 'Super Smash Bros. 4',
         class: 'Throwing',
@@ -1335,7 +1335,7 @@ module.exports = [
     {
         name: 'apple',
         url: 'https://www.ssbwiki.com/images/5/56/ApplesTrophyWiiU.png',
-        smash: ['Melee', 'Brawl', 'Ultimate'],
+        games: ['Melee', 'Brawl', 'Ultimate'],
         series: 'Kirby',
         debut: 'Kirby\'s Dream Land',
         class: 'Throwing/Recovery',
@@ -1346,7 +1346,7 @@ module.exports = [
     {
         name: 'auroros',
         url: 'https://www.ssbwiki.com/images/c/c0/Auroros_-_Brawl_Trophy.png',
-        smash: ['Brawl'],
+        games: ['Brawl'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Throwing',
@@ -1357,7 +1357,7 @@ module.exports = [
     {
         name: 'chest',
         url: 'https://www.ssbwiki.com/images/4/4e/ChestSmashRun.png',
-        smash: ['3DS'],
+        games: ['3DS'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. 3DS',
         class: 'Special/Container',
@@ -1368,7 +1368,7 @@ module.exports = [
     {
         name: 'key',
         url: 'https://www.ssbwiki.com/images/6/6b/Brawl_Key.jpg',
-        smash: ['Brawl'],
+        games: ['Brawl'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Throwing',
@@ -1379,7 +1379,7 @@ module.exports = [
     {
         name: 'pellet',
         url: 'https://www.ssbwiki.com/images/7/71/PelletsTrophyWiiU.png',
-        smash: ['Brawl', '3DS', 'Ultimate'],
+        games: ['Brawl', '3DS', 'Ultimate'],
         series: 'Pikmin',
         debut: 'Pikmin',
         class: 'Throwing',
@@ -1390,7 +1390,7 @@ module.exports = [
     {
         name: 'shellcreeper',
         url: 'https://www.ssbwiki.com/images/5/5a/ShellcreeperTrophyWiiU.png',
-        smash: ['Brawl', 'Ultimate'],
+        games: ['Brawl', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Mario Bros.',
         class: 'Throwing',
@@ -1401,7 +1401,7 @@ module.exports = [
     {
         name: 'sidestepper',
         url: 'https://www.ssbwiki.com/images/e/e1/SidesteppersTrophyWiiU.png',
-        smash: ['Brawl', 'Ultimate'],
+        games: ['Brawl', 'Ultimate'],
         series: 'Super Mario',
         debut: 'Mario Bros.',
         class: 'Throwing',
@@ -1412,7 +1412,7 @@ module.exports = [
     {
         name: 'spirit shooting gun',
         url: 'https://www.ssbwiki.com/images/e/ec/SpiritFromSpiritBoard.jpg',
-        smash: ['Ultimate'],
+        games: ['Ultimate'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Ultimate',
         class: 'Shooting',
@@ -1423,7 +1423,7 @@ module.exports = [
     {
         name: 'coins and bills',
         url: 'https://www.ssbwiki.com/images/7/7f/CoinCoinSmashTrophyWiiU.png',
-        smash: ['Melee', 'Brawl', 'Wii U'],
+        games: ['Melee', 'Brawl', 'Wii U'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Melee',
         class: 'Collectable',
@@ -1434,7 +1434,7 @@ module.exports = [
     {
         name: 'stock ball',
         url: 'https://www.ssbwiki.com/images/e/e3/Stock.jpg',
-        smash: ['Brawl'],
+        games: ['Brawl'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Special',
@@ -1445,7 +1445,7 @@ module.exports = [
     {
         name: 'target',
         url: 'https://www.ssbwiki.com/images/e/e9/Target_Melee_Trophy.png',
-        smash: ['64', 'Melee', 'Brawl', '4'],
+        games: ['64', 'Melee', 'Brawl', '4'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. 64',
         class: 'Special',
@@ -1456,7 +1456,7 @@ module.exports = [
     {
         name: 'tortimer fruits',
         url: 'https://www.ssbwiki.com/images/c/c3/Tortimer_Island_SSB3DS.png',
-        smash: ['3DS', 'Ultimate'],
+        games: ['3DS', 'Ultimate'],
         series: 'Animal Crossing',
         debut: 'Animal Crossing',
         class: 'Recovery/Throwing',
@@ -1467,7 +1467,7 @@ module.exports = [
     {
         name: 'trophy stand',
         url: 'https://www.ssbwiki.com/images/c/c8/TrophyStand.jpg',
-        smash: ['Brawl'],
+        games: ['Brawl'],
         series: 'Super Smash Bros.',
         debut: 'Super Smash Bros. Brawl',
         class: 'Throwing',
@@ -1478,7 +1478,7 @@ module.exports = [
     {
         name: 'yoshi\'s egg',
         url: 'https://www.ssbwiki.com/images/7/71/YoshiEgg.png',
-        smash: ['Melee'],
+        games: ['Melee'],
         series: 'Yoshi',
         debut: 'Yoshi (NES)',
         class: 'Throwing',

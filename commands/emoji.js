@@ -4,7 +4,7 @@ module.exports = {
     name: 'emoji',
     aliases: ['emote', 'e'],
     description: 'Shows information about a custom emoji. I need the "Manage Emojis" permission to show the most info!',
-    usage: '<emoji>',
+    usage: ['<emoji>'],
     args: true,
     category: 'info',
     execute(msg, args) {

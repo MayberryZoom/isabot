@@ -1,6 +1,5 @@
 const terms = require('../terms.js');
-const termNames = Object.keys(terms);
-const generalNames = termNames.filter(t => terms[t].character === 'general');
+const generalNames = terms.filter(t => t.character === 'general').map(t => t.name);
 
 const characters = new Discord.Collection(
     [
@@ -16,14 +15,14 @@ const characters = new Discord.Collection(
 module.exports = {
     name: 'terms',
     description: 'Gets a character\'s terms.',
-    usage: '<character>',
+    usage: ['<character>'],
     category: 'smash',
     execute(msg, args) {
         return new Promise((resolve, reject) => {
             if (!args.length) {
                 let currentChar = msg.channel.type === 'dm' ? undefined : characters.find(c => c.id === msg.guild.id);
                 let charNames;
-                if (currentChar) { currentChar = currentChar.aliases[0]; charNames = termNames.filter(t => terms[t].character === currentChar) }
+                if (currentChar) { currentChar = currentChar.aliases[0]; charNames = terms.filter(t => t.character === currentChar).map(t => t.name); }
 
                 let termsEmbed = new Discord.RichEmbed() .setTitle('Terms for `>define`') .setColor(isabotColor) .addField('General Terms', generalNames.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
                 if (charNames && charNames.length) termsEmbed .addField(capitalize(currentChar, [' ']) + ' Terms', charNames.sort().join(', '));
@@ -35,8 +34,8 @@ module.exports = {
             const character = characters.find(c => c.aliases.includes(argsFixed));
             if (character === null) msg.channel.send('That is not a valid character!').then(resolve()).catch(e => reject(e));
 
-            const charTerms = termNames.filter(t => terms[t].character.toLowerCase()  === character.aliases[0]);
-            msg.channel.send(new Discord.RichEmbed() .setTitle(terms[charTerms[0]].character + ' Terms') .setColor(isabotColor) .setDescription(charTerms.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp())
+            const charTerms = terms.filter(t => t.character.toLowerCase()  === character.aliases[0]);
+            msg.channel.send(new Discord.RichEmbed() .setTitle(capitalize(charTerms[0].character, [' ', '-']) + ' Terms') .setColor(isabotColor) .setDescription(charTerms.map(t => t.name).sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp())
             .then(resolve())
             .catch(e => reject(e));
         });

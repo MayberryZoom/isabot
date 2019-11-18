@@ -2,3 +2,6 @@ node_modules/
 token.json
 package-lock.json
 commands/flair.js
+commands/name.js
+api.js
+commands/jab.js

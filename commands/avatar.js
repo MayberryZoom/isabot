@@ -3,7 +3,7 @@ const { parseUser } = require('../conversions.js');
 module.exports = {
     name: 'avatar',
     description: "Gets a user's avatar.",
-    usage: '<user>',
+    usage: ['<user>'],
     dmDisabled: 1,
     category: 'info',
     execute(msg, args) {

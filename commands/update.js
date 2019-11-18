@@ -10,13 +10,13 @@ module.exports = {
 	name: 'update',
 	aliases: ['restart', 'reboot', 'reload'],
 	description: 'Update bot/reload commands',
-	usage: '<command>',
+	usage: ['<command>'],
 	hidden: true,
 	ownerOnly: true,
 	category: 'owner',
 	execute(msg, args) {
 		return new Promise(async (resolve, reject) => {
-			if (args[0]) {
+			if (args.length !== 0) {
 				if (commandFiles.includes(args[0] + '.js')) {
 					client.commands.set(args[0], refresh(`./${args[0]}.js`));
 					return msg.channel.send('Reloaded command `' + args[0] + '` successfully.').then(resolve()).catch((e) => reject(e));

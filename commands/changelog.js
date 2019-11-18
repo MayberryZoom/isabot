@@ -1,13 +1,33 @@
-const changes = `- Optimization and bug fixes
-- Added \`>isabelle\` and \`>digby\`
-- Added \`>info\`
-- Added \`>credits\`
-    - Added indicator to \`>user\` for dev/contributor/tester
-- Buffed \`>help\`
-    - Added command categories
-    - Added a few more neat things
-- Buffed \`>server\`
-    - Added an optional argument to get specific server properties`;
+const changes = `- Added optional argument to \`>source\` that provides the source for a specific command __(11/12/19)__
+
+- Improved \`>jab\` __(11/13/19)__
+    - Now supports character and move arguments at same time
+    - Now supports rage
+
+- Improved \`>help\` __(11/13/19)__
+    - Now supports multiple syntax examples
+    - Fixed a bug where it was impossible to see help for server specific commands
+
+- Added \`>item\` __(11/14/19)__
+    - Shows item for any item in the Smash series
+    - Use no argument for a list of items
+    - Provide a smash game as an argument for a list of items from that game
+
+- Updated Isabelle USmash in \`>hitbox\` to properly display its hitboxes __(11/14/19)__
+
+- Added \`>tip\` __(11/15/19)__
+    - Provides a random bit of smash advice
+
+- Added \`>coin\` __(11/16/19)__
+    - Flips a coin, landing on either heads or tails
+
+- Added \`>dice\` __(11/16/19)__
+    - Rolls a die
+    - Provide a number of sides for it to have
+
+- Added \`>rps\` __(11/16/19)__
+    - Play Rock Paper Scissors
+    - Provide an option to use`;
 
 module.exports = {
     name: 'changelog',
