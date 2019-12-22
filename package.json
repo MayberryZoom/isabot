@@ -1,23 +1,21 @@
 {
   "name": "isabot",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Spexxtacular/isabot.git"
+    "url": "git+https://github.com/Isachu/isabot.git"
   },
-  "author": "Spexxtacular",
+  "author": "Isachu",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^11.4.2",
-    "get-average-color": "0.0.6",
-    "image-average-color": "^1.0.0",
-    "readimage": "^1.1.1"
+    "axios": "^0.19.0",
+    "discord.js": "^11.5.1"
   },
   "bugs": {
-    "url": "https://github.com/Spexxtacular/isabot/issues"
+    "url": "https://github.com/Isachu/isabot/issues"
   },
-  "homepage": "https://github.com/Spexxtacular/isabot#readme",
+  "homepage": "https://github.com/Isachu/isabot#readme",
   "keywords": [],
   "description": ""
 }

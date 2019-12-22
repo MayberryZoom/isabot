@@ -4,8 +4,9 @@ module.exports = {
     name: 'emoji',
     aliases: ['emote', 'e'],
     description: 'Shows information about a custom emoji. I need the "Manage Emojis" permission to show the most info!',
-    usage: '<emoji>',
+    usage: ['<emoji>'],
     args: true,
+    category: 'info',
     execute(msg, args) {
         return new Promise(async (resolve, reject) => {
             const e = await conversions.parseEmoji(client, args.join(' '));
@@ -13,7 +14,9 @@ module.exports = {
 
             let embed = new Discord.RichEmbed()
                 .setTitle(`:${e.name}: (${e.id})`)
-                .setColor(color);
+                .setColor(isabotColor)
+                .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
+                .setTimestamp();
 
             if (e.guild) {
                 embed.addField('Created At', e.createdAt.toUTCString(), true)

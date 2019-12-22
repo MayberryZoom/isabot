@@ -59,8 +59,9 @@ const { parseUser } = require('../conversions.js');
 module.exports = {
     name: 'compliment',
     description: 'Compliments a user.',
-    usage: '<user>',
+    usage: ['<user>'],
     args: true,
+    category: 'fun',
     execute(msg, args) {
         return new Promise(async (resolve, reject) => {
             const user = await parseUser(msg, args.join(' '));
