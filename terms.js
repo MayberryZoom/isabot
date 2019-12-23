@@ -367,7 +367,7 @@ module.exports = [
    },
    {
       name: 'nut',
-      definition: 'Developed by **Iggy**\ndthrow > (roll) > [uaft/nair] > (sideb) > grab > [fthrow] > (fair).\n*Note: (Squall) can be escaped with SDI, making this combo not true. Links not embedded for space reasons. \n<https://youtu.be/KmbBGbuMTZI?t=27>* \n<https://twitter.com/v23God/status/1096525627094650880>',
+      definition: 'Developed by **Iggy**\ndthrow > (roll) > [uaft/nair] > (sideb) > grab > [fthrow] > (fair).\n*Note: (Squall) can be escaped with SDI, making this combo not true.\n<https://youtu.be/KmbBGbuMTZI?t=27>* \n<https://twitter.com/v23God/status/1096525627094650880>',
       character: 'ice climbers'
    },
    {
@@ -377,7 +377,7 @@ module.exports = [
    },
    {
       name: 'cheerless',
-      definition: 'If you get a synced grab with ICs, when you input a throw Nana will do a taunt (called cheer). This means she cannot act while you are throwing. Certain setups can allow you to get a cheerless throw, where Nana will be able to buffer an option as you throw, before she cheers. An example of this is the yeet.https://youtu.be/377qQF66n9M',
+      definition: 'If you get a synced grab with ICs, when you input a throw Nana will do a taunt (called cheer). This means she cannot act while you are throwing. Certain setups can allow you to get a cheerless throw, where Nana will be able to buffer an option as you throw, before she cheers. An example of this is the yeet.<https://youtu.be/377qQF66n9M>',
       character: 'ice climbers'
    },
    {
@@ -387,7 +387,7 @@ module.exports = [
    },
    {
       name: 'semisync',
-      definition: 'A state of being where nana will sometimes be under popo\'s control, and sometimes not. \nhttps://gfycat.com/MellowTerribleFawn',
+      definition: 'A state of being where nana will sometimes be under popo\'s control, and sometimes not. \n<https://gfycat.com/MellowTerribleFawn>',
       character: 'ice climbers'
    },
    {
@@ -413,19 +413,19 @@ module.exports = [
    {
       name: 'tilt turn',
       aliases: ['tilt turn desync'],
-      definition: 'One of the hardest desyncs ICs can do. Allows you to very quickly desync from standing, and can be applied to (blizzard) [wavedash]\nhttps://twitter.com/v23God/status/1114949522256539648',
+      definition: 'One of the hardest desyncs ICs can do. Allows you to very quickly desync from standing, and can be applied to (blizzard) [wavedash]\n<https://twitter.com/v23God/status/1114949522256539648>',
       character: 'ice climbers'
    },
    {
       name: 'blizzard wavedash',
       aliases: ['blizzdash'],
-      definition: 'https://twitter.com/madmonk12345/status/1089084293241061378',
+      definition: '<https://twitter.com/madmonk12345/status/1089084293241061378>',
       character: 'ice climbers'
    },
    {
       name: 'jab interrupt',
       aliases: ['jab desync'],
-      definition: 'https://twitter.com/Savestate/status/1077064481233088512',
+      definition: '<https://twitter.com/Savestate/status/1077064481233088512>',
       character: 'ice climbers'
    },
    {
@@ -436,17 +436,17 @@ module.exports = [
    },
    {
       name: 'gimfinite',
-      definition: 'https://youtu.be/BCovjXUecDw',
+      definition: '<https://youtu.be/BCovjXUecDw>',
       character: 'ice climbers'
    },
    {
       name: 'ruri combo',
-      definition: 'A solid conversion off of synced grab at mid percents. https://twitter.com/ruripikaics/status/1105443229095190529',
+      definition: 'A solid conversion off of synced grab at mid percents. <https://twitter.com/ruripikaics/status/1105443229095190529>',
       character: 'ice climbers'
    },
    {
       name: 'chars doc',
-      definition: 'Doc that lists what specific things work on which characters, such as utilt (footstool squall), (utilt) footstool as an infinite, and the gimfinite. Work in progress, contact techy#5973 for editing access/corrections. https://docs.google.com/spreadsheets/d/1WI_xGi1OQ3b0bhrue42OqjrlufqYJQXM2m0FNil6-hw/edit#gid=0',
+      definition: 'Doc that lists what specific things work on which characters, such as utilt (footstool squall), (utilt) footstool as an infinite, and the gimfinite. Work in progress, contact techy#5973 for editing access/corrections. <https://docs.google.com/spreadsheets/d/1WI_xGi1OQ3b0bhrue42OqjrlufqYJQXM2m0FNil6-hw/edit#gid=0>',
       character: 'ice climbers'
    },
    {
@@ -456,7 +456,7 @@ module.exports = [
    },
    {
       name: 'nanatrump',
-      definition: 'While trumping is only mediocre for a lot of characters in this game, since the opponent can DI in or away from the stage and limit your options for directly punishing it, Ice Climbers has what is likely the best trump punishes in the game. The answer is to make nana trump the opponent, while immdiately hitting ledge with popo fsmash. This is called nanatrump.\nThere are two main ways to do this - \n1. Run towards ledge and pivot grab towards center stage right before you reach ledge. While popo is in the endlag from the pivot grab, you can trump with nana.\n2. You can jump towards ledge, and if you space your landing just right, nana will grab ledge but popo will land on stage.\n\nAs nana trumps the opponent, you must immediately fsmash the ledge with popo. If done properly, they will get hit by the fsmash immediately after breaking contact with the ledge, which guarantees the fsmash.\nExample: https://twitter.com/bigd_ssb/status/1086753626670809088',
+      definition: 'While trumping is only mediocre for a lot of characters in this game, since the opponent can DI in or away from the stage and limit your options for directly punishing it, Ice Climbers has what is likely the best trump punishes in the game. The answer is to make nana trump the opponent, while immdiately hitting ledge with popo fsmash. This is called nanatrump.\nThere are two main ways to do this - \n1. Run towards ledge and pivot grab towards center stage right before you reach ledge. While popo is in the endlag from the pivot grab, you can trump with nana.\n2. You can jump towards ledge, and if you space your landing just right, nana will grab ledge but popo will land on stage.\n\nAs nana trumps the opponent, you must immediately fsmash the ledge with popo. If done properly, they will get hit by the fsmash immediately after breaking contact with the ledge, which guarantees the fsmash.\nExample: <https://twitter.com/bigd_ssb/status/1086753626670809088>',
       character: 'ice climbers'
    },
    {
@@ -467,23 +467,23 @@ module.exports = [
    {
       name: 'landing lag desync',
       aliases: ['bair uair', 'uair uair', 'double uair', 'LL desync'],
-      definition: 'If you do a short hop buffered bair or uair, and then buffer an uair right before landing, Nana\'s uair will autocancel, and you can input something for nana right before you land, which popo will ignore.\nhttps://www.youtube.com/watch?v=79BBYmOR78I',
+      definition: 'If you do a short hop buffered bair or uair, and then buffer an uair right before landing, Nana\'s uair will autocancel, and you can input something for nana right before you land, which popo will ignore.\n<https://www.youtube.com/watch?v=79BBYmOR78I>',
       character: 'ice climbers'
    },
    {
       name: 'izaw guide',
-      definition: 'A beginners intro to a few useful ICs things. https://www.youtube.com/watch?v=Y2uVdqAVoUQ',
+      definition: 'A beginners intro to a few useful ICs things. <https://www.youtube.com/watch?v=Y2uVdqAVoUQ>',
       character: 'ice climbers'
    },
    {
       name: 'footstool squall',
       aliases: ['fs squall'],
-      definition: 'If you get a popo solo utilt, you can footstool with nana and immediately input squall with nana, which will drag the opponent down potentially into a grab. https://youtu.be/gnKpZjXZA40',
+      definition: 'If you get a popo solo utilt, you can footstool with nana and immediately input squall with nana, which will drag the opponent down potentially into a grab. <https://youtu.be/gnKpZjXZA40>',
       character: 'ice climbers'
    },
    {
       name: 'rollback desync',
-      definition: 'You can roll while also launching nana forward and squalling. technical details are in the video description: https://youtu.be/lA6l1H_DcMQ',
+      definition: 'You can roll while also launching nana forward and squalling. technical details are in the video description: <https://youtu.be/lA6l1H_DcMQ>',
       character: 'ice climbers'
    },
    {
@@ -505,18 +505,18 @@ module.exports = [
    },
    {
       name: 'blizz confirms',
-      definition: 'Kill Confirms out of a synced blizzard freeze: https://twitter.com/techyCoder81/status/1119463888410562560',
+      definition: 'Kill Confirms out of a synced blizzard freeze: <https://twitter.com/techyCoder81/status/1119463888410562560>',
        character: 'ice climbers'
    },
    {
       name: 'pummel buffer desync',
       aliases: ['cheer cancel'],
-      definition: 'You can buffer certain options for nana as popo\'s grab is coming out but before it actually lands. This used to be referred to as Cheer Cancel, but has now been renamed to Pummel Buffer Desync. Note that it is not Cheerless, and does not directly involve cheerless.\nFrame data: The window for grab (spotdodge) is 5 frames from standing grab (-3 to +1, with grab being f0), and  6 frames from grab during initial dash (-2 to +3). You can also Roll with the same timing. This window works because you can input down before the grab, and popo\'s grab input will count as a shield input for Nana. And of course, down + shield == spotdodge.\n\nThe window for grab (AB smash) is 2 frames from standing grab (0 to +1, with grab being f0), and 3 frames from grab during initial dash (+1 to +3). This is the generalized window for things that aren\'t roll or spotdodge. For example, you can grab (jump) , or grab (taunt) with this same timing.\n\nUnfortunately, while you CAN do tilts and specials while grabbing they are all a 1 frame window from a dash grab, and are not possible from a standing grab. In the future I may do a more in depth video on the specific reasons for why that is the case, but for now just don\'t worry about that at all. Spotdodge is the most common choice for CC option. https://www.youtube.com/watch?v=m-NKjph9fFI&feature=youtu.be',
+      definition: 'You can buffer certain options for nana as popo\'s grab is coming out but before it actually lands. This used to be referred to as Cheer Cancel, but has now been renamed to Pummel Buffer Desync. Note that it is not Cheerless, and does not directly involve cheerless.\nFrame data: The window for grab (spotdodge) is 5 frames from standing grab (-3 to +1, with grab being f0), and  6 frames from grab during initial dash (-2 to +3). You can also Roll with the same timing. This window works because you can input down before the grab, and popo\'s grab input will count as a shield input for Nana. And of course, down + shield == spotdodge.\n\nThe window for grab (AB smash) is 2 frames from standing grab (0 to +1, with grab being f0), and 3 frames from grab during initial dash (+1 to +3). This is the generalized window for things that aren\'t roll or spotdodge. For example, you can grab (jump) , or grab (taunt) with this same timing.\n\nUnfortunately, while you CAN do tilts and specials while grabbing they are all a 1 frame window from a dash grab, and are not possible from a standing grab. In the future I may do a more in depth video on the specific reasons for why that is the case, but for now just don\'t worry about that at all. Spotdodge is the most common choice for CC option. <https://www.youtube.com/watch?v=m-NKjph9fFI&feature=youtu.be>',
       character: 'ice climbers'
    },
    {
       name: 'nair interrupt',
-      definition: 'If you hit someone with the first 2 frames of nair in a sh, you can buffer a squall for nana instead of the nair. https://www.youtube.com/watch?v=MTe5xxQPvEY',
+      definition: 'If you hit someone with the first 2 frames of nair in a sh, you can buffer a squall for nana instead of the nair. <https://www.youtube.com/watch?v=MTe5xxQPvEY>',
       character: 'ice climbers'
    },
    {
@@ -527,7 +527,7 @@ module.exports = [
    {
       name: 'turn buffer desync',
       aliases: ['turn buffer'],
-      definition: 'A fast desync done from standing or walking. Turn without dashing, then buffer another turn without dashing with popo that nana will do in 6 frames, then after 6 or more frames have passed, input a dash in the original direction you turned followed by an immediate attack you can do from walk but not run. Nana’s turning animation during this cannot be interrupted by a dash in that direction, so she dashes 4 frames late, creating a window for a nana only input./nVideo: https://twitter.com/madmonk12345/status/1144807399854751744?s=21/nStick movement guide: https://twitter.com/madmonk12345/status/1140854288517718017?s=21',
+      definition: 'A fast desync done from standing or walking. Turn without dashing, then buffer another turn without dashing with popo that nana will do in 6 frames, then after 6 or more frames have passed, input a dash in the original direction you turned followed by an immediate attack you can do from walk but not run. Nana’s turning animation during this cannot be interrupted by a dash in that direction, so she dashes 4 frames late, creating a window for a nana only input./nVideo: <https://twitter.com/madmonk12345/status/1144807399854751744?s=21>/nStick movement guide: <https://twitter.com/madmonk12345/status/1140854288517718017?s=21>',
       character: 'ice climbers'
    },   
    {
@@ -539,7 +539,7 @@ module.exports = [
    {
       name: 'button storage desyncs',
       aliases: ['grab storage', 'special storage', 'shield storage', 'taunt storage', 'jump storage', 'button storage'],
-      definition: 'By getting Nana to ignore an input while we respawn (which can be done either by whiffing a grab and holding it immediately after, holding it as we die, or after a failed reconnect buffer), we can observe various anomalies./nThis is most usefully applied with Special Storage (which requires Smash Stick) or Grab Storage (which can be used with any control scheme), however it also has known effects with Shield, Jump and Taunt./nFor a more detailed guide on Grab Storage and Special Storage, please see https://docs.google.com/document/d/1Ftem9sr7ULRqfC0fHwTei1W1vjCf73lz6V9tXfofRwU/edit or you can see some applications being showcased in https://youtu.be/sfbicrcGfMU',
+      definition: 'By getting Nana to ignore an input while we respawn (which can be done either by whiffing a grab and holding it immediately after, holding it as we die, or after a failed reconnect buffer), we can observe various anomalies./nThis is most usefully applied with Special Storage (which requires Smash Stick) or Grab Storage (which can be used with any control scheme), however it also has known effects with Shield, Jump and Taunt./nFor a more detailed guide on Grab Storage and Special Storage, please see <https://docs.google.com/document/d/1Ftem9sr7ULRqfC0fHwTei1W1vjCf73lz6V9tXfofRwU/edit> or you can see some applications being showcased in <https://youtu.be/sfbicrcGfMU>',
       character: 'ice climbers'
    },
    {
@@ -556,6 +556,12 @@ module.exports = [
    {
       name: 'reconnect buffer',
       definition: 'Whenever Nana comes back into Popo\'s range, if you\'re holding an input there\'s a chance that Nana will read that input immediately, thereby letting you get things like (blizz) as Nana reconnects, while Popo remains fully actionable. While it is known to not be truly random, the conditions for whether she reads the input or not are unknown.\nIf the reconnect buffer fails, this notably gives you storage for that input, making attempted reconnect buffers for special and attack particularly noteworthy.',
+      character: 'ice climbers'
+   },
+   {
+      name: 'run state storage',
+      aliases: ['run walk storage'],
+      definition: 'When forward is held on the control stick, nana and popo maintain their current state of running or walking./n/nRun state storage is where you get popo to walk and nana to run. In this state, releasing the stick cause only nana to enter skid for 12 frames during which she cannot dash backwards or shield. This allows you to dash backwards or shield with popo and immediately do a nana first desync./n/nThis state can be achieved from any previous desync./n/nIf only popo can act, you can quickly mash forward twice quickly and then continue to hold forward 6-12 frames before nana can act to cause popo to do a dashwalk and nana to dash which converts into run state storage./n/nWhen nana can act, you can simply hold forward more than 6 frames before popo can act. This causes nana to dash and popo to walk./n/nExamples:/n<https://twitter.com/madmonk12345/status/1188207819780050944?s=21>/n<https://twitter.com/madmonk12345/status/1195622276680433664?s=21>',
       character: 'ice climbers'
    },
    // wii fit trainer
