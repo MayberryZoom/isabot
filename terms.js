@@ -563,6 +563,11 @@ module.exports = [
       definition: 'When forward is held on the control stick, nana and popo maintain their current state of running or walking./n/nRun state storage is where you get popo to walk and nana to run. In this state, releasing the stick cause only nana to enter skid for 12 frames during which she cannot dash backwards or shield. This allows you to dash backwards or shield with popo and immediately do a nana first desync./n/nThis state can be achieved from any previous desync./n/nIf only popo can act, you can quickly mash forward twice quickly and then continue to hold forward 6-12 frames before nana can act to cause popo to do a dashwalk and nana to dash which converts into run state storage./n/nWhen nana can act, you can simply hold forward more than 6 frames before popo can act. This causes nana to dash and popo to walk./n/nExamples:/n<https://twitter.com/madmonk12345/status/1188207819780050944?s=21>/n<https://twitter.com/madmonk12345/status/1195622276680433664?s=21>',
       character: 'ice climbers'
    },
+   {
+      name: 'landing tilt desync',
+      definition: 'Often when you land (even if you just empty hop normally) Nana will land less than 6 frames after Popo due to the effects of Popoforce. This allows us to input grounded attacks right before Popo lands so he performs an autocancelled aerial (can\'t be done with Dair for obvious reasons) while Nana receives the input while grounded. Functionally this results in Popo doing an empty, lagless landing, while Nana lands with a tilt/jab/smash attack. This can be used to get an immediate (smash attack charge), or even an (ftilt) which can combo into grab at all percents.',
+      character: 'ice climbers'
+   },
    // wii fit trainer
    {
       name: 'hc',
