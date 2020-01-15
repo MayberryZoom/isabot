@@ -471,6 +471,12 @@ module.exports = [
       character: 'ice climbers'
    },
    {
+      name: 'ICs Megaguide',
+      aliases: ['Megaguide', 'Mentor Guide', 'Mega Guide', 'ICs Mega Guide'],
+      definition: 'https://docs.google.com/document/d/1fs1J6xsBlsRGqCxJsfyANRR8W8ZA87oZ8kS9ppGeNi4/edit?usp=sharing',
+      character: 'ice climbers'
+   },
+   {
       name: 'izaw guide',
       definition: 'A beginners intro to a few useful ICs things. <https://www.youtube.com/watch?v=Y2uVdqAVoUQ>',
       character: 'ice climbers'
@@ -509,9 +515,9 @@ module.exports = [
        character: 'ice climbers'
    },
    {
-      name: 'pummel buffer desync',
-      aliases: ['cheer cancel'],
-      definition: 'You can buffer certain options for nana as popo\'s grab is coming out but before it actually lands. This used to be referred to as Cheer Cancel, but has now been renamed to Pummel Buffer Desync. Note that it is not Cheerless, and does not directly involve cheerless.\nFrame data: The window for grab (spotdodge) is 5 frames from standing grab (-3 to +1, with grab being f0), and  6 frames from grab during initial dash (-2 to +3). You can also Roll with the same timing. This window works because you can input down before the grab, and popo\'s grab input will count as a shield input for Nana. And of course, down + shield == spotdodge.\n\nThe window for grab (AB smash) is 2 frames from standing grab (0 to +1, with grab being f0), and 3 frames from grab during initial dash (+1 to +3). This is the generalized window for things that aren\'t roll or spotdodge. For example, you can grab (jump) , or grab (taunt) with this same timing.\n\nUnfortunately, while you CAN do tilts and specials while grabbing they are all a 1 frame window from a dash grab, and are not possible from a standing grab. In the future I may do a more in depth video on the specific reasons for why that is the case, but for now just don\'t worry about that at all. Spotdodge is the most common choice for CC option. <https://www.youtube.com/watch?v=m-NKjph9fFI&feature=youtu.be>',
+      name: 'Cheer Cancel',
+      aliases: ['Pummel Buffer Desync'],
+      definition: 'You can buffer certain options for nana as popo\'s grab is coming out but before it actually lands. IMPORTANT NOTE: This is NOT Cheerless, and does not directly involve cheerless, though it is one method (amongst many) that can lead into Cheerless.\nFrame data: The window for grab (spotdodge) is 5 frames from standing grab (-3 to +1, with grab being f0), and  6 frames from grab during initial dash (-2 to +3). You can also Roll with the same timing. This window works because you can input down before the grab, and popo\'s grab input will count as a shield input for Nana. And of course, down + shield == spotdodge.\n\nThe window for grab (AB smash) is 2 frames from standing grab (0 to +1, with grab being f0), and 3 frames from grab during initial dash (+1 to +3). This is the generalized window for things that aren\'t roll or spotdodge. For example, you can grab (jump) , or grab (taunt) with this same timing.\n\nUnfortunately, while you CAN do tilts and specials while grabbing they are all a 1 frame window from a dash grab, and are not possible from a standing grab. In the future I may do a more in depth video on the specific reasons for why that is the case, but for now just don\'t worry about that at all. Spotdodge is the most common choice for CC option. <https://www.youtube.com/watch?v=m-NKjph9fFI&feature=youtu.be>',
       character: 'ice climbers'
    },
    {
