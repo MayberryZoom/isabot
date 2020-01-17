@@ -495,7 +495,7 @@ module.exports = [
    {
       name: 'utilt footstool',
       aliases: ['utilt fs'],
-      definition: '(utilt) footstool AD down is a semi useful combo, which is infinite on certain floaties, but otherwise can be teched and therefore is not super reliable.',
+      definition: '(utilt) footstool airdodge down is a semi useful combo, which is infinite on certain floaties, but otherwise can be teched and therefore is not super reliable.',
       character: 'ice climbers'
    },
    {
@@ -545,7 +545,7 @@ module.exports = [
    {
       name: 'button storage desyncs',
       aliases: ['grab storage', 'special storage', 'shield storage', 'taunt storage', 'jump storage', 'button storage'],
-      definition: 'By getting Nana to ignore an input while we respawn (which can be done either by whiffing a grab and holding it immediately after, holding it as we die, or after a failed reconnect buffer), we can observe various anomalies./nThis is most usefully applied with Special Storage (which requires Smash Stick) or Grab Storage (which can be used with any control scheme), however it also has known effects with Shield, Jump and Taunt./nFor a more detailed guide on Grab Storage and Special Storage, please see <https://docs.google.com/document/d/1Ftem9sr7ULRqfC0fHwTei1W1vjCf73lz6V9tXfofRwU/edit> or you can see some applications being showcased in <https://youtu.be/sfbicrcGfMU>',
+      definition: 'By getting Nana to ignore an input while we respawn (which can be done either by whiffing a grab and holding it immediately after, holding it as we die, or after a failed reconnect buffer), we can observe various anomalies./nThis is most usefully applied with Special Storage (which requires Smash Stick) or Grab Storage (which can be used with any control scheme), however it also has known effects with Shield, Jump and Taunt./nVideo Guide: <https://youtu.be/6oret9hMXek>/nFor a slightly more detailed text guide on Grab Storage and Special Storage, see <https://docs.google.com/document/d/1Ftem9sr7ULRqfC0fHwTei1W1vjCf73lz6V9tXfofRwU/edit>',
       character: 'ice climbers'
    },
    {
