@@ -466,13 +466,13 @@ module.exports = [
    },
    {
       name: 'landing lag desync',
-      aliases: ['bair uair', 'uair uair', 'double uair', 'LL desync'],
+      aliases: ['bair uair', 'uair uair', 'double uair', 'll desync'],
       definition: 'If you do a short hop buffered bair or uair, and then buffer an uair right before landing, Nana\'s uair will autocancel, and you can input something for nana right before you land, which popo will ignore.\n<https://www.youtube.com/watch?v=79BBYmOR78I>',
       character: 'ice climbers'
    },
    {
-      name: 'ICs Megaguide',
-      aliases: ['Megaguide', 'Mentor Guide', 'Mega Guide', 'ICs Mega Guide'],
+      name: 'ics megaguide',
+      aliases: ['megaguide', 'mentor guide'],
       definition: 'https://docs.google.com/document/d/1fs1J6xsBlsRGqCxJsfyANRR8W8ZA87oZ8kS9ppGeNi4/edit?usp=sharing',
       character: 'ice climbers'
    },
@@ -515,8 +515,8 @@ module.exports = [
        character: 'ice climbers'
    },
    {
-      name: 'Cheer Cancel',
-      aliases: ['Pummel Buffer Desync'],
+      name: 'cheer cancel',
+      aliases: ['pummel buffer desync'],
       definition: 'You can buffer certain options for nana as popo\'s grab is coming out but before it actually lands. IMPORTANT NOTE: This is NOT Cheerless, and does not directly involve cheerless, though it is one method (amongst many) that can lead into Cheerless.\nFrame data: The window for grab (spotdodge) is 5 frames from standing grab (-3 to +1, with grab being f0), and  6 frames from grab during initial dash (-2 to +3). You can also Roll with the same timing. This window works because you can input down before the grab, and popo\'s grab input will count as a shield input for Nana. And of course, down + shield == spotdodge.\n\nThe window for grab (AB smash) is 2 frames from standing grab (0 to +1, with grab being f0), and 3 frames from grab during initial dash (+1 to +3). This is the generalized window for things that aren\'t roll or spotdodge. For example, you can grab (jump) , or grab (taunt) with this same timing.\n\nUnfortunately, while you CAN do tilts and specials while grabbing they are all a 1 frame window from a dash grab, and are not possible from a standing grab. In the future I may do a more in depth video on the specific reasons for why that is the case, but for now just don\'t worry about that at all. Spotdodge is the most common choice for CC option. <https://www.youtube.com/watch?v=m-NKjph9fFI&feature=youtu.be>',
       character: 'ice climbers'
    },
@@ -538,7 +538,6 @@ module.exports = [
    },   
    {
       name: 'shieldstun desync',
-      aliases: ['shield stun desync'],
       definition: 'Often when an opponent hits our shield Nana and Popo will end up less or more than 6 frames apart, meaning we can desync out of the shieldstun.',
       character: 'ice climbers'
    },
