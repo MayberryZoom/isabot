@@ -21,7 +21,7 @@ module.exports = {
         return new Promise((resolve, reject) => {
             const currentChar = msg.channel.type === 'dm' ? undefined : characters[msg.guild.id];
             let charNames;
-            if (currentChar) charNames = terms.filter(t => t.character === currentChar);
+            if (currentChar) charNames = terms.filter(t => t.character === currentChar).map(t => t.name);
 
             if (!args.length) {
                 let termsEmbed = new Discord.RichEmbed() .setTitle('Terms for `>define`') .setColor(isabotColor) .addField('General Terms', generalNames.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
