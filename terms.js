@@ -349,13 +349,8 @@ module.exports = [
    
    // pichu
    {
-      name: 'deletchu',
-      definition: '[Archaic] UAir -> Fastfall Thunder, a kill confirm that can be set up with multiple options. Works on all DI, but the UAir has to be crossed up on DI out.',
-      character: 'pichu'
-   },
-   {
       name: 'lightning loops',
-      definition: 'Using Double Jump Fastfall Autocancel (DJFFAC) BAir dragdown to combo into UTilt or UAir, which can combo into another bair, and repeat the setup. To learn more, watch this video: https://youtu.be/xJyufyRb2F4',
+      definition: 'https://youtu.be/xJyufyRb2F4',
       character: 'pichu'
    },
 
