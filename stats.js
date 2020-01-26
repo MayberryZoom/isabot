@@ -2,11 +2,7 @@ module.exports = [
     {
         "name": "isabelle",
         "color": "0xf3ee51",
-        "aliases": [
-            "isa",
-            "izzy",
-            "belle"
-        ],
+        "aliases": ["isa", "izzy", "belle", 'dog'],
         "stats": [
             {
                 "keys": [
