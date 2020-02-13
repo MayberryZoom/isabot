@@ -1,4 +1,4 @@
-const changes = `- Fixed a bug with \`>define\` where character specific terms would not display their names properly`;
+const changes = `- Added every character's non special hitboxes __(2/13/2020)__`;
 
 module.exports = {
     name: 'changelog',

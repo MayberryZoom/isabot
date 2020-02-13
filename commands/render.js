@@ -1,4 +1,4 @@
-const characters = require('../stats.js');
+const characters = require('../characters.js');
 
 const toUnderscore = (text, split) => {
     let newText = text;
@@ -17,7 +17,7 @@ module.exports = {
             let character = toOneWord(args.join(' ').toLowerCase());
             character = characters.find(c => toOneWord(c.name) === character || (c.aliases && c.aliases.includes(character)));
             
-            if (!character) return msg.channel.send('That character is either not included or not valid!').then(resolve()).catch(e => reject(e));
+            if (!character || character.name === 'luma') return msg.channel.send('That character is not valid!').then(resolve()).catch(e => reject(e));
 
             const charNameFixed = toUnderscore(character.name.replace(/\./g, '').replace(/&/g, 'and').replace(/(popo)|(nana)/, 'ice_climbers'), ['-', ' '])
 

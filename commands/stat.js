@@ -1,4 +1,4 @@
-const characters = require('../stats.js');
+const characters = require('../characters.js');
 
 const toUnderscore = (text, split) => {
     let newText = text;
@@ -8,9 +8,9 @@ const toUnderscore = (text, split) => {
 
 module.exports = {
     name: 'stat',
-    aliases: ['stats'],
-    description: 'Grabs the given character\'s stats. All data from Kurogane Hammer.',
-    usage: ['<character> <stat>'],
+    aliases: ['stats', 'attribute', 'attributes'],
+    description: 'Grabs the given character\'s attributes. All data from Kurogane Hammer. Example: `>stat mario weight`',
+    usage: ['<character> <attribute>'],
     args: true,
     category: 'smash',
     execute(msg, args) {
@@ -21,16 +21,15 @@ module.exports = {
                 character = characters.find(c => toOneWord(c.name) === character || (c.aliases && c.aliases.includes(character)));
                 x++;
             }
-            if (!character) return msg.channel.send('That character is either not included or not valid!').then(resolve()).catch(e => reject(e));
+            if (!character) return msg.channel.send('That character is not valid!').then(resolve()).catch(e => reject(e));
 
-            const statName = toOneWord(args.slice(x - 1).join(' ').toLowerCase());
-            let stat = character.stats.find(s => s.keys.includes(statName))
-
-            if (!stat) return msg.channel.send('That stat is not valid!').then(resolve()).catch(e => reject(e));
+            let attrName = toOneWord(args.slice(x - 1).join(' ').toLowerCase());
+            let attribute = character.attributes.find(a => toOneWord(a.name) === attrName || (a.aliases && a.aliases.map(x => toOneWord(x)).includes(attrName)));
+            if (!attribute) return msg.channel.send('That attribute is not valid!').then(resolve()).catch(e => reject(e));
 
             const charNameFixed = toUnderscore(character.name.replace(/\./g, '').replace(/&/g, 'and').replace(/(popo)|(nana)/, 'ice_climbers'), ['-', ' '])
 
-            const embed = new Discord.RichEmbed() .setColor(character.color) .setThumbnail(`https://www.smashbros.com/assets_v2/img/fighter/${charNameFixed}/main.png`) .addField(capitalize(character.name, [' ', '-', '.']) + ' ' + stat.name, 'Value: ' + stat.value + '\nRank: ' + stat.rank) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
+            const embed = new Discord.RichEmbed() .setColor(character.color) .setThumbnail(`https://www.smashbros.com/assets_v2/img/fighter/${charNameFixed}/main.png`) .setTitle(capitalize(character.name, [' ', '-', '.']) + ' ' + capitalize(attribute.name, [' '])) .setDescription('Value: ' + attribute.value /*+ '\nRank: ' + attribute.rank*/) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
             return msg.channel.send(embed).then(resolve()).catch((e) => reject(e));
         });
     }
