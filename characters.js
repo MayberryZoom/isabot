@@ -2910,6 +2910,7 @@ module.exports = [
     },
     {
         'name': 'bowser jr.',
+        aliases: ['bjr'],
         'color': '#59bf38',
         'jabType': 'rapid 2',
         'moves': [

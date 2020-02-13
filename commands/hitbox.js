@@ -24,15 +24,15 @@ module.exports = {
         return new Promise((resolve, reject) => {
             if (args[0] === 'credit' || args[0] === 'credits') return msg.channel.send(credits).then(resolve()).catch(e => reject(e));
 
-            let character, x = 0;
-            while (!character && x <= args.length) {
+            let character, x = args.length;
+            while (!character && x >= 0) {
                 character = toOneWord(args.slice(0, x).join(' ').toLowerCase());
                 character = charData.find(c => toOneWord(c.name) === character || (c.aliases && c.aliases.map(x => toOneWord(x)).includes(character)));
-                x++;
+                x--;
             }
             if (!character) return msg.channel.send('That character is not valid!').then(resolve()).catch(e => reject(e));
             
-            let move = toOneWord(args.slice(x - 1).join(' ').toLowerCase());
+            let move = toOneWord(args.slice(x + 1).join(' ').toLowerCase());
             if (!move) return msg.channel.send('Please provide a move!').then(resolve()).catch(e => reject(e));
 
             move = character.moves.find(x => toOneWord(x.name) === move || (x.aliases && x.aliases.map(y => toOneWord(y)).includes(move)));

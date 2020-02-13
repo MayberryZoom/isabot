@@ -15,15 +15,15 @@ module.exports = {
     category: 'smash',
     execute(msg, args) {
         return new Promise((resolve, reject) => {
-            let character, x = 0;
-            while (!character && x <= args.length) {
+            let character, x = args.length;
+            while (!character && x >= 0) {
                 character = toOneWord(args.slice(0, x).join(' ').toLowerCase());
                 character = characters.find(c => toOneWord(c.name) === character || (c.aliases && c.aliases.includes(character)));
-                x++;
+                x--;
             }
             if (!character) return msg.channel.send('That character is not valid!').then(resolve()).catch(e => reject(e));
 
-            let attrName = toOneWord(args.slice(x - 1).join(' ').toLowerCase());
+            let attrName = toOneWord(args.slice(x + 1).join(' ').toLowerCase());
             let attribute = character.attributes.find(a => toOneWord(a.name) === attrName || (a.aliases && a.aliases.map(x => toOneWord(x)).includes(attrName)));
             if (!attribute) return msg.channel.send('That attribute is not valid!').then(resolve()).catch(e => reject(e));
 
