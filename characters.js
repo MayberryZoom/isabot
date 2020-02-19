@@ -146,6 +146,30 @@ module.exports = [
                 ]
             },
             {
+                name: 'fishing rod (cast)',
+                aliases: [
+                    'rod',
+                    'fishing pole',
+                    'fishing rod',
+                    'rod cast',
+                    'smash rod',
+                    'smash fishing rod',
+                    'tilt rod',
+                    'tilt fishing rod'
+                ],
+                url: 'https://pbs.twimg.com/media/EQxzqxNUwAAp3-n?format=png'
+            },
+            {
+                name: 'fishing rod (reel)',
+                aliases: [
+                    'rod reel',
+                    'rod reel in',
+                    'fishing pole reel',
+                    'fishing pole reel in'
+                ],
+                url: 'https://pbs.twimg.com/media/EQxzqw8UUAATugV?format=png'
+            },
+            {
                 'name': 'fishing rod forward throw',
                 'aliases': [
                     'fising rod fthrow',
