@@ -151,11 +151,7 @@ module.exports = [
                     'rod',
                     'fishing pole',
                     'fishing rod',
-                    'rod cast',
-                    'smash rod',
-                    'smash fishing rod',
-                    'tilt rod',
-                    'tilt fishing rod'
+                    'rod cast'
                 ],
                 url: 'https://pbs.twimg.com/media/EQxzqxNUwAAp3-n?format=png'
             },
