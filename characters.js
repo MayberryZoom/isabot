@@ -12926,10 +12926,8 @@ module.exports = [
         ]
     },
     {
-        'name': 'duck hunt duo',
-        'aliases': [
-            'duckhunt'
-        ],
+        'name': 'duck hunt',
+        'aliases': ['duck hunt duo'],
         'color': '#8c5d3a',
         'jabType': 'gentleman',
         'moves': [
