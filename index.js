@@ -58,7 +58,7 @@ client.on('message', async msg => {
 
 	if (command.args && !args.length) {
 		let reply = 'Please provide an argument!';
-		if (command.usage) reply += `\nThe proper usage is \`\`\`${prefix}${command.name} ${command.usage}\`\`\``;
+		if (command.usage) reply += `\nThe proper usage is \`\`\`${prefix}${command.name} ${command.usage[0]}\`\`\``;
 
 		return msg.channel.send(reply);
 	}
