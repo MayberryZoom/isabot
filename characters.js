@@ -146,6 +146,26 @@ module.exports = [
                 ]
             },
             {
+                name: 'fishing rod (cast)',
+                aliases: [
+                    'rod',
+                    'fishing pole',
+                    'fishing rod',
+                    'rod cast'
+                ],
+                url: 'https://pbs.twimg.com/media/EQxzqxNUwAAp3-n?format=png'
+            },
+            {
+                name: 'fishing rod (reel)',
+                aliases: [
+                    'rod reel',
+                    'rod reel in',
+                    'fishing pole reel',
+                    'fishing pole reel in'
+                ],
+                url: 'https://pbs.twimg.com/media/EQxzqw8UUAATugV?format=png'
+            },
+            {
                 'name': 'fishing rod forward throw',
                 'aliases': [
                     'fising rod fthrow',
@@ -12906,10 +12926,8 @@ module.exports = [
         ]
     },
     {
-        'name': 'duck hunt duo',
-        'aliases': [
-            'duckhunt'
-        ],
+        'name': 'duck hunt',
+        'aliases': ['duck hunt duo'],
         'color': '#8c5d3a',
         'jabType': 'gentleman',
         'moves': [
