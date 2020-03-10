@@ -299,11 +299,6 @@ module.exports = [
 
    // isabelle
    {
-      name: 'rod naming system',
-      definition: '[Uncommon] Similar to DK\'s cargo throws, it is a system to easily abbreviate the 8 fishing rod throws. All abbreviations consist of 4 letters.\n\n1) A or G - Stands for aerial or grounded\n2) R - Stands for rod\n3) F or B or U or D - Stands for the throw direction, like normal throws\n4) T - Stands for throw\n\nFor example, a grounded rod forward throw would be GRFT.',
-      character: 'isabelle'
-   },
-   {
       name: 'glyroid',
       definition: 'To Glyroid, first plant a lloid. Then, upon dashing, press down B and then hold in the direction of the dash, it will make Isabelle slide a considerable distance while doing the animation of manually triggering the mine. You cannot B-Reverse this. Found by Vinylic.',
       character: 'isabelle'
