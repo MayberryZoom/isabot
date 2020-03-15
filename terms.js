@@ -296,6 +296,12 @@ module.exports = [
       definition: "A Roll Cancel Grab (RCG) is a technique that allows characters to perform an extended version of their dash grab. It is performed by buffering a roll from an initial dash, and then cancelling the first few frames of the roll with an attack or grab input. While on certain characters the range gained is minimal, other characters burst forward a large distance, and can even travel through opponents. This can be used in a variation of this technique- the Roll Cancel Pivot Grab. It is the same input as a normal RCG, but after the grab, hold back to perform a pivot grab. Both of these are viable burst options for certain characters, such as Pichu.",
       character: 'general'
    },
+   {
+      name:  'footstool',
+      aliases: ['fs', 'phantom footstool', 'phantom fs'],
+      definition: 'When you input jump on top of another character you can footstool off of them. Footstooling a character in the air will put them into tumble (which they can tech), if the opponent is in the middle of an action you can still footstool them, but it will not put the opponent into a special animation/tumble like normal, this is commonly referred to as a Phantom Footstool. Footstooling also grants a brief period of invincibility.',
+      character: 'general'
+   },
 
    // isabelle
    {
@@ -357,7 +363,7 @@ module.exports = [
    },
    {
       name: 'nut',
-      definition: 'Developed by **Iggy**\ndthrow > (roll) > [uaft/nair] > (sideb) > grab > [fthrow] > (fair).\n*Note: (Squall) can be escaped with SDI, making this combo not true.\n<https://youtu.be/KmbBGbuMTZI?t=27>* \n<https://twitter.com/v23God/status/1096525627094650880>',
+      definition: 'dthrow > (roll) > [uaft/nair] > (sideb) > grab > [fthrow] > (fair).\n*Note: (Squall) can be escaped with SDI, making this combo not true.\n<https://youtu.be/KmbBGbuMTZI?t=27>* \n<https://twitter.com/v23God/status/1096525627094650880>',
       character: 'ice climbers'
    },
    {
@@ -415,7 +421,7 @@ module.exports = [
    {
       name: 'jab interrupt',
       aliases: ['jab desync'],
-      definition: '<https://twitter.com/Savestate/status/1077064481233088512>',
+      definition: 'You can desync off of jab on hit/shield (including on things like Pikmin/hydrant) if you buffer jab out of any state where you can not jab (immediately out of dash, dropping shield, after a move etc etc), then input something for Nana in the next 3 frames\n https://gfycat.com/equatorialsentimentalbooby',
       character: 'ice climbers'
    },
    {
@@ -479,13 +485,13 @@ module.exports = [
    },
    {
       name: 'rollback desync',
-      definition: 'You can roll while also launching nana forward and squalling. technical details are in the video description: <https://youtu.be/lA6l1H_DcMQ>',
+      definition: 'You can roll while also launching nana forward and squalling. technical details are in the video description: <https://youtu.be/lA6l1H_DcMQ> \n https://gfycat.com/oblongfriendlycrow',
       character: 'ice climbers'
    },
    {
       name: 'utilt footstool',
-      aliases: ['utilt fs'],
-      definition: '(utilt) footstool airdodge down is a semi useful combo, which is infinite on certain floaties, but otherwise can be teched and therefore is not super reliable.',
+      aliases: ['utilt fs', 'utilt fs squall', 'utilt footstool squall'],
+      definition: 'Desynced utilt can lead into a footstool with the other climber. [utilt] (footstool squall) in particular is quite popular as a conversion that can lead into a grab. \nhttps://gfycat.com/harmoniousfreshduckbillcat \n(utilt) [footstool airdodge down] or [utilt] (footstool airdodge down) is a semi useful combo, which is an infinite on Puff, Kirby and GnW, but otherwise can be teched and therefore is not super reliable. \n https://gfycat.com/harmoniousfreshduckbillcat',
       character: 'ice climbers'
    },
    {
@@ -533,7 +539,7 @@ module.exports = [
    },
    {
       name: 'button storage desyncs',
-      aliases: ['grab storage', 'special storage', 'shield storage', 'taunt storage', 'jump storage', 'button storage'],
+      aliases: ['grab storage', 'special storage', 'shield storage', 'taunt storage', 'jump storage', 'button storage', 'the greatest thing to ever happen to ICs'],
       definition: 'By getting Nana to ignore an input while we respawn (which can be done either by whiffing a grab and holding it immediately after, holding it as we die, or after a failed reconnect buffer), we can observe various anomalies.\nThis is most usefully applied with Special Storage (which requires Smash Stick) or Grab Storage (which can be used with any control scheme), however it also has known effects with Shield, Jump and Taunt.\nVideo Guide: <https://youtu.be/6oret9hMXek>\nFor a slightly more detailed text guide on Grab Storage and Special Storage, see <https://docs.google.com/document/d/1Ftem9sr7ULRqfC0fHwTei1W1vjCf73lz6V9tXfofRwU/edit>',
       character: 'ice climbers'
    },
@@ -561,6 +567,29 @@ module.exports = [
    {
       name: 'landing tilt desync',
       definition: 'Often when you land (even if you just empty hop normally) Nana will land less than 6 frames after Popo due to the effects of Popoforce. This allows us to input grounded attacks right before Popo lands so he performs an autocancelled aerial (can\'t be done with Dair for obvious reasons) while Nana receives the input while grounded. Functionally this results in Popo doing an empty, lagless landing, while Nana lands with a tilt/jab/smash attack. This can be used to get an immediate (smash attack charge), or even an (ftilt) which can combo into grab at all percents.',
+      character: 'ice climbers'
+   },
+   {
+      name: 'murasat combo',
+      aliases: ['murasat', 'mura combo', 'mura'],
+      definition: 'dthrow (shield) [uair] (fair), popular low percent throw conversion commonly used for a regrab.\nDuring dthrow, hold shield+jump+up and time an attack input during the desync window for dthrow, this should result in (shield) [uair] which can be followed up with (fair) inputted normally. \n https://gfycat.com/barepopularkinkajou \n<https://www.youtube.com/watch?v=6WR5V7FGEmg&t=345s>',
+      character: 'ice climbers'
+   },
+   {
+      name: 'fair footstool',
+      aliases: ['dthrow fair footstool', 'fair fs', 'dthrow fair footstool'],
+      definition: 'Off of a cheerless dthrow, you can confirm into (fair) [footstool].\n https://gfycat.com/naughtytalkativedove',
+      character: 'ice climbers'
+   },
+   {
+      name: 'dthrow footstool',
+      aliases: ['dthrow fs'],
+      definition: 'Off of a cheerless dthrow, you can confirm into (footstool), which can be used for a variety of confirms if they miss the tech. \n https://gfycat.com/lightheartedbigaustraliansilkyterrier',
+      character: 'ice climbers'
+   },
+   {
+      name: 'backdash cheerless',
+      definition: 'You can get a cheerless grab off of backdash. \n https://gfycat.com/honesttidyermine',
       character: 'ice climbers'
    },
    // wii fit trainer
