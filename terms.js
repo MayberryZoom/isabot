@@ -299,11 +299,6 @@ module.exports = [
 
    // isabelle
    {
-      name: 'rod naming system',
-      definition: '[Uncommon] Similar to DK\'s cargo throws, it is a system to easily abbreviate the 8 fishing rod throws. All abbreviations consist of 4 letters.\n\n1) A or G - Stands for aerial or grounded\n2) R - Stands for rod\n3) F or B or U or D - Stands for the throw direction, like normal throws\n4) T - Stands for throw\n\nFor example, a grounded rod forward throw would be GRFT.',
-      character: 'isabelle'
-   },
-   {
       name: 'glyroid',
       definition: 'To Glyroid, first plant a lloid. Then, upon dashing, press down B and then hold in the direction of the dash, it will make Isabelle slide a considerable distance while doing the animation of manually triggering the mine. You cannot B-Reverse this. Found by Vinylic.',
       character: 'isabelle'
@@ -349,13 +344,8 @@ module.exports = [
    
    // pichu
    {
-      name: 'deletchu',
-      definition: '[Archaic] UAir -> Fastfall Thunder, a kill confirm that can be set up with multiple options. Works on all DI, but the UAir has to be crossed up on DI out.',
-      character: 'pichu'
-   },
-   {
       name: 'lightning loops',
-      definition: 'Using Double Jump Fastfall Autocancel (DJFFAC) BAir dragdown to combo into UTilt or UAir, which can combo into another bair, and repeat the setup. To learn more, watch this video: https://youtu.be/xJyufyRb2F4',
+      definition: 'https://youtu.be/xJyufyRb2F4',
       character: 'pichu'
    },
 
@@ -466,13 +456,13 @@ module.exports = [
    },
    {
       name: 'landing lag desync',
-      aliases: ['bair uair', 'uair uair', 'double uair', 'LL desync'],
+      aliases: ['bair uair', 'uair uair', 'double uair', 'll desync'],
       definition: 'If you do a short hop buffered bair or uair, and then buffer an uair right before landing, Nana\'s uair will autocancel, and you can input something for nana right before you land, which popo will ignore.\n<https://www.youtube.com/watch?v=79BBYmOR78I>',
       character: 'ice climbers'
    },
    {
-      name: 'ICs Megaguide',
-      aliases: ['Megaguide', 'Mentor Guide', 'Mega Guide', 'ICs Mega Guide'],
+      name: 'ics megaguide',
+      aliases: ['megaguide', 'mentor guide'],
       definition: 'https://docs.google.com/document/d/1fs1J6xsBlsRGqCxJsfyANRR8W8ZA87oZ8kS9ppGeNi4/edit?usp=sharing',
       character: 'ice climbers'
    },
@@ -515,8 +505,8 @@ module.exports = [
        character: 'ice climbers'
    },
    {
-      name: 'Cheer Cancel',
-      aliases: ['Pummel Buffer Desync'],
+      name: 'cheer cancel',
+      aliases: ['pummel buffer desync'],
       definition: 'You can buffer certain options for nana as popo\'s grab is coming out but before it actually lands. IMPORTANT NOTE: This is NOT Cheerless, and does not directly involve cheerless, though it is one method (amongst many) that can lead into Cheerless.\nFrame data: The window for grab (spotdodge) is 5 frames from standing grab (-3 to +1, with grab being f0), and  6 frames from grab during initial dash (-2 to +3). You can also Roll with the same timing. This window works because you can input down before the grab, and popo\'s grab input will count as a shield input for Nana. And of course, down + shield == spotdodge.\n\nThe window for grab (AB smash) is 2 frames from standing grab (0 to +1, with grab being f0), and 3 frames from grab during initial dash (+1 to +3). This is the generalized window for things that aren\'t roll or spotdodge. For example, you can grab (jump) , or grab (taunt) with this same timing.\n\nUnfortunately, while you CAN do tilts and specials while grabbing they are all a 1 frame window from a dash grab, and are not possible from a standing grab. In the future I may do a more in depth video on the specific reasons for why that is the case, but for now just don\'t worry about that at all. Spotdodge is the most common choice for CC option. <https://www.youtube.com/watch?v=m-NKjph9fFI&feature=youtu.be>',
       character: 'ice climbers'
    },
@@ -533,30 +523,29 @@ module.exports = [
    {
       name: 'turn buffer desync',
       aliases: ['turn buffer'],
-      definition: 'A fast desync done from standing or walking. Turn without dashing, then buffer another turn without dashing with popo that nana will do in 6 frames, then after 6 or more frames have passed, input a dash in the original direction you turned followed by an immediate attack you can do from walk but not run. Nana’s turning animation during this cannot be interrupted by a dash in that direction, so she dashes 4 frames late, creating a window for a nana only input./nVideo: <https://twitter.com/madmonk12345/status/1144807399854751744?s=21>/nStick movement guide: <https://twitter.com/madmonk12345/status/1140854288517718017?s=21>',
+      definition: 'A fast desync done from standing or walking. Turn without dashing, then buffer another turn without dashing with popo that nana will do in 6 frames, then after 6 or more frames have passed, input a dash in the original direction you turned followed by an immediate attack you can do from walk but not run. Nana’s turning animation during this cannot be interrupted by a dash in that direction, so she dashes 4 frames late, creating a window for a nana only input.\nVideo: <https://twitter.com/madmonk12345/status/1144807399854751744?s=21>\nStick movement guide: <https://twitter.com/madmonk12345/status/1140854288517718017?s=21>',
       character: 'ice climbers'
    },   
    {
       name: 'shieldstun desync',
-      aliases: ['shield stun desync'],
       definition: 'Often when an opponent hits our shield Nana and Popo will end up less or more than 6 frames apart, meaning we can desync out of the shieldstun.',
       character: 'ice climbers'
    },
    {
       name: 'button storage desyncs',
       aliases: ['grab storage', 'special storage', 'shield storage', 'taunt storage', 'jump storage', 'button storage'],
-      definition: 'By getting Nana to ignore an input while we respawn (which can be done either by whiffing a grab and holding it immediately after, holding it as we die, or after a failed reconnect buffer), we can observe various anomalies./nThis is most usefully applied with Special Storage (which requires Smash Stick) or Grab Storage (which can be used with any control scheme), however it also has known effects with Shield, Jump and Taunt./nVideo Guide: <https://youtu.be/6oret9hMXek>/nFor a slightly more detailed text guide on Grab Storage and Special Storage, see <https://docs.google.com/document/d/1Ftem9sr7ULRqfC0fHwTei1W1vjCf73lz6V9tXfofRwU/edit>',
+      definition: 'By getting Nana to ignore an input while we respawn (which can be done either by whiffing a grab and holding it immediately after, holding it as we die, or after a failed reconnect buffer), we can observe various anomalies.\nThis is most usefully applied with Special Storage (which requires Smash Stick) or Grab Storage (which can be used with any control scheme), however it also has known effects with Shield, Jump and Taunt.\nVideo Guide: <https://youtu.be/6oret9hMXek>\nFor a slightly more detailed text guide on Grab Storage and Special Storage, see <https://docs.google.com/document/d/1Ftem9sr7ULRqfC0fHwTei1W1vjCf73lz6V9tXfofRwU/edit>',
       character: 'ice climbers'
    },
    {
       name: 'run turn desync',
       aliases: ['run turn'],
-      definition: 'During Run (not dash), if you turn (without skidding), then in frames 1-5 input roll/spotdodge and in the same window, but on or after the frame you input shield, you input a grounded option for Popo, you can desync that shield option+Popo option. For example, you can do [rar shorthop] (roll back) or [blizz] (spotdodge), or much more./nNote that you can also (shield) with it, however the window is much tighter. There is also a potential polling issue in theory, where the game may read the left stick as being neutral for 1 frame, which will also tighten the window, and make (shield) impossible (though this outcome is quite unlikely)',
+      definition: 'During Run (not dash), if you turn (without skidding), then in frames 1-5 input roll/spotdodge and in the same window, but on or after the frame you input shield, you input a grounded option for Popo, you can desync that shield option+Popo option. For example, you can do [rar shorthop] (roll back) or [blizz] (spotdodge), or much more.\nNote that you can also (shield) with it, however the window is much tighter. There is also a potential polling issue in theory, where the game may read the left stick as being neutral for 1 frame, which will also tighten the window, and make (shield) impossible (though this outcome is quite unlikely)',
       character: 'ice climbers'
    },
    {
       name: 'belay desync',
-      definition: 'When you belay to ledge, both ICs will be actionable on the same frame, so you can desync by inputting something for Nana within 6 frames before Popo is actionable, and then buffering something for Popo (this is necessary) as well./n While not the same desync, you can also attempt for a reconnect buffer by holding an input as you belay, giving you a chance to buffer that input for Nana only. This can be applied in more guaranteed, or more flexible ways by applying Grab Storage.',
+      definition: 'When you belay to ledge, both ICs will be actionable on the same frame, so you can desync by inputting something for Nana within 6 frames before Popo is actionable, and then buffering something for Popo (this is necessary) as well.\n While not the same desync, you can also attempt for a reconnect buffer by holding an input as you belay, giving you a chance to buffer that input for Nana only. This can be applied in more guaranteed, or more flexible ways by applying Grab Storage.',
       character: 'ice climbers'
    },
    {
@@ -566,7 +555,7 @@ module.exports = [
    },
    {
       name: 'run state storage',
-      definition: 'When forward is held on the control stick, nana and popo maintain their current state of running or walking./n/nRun state storage is where you get popo to walk and nana to run. In this state, releasing the stick cause only nana to enter skid for 12 frames during which she cannot dash backwards or shield. This allows you to dash backwards or shield with popo and immediately do a nana first desync./n/nThis state can be achieved from any previous desync./n/nIf only popo can act, you can quickly mash forward twice quickly and then continue to hold forward 6-12 frames before nana can act to cause popo to do a dashwalk and nana to dash which converts into run state storage./n/nWhen nana can act, you can simply hold forward more than 6 frames before popo can act. This causes nana to dash and popo to walk./n/nExamples:/n<https://twitter.com/madmonk12345/status/1188207819780050944?s=21>/n<https://twitter.com/madmonk12345/status/1195622276680433664?s=21>',
+      definition: 'When forward is held on the control stick, nana and popo maintain their current state of running or walking.\n\nRun state storage is where you get popo to walk and nana to run. In this state, releasing the stick cause only nana to enter skid for 12 frames during which she cannot dash backwards or shield. This allows you to dash backwards or shield with popo and immediately do a nana first desync.\n\nThis state can be achieved from any previous desync.\n\nIf only popo can act, you can quickly mash forward twice quickly and then continue to hold forward 6-12 frames before nana can act to cause popo to do a dashwalk and nana to dash which converts into run state storage.\n\nWhen nana can act, you can simply hold forward more than 6 frames before popo can act. This causes nana to dash and popo to walk.\n\nExamples:\n<https://twitter.com/madmonk12345/status/1188207819780050944?s=21>\n<https://twitter.com/madmonk12345/status/1195622276680433664?s=21>',
       character: 'ice climbers'
    },
    {

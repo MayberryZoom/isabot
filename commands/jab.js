@@ -1,4 +1,4 @@
-const stats = require('../stats.js');
+const charData = require('../characters.js');
 
 const moves = [
     {
@@ -48,7 +48,7 @@ const getAdvantage = (weight, opponentPercent, playerPercent) => {
 
 const findStartingPercent = (move, opponent, r) => {
     return new Promise(async (resolve) => {
-        const weight = opponent.stats.find(s => s.name === 'Weight').value;
+        const weight = opponent.attributes.find(s => s.name === 'weight').value;
         if (!r || r < 35) r = 35;
         if (r > 150) r = 150;
 
@@ -89,7 +89,7 @@ module.exports = {
                 x--
                 character = toOneWord(args.slice(0, x + 1).join(' ').toLowerCase());
                 move = toOneWord(args.slice(0, x + 1).join(' ').toLowerCase());
-                character = stats.find(c => toOneWord(c.name) === character || (c.aliases && c.aliases.includes(character)));
+                character = charData.find(c => toOneWord(c.name) === character || (c.aliases && c.aliases.includes(character)));
                 move = moves.find(m => toOneWord(m.name) === move || (m.aliases && m.aliases.includes(move)));
             }
 
@@ -101,10 +101,10 @@ module.exports = {
                 if (!isNaN(parseInt(newArgs[newArgs.length - 1]))) rage = parseInt(newArgs.pop().match(/(\d+)%?/));
 
                 character = toOneWord(newArgs.join(' ').toLowerCase());
-                character = stats.find(c => toOneWord(c.name) === character || (c.aliases && c.aliases.includes(character)));
+                character = charData.find(c => toOneWord(c.name) === character || (c.aliases && c.aliases.includes(character)));
 
                 const invalidText = newArgs.length > 0 ? character ? '' : 'Invalid character! Defaulting to Mario...\n' : 'No character provided! Defaulting to Mario...\n';
-                if (!character) character = stats.find(c => c.name === 'mario');
+                if (!character) character = charData.find(c => c.name === 'mario');
 
                 const percent = await findStartingPercent(move, character, rage);
                 return msg.channel.send(invalidText + 'True on **' + capitalize(character.name, [' ', '-']) + '** starting at **' + percent + '%**\n\n' + move.description).then(resolve()).catch((e) => reject(e));
