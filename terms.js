@@ -298,8 +298,8 @@ module.exports = [
    },
    {
       name:  'footstool',
-      aliases: ['fs'],
-      definition: 'When you input jump on top of another character you can footstool off of them. Footstooling a character in the air will put them into tumble (which they can tech), if the opponent is in the middle of an action you can still footstool them, but it will put the opponent into a special animation/tumble like normal. Footstooling also grants a brief period of invincibility.',
+      aliases: ['fs', 'phantom footstool', 'phantom fs'],
+      definition: 'When you input jump on top of another character you can footstool off of them. Footstooling a character in the air will put them into tumble (which they can tech), if the opponent is in the middle of an action you can still footstool them, but it will not put the opponent into a special animation/tumble like normal, this is commonly referred to as a Phantom Footstool. Footstooling also grants a brief period of invincibility.',
       character: 'general'
    },
 
