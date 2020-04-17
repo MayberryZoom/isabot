@@ -20,7 +20,8 @@ module.exports = [
             {
                 'name': 'down tilt',
                 'aliases': [
-                    'dtilt'
+                    'dtilt',
+                    'plucc'
                 ],
                 'link': 'dtilt'
             },
@@ -34,7 +35,8 @@ module.exports = [
             {
                 'name': 'dash attack',
                 'aliases': [
-                    'da'
+                    'da',
+                    'pot'
                 ],
                 'png': true
             },
@@ -42,7 +44,8 @@ module.exports = [
                 'name': 'forward smash',
                 'aliases': [
                     'fsmash',
-                    'side smash'
+                    'side smash',
+                    'tada'
                 ],
                 'link': 'fsmash'
             },
@@ -4451,6 +4454,7 @@ module.exports = [
     },
     {
         'name': 'link',
+        aliases: ['adult link'],
         'color': '#1c94c3',
         'jabType': 3,
         'moves': [
@@ -12927,7 +12931,7 @@ module.exports = [
     },
     {
         'name': 'duck hunt',
-        'aliases': ['duck hunt duo'],
+        'aliases': ['duck hunt duo', 'dh', 'dhd'],
         'color': '#8c5d3a',
         'jabType': 'gentleman',
         'moves': [
@@ -13968,15 +13972,36 @@ module.exports = [
     },
     {
         'name': 'bayonetta',
+        aliases: ['bayo'],
         'color': '#a5a1e0',
         'jabType': 'gentleman',
         'moves': [
             {
-                'name': 'forward tilt',
+                'name': 'forward tilt 1',
                 'aliases': [
-                    'ftilt'
+                    'ftilt 1',
+                    'forward tilt',
+                    'ftilt',
+                    'bad move',
+                    'bad move 1'
                 ],
-                'link': 'ftilt'
+                'link': 'ftilt 1'
+            },
+            {
+                'name': 'forward tilt 2',
+                'aliases': [
+                    'ftilt 2',
+                    'bad move 2'
+                ],
+                'link': 'ftilt 2'
+            },
+            {
+                'name': 'forward tilt 3',
+                'aliases': [
+                    'ftilt 3',
+                    'bad move 3'
+                ],
+                'link': 'ftilt 3'
             },
             {
                 'name': 'down tilt',
@@ -17499,7 +17524,8 @@ module.exports = [
                 'name': 'back aerial',
                 'aliases': [
                     'back air',
-                    'bair'
+                    'bair',
+                    'gg'
                 ],
                 'link': 'bair'
             },
