@@ -15,7 +15,7 @@ const moves = [
     {
         name: 'pocket trap',
         frame: 7,
-        description: 'Essentially guarantees you either a kill or shield break. The pocketed item is not true, but assuming it is strong, it will break the opponent\'s shield if they don\'t take the hit. Very effective with moves like Charge Shot or Ptooie.'
+        description: 'Essentially guarantees either a kill or shield break. The pocketed item is not true, but it will break the opponent\'s shield if they don\'t take the hit. Requires a strong projectile like Charge Shot or Ptooie.'
     },
     {
         name: 'forward tilt',
@@ -30,6 +30,12 @@ const moves = [
         description: 'True at the same percents as FTilt, but kills ~10% earlier and has a better angle. Due to the nature of smash attacks, it is technically harder to input, but not very much. Reliable KO option at ledge.'
     },
     {
+        name: 'up smash',
+        aliases: ['usmash'],
+        frame: 9,
+        description: 'Generally outclassed by DSmash, but can be useful when you\'re facing away from the ledge or are on a platform. Kills as soon as it\'s true.'
+    },
+    {
         name: 'pocket',
         frame: 9,
         description: 'Very strong, but works later than FTilt/DSmash. Can kill pretty much as soon as it\'s true, depending on which move is pocketed. Very effective with moves like Charge Shot, Ptooie, Shadow Ball, etc.'
@@ -38,7 +44,7 @@ const moves = [
         name: 'down tilt',
         aliases: ['dtilt'],
         frame: 9,
-        description: 'This followup exists, but it\'s not very good in many scenarios, since FTilt/DSmash kill earlier, have better angles, and work at earlier percents. Can work as a DI mixup on high platforms.'
+        description: 'This followup exists, but it\'s not very good in many scenarios, since FTilt/DSmash kill earlier, have better angles, and work at earlier percents. In addition, USmash is true at the same percents, but kills more reliably. Can work as a DI mixup on high platforms.'
     },
 ]
 
