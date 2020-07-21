@@ -18382,5 +18382,134 @@ module.exports = [
             }
         ],
         'attributes': []
+    },
+    {
+        'name': 'min min',
+        'color': '#ff872b',
+        'jabType': 'gentleman',
+        'moves': [
+            {
+                'name': 'down tilt',
+                'aliases': [
+                    'dtilt'
+                ],
+                'link': 'dtilt'
+            },
+            {
+                'name': 'up tilt',
+                'aliases': [
+                    'utilt'
+                ],
+                'link': 'utilt'
+            },
+            {
+                'name': 'dash attack',
+                'aliases': [
+                    'da'
+                ]
+            },
+            {
+                'name': 'down smash',
+                'aliases': [
+                    'dsmash'
+                ],
+                'link': 'dsmash'
+            },
+            {
+                'name': 'up smash',
+                'aliases': [
+                    'usmash'
+                ]
+            },
+            {
+                'name': 'up aerial',
+                'aliases': [
+                    'up air',
+                    'uair',
+                    'upair'
+                ],
+                'link': 'uair'
+            },
+            {
+                'name': 'down aerial',
+                'aliases': [
+                    'down air',
+                    'dair'
+                ],
+                'link': 'dair'
+            },
+            {
+                'name': 'standing grab',
+                'aliases': [
+                    'grabs',
+                    'grab'
+                ],
+                'link': 'grab'
+            },
+            {
+                'name': 'dash grab',
+                'aliases': [
+                    'grabd'
+                ]
+            },
+            {
+                'name': 'pivot grab',
+                'aliases': [
+                    'grabp'
+                ]
+            },
+            {
+                'name': 'jab 1',
+                'aliases': [
+                    'jab'
+                ]
+            },
+            {
+                'name': 'jab 2'
+            },
+            {
+                'name': 'jab 3'
+            },
+            {
+                'name': 'rapid jab',
+                'link': 'jab rapid'
+            },
+            {
+                'name': 'rapid jab finisher',
+                'aliases': [
+                    'rapid jab ender'
+                ],
+                'link': 'rapid jab end'
+            },
+            {
+                'name': 'forward throw',
+                'aliases': [
+                    'fthrow'
+                ],
+                'link': 'fthrow'
+            },
+            {
+                'name': 'back throw',
+                'aliases': [
+                    'bthrow'
+                ],
+                'link': 'bthrow'
+            },
+            {
+                'name': 'up throw',
+                'aliases': [
+                    'uthrow'
+                ],
+                'link': 'uthrow'
+            },
+            {
+                'name': 'down throw',
+                'aliases': [
+                    'dthrow'
+                ],
+                'link': 'dthrow'
+            }
+        ],
+        'attributes': []
     }
 ]
