@@ -17607,7 +17607,63 @@ module.exports = [
                 'link': 'dthrow'
             }
         ],
-        'attributes': []
+        'attributes': [
+            {
+                'name': 'weight',
+                'value': 93,
+                'rank': 0,
+                'aliases': [
+                    'mass'
+                ]
+            },
+            {
+                'name': 'run speed',
+                'aliases': [
+                    'run'
+                ],
+                'value': 2.06,
+                'rank': 0
+            },
+            {
+                'name': 'walk speed',
+                'aliases': [
+                    'walk'
+                ],
+                'value': 1.12,
+                'rank': 0
+            },
+            {
+                'name': 'air speed',
+                'aliases': [
+                    'drift'
+                ],
+                'value': 1.1,
+                'rank': 0
+            },
+            {
+                'name': 'fall speed',
+                'value': 1.63,
+                'rank': 0
+            },
+            {
+                'name': 'fastfall speed',
+                'aliases': [
+                    'fastfall'
+                ],
+                'value': 3.097,
+                'rank': 0
+            },
+            {
+                'name': 'fastfall speed increase',
+                'aliases': [
+                    'ffincrease',
+                    'fastfallincrease',
+                    'ff%'
+                ],
+                'value': 90,
+                'rank': 0
+            }
+        ]
     },
     {
         'name': 'hero',
@@ -17883,7 +17939,63 @@ module.exports = [
                 'link': 'dthrow'
             }
         ],
-        'attributes': []
+        'attributes': [
+            {
+                'name': 'weight',
+                'value': 101,
+                'rank': 0,
+                'aliases': [
+                    'mass'
+                ]
+            },
+            {
+                'name': 'run speed',
+                'aliases': [
+                    'run'
+                ],
+                'value': 1.84,
+                'rank': 0
+            },
+            {
+                'name': 'walk speed',
+                'aliases': [
+                    'walk'
+                ],
+                'value': 0.98,
+                'rank': 0
+            },
+            {
+                'name': 'air speed',
+                'aliases': [
+                    'drift'
+                ],
+                'value': 1.01,
+                'rank': 0
+            },
+            {
+                'name': 'fall speed',
+                'value': 1.57,
+                'rank': 0
+            },
+            {
+                'name': 'fastfall speed',
+                'aliases': [
+                    'fastfall'
+                ],
+                'value': 2.512,
+                'rank': 0
+            },
+            {
+                'name': 'fastfall speed increase',
+                'aliases': [
+                    'ffincrease',
+                    'fastfallincrease',
+                    'ff%'
+                ],
+                'value': 60,
+                'rank': 0
+            }
+        ]
     },
     {
         'name': 'banjo & kazooie',
@@ -18056,7 +18168,63 @@ module.exports = [
                 'link': 'dthrow'
             }
         ],
-        'attributes': []
+        'attributes': [
+            {
+                'name': 'weight',
+                'value': 106,
+                'rank': 0,
+                'aliases': [
+                    'mass'
+                ]
+            },
+            {
+                'name': 'run speed',
+                'aliases': [
+                    'run'
+                ],
+                'value': 2.18,
+                'rank': 0
+            },
+            {
+                'name': 'walk speed',
+                'aliases': [
+                    'walk'
+                ],
+                'value': 1.06,
+                'rank': 0
+            },
+            {
+                'name': 'air speed',
+                'aliases': [
+                    'drift'
+                ],
+                'value': 0.92,
+                'rank': 0
+            },
+            {
+                'name': 'fall speed',
+                'value': 1.76,
+                'rank': 0
+            },
+            {
+                'name': 'fastfall speed',
+                'aliases': [
+                    'fastfall'
+                ],
+                'value': 2.816,
+                'rank': 0
+            },
+            {
+                'name': 'fastfall speed increase',
+                'aliases': [
+                    'ffincrease',
+                    'fastfallincrease',
+                    'ff%'
+                ],
+                'value': 60,
+                'rank': 0
+            }
+        ]
     },
     {
         'name': 'terry',
@@ -18213,7 +18381,63 @@ module.exports = [
                 'link': 'dthrow'
             }
         ],
-        'attributes': []
+        'attributes': [
+            {
+                'name': 'weight',
+                'value': 108,
+                'rank': 0,
+                'aliases': [
+                    'mass'
+                ]
+            },
+            {
+                'name': 'run speed',
+                'aliases': [
+                    'run'
+                ],
+                'value': 1.72,
+                'rank': 0
+            },
+            {
+                'name': 'walk speed',
+                'aliases': [
+                    'walk'
+                ],
+                'value': 0.85,
+                'rank': 0
+            },
+            {
+                'name': 'air speed',
+                'aliases': [
+                    'drift'
+                ],
+                'value': 0.95,
+                'rank': 0
+            },
+            {
+                'name': 'fall speed',
+                'value': 1.48,
+                'rank': 0
+            },
+            {
+                'name': 'fastfall speed',
+                'aliases': [
+                    'fastfall'
+                ],
+                'value': 2.368,
+                'rank': 0
+            },
+            {
+                'name': 'fastfall speed increase',
+                'aliases': [
+                    'ffincrease',
+                    'fastfallincrease',
+                    'ff%'
+                ],
+                'value': 60,
+                'rank': 0
+            }
+        ]
     },
     {
         'name': 'byleth',
@@ -18381,7 +18605,63 @@ module.exports = [
                 'link': 'dthrow'
             }
         ],
-        'attributes': []
+        'attributes': [
+            {
+                'name': 'weight',
+                'value': 97,
+                'rank': 0,
+                'aliases': [
+                    'mass'
+                ]
+            },
+            {
+                'name': 'run speed',
+                'aliases': [
+                    'run'
+                ],
+                'value': 1.43,
+                'rank': 0
+            },
+            {
+                'name': 'walk speed',
+                'aliases': [
+                    'walk'
+                ],
+                'value': 0.97,
+                'rank': 0
+            },
+            {
+                'name': 'air speed',
+                'aliases': [
+                    'drift'
+                ],
+                'value': 0.89,
+                'rank': 0
+            },
+            {
+                'name': 'fall speed',
+                'value': 1.6,
+                'rank': 0
+            },
+            {
+                'name': 'fastfall speed',
+                'aliases': [
+                    'fastfall'
+                ],
+                'value': 2.56,
+                'rank': 0
+            },
+            {
+                'name': 'fastfall speed increase',
+                'aliases': [
+                    'ffincrease',
+                    'fastfallincrease',
+                    'ff%'
+                ],
+                'value': 62.5,
+                'rank': 0
+            }
+        ]
     },
     {
         'name': 'min min',
@@ -18510,6 +18790,62 @@ module.exports = [
                 'link': 'dthrow'
             }
         ],
-        'attributes': []
+        'attributes': [
+            {
+                'name': 'weight',
+                'value': 104,
+                'rank': 21,
+                'aliases': [
+                    'mass'
+                ]
+            },
+            {
+                'name': 'run speed',
+                'aliases': [
+                    'run'
+                ],
+                'value': 1.55,
+                'rank': 0
+            },
+            {
+                'name': 'walk speed',
+                'aliases': [
+                    'walk'
+                ],
+                'value': 1.05,
+                'rank': 0
+            },
+            {
+                'name': 'air speed',
+                'aliases': [
+                    'drift'
+                ],
+                'value': 0.85,
+                'rank': 70
+            },
+            {
+                'name': 'fall speed',
+                'value': 1.5,
+                'rank': 50
+            },
+            {
+                'name': 'fastfall speed',
+                'aliases': [
+                    'fastfall'
+                ],
+                'value': 2.432,
+                'rank': 0
+            },
+            {
+                'name': 'fastfall speed increase',
+                'aliases': [
+                    'ffincrease',
+                    'fastfallincrease',
+                    'ff%'
+                ],
+                'value': 61.678,
+                'rank': 0
+            }
+        ]
     }
 ]
