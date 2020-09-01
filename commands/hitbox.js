@@ -1,9 +1,8 @@
 const charData = require('../characters.js');
 
 const toUnderscore = (text) => {
-    let newText = text.replace(/popo|nana/, 'ice climbers').replace(/rosalina|luma/, 'rosalina and luma').replace(/(squirtle|ivysaur|charizard)/, 'pt $1').replace('banjo & kazooie', 'banjo and kazooie');
-    ['-', '.', '(', ')', "'"].forEach(x => newText = newText.split(x).join(''));
-    return newText.split(' ').join('_');
+    ['-', '.', '(', ')', "'"].forEach(x => text = text.split(x).join(''));
+    return text.split(' ').join('_');
 }
 
 const twitter = '<:twitter:607841501279420416>';
@@ -13,6 +12,109 @@ const www = '<:www:673835229022126101>';
 const credits =
 `__Zeckemyro__ (${twitter}@Zeckemyro ${discord}Zeckemyro#9776) - Hitbox visualizations
 __UFD__ (${twitter}@ultframedata ${www}<https://ultimateframedata.com/>) - Having the images uploaded somewhere I can grab them from`;
+
+let normals = [
+    { name: 'down tilt', aliases: ['dtilt'], link: 'dtilt' },
+    { name: 'up tilt', aliases: ['utilt'], link: 'utilt' },
+    { name: 'dash attack', aliases: ['da'] },
+    { name: 'down smash', aliases: ['dsmash'], link: 'dsmash' },
+    { name: 'up smash', aliases: ['usmash'] },
+    { name: 'neutral aerial', aliases: ['neutral air', 'nair'], link: 'nair' },
+    { name: 'forward aerial', aliases: ['forward air', 'fair'], link: 'fair' },
+    { name: 'back aerial', aliases: ['back air', 'bair'], link: 'bair' },
+    { name: 'up aerial', aliases: ['up air', 'uair', 'upair'], link: 'uair' },
+    { name: 'down aerial', aliases: ['down air', 'dair'], link: 'dair' },
+    { name: 'standing grab', aliases: ['grabs', 'grab'], link: 'grab' },
+    { name: 'dash grab', aliases: ['grabd'] },
+    { name: 'pivot grab', aliases: ['grabp'] },
+    { name: 'pummel', aliases: ['neutral throw'] },
+    { name: 'forward throw', aliases: ['fthrow'], link: 'fthrow' },
+    { name: 'back throw', aliases: ['bthrow'], link: 'bthrow' },
+    { name: 'up throw', aliases: ['uthrow'], link: 'uthrow' },
+    { name: 'down throw', aliases: ['dthrow'], link: 'dthrow' },
+];
+
+let jabs = {
+    '1': [
+        { name: 'jab', aliases: ['neutral tilt'] }
+    ],
+    '2': [
+        { name: 'jab 1', aliases: ['jab'] },
+        { name: 'jab 2'}
+    ],
+    '3': [
+        { name: 'jab 1', aliases: ['jab'] },
+        { name: 'jab 2'},
+        { name: 'jab 3'}
+    ],
+    'rapid': [
+        { name: 'rapid jab', aliases: ['jab'], link: 'jab rapid' },
+        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'rapid jab end'}
+    ],
+    'rapid 1': [
+        { name: 'jab 1', aliases: ['jab'] },
+        { name: 'rapid jab', link: 'jab rapid' },
+        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'rapid jab end'}
+    ],
+    'rapid 2': [
+        { name: 'jab 1', aliases: ['jab'] },
+        { name: 'jab 2'},
+        { name: 'rapid jab', link: 'jab rapid' },
+        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'rapid jab end'}
+    ],
+    'gentleman': [
+        { name: 'jab 1', aliases: ['jab'] },
+        { name: 'jab 2'},
+        { name: 'jab 3'},
+        { name: 'rapid jab', link: 'jab rapid' },
+        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'rapid jab end'}
+    ],
+    'unique': []
+};
+
+let ftilts = {
+    'unangled': [
+        { name: 'forward tilt', aliases: ['ftilt'], link: 'ftilt' }
+    ],
+    'angled': [
+        { name: 'forward tilt', aliases: ['ftilt'], link: 'ftilt' },
+        { name: 'down angled forward tilt', aliases: ['daft', 'down forward tilt', 'down ftilt', 'dftilt', 'forward tilt down', 'ftilt down'], link: 'ftilt down' },
+        { name: 'up angled forward tilt', aliases: ['uaft', 'up forward tilt', 'up ftilt', 'uftilt', 'forward tilt up', 'ftilt up'], link: 'ftilt up' }
+    ],
+    '2': [
+        { name: 'forward tilt 1', aliases: ['forward tilt', 'ftilt', 'ftilt 1'], link: 'ftilt 1' },
+        { name: 'forward tilt 2', aliases: ['ftilt 2'], link: 'ftilt 2' }
+    ],
+    '3': [
+        { name: 'forward tilt 1', aliases: ['ftilt 1', 'forward tilt', 'ftilt'], link: 'ftilt 1' },
+        { name: 'forward tilt 2', aliases: ['ftilt 2'], link: 'ftilt 2' },
+        { name: 'forward tilt 3', aliases: ['ftilt 3'], link: 'ftilt 3' }
+    ],
+    'unique': []
+}
+
+let fsmashes = {
+    'unangled': [
+        { name: 'forward smash', aliases: ['fsmash', 'side smash'], link: 'fsmash' }
+    ],
+    'angled': [
+        { name: 'forward smash', aliases: ['fsmash', 'side smash'], link: 'fsmash' },
+        { name: 'down angled forward smash', aliases: ['down forward smash', 'down fsmash', 'dfsmash', 'forward smash down', 'fsmash down'], link: 'fsmash down' },
+        { name: 'up angled forward smash', aliases: ['up forward smash', 'up fsmash', 'ufsmash', 'forward smash up', 'fsmash up'], link: 'fsmash up' }
+    ],
+    '2': [
+        { name: 'forward smash 1', aliases: ['forward smash', 'fsmash', 'fsmash 1', 'side smash', 'side smash 1'], link: 'fsmash 1' },
+        { name: 'forward smash 2', aliases: ['fsmash 2', 'side smash 2'], link: 'fsmash 2' }
+    ],
+    'unique': []
+}
+
+let landingDair = { name: 'landing down aerial', aliases: ['landing down air', 'landing dair'], link: 'dair landing' }
+
+charData.map(c => {
+    c.moves = normals.concat(jabs[c.jabType]).concat(ftilts[c.ftiltType]).concat(fsmashes[c.fsmashType]).filter(n => !((c.exclude && c.exclude.includes(n.name)) || c.moves.find(m => m.name === n.name))).concat(c.moves);
+    if (c.landingDair) c.moves.push(landingDair);
+});
 
 module.exports = {
     name: 'hitbox',
@@ -40,7 +142,7 @@ module.exports = {
             if (move) {
                 const formatted = capitalize(`${character.name} ${move.name}`, [' ', '(', '/', '.', '-']);
 
-                let link = move.url ? move.url : 'https://ultimateframedata.com/hitboxes/' + toUnderscore(character.name) + '/' + toOneWord((character.name === 'banjo & kazooie' ? 'banjo kazooie' : character.name) + (move.link ? move.link : move.name)) + (move.png ? '.png' : '.gif');
+                let link = move.url ? move.url : 'https://ultimateframedata.com/hitboxes/' + toUnderscore(character.ufdDir ? character.ufdDir : character.name) + '/' + toOneWord((character.ufdFile ? character.ufdFile : character.name) + (move.link ? move.link : move.name)).replace('&', '_') + (move.png ? '.png' : '.gif');
 
                 let embed = new Discord.RichEmbed() .setTitle(formatted) .setImage(link) .setColor(character.color) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
                 if (move.comment) embed.setDescription(move.comment);
