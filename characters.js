@@ -260,6 +260,7 @@ module.exports = [
         jabType: '2',
         ftiltType: 'angled',
         fsmashType: 'unangled',
+        landingDair: true,
         moves: [],
         attributes: [
             {
@@ -1030,6 +1031,7 @@ module.exports = [
         jabType: 'rapid 2',
         ftiltType: 'angled',
         fsmashType: 'angled',
+        landingDair: true,
         moves: [],
         attributes: [
             {
@@ -1614,6 +1616,7 @@ module.exports = [
         jabType: '2',
         ftiltType: 'angled',
         fsmashType: 'angled',
+        landingDair: true,
         moves: [],
         attributes: [
             {
@@ -2083,6 +2086,7 @@ module.exports = [
         jabType: '3',
         ftiltType: 'unangled',
         fsmashType: 'unangled',
+        landingDair: true,
         moves: [],
         attributes: [
             {
@@ -2135,6 +2139,7 @@ module.exports = [
         jabType: 'gentleman',
         ftiltType: 'unangled',
         fsmashType: 'angled',
+        landingDair: true,
         moves: [],
         attributes: [
             {
@@ -2187,6 +2192,7 @@ module.exports = [
         jabType: '3',
         ftiltType: 'angled',
         fsmashType: 'angled',
+        landingDair: true,
         moves: [],
         attributes: [
             {
@@ -3143,6 +3149,7 @@ module.exports = [
         jabType: '3',
         ftiltType: 'unangled',
         fsmashType: 'unangled',
+        landingDair: true,
         moves: [],
         attributes: [
             {
@@ -4136,6 +4143,7 @@ module.exports = [
         jabType: '3',
         ftiltType: 'angled',
         fsmashType: 'unangled',
+        landingDair: true,
         moves: [],
         attributes: [
             {
@@ -4187,6 +4195,7 @@ module.exports = [
         jabType: 'rapid 2',
         ftiltType: 'angled',
         fsmashType: 'angled',
+        landingDair: true,
         moves: [],
         attributes: [
             {
@@ -4239,6 +4248,7 @@ module.exports = [
         jabType: '1',
         ftiltType: 'angled',
         fsmashType: 'unangled',
+        landingDair: true,
         moves: [],
         attributes: [
             {
@@ -4344,6 +4354,7 @@ module.exports = [
         jabType: 'rapid 2',
         ftiltType: 'unangled',
         fsmashType: 'unangled',
+        landingDair: true,
         moves: [],
         attributes: [
             {
@@ -4447,6 +4458,7 @@ module.exports = [
         jabType: 'rapid 2',
         ftiltType: 'angled',
         fsmashType: 'unangled',
+        landingDair: true,
         moves: [],
         attributes: [
             {
@@ -4710,6 +4722,7 @@ module.exports = [
         jabType: 'rapid 1',
         ftiltType: 'unangled',
         fsmashType: 'unangled',
+        landingDair: true,
         moves: [],
         attributes: [
             {
@@ -5048,6 +5061,7 @@ module.exports = [
         jabType: 'gentleman',
         ftiltType: 'angled',
         fsmashType: 'unangled',
+        landingDair: true,
         moves: [],
         attributes: [
             {
@@ -5203,6 +5217,7 @@ module.exports = [
         jabType: 'gentleman',
         ftiltType: 'unique',
         fsmashType: 'unique',
+        landingDair: true,
         moves: [],
         exclude: ['neutral aerial', 'forward aerial', 'back aerial'],
         attributes: [
