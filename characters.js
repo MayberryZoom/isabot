@@ -1026,7 +1026,7 @@ module.exports = [
     },
     {
         name: 'bowser jr.',
-        aliases: ['bjr', 'larry', 'roy', 'lemmy', 'wendy', 'iggy', 'morton', 'ludwig'],
+        aliases: ['bjr', 'larry', 'lemmy', 'wendy', 'iggy', 'morton', 'ludwig'],
         color: '#59bf38',
         jabType: 'rapid 2',
         ftiltType: 'angled',
