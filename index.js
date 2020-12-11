@@ -9,7 +9,7 @@ global.client = new Discord.Client({
 		'GUILD_MEMBER_ADD',
 		'GUILD_MEMBER_REMOVE'
 	],
-	disableEveryone: true
+	disableMentions: 'everyone'
 });
 
 const { prefix } = require('./config.json');
@@ -78,9 +78,9 @@ client.once('ready', () => {
     if (client.user.id === '513515391155175424') sendLog('<@&513807019048828929> Ready!');
 	client.user.setActivity('"' + prefix + '" is my prefix!')
 	setInterval(() => {
-		for (const g of client.guilds.values()) {
-			g.members.clear();
-			g.presences.clear();
+		for (const g of client.guilds.cache.values()) {
+			g.members.cache.clear();
+			g.presences.cache.clear();
 		}
 	}, 1000 * 60);
 });

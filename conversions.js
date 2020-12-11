@@ -4,7 +4,7 @@ module.exports = {
         const matches = mention.match(/^<@!?(\d+)>$/);
         if (matches) {
             const id = matches[1];
-            return msg.guild.members.get(id).user;
+            return msg.guild.members.fetch(id).user;
         }
         else { return null; }
     },
@@ -14,7 +14,7 @@ module.exports = {
         const matches = mention.match(/^<@&(\d+)>$/);
         if (matches) {
             const id = matches[1];
-            return msg.guild.roles.get(id);
+            return msg.guild.roles.catch.get(id);
         }
         else { return null; }
     },
@@ -24,7 +24,7 @@ module.exports = {
         const matches = mention.match(/^<#(\d+)>$/);
         if (matches) {
             const id = matches[1];
-            return msg.guild.channels.get(id);
+            return msg.guild.channels.cache.get(id);
         }
         else { return null; }
     },
@@ -32,8 +32,7 @@ module.exports = {
     // converts a user object to a member object for the given message's guild
     userToMember: (u, msg) => {
         return new Promise(async (resolve) => {
-            const g = await msg.guild.fetchMembers();
-            resolve(g.members.get(u.id));
+            resolve(msg.guild.members.fetch(u.id));
         });
     },
 
@@ -42,22 +41,21 @@ module.exports = {
     parseUser: (msg, string) => {
         return new Promise(async (resolve) => {
             const conversions = require('./conversions.js');
-            await msg.guild.fetchMembers();
     
             let user;
             if (!string) {
                 user = msg.author;
             }
-            else if (msg.mentions.users.array().length !== 0) {
+            else if (msg.mentions.users.size !== 0) {
                 user = conversions.userFromMention(string, msg);
             }
             else if (/^\d+$/.test(string)) {
-                let x = msg.guild.members.get(string);
+                let x = msg.guild.members.fetch(string);
                 if (x) user = x.user;
             }
             else {
                 string = string.toLowerCase();
-                let x = msg.guild.members.find(m => m.user.username.toLowerCase() === string || m.user.tag.toLowerCase() === string || m.displayName.toLowerCase() === string);
+                let x = msg.guild.members.fetch().then(g => g.find(m => m.user.username.toLowerCase() === string || m.user.tag.toLowerCase() === string || m.displayName.toLowerCase() === string));
                 if (x) user = x.user;
             }
             resolve(user);
@@ -78,7 +76,7 @@ module.exports = {
                 c = conversions.channelFromMention(string, msg);
             }
             else if (!isNaN(parseInt(string))) {
-                c = msg.guild.channels.get(string);
+                c = msg.guild.channels.cache.get(string);
             }
             else {
                 string = string.toLowerCase();
