@@ -112,6 +112,8 @@ let fsmashes = {
 let landingDair = { name: 'landing down aerial', aliases: ['landing down air', 'landing dair'], link: 'dair landing' }
 
 charData.map(c => {
+    if (c.unreleased) return;
+
     c.moves = normals.concat(jabs[c.jabType]).concat(ftilts[c.ftiltType]).concat(fsmashes[c.fsmashType]).filter(n => !((c.exclude && c.exclude.includes(n.name)) || c.moves.find(m => m.name === n.name))).concat(c.moves);
     if (c.landingDair) c.moves.push(landingDair);
 });
@@ -132,8 +134,9 @@ module.exports = {
                 character = charData.find(c => toOneWord(c.name) === character || (c.aliases && c.aliases.map(x => toOneWord(x)).includes(character)));
                 x--;
             }
+            if (character.unreleased) return msg.channel.send('That character is not available yet!').then(resolve()).catch(e => reject(e));
             if (!character) return msg.channel.send('That character is not valid!').then(resolve()).catch(e => reject(e));
-            
+
             let move = toOneWord(args.slice(x + 1).join(' ').toLowerCase());
             if (!move) return msg.channel.send('Please provide a move!').then(resolve()).catch(e => reject(e));
 

@@ -18,7 +18,7 @@ module.exports = {
 
     toOneWord: (text) => {
         let newText = text;
-        [' ', '_', '-', '.', '(', ')', "'"].forEach(x => newText = newText.split(x).join(''))
+        [' ', '_', '-', '.', '(', ')', "'", '/'].forEach(x => newText = newText.split(x).join(''))
         return newText;
     },
 
