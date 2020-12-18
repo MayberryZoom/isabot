@@ -74,10 +74,6 @@ client.on('message', async msg => {
 	});
 });
 
-client.on('guildCreate', guild => {
-	sendLog('<@&513807019048828929> I joined ' + guild.name);
-});
-
 client.once('ready', () => {
     if (client.user.id === '513515391155175424') sendLog('<@&513807019048828929> Ready!');
 	client.user.setActivity('"' + prefix + '" is my prefix!')

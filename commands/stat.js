@@ -22,6 +22,7 @@ module.exports = {
                 x--;
             }
             if (!character || character.name === 'luma') return msg.channel.send('That character is not valid!').then(resolve()).catch(e => reject(e));
+            if (character.unreleasedStat) return msg.channel.send('That character is not available yet!').then(resolve()).catch(e => reject(e));
 
             let attrName = toOneWord(args.slice(x + 1).join(' ').toLowerCase());
             let attribute = character.attributes.find(a => toOneWord(a.name) === attrName || (a.aliases && a.aliases.map(x => toOneWord(x)).includes(attrName)));
