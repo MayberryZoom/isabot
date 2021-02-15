@@ -517,9 +517,15 @@ module.exports = [
       character: 'ice climbers'
    },
    {
-      name: 'nair interrupt',
-      definition: 'If you hit someone with the first 2 frames of nair in a sh, you can buffer a squall for nana instead of the nair. <https://www.youtube.com/watch?v=MTe5xxQPvEY>',
-      character: 'ice climbers'
+        name: 'nair interrupt',
+        definition: 'Nair interrupt is a hitlag based desync that allows Nana to overwrite her short hop neutral aerial into any other aerial or special. \n\nPopo’s short hop nair must hit on either frame 1 (reverse hitbox) or frame 2 (forward hitbox) for Nana to desync. This allows for a powerful shield pressure option with [nair] (squall) or a tech chase option with [nair] (IB). \n\nMore info: <https://docs.google.com/document/d/12f_J5neaipWebvqdbXjDZIEQQxrx8JR-4drF51niPmc/edit> \nCharacter details: <https://docs.google.com/spreadsheets/d/1WI_xGi1OQ3b0bhrue42OqjrlufqYJQXM2m0FNil6-hw/edit#gid=280315553> \n\nExamples: \n<https://www.youtube.com/watch?v=E-wczC5ffEA> \n<https://www.youtube.com/watch?v=MTe5xxQPvEY> \n<https://youtu.be/v6ygCP04k24?t=98> \n<https://gfycat.com/bluevictoriouscopepod>',
+        character: 'ice climbers'
+   },
+   {
+        name: 'dtac',
+        aliases: ['dtilt attack cancel, down tilt attack cancel'],
+        definition: 'DTAC, or Dtilt Attack Cancel, is a hitlag based desync that allows Nana to attack cancel off of a synced dtilt. \n\nOverwriting the attack cancelled aerial with a Nana special allows for a powerful shield pressure option with DTAC (squall) or a tech chase option with DTAC (IB). \n\nTo perform, immediately after inputting a synced dtilt on hit, input a  jump followed by Nana\'s special option. \nThis desync will not work if dtilt is spaced. \n\nExamples: \n<https://www.youtube.com/watch?v=FEUgLKcFzDQ> \n<https://www.youtube.com/watch?v=mIdrUjzXjbA>',
+        character: 'ice climbers'
    },
    {
       name: 'blizzwall',
@@ -532,6 +538,12 @@ module.exports = [
       definition: 'A fast desync done from standing or walking. Turn without dashing, then buffer another turn without dashing with popo that nana will do in 6 frames, then after 6 or more frames have passed, input a dash in the original direction you turned followed by an immediate attack you can do from walk but not run. Nana’s turning animation during this cannot be interrupted by a dash in that direction, so she dashes 4 frames late, creating a window for a nana only input.\nVideo: <https://twitter.com/madmonk12345/status/1144807399854751744?s=21>\nStick movement guide: <https://twitter.com/madmonk12345/status/1140854288517718017?s=21>',
       character: 'ice climbers'
    },   
+   {
+        name: 'dash dance buffer desync',
+        aliases: ['ddb', 'ddb (aerials)', 'dash dance buffer (aerials)'],
+        definition: 'Dash dancing clears the input buffer entirely. This allows you to attack cancel an aerial nana only by dashing forward, inputting a dash walk via the cstick, dash dancing, then jumping. For more information on how to learn it check here: <https://pastebin.com/1SNvDXeg> \n\nVideo introduction: <https://twitter.com/WalnutSSBU/status/1359283149033897985>',
+        character: 'ice climbers'
+   },
    {
       name: 'shieldstun desync',
       definition: 'Often when an opponent hits our shield Nana and Popo will end up less or more than 6 frames apart, meaning we can desync out of the shieldstun.',
