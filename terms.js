@@ -523,7 +523,7 @@ module.exports = [
    },
    {
         name: 'dtac',
-        aliases: ['dtilt attack cancel, down tilt attack cancel'],
+        aliases: ['dtilt attack cancel', 'down tilt attack cancel'],
         definition: 'DTAC, or Dtilt Attack Cancel, is a hitlag based desync that allows Nana to attack cancel off of a synced dtilt. \n\nOverwriting the attack cancelled aerial with a Nana special allows for a powerful shield pressure option with DTAC (squall) or a tech chase option with DTAC (IB). \n\nTo perform, immediately after inputting a synced dtilt on hit, input a  jump followed by Nana\'s special option. \nThis desync will not work if dtilt is spaced. \n\nExamples: \n<https://www.youtube.com/watch?v=FEUgLKcFzDQ> \n<https://www.youtube.com/watch?v=mIdrUjzXjbA>',
         character: 'ice climbers'
    },
