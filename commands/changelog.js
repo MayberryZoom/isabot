@@ -1,4 +1,8 @@
-const changes = `__12/17/2020__
+const changes = `__2/19/2021__
+- Added hitbox data for Sephiroth
+- Added Pyra/Mythra to \`>render\`
+
+__12/17/2020__
 - Updated \`>stat\`
     - Added attributes for Sephiroth
     - Fixed Steve's attribute data (was accidentally set to Min-Min's)

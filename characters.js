@@ -5164,7 +5164,7 @@ module.exports = [
                     'sword fair wood stone iron diamond'
                 ],
                 link: 'fair sword wood stone iron diamond',
-                comment: 'Steve can perform his forward and back aerials using his sword\'s frame data (Jab, FTilt, NAir) by inputting them with the SH macro. They are much faster but deal much less damage than the pickaxe variants.'
+                description: 'Steve can perform his forward and back aerials using his sword\'s frame data (Jab, FTilt, NAir) by inputting them with the SH macro. They are much faster but deal much less damage than the pickaxe variants.'
             },
             {
                 name: 'short-hop forward aerial (gold)',
@@ -5182,7 +5182,7 @@ module.exports = [
                     'sword fair gold'
                 ],
                 link: 'fair sword gold',
-                comment: 'Steve can perform his forward and back aerials using his sword\'s frame data (Jab, FTilt, NAir) by inputting them with the SH macro. They are much faster but deal much less damage than the pickaxe variants.'
+                description: 'Steve can perform his forward and back aerials using his sword\'s frame data (Jab, FTilt, NAir) by inputting them with the SH macro. They are much faster but deal much less damage than the pickaxe variants.'
             },
             {
                 name: 'short-hop forward aerial (no tool)',
@@ -5236,7 +5236,7 @@ module.exports = [
                     'sword fair fist'
                 ],
                 link: 'fair sword punch',
-                comment: 'Steve can perform his forward and back aerials using his sword\'s frame data (Jab, FTilt, NAir) by inputting them with the SH macro. They are much faster but deal much less damage than the pickaxe variants.'
+                description: 'Steve can perform his forward and back aerials using his sword\'s frame data (Jab, FTilt, NAir) by inputting them with the SH macro. They are much faster but deal much less damage than the pickaxe variants.'
             },
             {
                 name: 'back aerial (wood/stone/iron/diamond)',
@@ -5426,7 +5426,7 @@ module.exports = [
                     'sword bair wood stone iron diamond'
                 ],
                 link: 'bair sword wood stone iron diamond',
-                comment: 'Steve can perform his forward and back aerials using his sword\'s frame data (Jab, FTilt, NAir) by inputting them with the SH macro. They are much faster but deal much less damage than the pickaxe variants.'
+                description: 'Steve can perform his forward and back aerials using his sword\'s frame data (Jab, FTilt, NAir) by inputting them with the SH macro. They are much faster but deal much less damage than the pickaxe variants.'
             },
             {
                 name: 'short-hop back aerial (gold)',
@@ -5444,7 +5444,7 @@ module.exports = [
                     'sword bair gold'
                 ],
                 link: 'bair sword gold',
-                comment: 'Steve can perform his forward and back aerials using his sword\'s frame data (Jab, FTilt, NAir) by inputting them with the SH macro. They are much faster but deal much less damage than the pickaxe variants.'
+                description: 'Steve can perform his forward and back aerials using his sword\'s frame data (Jab, FTilt, NAir) by inputting them with the SH macro. They are much faster but deal much less damage than the pickaxe variants.'
             },
             {
                 name: 'short-hop back aerial (no tool)',
@@ -5498,7 +5498,7 @@ module.exports = [
                     'sword bair fist'
                 ],
                 link: 'bair sword punch',
-                comment: 'Steve can perform his forward and back aerials using his sword\'s frame data (Jab, FTilt, NAir) by inputting them with the SH macro. They are much faster but deal much less damage than the pickaxe variants.'
+                description: 'Steve can perform his forward and back aerials using his sword\'s frame data (Jab, FTilt, NAir) by inputting them with the SH macro. They are much faster but deal much less damage than the pickaxe variants.'
             },
             {
                 name: 'up aerial (wood/stone/iron/diamond)',
@@ -5631,10 +5631,210 @@ module.exports = [
         name: 'sephiroth',
         aliases: ['edge', 'sword', 'seph'],
         color: '#dee0e3',
-        jabType: 'unique',
-        ftiltType: 'unique',
-        fsmashType: 'unique',
-        moves: [],
+        jabType: '3',
+        ftiltType: 'angled',
+        fsmashType: 'unangled',
+        landingDair: true,
+        moves: [
+            {
+                name: 'forward smash (winged)',
+                aliases: [
+                    'forward smash winged',
+                    'fsmash winged',
+                    'winged forward smash',
+                    'winged fsmash',
+                    'forward smash owa',
+                    'fsmash owa'
+                ],
+                link: 'fsmash winged'
+            },
+            {
+                name: 'up smash (winged)',
+                aliases: [
+                    'up smash winged',
+                    'usmash winged',
+                    'winged up smash',
+                    'winged usmash',
+                    'up smash owa',
+                    'usmash owa'
+                ],
+                link: 'usmash winged'
+            },
+            {
+                name: 'down smash (winged)',
+                aliases: [
+                    'down smash winged',
+                    'dsmash winged',
+                    'winged down smash',
+                    'winged dsmash',
+                    'down smash owa',
+                    'dsmash owa'
+                ],
+                link: 'dsmash winged'
+            },
+            {
+                name: 'down smash (over edge)',
+                aliases: [
+                    'down smash over edge',
+                    'down smash aerial',
+                    'dsmash over edge',
+                    'dsmash aerial'
+                ],
+                link: 'dsmash air'
+            },
+            {
+                name: 'down smash (winged, over edge)',
+                aliases: [
+                    'down smash over edge winged',
+                    'down smash aerial winged',
+                    'dsmash over edge winged',
+                    'dsmash aerial winged',
+                    'winged down smash over edge',
+                    'winged down smash aerial',
+                    'winged dsmash over edge',
+                    'winged dsmash aerial',
+                    'down smash over edge owa',
+                    'down smash aerial owa',
+                    'dsmash over edge owa',
+                    'dsmash aerial owa'
+                ],
+                link: 'dsmash air winged'
+            },
+            {
+                name: 'flare',
+                aliases: [
+                    'neutral b',
+                    'neutral special',
+                    'neutral b min',
+                    'neutral special min',
+                    'neutral b minimum',
+                    'neutral special minimum',
+                    'neutral b uncharged',
+                    'neutral special uncharged'
+                ]
+            },
+            {
+                name: 'megaflare',
+                aliases: [
+                    'neutral b mid',
+                    'neutral special mid',
+                    'neutral b middle',
+                    'neutral special middle'
+                ]
+            },
+            {
+                name: 'gigaflare',
+                aliases: [
+                    'neutral b max',
+                    'neutral special max',
+                    'neutral b maximum',
+                    'neutral special maximum',
+                    'neutral b charged',
+                    'neutral special charged'
+                ]
+            },
+            {
+                name: 'shadow flare (minimum)',
+                aliases: [
+                    'side b',
+                    'side special',
+                    'side b min',
+                    'side special min',
+                    'side b minimum',
+                    'side special minimum',
+                    'side b uncharged',
+                    'side special uncharged'
+                ],
+                link: 'shadow flare min'
+            },
+            {
+                name: 'shadow flare (maximum)',
+                aliases: [
+                    'side b max',
+                    'side special max',
+                    'side b maximum',
+                    'side special maximum',
+                    'side b charged',
+                    'side special charged'
+                ],
+                link: 'shadow flare max'
+            },
+            {
+                name: 'blade dash',
+                aliases: [
+                    'up b',
+                    'up special',
+                    'up b min',
+                    'up special min',
+                    'up b uncharged',
+                    'up special uncharged'
+                ]
+            },
+            {
+                name: 'octaslash',
+                aliases: [
+                    'up b max',
+                    'up special max',
+                    'up b charged',
+                    'up special charged',
+                ]
+            },
+            {
+                name: 'scintilla',
+                aliases: [
+                    'down b',
+                    'down special'
+                ],
+                link: 'scintilla miss'
+            },
+            {
+                name: 'scintilla (success, minimum)',
+                aliases: [
+                    'scintilla success',
+                    'scintilla success min',
+                    'scintilla success minimum',
+                    'down b success min',
+                    'down special success min',
+                    'down b success minimum',
+                    'down special success minimum',
+                    'scintilla minimum',
+                    'scintilla min',
+                    'down b hit',
+                    'down special hit',
+                    'down b hit min',
+                    'down special hit min',
+                    'down b hit minimum',
+                    'down special hit minimum',
+                    'down b min',
+                    'down special min',
+                    'down b minimum',
+                    'down special minimum'
+                ],
+                link: 'scintilla hit min'
+            },
+            {
+                name: 'scintilla (success, maximum)',
+                aliases: [
+                    'scintilla success max',
+                    'down b success max',
+                    'down special success max',
+                    'scintilla success maximum',
+                    'down b success maximum',
+                    'down special success maximum',
+                    'scintilla maximum',
+                    'scintilla max',
+                    'down b hit max',
+                    'down special hit max',
+                    'down b hit maximum',
+                    'down special hit maximum',
+                    'down b max',
+                    'down special max',
+                    'down b maximum',
+                    'down special maximum'
+                ],
+                link: 'scintilla hit max'
+            },
+        ],
         exclude: [],
         attributes: [
             {
@@ -5671,7 +5871,31 @@ module.exports = [
                 aliases: ['ffincrease', 'fastfallincrease', 'ff%'],
                 value: 60,
             }
-        ],
-        unreleasedHitbox: true
+        ]
+    },
+    {
+        name: 'pyra',
+        aliases: ['pythra', 'aegis', 'homura'],
+        color: '#d04c4a',
+        jabType: 'unique',
+        ftiltType: 'unique',
+        fsmashType: 'unique',
+        moves: [],
+        attributes: [],
+        unreleasedHitbox: true,
+        unreleasedStat: true
+    },
+    {
+        name: 'mythra',
+        aliases: ['hikari'],
+        ssbuLink: 'pyra',
+        color: '#d04c4a',
+        jabType: 'unique',
+        ftiltType: 'unique',
+        fsmashType: 'unique',
+        moves: [],
+        attributes: [],
+        unreleasedHitbox: true,
+        unreleasedStat: true
     }
 ]
