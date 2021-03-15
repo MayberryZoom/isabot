@@ -49,25 +49,25 @@ let jabs = {
     ],
     'rapid': [
         { name: 'rapid jab', aliases: ['jab'], link: 'jab rapid' },
-        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'rapid jab end'}
+        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'jab rapid end'}
     ],
     'rapid 1': [
         { name: 'jab 1', aliases: ['jab'] },
         { name: 'rapid jab', link: 'jab rapid' },
-        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'rapid jab end'}
+        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'jab rapid end'}
     ],
     'rapid 2': [
         { name: 'jab 1', aliases: ['jab'] },
         { name: 'jab 2'},
         { name: 'rapid jab', link: 'jab rapid' },
-        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'rapid jab end'}
+        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'jab rapid end'}
     ],
     'gentleman': [
         { name: 'jab 1', aliases: ['jab'] },
         { name: 'jab 2'},
-        { name: 'jab 3'},
+        { name: 'jab 3', aliases: ['gentleman']},
         { name: 'rapid jab', link: 'jab rapid' },
-        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'rapid jab end'}
+        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'jab rapid end'}
     ],
     'unique': []
 };

@@ -2944,7 +2944,7 @@ module.exports = [
         name: 'diddy kong',
         aliases: ['diddy'],
         color: '#e15951',
-        jabType: 'gentleman',
+        jabType: '3',
         ftiltType: 'angled',
         fsmashType: 'unangled',
         moves: [],
@@ -5877,25 +5877,282 @@ module.exports = [
         name: 'pyra',
         aliases: ['pythra', 'aegis', 'homura'],
         color: '#d04c4a',
-        jabType: 'unique',
-        ftiltType: 'unique',
-        fsmashType: 'unique',
-        moves: [],
-        attributes: [],
-        unreleasedHitbox: true,
-        unreleasedStat: true
+        jabType: 'gentleman',
+        ftiltType: 'unangled',
+        fsmashType: 'unangled',
+        moves: [
+            {
+                name :'up tilt',
+                aliases: [
+                    'utilt',
+                    'hold the po',
+                    'htp'
+                ],
+                link: 'utilt'
+            },
+            {
+                name: 'up tilt (interpolated)',
+                aliases: [
+                    'utilt interpolated',
+                    'hold the po interpolated',
+                    'htp interpolated'
+                ],
+                link: 'utilt interpolated'
+            },
+            {
+                name: 'forward smash (interpolated)',
+                aliases: [
+                    'fsmash interpolated',
+                    'side smash interpolated'
+                ],
+                link: 'fsmash interpolated'
+            },
+            {
+                name: 'down aerial (interpolated)',
+                aliases: [
+                    'down air interpolated',
+                    'dair interpolated'
+                ],
+                link: 'dair interpolated'
+            },
+            {
+                name: 'flame nova 1',
+                aliases: [
+                    'neutral b',
+                    'neutral special',
+                    'flame nova',
+                    'nova',
+                    'fn',
+                    'fn1',
+                    'neutral b min',
+                    'neutral b minimum',
+                    'neutral special min',
+                    'neutral special minimum',
+                    'flame nova min',
+                    'flame nova minimum',
+                    'fn min',
+                    'fn minimum',
+                    'nova min',
+                    'nova minimum'
+                ]
+            },
+            {
+                name: 'flame nova 2',
+                aliases: [
+                    'fn2',
+                    'nova 2',
+                    'neutral b middle',
+                    'neutral special middle',
+                    'flame nova middle',
+                    'fn middle',
+                ]
+            },
+            {
+                name: 'flame nova 3',
+                aliases: [
+                    'fn3',
+                    'nova 3',
+                    'neutral b max',
+                    'neutral b maximum',
+                    'neutral special max',
+                    'neutral special maximum',
+                    'flame nova max',
+                    'flame nova maximum',
+                    'fn max',
+                    'fn maximum'
+                ]
+            },
+            {
+                name: 'blazing end (melee)',
+                aliases: [
+                    'side b melee',
+                    'side special melee',
+                    'be melee',
+                    'side b point blank',
+                    'side special point blank',
+                    'blazing end point blank',
+                    'be point blank',
+                    'side b direct',
+                    'side special direct',
+                    'blazing end direct',
+                    'be direct',
+                    'side b throw',
+                    'side special throw',
+                    'blazing end throw',
+                    'be throw'
+                ],
+                link: 'blazing end start'
+            },
+            {
+                name: 'blazing end (projectile)',
+                aliases: [
+                    'side b',
+                    'side special',
+                    'blazing end',
+                    'be',
+                    'side b projectile',
+                    'side special projectile',
+                    'be projectile',
+                    'side b spin',
+                    'side special spin',
+                    'blazing end spin',
+                    'be spin'
+                ],
+                link: 'blazing end'
+            },
+            {
+                name: 'prominence revolt',
+                aliases: [
+                    'up b',
+                    'up special',
+                    'pr'
+                ]
+            },
+            {
+                name: 'swap',
+                aliases: [
+                    'down b',
+                    'down special',
+                    'switch'
+                ],
+                link: 'swap to mythra'
+            }
+        ],
+        attributes: [
+            {
+                name: 'weight',
+                value: 98,
+                aliases: ['mass']
+            },
+            {
+                name: 'run speed',
+                aliases: ['run'],
+                value: 1.38,
+            },
+            {
+                name: 'walk speed',
+                aliases: ['walk'],
+                value: 0.92,
+            },
+            {
+                name: 'air speed',
+                aliases: ['drift'],
+                value: 1.1,
+            },
+            {
+                name: 'fall speed',
+                value: 1.62,
+            },
+            {
+                name: 'fastfall speed',
+                aliases: ['fastfall'],
+                value: 2.592,
+            },
+            {
+                name: 'fastfall speed increase',
+                aliases: ['ffincrease', 'fastfallincrease', 'ff%'],
+                value: 60,
+            }
+        ]
     },
     {
         name: 'mythra',
         aliases: ['hikari'],
         ssbuLink: 'pyra',
-        color: '#d04c4a',
-        jabType: 'unique',
-        ftiltType: 'unique',
-        fsmashType: 'unique',
-        moves: [],
-        attributes: [],
-        unreleasedHitbox: true,
-        unreleasedStat: true
+        color: '#ffffcc',
+        jabType: 'gentleman',
+        ftiltType: 'unangled',
+        fsmashType: 'unangled',
+        moves: [
+            {
+                name :'up tilt',
+                aliases: [
+                    'utilt',
+                    'hold the mo',
+                    'htm'
+                ],
+                link: 'utilt'
+            },
+            {
+                name: 'up tilt (interpolated)',
+                aliases: [
+                    'utilt interpolated',
+                    'hold the mo interpolated',
+                    'htm interpolated'
+                ],
+                link: 'utilt interpolated'
+            },
+            {
+                name: 'forward smash (interpolated)',
+                aliases: [
+                    'fsmash interpolated',
+                    'side smash interpolated'
+                ],
+                link: 'fsmash interpolated'
+            },
+            {
+                name: 'neutral aerial (landing)',
+                aliases: [
+                    'nair landing',
+                    'landing nair',
+                    'landing neutral aerial'
+                ],
+                link: 'nair landing'
+            },
+
+            {
+                name: 'down aerial (interpolated)',
+                aliases: [
+                    'down air interpolated',
+                    'dair interpolated'
+                ],
+                link: 'dair interpolated'
+            },
+            {
+                name: 'swap',
+                aliases: [
+                    'down b',
+                    'down special',
+                    'switch'
+                ],
+                link: 'swap to pyra'
+            }
+        ],
+        attributes: [
+            {
+                name: 'weight',
+                value: 92,
+                aliases: ['mass']
+            },
+            {
+                name: 'run speed',
+                aliases: ['run'],
+                value: 2.41,
+            },
+            {
+                name: 'walk speed',
+                aliases: ['walk'],
+                value: 1.42,
+            },
+            {
+                name: 'air speed',
+                aliases: ['drift'],
+                value: 1.22,
+            },
+            {
+                name: 'fall speed',
+                value: 1.87,
+            },
+            {
+                name: 'fastfall speed',
+                aliases: ['fastfall'],
+                value: 2.992,
+            },
+            {
+                name: 'fastfall speed increase',
+                aliases: ['ffincrease', 'fastfallincrease', 'ff%'],
+                value: 60,
+            }
+        ]
     }
 ]

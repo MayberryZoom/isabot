@@ -1,4 +1,8 @@
-const changes = `__2/19/2021__
+const changes = `__3/15/2021__
+- Added hitbox data for Pyra/Mythra (except Mythra specials)
+- Added attributes for Pyra/Mythra
+
+__2/19/2021__
 - Added hitbox data for Sephiroth
 - Added Pyra/Mythra to \`>render\`
 
