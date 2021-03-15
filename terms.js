@@ -357,33 +357,8 @@ module.exports = [
 
    // ice climbers
    {
-      name: 'uaft',
-      definition: 'Up angled forward tilt.',
-      character: 'ice climbers'
-   },
-   {
-      name: 'nut',
-      definition: 'dthrow > (roll) > [uaft/nair] > (sideb) > grab > [fthrow] > (fair).\n*Note: (Squall) can be escaped with SDI, making this combo not true.\n<https://youtu.be/KmbBGbuMTZI?t=27>* \n<https://twitter.com/v23God/status/1096525627094650880>',
-      character: 'ice climbers'
-   },
-   {
-      name: 'desync',
-      definition: 'Any situation or setup that involves having nana and popo acting independantly of one another, usually though buffering an input for one while the other is busy.',
-      character: 'ice climbers'
-   },
-   {
-      name: 'cheerless',
-      definition: 'If you get a synced grab with ICs, when you input a throw Nana will do a taunt (called cheer). This means she cannot act while you are throwing. Certain setups can allow you to get a cheerless throw, where Nana will be able to buffer an option as you throw, before she cheers. An example of this is the yeet.<https://youtu.be/377qQF66n9M>',
-      character: 'ice climbers'
-   },
-   {
-      name: 'synced',
-      definition: 'When nana and popo are synchronized, and are acting at the same time doing the same thing.',
-      character: 'ice climbers'
-   },
-   {
-      name: 'semisync',
-      definition: 'A state of being where nana will sometimes be under popo\'s control, and sometimes not. \n<https://gfycat.com/MellowTerribleFawn>',
+      name: 'backdash cheerless',
+      definition: 'You can get a cheerless grab off of backdash. \nhttps://gfycat.com/distortedwillingbeagle',
       character: 'ice climbers'
    },
    {
@@ -392,25 +367,24 @@ module.exports = [
       character: 'ice climbers'
    },
    {
+      name: 'belay desync',
+      definition: 'When you belay to ledge, both ICs will be actionable on the same frame, so you can desync by inputting something for Nana within 6 frames before Popo is actionable, and then buffering something for Popo (this is necessary) as well.\nWhile not the same desync, you can also attempt for a reconnect buffer by holding an input as you belay, giving you a chance to buffer that input for Nana only. This can be applied in more guaranteed, or more flexible ways by applying Grab Storage. \nhttps://gfycat.com/groundedvengefulcentipede',
+      character: 'ice climbers'
+   },
+   {
       name: 'blizz',
       definition: 'Blizzard - ICs down special.',
       character: 'ice climbers'
    },
    {
-      name: 'squall',
-      definition: 'Squall Hammer - ICs side special.',
+      name: 'blizzblock',
+      definition: 'Blizzblock is a powerful neutral tool that refers to alternating desynced Ice Blocks with a desynced Blizzard mixed in to send any reflected Ice Blocks back at the opponent. It is a very versatile tool as it can be used offensively to pressure shields or confirm into a combo, as well as defensively to force an approach or invalidate certain projectiles. To use Blizzblock effectively, it is important to stay reactive. One climber is free to counter the opponent\’s response while the other climber is in lag, be that stopping the Blizzblock, continuing it, stuffing out a jump, or transitioning to a different desynced option. \nhttps://gfycat.com/timelyfittingdachshund \n\nFor a more intensive guide, read here: <https://docs.google.com/document/d/1IRYkx4wro643NB0r_zkPMfUR4V9OmiqSc-xbAieYA88/edit?usp=sharing>',
       character: 'ice climbers'
    },
    {
-      name: 'ib',
-      definition: 'Ice Block/Ice Shot - ICs neutral special.',
-      character: 'ice climbers'
-   },
-   {
-      name: 'tilt turn',
-      aliases: ['tilt turn desync'],
-      definition: 'One of the hardest desyncs ICs can do. Allows you to very quickly desync from standing, and can be applied to (blizzard) [wavedash]\n<https://twitter.com/v23God/status/1114949522256539648>',
-      character: 'ice climbers'
+      name: 'blizz confirms',
+      definition: 'Kill Confirms out of a synced blizzard freeze: <https://twitter.com/techyCoder81/status/1119463888410562560>',
+       character: 'ice climbers'
    },
    {
       name: 'blizzard wavedash',
@@ -419,25 +393,14 @@ module.exports = [
       character: 'ice climbers'
    },
    {
-      name: 'jab interrupt',
-      aliases: ['jab desync'],
-      definition: 'You can desync off of jab on hit/shield (including on things like Pikmin/hydrant) if you buffer jab out of any state where you can not jab (immediately out of dash, dropping shield, after a move etc etc), then input something for Nana in the next 3 frames\n https://gfycat.com/equatorialsentimentalbooby',
+      name: 'blizzwall',
+      definition: 'Blizzwall is desynced blizzards in neutral. specifically, its when you alternate nana/popo blizzard to form a soft of wall of blizzard forwards, sometimes short hopping, sometimes moving backward or forward. When performed correctly, there is no gap in the blizzard projectiles, since each one covers the endlag of the one that came before it. The counterplay to this is jumping, which can be uaired instead. Many characters have specific moves that can hit you through blizzwall, so keep these in mind.',
       character: 'ice climbers'
    },
    {
-      name: 'soymilk',
-      aliases: ['skid turn', 'skid turn desync'],
-      definition: 'Soymilk desync aka "skid turn": Dash in one direction until you enter run, then let go of the control stick to enter skid, then move the control stick in the opposite direction so Popo enters turn, and quickly interrupt the turning animation with any grounded move. If done correctly, Popo will perform the move and Nana will perform a short dash forward.\n\nTechnical details: Just like with other run turn desynchs, you have to input the move before Nana goes into turn so that she interprets the turn input as a dash forward. Out of skid, dash interrupts as early as frame 8. So you have to skid, turn, and then input a move at least 8 frames after the original skid, but less than 6 frames after the turn',
-      character: 'ice climbers'
-   },
-   {
-      name: 'gimfinite',
-      definition: '<https://youtu.be/BCovjXUecDw>',
-      character: 'ice climbers'
-   },
-   {
-      name: 'ruri combo',
-      definition: 'A solid conversion off of synced grab at mid percents. <https://twitter.com/ruripikaics/status/1105443229095190529>',
+      name: 'button storage desyncs',
+      aliases: ['grab storage', 'special storage', 'shield storage', 'taunt storage', 'jump storage', 'button storage', 'the greatest thing to ever happen to ics'],
+      definition: 'By getting Nana to ignore an input while we respawn (which can be done either by whiffing a grab and holding it immediately after, holding it as we die, or after a failed reconnect buffer), we can observe various anomalies.\nThis is most usefully applied with Special Storage (which requires Smash Stick) or Grab Storage (which can be used with any control scheme), however it also has known effects with Shield, Jump and Taunt.\nVideo Guide: <https://youtu.be/6oret9hMXek>\nFor a slightly more detailed text guide on Grab Storage and Special Storage, see <https://docs.google.com/document/d/1Ftem9sr7ULRqfC0fHwTei1W1vjCf73lz6V9tXfofRwU/edit>',
       character: 'ice climbers'
    },
    {
@@ -446,24 +409,65 @@ module.exports = [
       character: 'ice climbers'
    },
    {
-      name: 'squall desync',
-      definition: 'At the end of squall, you can buffer an option just for nana, and then buffer something for popo, so that they perform two different things. Note that like with throw desync, you must buffer something for Popo as well.\nBasics: <https://twitter.com/v23God/status/1102950879672627207>\nTechnical Details: <https://www.youtube.com/watch?v=xVuxZxmc358>',
+      name: 'cheer cancel',
+      aliases: ['pummel buffer desync'],
+      definition: 'You can buffer certain options for nana as popo\'s grab is coming out but before it actually lands. IMPORTANT NOTE: This is NOT Cheerless, and does not directly involve cheerless, though it is one method (amongst many) that can lead into Cheerless.\nFrame data: The window for grab (spotdodge) is 5 frames from standing grab (-3 to +1, with grab being f0), and  6 frames from grab during initial dash (-2 to +3). You can also Roll with the same timing. This window works because you can input down before the grab, and popo\'s grab input will count as a shield input for Nana. And of course, down + shield == spotdodge.\n\nThe window for grab (AB smash) is 2 frames from standing grab (0 to +1, with grab being f0), and 3 frames from grab during initial dash (+1 to +3). This is the generalized window for things that aren\'t roll or spotdodge. For example, you can grab (jump) , or grab (taunt) with this same timing.\n\nUnfortunately, while you CAN do tilts and specials while grabbing they are all a 1 frame window from a dash grab, and are not possible from a standing grab. In the future I may do a more in depth video on the specific reasons for why that is the case, but for now just don\'t worry about that at all. Spotdodge is the most common choice for CC option. <https://www.youtube.com/watch?v=m-NKjph9fFI&feature=youtu.be>',
       character: 'ice climbers'
    },
    {
-      name: 'nanatrump',
-      definition: 'While trumping is only mediocre for a lot of characters in this game, since the opponent can DI in or away from the stage and limit your options for directly punishing it, Ice Climbers has what is likely the best trump punishes in the game. The answer is to make nana trump the opponent, while immdiately hitting ledge with popo fsmash. This is called nanatrump.\nThere are two main ways to do this - \n1. Run towards ledge and pivot grab towards center stage right before you reach ledge. While popo is in the endlag from the pivot grab, you can trump with nana.\n2. You can jump towards ledge, and if you space your landing just right, nana will grab ledge but popo will land on stage.\n\nAs nana trumps the opponent, you must immediately fsmash the ledge with popo. If done properly, they will get hit by the fsmash immediately after breaking contact with the ledge, which guarantees the fsmash.\nExample: <https://twitter.com/bigd_ssb/status/1086753626670809088>',
+      name: 'cheerless',
+      definition: 'If you get a synced grab with ICs, when you input a throw Nana will do a taunt (called cheer). This means she cannot act while you are throwing. Certain setups can allow you to get a cheerless throw, where Nana will be able to buffer an option as you throw, before she cheers. An example of this is the yeet.<https://youtu.be/377qQF66n9M>',
       character: 'ice climbers'
    },
    {
-      name: 'teeter cheerless',
-      definition:   'If you can get nana to teeter on the edge of a platform or the main stage, you can guarantee a cheerless throw from it. Nana will not cheer if she is teetering when you throw someone. This can be setup\n1. in the same way that nanatrump is setup with whiff grab\n2. with a dash towards ledge\n3. airdodging onto a platform with the right timing\nExamples-<https://gfycat.com/DearElaborateAlaskanmalamute>\n<https://youtu.be/Yp69Y3gjSMk>',
+      name: 'dash dance buffer desync',
+      aliases: ['ddb', 'ddb (aerials)', 'dash dance buffer (aerials)'],
+      definition: 'Dash dancing clears the input buffer entirely. This allows you to attack cancel an aerial nana only by dashing forward, inputting a dash walk via the cstick, dash dancing, then jumping. For more information on how to learn it check here: <https://pastebin.com/1SNvDXeg> \n\nVideo introduction: <https://twitter.com/WalnutSSBU/status/1359283149033897985>',
       character: 'ice climbers'
    },
    {
-      name: 'landing lag desync',
-      aliases: ['bair uair', 'uair uair', 'double uair', 'll desync'],
-      definition: 'If you do a short hop buffered bair or uair, and then buffer an uair right before landing, Nana\'s uair will autocancel, and you can input something for nana right before you land, which popo will ignore.\n<https://www.youtube.com/watch?v=79BBYmOR78I>',
+      name: 'desync',
+      definition: 'Any situation or setup that involves having nana and popo acting independantly of one another, usually though buffering an input for one while the other is busy.',
+      character: 'ice climbers'
+   },
+   {
+      name: 'dtac',
+      aliases: ['dtilt attack cancel', 'down tilt attack cancel'],
+      definition: 'DTAC, or Dtilt Attack Cancel, is a hitlag based desync that allows Nana to attack cancel off of a synced dtilt. \n\nOverwriting the attack cancelled aerial with a Nana special allows for a powerful shield pressure option with DTAC (squall) or a tech chase option with DTAC (IB). \n\nTo perform, immediately after inputting a synced dtilt on hit, input a  jump followed by Nana\'s special option. \nThis desync will not work if dtilt is spaced. \n\nExamples: \n<https://www.youtube.com/watch?v=FEUgLKcFzDQ> \n<https://www.youtube.com/watch?v=mIdrUjzXjbA>',
+      character: 'ice climbers'
+   },
+   {
+      name: '[dthrow] (delayed fair)',
+      aliases: ['kakko', 'dthrow delayed fair', '[dthrow] (delayed fair spike)', 'dthrow delayed fair spike',],
+      definition: '[Dthrow] (delayed fair) is a low percent desynced combo starter that, at its core, uses a delayed pre-tumble (fair spike) to give Popo massive frame advantage over the opponent for completely true follow ups. The most common follow ups are [sh landing nair] and [spotdodge] (blizz) [jab 1] \{kakko\}. \nhttps://gfycat.com/lazyfluidelectriceel \n\nPerforming details: <https://docs.google.com/document/d/1fl9yEFLCNua4HzzzpdOclklYXB_qaJCmmxzBCJ0mgJg/edit?usp=sharing>',
+      character: 'ice climbers'
+   },
+   {
+      name: 'dthrow footstool',
+      aliases: ['dthrow fs'],
+      definition: 'Off of a cheerless dthrow, you can confirm into (footstool), which can be used for a variety of confirms if they miss the tech. \nhttps://gfycat.com/descriptiveslimbongo \nDetailed guide: <https://docs.google.com/document/d/18XMLglb05D2zXQQerpznfg8N8JNj1lyF11GC8t99UyA/edit>',
+      character: 'ice climbers'
+   },
+   {
+      name: 'fair footstool',
+      aliases: ['dthrow fair footstool', 'fair fs', 'dthrow fair footstool'],
+      definition: 'Off of a cheerless dthrow, you can confirm into (delayed fair) [footstool]. \nhttps://gfycat.com/calmuniquefugu',
+      character: 'ice climbers'
+   },
+   {
+      name: 'footstool squall',
+      aliases: ['fs squall'],
+      definition: 'If you get a popo solo utilt, you can footstool with nana and immediately input squall with nana, which will drag the opponent down potentially into a grab. <https://youtu.be/gnKpZjXZA40>',
+      character: 'ice climbers'
+   },
+   {
+      name: 'gimfinite',
+      definition: '<https://youtu.be/BCovjXUecDw>',
+      character: 'ice climbers'
+   },
+   {
+      name: 'ib',
+      definition: 'Ice Block/Ice Shot - ICs neutral special.',
       character: 'ice climbers'
    },
    {
@@ -478,102 +482,21 @@ module.exports = [
       character: 'ice climbers'
    },
    {
-      name: 'footstool squall',
-      aliases: ['fs squall'],
-      definition: 'If you get a popo solo utilt, you can footstool with nana and immediately input squall with nana, which will drag the opponent down potentially into a grab. <https://youtu.be/gnKpZjXZA40>',
+      name: 'jab interrupt',
+      aliases: ['jab desync'],
+      definition: 'You can desync off of jab on hit/shield (including on things like Pikmin/hydrant) if you buffer jab out of any state where you can not jab (immediately out of dash, dropping shield, after a move etc etc), then input something for Nana in the next 3 frames. \nhttps://gfycat.com/testyhauntingeastsiberianlaika',
       character: 'ice climbers'
    },
    {
-      name: 'rollback desync',
-      definition: 'You can roll while also launching nana forward and squalling. technical details are in the video description: <https://youtu.be/lA6l1H_DcMQ> \n https://gfycat.com/oblongfriendlycrow',
+      name: 'jump cc fsmash',
+      aliases: ['jump cc (fsmash)', 'jump cc nair fsmash', 'jump cc (nair) (fsmash)', 'ccj fsmash', 'ccj nair fsmash', 'ccj (fsmash)', 'ccj (nair) (fsmash)'],
+      definition: '(Fsmash) from a cheer cancel jump grab. Perform a CCJ grab and hold the A button used to pummel. Then briefly tap down on the control stick from frames 11 - 20. This will result in [dthrow] (fast fall nair). Lastly, input (fsmash) with c stick or AB smash, it is significantly harder otherwise. Release quickly to have the fsmash come out as early as possible. \nIf you dair, or nana hits the nair but there\’s no fsmash, or you don\’t fastfall, you pressed down too early. All of the above result from pressing down before frame 11. \nhttps://gfycat.com/windingcavernousinvisiblerail \n\nMore details: <https://docs.google.com/document/d/1ggMr0TXWiWE5xf1J2qchvnve0n9Oiloa-X4fwwhigEY/edit?usp=sharing>',
       character: 'ice climbers'
    },
    {
-      name: 'utilt footstool',
-      aliases: ['utilt fs', 'utilt fs squall', 'utilt footstool squall'],
-      definition: 'Desynced utilt can lead into a footstool with the other climber. [utilt] (footstool squall) in particular is quite popular as a conversion that can lead into a grab. \nhttps://gfycat.com/harmoniousfreshduckbillcat \n(utilt) [footstool airdodge down] or [utilt] (footstool airdodge down) is a semi useful combo, which is an infinite on Puff, Kirby and GnW, but otherwise can be teched and therefore is not super reliable. \n https://gfycat.com/harmoniousfreshduckbillcat',
-      character: 'ice climbers'
-   },
-   {
-      name: 'notation',
-      definition: '__**Ice Climbers combo notation:**__\n**Fair** - this is a synced Fair, performed by both climbers\n**(Fair)** - this is a desynced Fair, performed by Nana (secondary climber) only\n**[Fair]** - this is a desynced Fair, performed by Popo [primary climber] only\n**DThrow** - this is a synced, cheered DThrow\n**[DThrow]** - this is a desynced, cheerless DThrow\nUsing arrows between components (DThrow > Uair) is helpful but not necessary. Use them to convey a sense of timing, where arrows represent inputs that are not performed almost simultaneously.',
-      character: 'ice climbers'
-   },
-   {
-      name: 'throw desync',
-      aliases: ['dthrow desync'],
-      definition: 'When you do a synced, cheered throw, you can buffer an option for Nana that Popo will not read in a 6 frame window, before Popo is actionable. This means that you can throw with Popo, and have Nana buffer just about anything, such as jump, blizzard, and roll (which is that is used to perform the Nut combo).\nNote that you must buffer something for Popo (which can be anything, even just movement) for Nana to register the desynced input.',
-      character: 'ice climbers'
-   },
-   {
-      name: 'blizz confirms',
-      definition: 'Kill Confirms out of a synced blizzard freeze: <https://twitter.com/techyCoder81/status/1119463888410562560>',
-       character: 'ice climbers'
-   },
-   {
-      name: 'cheer cancel',
-      aliases: ['pummel buffer desync'],
-      definition: 'You can buffer certain options for nana as popo\'s grab is coming out but before it actually lands. IMPORTANT NOTE: This is NOT Cheerless, and does not directly involve cheerless, though it is one method (amongst many) that can lead into Cheerless.\nFrame data: The window for grab (spotdodge) is 5 frames from standing grab (-3 to +1, with grab being f0), and  6 frames from grab during initial dash (-2 to +3). You can also Roll with the same timing. This window works because you can input down before the grab, and popo\'s grab input will count as a shield input for Nana. And of course, down + shield == spotdodge.\n\nThe window for grab (AB smash) is 2 frames from standing grab (0 to +1, with grab being f0), and 3 frames from grab during initial dash (+1 to +3). This is the generalized window for things that aren\'t roll or spotdodge. For example, you can grab (jump) , or grab (taunt) with this same timing.\n\nUnfortunately, while you CAN do tilts and specials while grabbing they are all a 1 frame window from a dash grab, and are not possible from a standing grab. In the future I may do a more in depth video on the specific reasons for why that is the case, but for now just don\'t worry about that at all. Spotdodge is the most common choice for CC option. <https://www.youtube.com/watch?v=m-NKjph9fFI&feature=youtu.be>',
-      character: 'ice climbers'
-   },
-   {
-        name: 'nair interrupt',
-        definition: 'Nair interrupt is a hitlag based desync that allows Nana to overwrite her short hop neutral aerial into any other aerial or special. \n\nPopo’s short hop nair must hit on either frame 1 (reverse hitbox) or frame 2 (forward hitbox) for Nana to desync. This allows for a powerful shield pressure option with [nair] (squall) or a tech chase option with [nair] (IB). \n\nMore info: <https://docs.google.com/document/d/12f_J5neaipWebvqdbXjDZIEQQxrx8JR-4drF51niPmc/edit> \nCharacter details: <https://docs.google.com/spreadsheets/d/1WI_xGi1OQ3b0bhrue42OqjrlufqYJQXM2m0FNil6-hw/edit#gid=280315553> \n\nExamples: \n<https://www.youtube.com/watch?v=E-wczC5ffEA> \n<https://www.youtube.com/watch?v=MTe5xxQPvEY> \n<https://youtu.be/v6ygCP04k24?t=98> \n<https://gfycat.com/bluevictoriouscopepod>',
-        character: 'ice climbers'
-   },
-   {
-        name: 'dtac',
-        aliases: ['dtilt attack cancel', 'down tilt attack cancel'],
-        definition: 'DTAC, or Dtilt Attack Cancel, is a hitlag based desync that allows Nana to attack cancel off of a synced dtilt. \n\nOverwriting the attack cancelled aerial with a Nana special allows for a powerful shield pressure option with DTAC (squall) or a tech chase option with DTAC (IB). \n\nTo perform, immediately after inputting a synced dtilt on hit, input a  jump followed by Nana\'s special option. \nThis desync will not work if dtilt is spaced. \n\nExamples: \n<https://www.youtube.com/watch?v=FEUgLKcFzDQ> \n<https://www.youtube.com/watch?v=mIdrUjzXjbA>',
-        character: 'ice climbers'
-   },
-   {
-      name: 'blizzwall',
-      definition: 'Blizzwall is desynced blizzards in neutral. specifically, its when you alternate nana/popo blizzard to form a soft of wall of blizzard forwards, sometimes short hopping, sometimes moving backward or forward. When performed correctly, there is no gap in the blizzard projectiles, since each one covers the endlag of the one that came before it. The counterplay to this is jumping, which can be uaired instead. Many characters have specific moves that can hit you through blizzwall, so keep these in mind.',
-      character: 'ice climbers'
-   },
-   {
-      name: 'turn buffer desync',
-      aliases: ['turn buffer'],
-      definition: 'A fast desync done from standing or walking. Turn without dashing, then buffer another turn without dashing with popo that nana will do in 6 frames, then after 6 or more frames have passed, input a dash in the original direction you turned followed by an immediate attack you can do from walk but not run. Nana’s turning animation during this cannot be interrupted by a dash in that direction, so she dashes 4 frames late, creating a window for a nana only input.\nVideo: <https://twitter.com/madmonk12345/status/1144807399854751744?s=21>\nStick movement guide: <https://twitter.com/madmonk12345/status/1140854288517718017?s=21>',
-      character: 'ice climbers'
-   },   
-   {
-        name: 'dash dance buffer desync',
-        aliases: ['ddb', 'ddb (aerials)', 'dash dance buffer (aerials)'],
-        definition: 'Dash dancing clears the input buffer entirely. This allows you to attack cancel an aerial nana only by dashing forward, inputting a dash walk via the cstick, dash dancing, then jumping. For more information on how to learn it check here: <https://pastebin.com/1SNvDXeg> \n\nVideo introduction: <https://twitter.com/WalnutSSBU/status/1359283149033897985>',
-        character: 'ice climbers'
-   },
-   {
-      name: 'shieldstun desync',
-      definition: 'Often when an opponent hits our shield Nana and Popo will end up less or more than 6 frames apart, meaning we can desync out of the shieldstun.',
-      character: 'ice climbers'
-   },
-   {
-      name: 'button storage desyncs',
-      aliases: ['grab storage', 'special storage', 'shield storage', 'taunt storage', 'jump storage', 'button storage', 'the greatest thing to ever happen to ics'],
-      definition: 'By getting Nana to ignore an input while we respawn (which can be done either by whiffing a grab and holding it immediately after, holding it as we die, or after a failed reconnect buffer), we can observe various anomalies.\nThis is most usefully applied with Special Storage (which requires Smash Stick) or Grab Storage (which can be used with any control scheme), however it also has known effects with Shield, Jump and Taunt.\nVideo Guide: <https://youtu.be/6oret9hMXek>\nFor a slightly more detailed text guide on Grab Storage and Special Storage, see <https://docs.google.com/document/d/1Ftem9sr7ULRqfC0fHwTei1W1vjCf73lz6V9tXfofRwU/edit>',
-      character: 'ice climbers'
-   },
-   {
-      name: 'run turn desync',
-      aliases: ['run turn'],
-      definition: 'During Run (not dash), if you turn (without skidding), then in frames 1-5 input roll/spotdodge and in the same window, but on or after the frame you input shield, you input a grounded option for Popo, you can desync that shield option+Popo option. For example, you can do [rar shorthop] (roll back) or [blizz] (spotdodge), or much more.\nNote that you can also (shield) with it, however the window is much tighter. There is also a potential polling issue in theory, where the game may read the left stick as being neutral for 1 frame, which will also tighten the window, and make (shield) impossible (though this outcome is quite unlikely)',
-      character: 'ice climbers'
-   },
-   {
-      name: 'belay desync',
-      definition: 'When you belay to ledge, both ICs will be actionable on the same frame, so you can desync by inputting something for Nana within 6 frames before Popo is actionable, and then buffering something for Popo (this is necessary) as well.\n While not the same desync, you can also attempt for a reconnect buffer by holding an input as you belay, giving you a chance to buffer that input for Nana only. This can be applied in more guaranteed, or more flexible ways by applying Grab Storage.',
-      character: 'ice climbers'
-   },
-   {
-      name: 'reconnect buffer',
-      definition: 'Whenever Nana comes back into Popo\'s range, if you\'re holding an input there\'s a chance that Nana will read that input immediately, thereby letting you get things like (blizz) as Nana reconnects, while Popo remains fully actionable. While it is known to not be truly random, the conditions for whether she reads the input or not are unknown.\nIf the reconnect buffer fails, this notably gives you storage for that input, making attempted reconnect buffers for special and attack particularly noteworthy.',
-      character: 'ice climbers'
-   },
-   {
-      name: 'run state storage',
-      definition: 'When forward is held on the control stick, nana and popo maintain their current state of running or walking.\n\nRun state storage is where you get popo to walk and nana to run. In this state, releasing the stick cause only nana to enter skid for 12 frames during which she cannot dash backwards or shield. This allows you to dash backwards or shield with popo and immediately do a nana first desync.\n\nThis state can be achieved from any previous desync.\n\nIf only popo can act, you can quickly mash forward twice quickly and then continue to hold forward 6-12 frames before nana can act to cause popo to do a dashwalk and nana to dash which converts into run state storage.\n\nWhen nana can act, you can simply hold forward more than 6 frames before popo can act. This causes nana to dash and popo to walk.\n\nExamples:\n<https://twitter.com/madmonk12345/status/1188207819780050944?s=21>\n<https://twitter.com/madmonk12345/status/1195622276680433664?s=21>',
+      name: 'landing lag desync',
+      aliases: ['bair uair', 'uair uair', 'double uair', 'll desync'],
+      definition: 'If you do a short hop buffered bair or uair, and then buffer an uair right before landing, Nana\'s uair will autocancel, and you can input something for nana right before you land, which popo will ignore.\n<https://www.youtube.com/watch?v=79BBYmOR78I> \nhttps://gfycat.com/tautfantasticaustraliancattledog',
       character: 'ice climbers'
    },
    {
@@ -584,26 +507,138 @@ module.exports = [
    {
       name: 'murasat combo',
       aliases: ['murasat', 'mura combo', 'mura'],
-      definition: 'dthrow (shield) [uair] (fair), popular low percent throw conversion commonly used for a regrab.\nDuring dthrow, hold shield+jump+up and time an attack input during the desync window for dthrow, this should result in (shield) [uair] which can be followed up with (fair) inputted normally. \n https://gfycat.com/barepopularkinkajou \n<https://www.youtube.com/watch?v=6WR5V7FGEmg&t=345s>',
+      definition: 'Dthrow (shield) [uair] (fair), a popular low percent throw conversion commonly used for a regrab.\nDuring dthrow, hold shield+jump+up and time an attack input during Popo\'s buffer window for dthrow, this should result in (shield) [uair] which can be followed up with (fair) inputted normally. \nhttps://gfycat.com/ashamedmeekbarebirdbat \n<https://www.youtube.com/watch?v=6WR5V7FGEmg&t=345s> \nPercent ranges: <https://docs.google.com/spreadsheets/d/1WI_xGi1OQ3b0bhrue42OqjrlufqYJQXM2m0FNil6-hw/edit#gid=740493672>',
       character: 'ice climbers'
    },
    {
-      name: 'fair footstool',
-      aliases: ['dthrow fair footstool', 'fair fs', 'dthrow fair footstool'],
-      definition: 'Off of a cheerless dthrow, you can confirm into (fair) [footstool].\n https://gfycat.com/naughtytalkativedove',
+      name: 'nair interrupt',
+      definition: 'Nair interrupt is a hitlag based desync that allows Nana to overwrite her short hop neutral aerial into any other aerial or special. \n\nPopo’s short hop nair must hit on either frame 1 (reverse hitbox) or frame 2 (forward hitbox) for Nana to desync. This allows for a powerful shield pressure option with [nair] (squall) or a tech chase option with [nair] (IB). \n\nMore info: <https://docs.google.com/document/d/12f_J5neaipWebvqdbXjDZIEQQxrx8JR-4drF51niPmc/edit> \nCharacter details: <https://docs.google.com/spreadsheets/d/1WI_xGi1OQ3b0bhrue42OqjrlufqYJQXM2m0FNil6-hw/edit#gid=280315553> \n\nExamples: \n<https://www.youtube.com/watch?v=E-wczC5ffEA> \n<https://www.youtube.com/watch?v=MTe5xxQPvEY> \n<https://youtu.be/v6ygCP04k24?t=98> \n<https://gfycat.com/bluevictoriouscopepod>',
       character: 'ice climbers'
    },
    {
-      name: 'dthrow footstool',
-      aliases: ['dthrow fs'],
-      definition: 'Off of a cheerless dthrow, you can confirm into (footstool), which can be used for a variety of confirms if they miss the tech. \n https://gfycat.com/lightheartedbigaustraliansilkyterrier',
+      name: 'nanapult',
+      definition: 'A tech originating from Melee where Nana is thrown across the stage with a SH/FH blizzard. From a desynced state where Popo is in lag, have Nana dash/run in the desired launch direction, then jump and blizzard before she leaves the Poposphere. Nana\'s launch distance is determined by how far forward the control stick is when she exits her jump squat animation. So, use a diagonal down and forward angle when inputting the blizzard then roll up to forward to get the maximum launch distance. From run state storage it is a little more complicated: <https://twitter.com/madmonksmash/status/1327675464035360769?s=21>',
       character: 'ice climbers'
    },
    {
-      name: 'backdash cheerless',
-      definition: 'You can get a cheerless grab off of backdash. \n https://gfycat.com/honesttidyermine',
+      name: 'nanatrump',
+      definition: 'While trumping is only mediocre for a lot of characters in this game, since the opponent can DI in or away from the stage and limit your options for directly punishing it, Ice Climbers has what is likely the best trump punishes in the game. The answer is to make nana trump the opponent, while immdiately hitting ledge with popo fsmash. This is called nanatrump.\nThere are two main ways to do this - \n1. Run towards ledge and pivot grab towards center stage right before you reach ledge. While popo is in the endlag from the pivot grab, you can trump with nana.\n2. You can jump towards ledge, and if you space your landing just right, nana will grab ledge but popo will land on stage.\n\nAs nana trumps the opponent, you must immediately fsmash the ledge with popo. If done properly, they will get hit by the fsmash immediately after breaking contact with the ledge, which guarantees the fsmash.\nExample: <https://twitter.com/bigd_ssb/status/1086753626670809088>',
       character: 'ice climbers'
    },
+   {
+      name: 'notation',
+      definition: '__**Ice Climbers combo notation:**__\n**Fair** - this is a synced Fair, performed by both climbers\n**(Fair)** - this is a desynced Fair, performed by Nana (secondary climber) only\n**[Fair]** - this is a desynced Fair, performed by Popo [primary climber] only\n**DThrow** - this is a synced, cheered DThrow\n**[DThrow]** - this is a desynced, cheerless DThrow\nUsing arrows between components (DThrow > Uair) is helpful but not necessary. Use them to convey a sense of timing, where arrows represent inputs that are not performed almost simultaneously.',
+      character: 'ice climbers'
+   },
+   {
+      name: 'nut',
+      definition: 'dthrow > (roll) > [uaft/nair] > (sideb) > grab > [fthrow] > (fair).\n*Note: (Squall) can be escaped with SDI, making this combo not true.\n<https://youtu.be/KmbBGbuMTZI?t=27>* \n<https://twitter.com/v23God/status/1096525627094650880>',
+      character: 'ice climbers'
+   },
+   {
+      name: 'reconnect buffer',
+      definition: 'Whenever Nana comes back into Popo\'s range, if you\'re holding an input there\'s a chance that Nana will read that input immediately, thereby letting you get things like (blizz) as Nana reconnects, while Popo remains fully actionable. While it is known to not be truly random, the conditions for whether she reads the input or not are unknown.\nIf the reconnect buffer fails, this notably gives you storage for that input, making attempted reconnect buffers for special and attack particularly noteworthy.',
+      character: 'ice climbers'
+   },
+   {
+      name: 'rollback desync',
+      definition: 'You can roll while also launching nana forward with a (squall) or (utilt). Technical details are in the video description: <https://youtu.be/lA6l1H_DcMQ> \nhttps://gfycat.com/remotemisguidedconch \nhttps://gfycat.com/dampgrandiosedore',
+      character: 'ice climbers'
+   },
+   {
+      name: 'run state storage',
+      definition: 'When forward is held on the control stick, nana and popo maintain their current state of running or walking.\n\nRun state storage is where you get popo to walk and nana to run. In this state, releasing the stick cause only nana to enter skid for 12 frames during which she cannot dash backwards or shield. This allows you to dash backwards or shield with popo and immediately do a nana first desync.\n\nThis state can be achieved from any previous desync.\n\nIf only popo can act, you can quickly mash forward twice quickly and then continue to hold forward 6-12 frames before nana can act to cause popo to do a dashwalk and nana to dash which converts into run state storage.\n\nWhen nana can act, you can simply hold forward more than 6 frames before popo can act. This causes nana to dash and popo to walk.\n\nExamples:\n<https://twitter.com/madmonk12345/status/1188207819780050944?s=21>\n<https://twitter.com/madmonk12345/status/1195622276680433664?s=21>',
+      character: 'ice climbers'
+   },
+   {
+      name: 'run turn desync',
+      aliases: ['run turn'],
+      definition: 'During Run (not dash), if you turn (without skidding), then in frames 1-5 input roll/spotdodge and in the same window, but on or after the frame you input shield, you input a grounded option for Popo, you can desync that shield option+Popo option. For example, you can do [rar shorthop] (roll back) or [blizz] (spotdodge), or much more.\nNote that you can also (shield) with it, however the window is much tighter. There is also a potential polling issue in theory, where the game may read the left stick as being neutral for 1 frame, which will also tighten the window, and make (shield) impossible (though this outcome is quite unlikely). \nhttps://gfycat.com/shrillmintyhapuka',
+      character: 'ice climbers'
+   },
+   {
+      name: 'ruri combo',
+      definition: 'A solid conversion off of synced grab at mid percents. <https://twitter.com/ruripikaics/status/1105443229095190529>',
+      character: 'ice climbers'
+   },
+   {
+      name: 'semisync',
+      definition: 'A state of being where nana will sometimes be under popo\'s control, and sometimes not. \n<https://gfycat.com/MellowTerribleFawn>',
+      character: 'ice climbers'
+   },
+   {
+      name: 'shield jump storage',
+      aliases: ['sjs'],
+      definition: 'While only one climber is able to shield, hold shield+b or shield+shield (2 shield inputs) and hold jump, once the other climber starts to shield, you\'ll be able to let go of b or 1 of the shield inputs to get the first climber to jump, while the other stays in shield. \n<https://twitter.com/negyxo18/status/1243498964533407744?s=19>',
+      character: 'ice climbers'
+   },
+   {
+      name: 'shieldstun desync',
+      definition: 'Often when an opponent hits our shield Nana and Popo will end up less or more than 6 frames apart, meaning we can desync out of the shieldstun. \nhttps://gfycat.com/dishonestjointbordercollie',
+      character: 'ice climbers'
+   },
+   {
+      name: 'soymilk',
+      aliases: ['skid turn', 'skid turn desync'],
+      definition: 'Soymilk desync aka "skid turn": Dash in one direction until you enter run, then let go of the control stick to enter skid, then move the control stick in the opposite direction so Popo enters turn, and quickly interrupt the turning animation with any grounded move. If done correctly, Popo will perform the move and Nana will perform a short dash forward. See "Soymilk Gif Guide." \n\nTechnical details: Just like with other run turn desyncs, you have to input the move before Nana goes into turn so that she interprets the turn input as a dash forward. Out of skid, dash interrupts as early as frame 8. So you have to skid, turn, and then input a move at least 8 frames after the original skid, but less than 6 frames after the turn.',
+      character: 'ice climbers'
+   },
+   {
+      name: 'soymilk gif guide',
+      aliases: ['soymilk gifs'],
+      definition: 'https://gfycat.com/fluidunrealistickitfox \nhttps://gfycat.com/reasonableseriouseeve \nhttps://gfycat.com/sickwelloffjackrabbit \nhttps://gfycat.com/willingcomplicatedbluemorphobutterfly',
+      character: 'ice climbers'
+   },
+   {
+      name: 'squall',
+      definition: 'Squall Hammer - ICs side special.',
+      character: 'ice climbers'
+   },
+   {
+      name: 'squall desync',
+      definition: 'At the end of squall, you can buffer an option just for nana, and then buffer something for popo, so that they perform two different things. Note that like with throw desync, you must buffer something for Popo as well. \nhttps://gfycat.com/lazydesertedape \nBasics: <https://twitter.com/v23God/status/1102950879672627207>\nTechnical Details: <https://www.youtube.com/watch?v=xVuxZxmc358>',
+      character: 'ice climbers'
+   },
+   {
+      name: 'synced',
+      definition: 'When nana and popo are synchronized, and are acting at the same time doing the same thing.',
+      character: 'ice climbers'
+   },
+   {
+      name: 'teeter cheerless',
+      definition:   'If you can get nana to teeter on the edge of a platform or the main stage, you can guarantee a cheerless throw from it. Nana will not cheer if she is teetering when you throw someone. This can be setup\n1. in the same way that nanatrump is setup with whiff grab\n2. with a dash towards ledge\n3. airdodging onto a platform with the right timing\nExamples-<https://gfycat.com/DearElaborateAlaskanmalamute>\n<https://youtu.be/Yp69Y3gjSMk>',
+      character: 'ice climbers'
+   },
+   {
+      name: 'throw desync',
+      aliases: ['dthrow desync'],
+      definition: 'When you do a synced, cheered throw, you can buffer an option for Nana that Popo will not read in a 6 frame window, before Popo is actionable. This means that you can throw with Popo, and have Nana buffer just about anything, such as jump, blizzard, and roll (which is that is used to perform the Nut combo).\nNote that you must buffer something for Popo (which can be anything, even just movement) for Nana to register the desynced input.',
+      character: 'ice climbers'
+   },
+   {
+      name: 'tilt turn',
+      aliases: ['tilt turn desync'],
+      definition: 'One of the hardest desyncs ICs can do. Allows you to very quickly desync from standing, and can be applied to (blizzard) [wavedash]\n<https://twitter.com/v23God/status/1114949522256539648>',
+      character: 'ice climbers'
+   },
+   {
+      name: 'turn buffer desync',
+      aliases: ['turn buffer'],
+      definition: 'A fast desync done from standing or walking. Turn without dashing, then buffer another turn without dashing with popo that nana will do in 6 frames, then after 6 or more frames have passed, input a dash in the original direction you turned followed by an immediate attack you can do from walk but not run. Nana’s turning animation during this cannot be interrupted by a dash in that direction, so she dashes 4 frames late, creating a window for a nana only input.\nVideo: <https://twitter.com/madmonk12345/status/1144807399854751744?s=21>\nStick movement guide: <https://twitter.com/madmonk12345/status/1140854288517718017?s=21>',
+      character: 'ice climbers'
+   },   
+   {
+      name: 'uaft',
+      definition: 'Up angled forward tilt.',
+      character: 'ice climbers'
+   },
+   {
+      name: 'utilt footstool',
+      aliases: ['utilt fs', 'utilt fs squall', 'utilt footstool squall'],
+      definition: 'Desynced utilt can lead into a footstool with the other climber. [utilt] (footstool squall) in particular is quite popular as a conversion that can lead into a grab. \nhttps://gfycat.com/harmoniousfreshduckbillcat \n(utilt) [footstool airdodge down] or [utilt] (footstool airdodge down) is a semi useful combo, which is an infinite on Puff, Kirby and GnW, but otherwise can be teched and therefore is not super reliable. \n https://gfycat.com/harmoniousfreshduckbillcat',
+      character: 'ice climbers'
+   },
+   
    // wii fit trainer
    {
       name: 'hc',
