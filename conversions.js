@@ -1,12 +1,14 @@
 module.exports = {
     // converts a user mention to a user object
-    userFromMention: (mention, msg) => {
-        const matches = mention.match(/^<@!?(\d+)>$/);
-        if (matches) {
-            const id = matches[1];
-            return msg.guild.members.get(id).user;
-        }
-        else { return null; }
+    memberFromMention: (mention, msg) => {
+        return new Promise(async (resolve) => {
+            const matches = mention.match(/^<@!?(\d+)>$/);
+            if (matches) {
+                const id = matches[1];
+                resolve(await msg.guild.members.fetch(id));
+            }
+            else resolve(null);
+        });
     },
 
     // converts a role mention to a role object
@@ -14,9 +16,9 @@ module.exports = {
         const matches = mention.match(/^<@&(\d+)>$/);
         if (matches) {
             const id = matches[1];
-            return msg.guild.roles.get(id);
+            return msg.guild.roles.catch.get(id);
         }
-        else { return null; }
+        else return null;
     },
     
     // converts a channel mention to a channel object
@@ -24,16 +26,15 @@ module.exports = {
         const matches = mention.match(/^<#(\d+)>$/);
         if (matches) {
             const id = matches[1];
-            return msg.guild.channels.get(id);
+            return msg.guild.channels.cache.get(id);
         }
-        else { return null; }
+        else return null;
     },
 
     // converts a user object to a member object for the given message's guild
     userToMember: (u, msg) => {
         return new Promise(async (resolve) => {
-            const g = await msg.guild.fetchMembers();
-            resolve(g.members.get(u.id));
+            resolve(await msg.guild.members.fetch(u.id));
         });
     },
 
@@ -42,22 +43,22 @@ module.exports = {
     parseUser: (msg, string) => {
         return new Promise(async (resolve) => {
             const conversions = require('./conversions.js');
-            await msg.guild.fetchMembers();
     
             let user;
             if (!string) {
                 user = msg.author;
             }
-            else if (msg.mentions.users.array().length !== 0) {
-                user = conversions.userFromMention(string, msg);
+            else if (msg.mentions.users.size !== 0) {
+                user = await conversions.memberFromMention(string, msg);
+                user = user.user
             }
             else if (/^\d+$/.test(string)) {
-                let x = msg.guild.members.get(string);
+                let x = await msg.guild.members.fetch(string);
                 if (x) user = x.user;
             }
             else {
                 string = string.toLowerCase();
-                let x = msg.guild.members.find(m => m.user.username.toLowerCase() === string || m.user.tag.toLowerCase() === string || m.displayName.toLowerCase() === string);
+                let x = await msg.guild.members.fetch().then(members => members.find(m => m.user.username.toLowerCase() === string || m.user.tag.toLowerCase() === string || m.displayName.toLowerCase() === string));
                 if (x) user = x.user;
             }
             resolve(user);
@@ -70,19 +71,21 @@ module.exports = {
         return new Promise(async (resolve) => {
             const conversions = require('./conversions.js');
 
+            await msg.guild.members.fetch();
+
             let c;
             if (!string) {
-                c = msg.channel;
+                c = await msg.channel.fetch();
             }
             else if (msg.mentions.channels.array().length !== 0) {
                 c = conversions.channelFromMention(string, msg);
             }
             else if (!isNaN(parseInt(string))) {
-                c = msg.guild.channels.get(string);
+                c = msg.guild.channels.cache.get(string);
             }
             else {
                 string = string.toLowerCase();
-                c = msg.guild.channels.find(c => c.name === string || c.name.split('-').join(' ') === string);
+                c = msg.guild.channels.cache.find(c => c.name === string || c.name.split('-').join(' ') === string);
             }
             resolve(c);
         });
@@ -94,7 +97,7 @@ module.exports = {
         return new Promise(async (resolve) => {
             const matches = string.match(/^<(a)?:(\w+):(\d+)>$/);
             if (matches) {
-                let e = client.emojis.get(matches[3]);
+                let e = client.emojis.cache.get(matches[3]);
                 if (!e) e = {
                     animated: matches[1] ? true : false,
                     client: client,

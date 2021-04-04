@@ -17,11 +17,10 @@ module.exports = {
     category: 'info',
     execute(msg) {
         return new Promise (async (resolve, reject) => {
-            let g = await client.guilds.get('513806689787445261').fetchMembers();
-            let embed = new Discord.RichEmbed()
+            let embed = new Discord.MessageEmbed()
                 .setTitle('Info about me!')
-                .setThumbnail(client.user.avatarURL)
-                .addField('Guilds', client.guilds.size, true)
+                .setThumbnail(client.user.avatarURL())
+                .addField('Guilds', client.guilds.cache.size, true)
                 .addField('Birthday', client.user.createdAt.toUTCString(), true)
                 .addField('Uptime', uptime(), true)
                 .addField('Current memory usage', Math.floor(process.memoryUsage().heapUsed / 1024 / 1024 * 100) / 100 + ' MB', true)

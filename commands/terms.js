@@ -24,7 +24,7 @@ module.exports = {
                 let charNames;
                 if (currentChar) { currentChar = currentChar.aliases[0]; charNames = terms.filter(t => t.character === currentChar).map(t => t.name); }
 
-                let termsEmbed = new Discord.RichEmbed() .setTitle('Terms for `>define`') .setColor(isabotColor) .addField('General Terms', generalNames.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
+                let termsEmbed = new Discord.MessageEmbed() .setTitle('Terms for `>define`') .setColor(isabotColor) .addField('General Terms', generalNames.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
                 if (charNames && charNames.length) termsEmbed .addField(capitalize(currentChar, [' ']) + ' Terms', charNames.sort().join(', '));
                 return msg.channel.send(termsEmbed).then(resolve()).catch(e => reject(e));
             }
@@ -32,10 +32,10 @@ module.exports = {
             const argsFixed = args.map(f => f.toLowerCase()).join(' ');
 
             const character = characters.find(c => c.aliases.includes(argsFixed));
-            if (character === null) msg.channel.send('That is not a valid character!').then(resolve()).catch(e => reject(e));
+            if (!character) msg.channel.send('That is not a valid character!').then(resolve()).catch(e => reject(e));
 
             const charTerms = terms.filter(t => t.character.toLowerCase()  === character.aliases[0]);
-            msg.channel.send(new Discord.RichEmbed() .setTitle(capitalize(charTerms[0].character, [' ', '-']) + ' Terms') .setColor(isabotColor) .setDescription(charTerms.map(t => t.name).sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp())
+            msg.channel.send(new Discord.MessageEmbed() .setTitle(capitalize(charTerms[0].character, [' ', '-']) + ' Terms') .setColor(isabotColor) .setDescription(charTerms.map(t => t.name).sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp())
             .then(resolve())
             .catch(e => reject(e));
         });

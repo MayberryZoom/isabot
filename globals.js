@@ -7,7 +7,7 @@ module.exports = {
 
     // functions
     sendLog: (toSend) => {
-        client.channels.get('520039319260495891').send(toSend);
+        client.channels.cache.get('520039319260495891').send(toSend);
     },
 
     sleep: (ms) => {

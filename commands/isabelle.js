@@ -17,8 +17,10 @@ module.exports = {
             disabledChannels.set(msg.channel.id, 'h');
             setTimeout(() => { disabledChannels.delete(msg.channel.id) }, this.cooldown * 1000)
 
+            const my_id = await client.channels.fetch('621592279919886338');
+
             const options = {
-                params: { client_id: client.channels.get('621592279919886338').topic },
+                params: { client_id: my_id.topic },
                 headers: { "If-None-Match": etag }
             }
 
@@ -33,7 +35,7 @@ module.exports = {
             });
 
             const image = cache[Math.floor(Math.random() * cache.length)];
-            const embed = new Discord.RichEmbed()
+            const embed = new Discord.MessageEmbed()
                 .setTitle('Random Isabelle!')
                 .setImage(image.link)
                 .setColor(isabotColor)
