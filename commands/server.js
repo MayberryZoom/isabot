@@ -24,7 +24,7 @@ module.exports = {
         return new Promise(async (resolve, reject) => {
             const g = await msg.guild.fetchMembers();
             if (!args[0]) {
-                const embed = new Discord.RichEmbed()
+                const embed = new Discord.MessageEmbed()
                     .setTitle(g.name + ' (' + g.id + ')')
                     .setColor(isabotColor)
                     .setThumbnail(g.iconURL)
@@ -42,7 +42,7 @@ module.exports = {
 
             const property = args.map(x => x.toLowerCase()).join(' ');
             if (['avatar', 'icon', 'picture', 'pic'].includes(property)) {
-                return msg.channel.send(new Discord.RichEmbed()
+                return msg.channel.send(new Discord.MessageEmbed()
                     .setTitle(g.name + "'s icon")
                     .setImage(g.iconURL)
                     .setColor(isabotColor)
@@ -53,7 +53,7 @@ module.exports = {
             if (['splash', 'splash image', 'invite image', 'splash picture', 'invite picture', 'splash pic', 'invite pic'].includes(property)) {
                 const splash = g.splashURL;
                 if (!splash) return msg.channel.send(g.name + ' has no splash image.').then(resolve()).catch(e => reject(e));;
-                return msg.channel.send(new Discord.RichEmbed()
+                return msg.channel.send(new Discord.MessageEmbed()
                     .setTitle(g.name + "'s splash image")
                     .setImage(splash)
                     .setColor(isabotColor)

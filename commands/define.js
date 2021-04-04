@@ -24,7 +24,7 @@ module.exports = {
             if (currentChar) charNames = terms.filter(t => t.character === currentChar).map(t => t.name);
 
             if (!args.length) {
-                let termsEmbed = new Discord.RichEmbed() .setTitle('Terms for `>define`') .setColor(isabotColor) .addField('General Terms', generalNames.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
+                let termsEmbed = new Discord.MessageEmbed() .setTitle('Terms for `>define`') .setColor(isabotColor) .addField('General Terms', generalNames.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
                 if (charNames) termsEmbed.addField(capitalize(currentChar, [' ']) + ' Terms', charNames.sort().join(', '));
                 return msg.channel.send(termsEmbed)
                 .then(resolve())

@@ -36,7 +36,7 @@ module.exports = {
             if (!u) return msg.channel.send('Please provide a valid argument!').then(resolve(msg.author.tag + ' didn\'t provide an argument for user')).catch(e => reject(e));
             const m = await conversions.userToMember(u, msg);
 
-            const embed = new Discord.RichEmbed()
+            const embed = new Discord.MessageEmbed()
                 .setTitle(u.tag + await getRank(u) + ' (' + u.id + ')')
                 .setColor(m.displayHexColor)
                 .setThumbnail(m.user.avatarURL)

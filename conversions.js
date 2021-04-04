@@ -71,9 +71,11 @@ module.exports = {
         return new Promise(async (resolve) => {
             const conversions = require('./conversions.js');
 
+            await msg.guild.members.fetch();
+
             let c;
             if (!string) {
-                c = msg.channel;
+                c = await msg.channel.fetch();
             }
             else if (msg.mentions.channels.array().length !== 0) {
                 c = conversions.channelFromMention(string, msg);
@@ -83,7 +85,7 @@ module.exports = {
             }
             else {
                 string = string.toLowerCase();
-                c = msg.guild.channels.find(c => c.name === string || c.name.split('-').join(' ') === string);
+                c = msg.guild.channels.cache.find(c => c.name === string || c.name.split('-').join(' ') === string);
             }
             resolve(c);
         });
@@ -95,7 +97,7 @@ module.exports = {
         return new Promise(async (resolve) => {
             const matches = string.match(/^<(a)?:(\w+):(\d+)>$/);
             if (matches) {
-                let e = client.emojis.get(matches[3]);
+                let e = client.emojis.cache.get(matches[3]);
                 if (!e) e = {
                     animated: matches[1] ? true : false,
                     client: client,

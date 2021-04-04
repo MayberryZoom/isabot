@@ -11,7 +11,7 @@ module.exports = {
             args = args.map(a => a.toLowerCase());
 
             if (!args[0]) {
-                return msg.channel.send(new Discord.RichEmbed()
+                return msg.channel.send(new Discord.MessageEmbed()
                     .setTitle('>convert')
                     .setColor(isabotColor)
                     .addField('Description', 'The convert command takes a value and converts it under the given multiplier.')
@@ -22,7 +22,7 @@ module.exports = {
                 .catch((e) => reject(e));
             }
             else if (args[0] === 'table') {
-                const embed = new Discord.RichEmbed()
+                const embed = new Discord.MessageEmbed()
                     .setTitle('SSBU Modifiers')
                     .setColor(isabotColor)
                     .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
