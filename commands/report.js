@@ -21,7 +21,7 @@ module.exports = {
             
             if (msg.attachments.map(x => x.url).length > 0) embed.setImage(msg.attachments.map(x => x.url)[0]);
 
-            return client.channels.get(reportChannel).send(embed).then(msg.channel.send('Report sent successfully!')).then(resolve()).catch(e => reject(e));
+            return client.channels.cache.get(reportChannel).send(embed).then(msg.channel.send('Report sent successfully!')).then(resolve()).catch(e => reject(e));
         })
     }
 };
