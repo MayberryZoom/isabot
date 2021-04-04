@@ -1,12 +1,14 @@
 module.exports = {
     // converts a user mention to a user object
-    userFromMention: (mention, msg) => {
-        const matches = mention.match(/^<@!?(\d+)>$/);
-        if (matches) {
-            const id = matches[1];
-            return msg.guild.members.fetch(id).user;
-        }
-        else { return null; }
+    memberFromMention: (mention, msg) => {
+        return new Promise(async (resolve) => {
+            const matches = mention.match(/^<@!?(\d+)>$/);
+            if (matches) {
+                const id = matches[1];
+                resolve(await msg.guild.members.fetch(id));
+            }
+            else resolve(null);
+        });
     },
 
     // converts a role mention to a role object
@@ -16,7 +18,7 @@ module.exports = {
             const id = matches[1];
             return msg.guild.roles.catch.get(id);
         }
-        else { return null; }
+        else return null;
     },
     
     // converts a channel mention to a channel object
@@ -26,7 +28,7 @@ module.exports = {
             const id = matches[1];
             return msg.guild.channels.cache.get(id);
         }
-        else { return null; }
+        else return null;
     },
 
     // converts a user object to a member object for the given message's guild
@@ -47,15 +49,16 @@ module.exports = {
                 user = msg.author;
             }
             else if (msg.mentions.users.size !== 0) {
-                user = conversions.userFromMention(string, msg);
+                user = await conversions.memberFromMention(string, msg);
+                user = user.user
             }
             else if (/^\d+$/.test(string)) {
-                let x = msg.guild.members.fetch(string);
+                let x = await msg.guild.members.fetch(string);
                 if (x) user = x.user;
             }
             else {
                 string = string.toLowerCase();
-                let x = msg.guild.members.fetch().then(g => g.find(m => m.user.username.toLowerCase() === string || m.user.tag.toLowerCase() === string || m.displayName.toLowerCase() === string));
+                let x = await msg.guild.members.fetch().then(members => members.find(m => m.user.username.toLowerCase() === string || m.user.tag.toLowerCase() === string || m.displayName.toLowerCase() === string));
                 if (x) user = x.user;
             }
             resolve(user);
