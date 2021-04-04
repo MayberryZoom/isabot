@@ -34,7 +34,7 @@ module.exports = {
     // converts a user object to a member object for the given message's guild
     userToMember: (u, msg) => {
         return new Promise(async (resolve) => {
-            resolve(msg.guild.members.fetch(u.id));
+            resolve(await msg.guild.members.fetch(u.id));
         });
     },
 
