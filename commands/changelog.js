@@ -1,4 +1,8 @@
-const changes = `__3/15/2021__
+const changes = `__4/4/2021__
+- Updated to discord.js v12
+    - What does this mean? It means the bot is more stable, several bugs were fixed, and just overall optimization. This will also make future updates easier.
+
+__3/15/2021__
 - Added hitbox data for Pyra/Mythra (except Mythra specials)
 - Added attributes for Pyra/Mythra
 
