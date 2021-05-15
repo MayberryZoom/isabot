@@ -404,6 +404,12 @@ module.exports = [
       character: 'ice climbers'
    },
    {
+      name: 'ccj fsmash',
+      aliases: ['jump cc fsmash', 'jump cc (fsmash)', 'jump cc nair fsmash', 'jump cc (nair) (fsmash)', 'ccj nair fsmash', 'ccj (fsmash)', 'ccj (nair) (fsmash)'],
+      definition: '(Fsmash) from a cheer cancel jump grab. Perform a CCJ grab and hold the A button used to pummel. Then briefly tap down on the control stick from frames 11 - 20. This will result in [dthrow] (fast fall nair). Lastly, input (fsmash) with c stick or AB smash, it is significantly harder otherwise. Release quickly to have the fsmash come out as early as possible. \nIf you dair, or nana hits the nair but there\’s no fsmash, or you don\’t fastfall, you pressed down too early. All of the above result from pressing down before frame 11. \nhttps://gfycat.com/windingcavernousinvisiblerail \n\nMore details: <https://docs.google.com/document/d/1ggMr0TXWiWE5xf1J2qchvnve0n9Oiloa-X4fwwhigEY/edit?usp=sharing>',
+      character: 'ice climbers'
+   },
+   {
       name: 'chars doc',
       definition: 'Doc that lists what specific things work on which characters, such as utilt (footstool squall), (utilt) footstool as an infinite, and the gimfinite. Work in progress, contact techy#5973 for editing access/corrections. <https://docs.google.com/spreadsheets/d/1WI_xGi1OQ3b0bhrue42OqjrlufqYJQXM2m0FNil6-hw/edit#gid=0>',
       character: 'ice climbers'
@@ -485,12 +491,6 @@ module.exports = [
       name: 'jab interrupt',
       aliases: ['jab desync'],
       definition: 'You can desync off of jab on hit/shield (including on things like Pikmin/hydrant) if you buffer jab out of any state where you can not jab (immediately out of dash, dropping shield, after a move etc etc), then input something for Nana in the next 3 frames. \nhttps://gfycat.com/testyhauntingeastsiberianlaika',
-      character: 'ice climbers'
-   },
-   {
-      name: 'jump cc fsmash',
-      aliases: ['jump cc (fsmash)', 'jump cc nair fsmash', 'jump cc (nair) (fsmash)', 'ccj fsmash', 'ccj nair fsmash', 'ccj (fsmash)', 'ccj (nair) (fsmash)'],
-      definition: '(Fsmash) from a cheer cancel jump grab. Perform a CCJ grab and hold the A button used to pummel. Then briefly tap down on the control stick from frames 11 - 20. This will result in [dthrow] (fast fall nair). Lastly, input (fsmash) with c stick or AB smash, it is significantly harder otherwise. Release quickly to have the fsmash come out as early as possible. \nIf you dair, or nana hits the nair but there\’s no fsmash, or you don\’t fastfall, you pressed down too early. All of the above result from pressing down before frame 11. \nhttps://gfycat.com/windingcavernousinvisiblerail \n\nMore details: <https://docs.google.com/document/d/1ggMr0TXWiWE5xf1J2qchvnve0n9Oiloa-X4fwwhigEY/edit?usp=sharing>',
       character: 'ice climbers'
    },
    {
