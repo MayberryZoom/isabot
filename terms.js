@@ -438,8 +438,8 @@ module.exports = [
    },
    {
       name: '[dthrow] (delayed fair)',
-      aliases: ['kakko', 'dthrow delayed fair', '[dthrow] (delayed fair spike)', 'dthrow delayed fair spike',],
-      definition: '[Dthrow] (delayed fair) is a low percent desynced combo starter that, at its core, uses a delayed pre-tumble (fair spike) to give Popo massive frame advantage over the opponent for completely true follow ups. The most common follow ups are [sh landing nair] and [spotdodge] (blizz) [jab 1] \{kakko\}. \nhttps://gfycat.com/lazyfluidelectriceel \n\nPerforming details: <https://docs.google.com/document/d/1fl9yEFLCNua4HzzzpdOclklYXB_qaJCmmxzBCJ0mgJg/edit?usp=sharing>',
+      aliases: ['kakko', 'kakko combo', 'dthrow delayed fair', '[dthrow] (delayed fair spike)', 'dthrow delayed fair spike',],
+      definition: '[Dthrow] (delayed fair) is a low percent desynced combo starter that, at its core, uses a delayed pre-tumble (fair spike) to give Popo massive frame advantage over the opponent for completely true follow ups. The most common follow ups are [sh landing nair] and [spotdodge] (blizz) [jab 1] \{kakko combo\}. \nhttps://gfycat.com/lazyfluidelectriceel \nPercent chart: https://cdn.discordapp.com/attachments/457051061526593536/842867577742295050/Kakko_Chart.png \n\nPerforming details: <https://docs.google.com/document/d/1fl9yEFLCNua4HzzzpdOclklYXB_qaJCmmxzBCJ0mgJg/edit?usp=sharing>',
       character: 'ice climbers'
    },
    {
@@ -580,7 +580,7 @@ module.exports = [
    {
       name: 'soymilk',
       aliases: ['skid turn', 'skid turn desync'],
-      definition: 'Soymilk desync aka "skid turn": Dash in one direction until you enter run, then let go of the control stick to enter skid, then move the control stick in the opposite direction so Popo enters turn, and quickly interrupt the turning animation with any grounded move. If done correctly, Popo will perform the move and Nana will perform a short dash forward. See "Soymilk Gif Guide." \n\nTechnical details: Just like with other run turn desyncs, you have to input the move before Nana goes into turn so that she interprets the turn input as a dash forward. Out of skid, dash interrupts as early as frame 8. So you have to skid, turn, and then input a move at least 8 frames after the original skid, but less than 6 frames after the turn.',
+      definition: 'Soymilk desync aka "skid turn": Dash in one direction until you enter run, then let go of the control stick to enter skid, then move the control stick in the opposite direction so Popo enters turn, and quickly interrupt the turning animation with any grounded move. If done correctly, Popo will perform the move and Nana will perform a short dash forward. See "Soymilk Gif Guide." \n\nTechnical details: Just like with other run turn desynchs, you have to input the move before Nana goes into turn so that she interprets the turn input as a dash forward. Out of skid, dash interrupts as early as frame 8. So you have to skid, turn, and then input a move at least 8 frames after the original skid, but less than 6 frames after the turn.',
       character: 'ice climbers'
    },
    {
