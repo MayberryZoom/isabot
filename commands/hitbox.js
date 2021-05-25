@@ -140,7 +140,7 @@ module.exports = {
             let move = toOneWord(args.slice(x + 1).join(' ').toLowerCase());
             if (!move) return msg.channel.send('Please provide a move!').then(resolve()).catch(e => reject(e));
 
-            move = character.moves.find(x => toOneWord(x.name) === move || (x.aliases && x.aliases.map(y => toOneWord(y)).includes(move)));
+            move = character.moves.find(m => toOneWord(m.name) === move || (m.aliases && m.aliases.map(a => toOneWord(a)).includes(move)));
             
             if (move) {
                 const formatted = capitalize(`${character.name} ${move.name}`, [' ', '(', '/', '.', '-']);

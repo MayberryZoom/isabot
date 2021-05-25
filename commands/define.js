@@ -32,7 +32,7 @@ module.exports = {
             }
 
             const term = terms.find(t => toOneWord(args.join(' ')).toLowerCase() === toOneWord(t.name) ||
-                (t.aliases && t.aliases.map(x => toOneWord(x)).includes(toOneWord(args.join(' ')))));
+                (t.aliases && t.aliases.map(x => toOneWord(x)).includes(toOneWord(args.join(' ').toLowerCase()))));
 
             if (term) {
                 return msg.channel.send(`__${capitalize(term.character, [' '])} Term__\n\n${term.definition}`, { split: true })
