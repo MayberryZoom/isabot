@@ -1,5 +1,5 @@
 const terms = require('../terms.js');
-const generalNames = terms.filter(t => t.character === 'general').map(t => t.name);
+const generalNames = terms.filter(t => !t.character).map(t => t.name);
 
 const characters = {
     '489939754021027841': 'isabelle',
@@ -35,7 +35,8 @@ module.exports = {
                 (t.aliases && t.aliases.map(x => toOneWord(x)).includes(toOneWord(args.join(' ').toLowerCase()))));
 
             if (term) {
-                return msg.channel.send(`__${capitalize(term.character, [' '])} Term__\n\n${term.definition}`, { split: true })
+                if (!term.character) term.character = 'general';
+                return msg.channel.send(`__${capitalize(term.character, [' ', '/'])} Term__\n\n${term.definition}`, { split: true })
                 .then(resolve())
                 .catch((e) => reject(e));
             }

@@ -3465,6 +3465,7 @@ module.exports = [
     {
         name: 'rosalina',
         aliases: ['rosa', 'rosalina and luma', 'rosalina & luma', 'rosa and luma'],
+        ssbuLink: 'rosalina and luma',
         ufdDir: 'rosalina and luma',
         color: '#98d5cd',
         jabType: 'gentleman',

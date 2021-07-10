@@ -2,305 +2,282 @@ module.exports = [
    // general
    {
       name:  'run cancel',
-      definition: 'A Run Cancel allows you to use any move out of a run. It is performed by returning the Control Stick to the neutral (default) position, then performing any move.',
-      character: 'general'
+      definition: 'A Run Cancel allows you to use any move out of a run. It is performed by returning the Control Stick to the neutral (default) position, then performing any move.'
    },
    {
       name: 'shorthop',
-      aliases: ['short hop'],
-      definition: 'A Short Hop, or a SH, is performed in 2 ways in SSBU:\n\n1) Pushing the jump button, then releasing it before becoming airborne\n2) Buffering an aerial during the jump startup\n\nA SH is a shorter version of a normal jump, allowing you to hit grounded opponents and land quicker.\n\nAfter performing a SH in SSBU, your aerial damage will be reduced to 0.85x its original damage. This applies until you jump or touch the ground. It is currently unknown if this applies to specials. It is also unknown if hitting an aerial, performing a special, performing an aerial, or being hit resets this.',
-      character: 'general'
+      aliases: ['short hop', 'sh'],
+      definition: 'A Short Hop, or a SH, is performed in 3 ways in SSBU:\n\n1) Pressing the jump button, then releasing it before becoming airborne\nPressing two jump buttons simultaneously\n3) Buffering an aerial during the jump startup\n\nA SH is a shorter version of a normal jump, allowing you to hit grounded opponents and land quicker.\n\nAfter performing a SH in SSBU, your aerial damage will be reduced to 0.85x its original damage. This applies until you jump, touch the ground, or get hit. This does not apply to specials.'
    },
    {
-      name: 'faf',
-      aliases: ['first actionable frame'],
-      definition: 'FAF is the First Actionable Frame. It\'s basically the first frame you can perform an action during another one. For instance, if a move has a FAF of 24, the first frame you can act during it is frame 24, and the last frame you cannot act is frame 23.',
-      character: 'general'
-   },
-   {
-      name: 'jmu',
-      aliases: ['joint matchup'],
-      definition: 'A JMU is a __J__oint __M__atch__U__p. During one, 2 Smashcords come together to discuss the MU between their characters. It\'s a great opportunity to learn! Each Smashcord does it differently - some structure theirs on a schedule and some don\'t, some end theirs with a crew battle and some don\'t, etc.',
-      character: 'general'
-   },
-   {
-      name: 'oos',
-      aliases: ['out of shield'],
-      definition: 'OoS refers to your Out of Shield options, or the things you can do while shielding. These are, for any character:\n\n- Grab\n- Jump\n- USmash\n- Up Special\n- Any  move after a jump\n- Any move after a shield drop.\n\nIn games prior to Ultimate, USmash/Up Special need to be jump cancelled.',
-      character: 'general'
-   },
-   {
-      name: 'reverse aerial rush',
-      aliases: ['rar'],
-      definition: 'A reverse aerial rush, or RAR, allows a character to jump backwards out of a dash. This is performed pushing back while dashing/running, then jump. Many characters can use this to approach with a back aerial (Mario, Ivysaur, etc), or use the startup of an up aerial that starts behind them (Falco, Pichu, etc).',
-      character: 'general'
-   },
-   {
-      name: 'rgr',
-      aliases: ['skid cancel'],
-      definition: 'RGR, also known as a Skid Cancel, stands for Reverse Grounded Rush. It\'s essentially the grounded version of RAR. Due to SSBU\'s new dash mechanics, you can cancel a skid with any move. In turn, you can reverse your direction before any move during a dash.',
-      character: 'general'
-   },
-   {
-      name: 'frame',
-      definition: 'A frame is the smallest unit of time in Smash. There are 60 frames per second, and the speed of moves is usually measured in frames. For instance, in Smash 4, Little Mac\'s Jab 1 is Frame 1, which is instant. Mario\'s Jab 1 is Frame 2, which is almost instant, etc. The speed of a move is often abbreviated to Fx, where x is the frame the move comes out on. For example, Little Mac\'s Jab would be F1 and Mario\'s would be F2.',
-      character: 'general'
-   },
-   {
-      name: 'runbrake',
-      definition: 'RunBrake is the technical name for a skid. This occurs when you enter Run, then return the control stick to neutral. Not to be confused with a turnaround skid, also known as a pivot, or run turnaround.',
-      character: 'general'
+      name: 'shff',
+      definition: 'A Short Hop Fast Fall, or SHFF for short, is the shortest possible jump. By performing a shorthop then fastfalling as soon as possible, you can drastically decrease the time spent in the air. Certain aerials can even autocancel during a SHFF, making them extremely quick to use depending on character. You can also delay the aerial until performing the fastfall to have it come out as you land. In addition, an aerial doesn\'t even need to be performed at all during a SHFF, making for a great fakeout, especially with fastfallers.'
    },
    {
       name: 'fullhop',
       aliases: ['fh'],
-      definition: 'A Full Hop, or a FH, is the normal type of jump. It is performed when you do not buffer an aerial on your jump startup or you hold the jump button throughout your jump startup. Using a FH allows you to hit opponents on high platforms, hit opponents far above you, followup from certain moves, etc.',
-      character: 'general'
+      definition: 'A Full Hop, or a FH, is the normal version of a jump. It is performed when you do not buffer an aerial on your jump startup or you hold the jump button throughout your jump startup. Using a FH allows you to hit opponents on high platforms, hit opponents far above you, followup from certain moves, go above enemy attacks, etc.'
+   },
+   {
+      name: 'faf',
+      aliases: ['first actionable frame'],
+      definition: 'FAF is the First Actionable Frame. It\'s basically the first frame you can perform an action during another one. For instance, if a move has a FAF of 24, the first frame you can act during it is frame 24, and the last frame you cannot act is frame 23.'
+   },
+   {
+      name: 'jmu',
+      aliases: ['joint matchup'],
+      definition: 'A JMU is a __J__oint __M__atch__U__p. During one, 2 Smashcords come together to discuss the MU between their characters. It\'s a great opportunity to learn! Each Smashcord does it differently - some structure theirs on a schedule and some don\'t, some end theirs with a crew battle and some don\'t, etc.'
+   },
+   {
+      name: 'oos',
+      aliases: ['out of shield'],
+      definition: 'OoS refers to your Out of Shield options, or the things you can do while shielding. These are, for any character:\n\nGrab, Jump, Up Smash, Up Special, any move after a jump, and any move after a shield drop.\n\nIn games prior to Ultimate, Up Smash/Special needs to be jump cancelled.'
+   },
+   {
+      name: 'reverse aerial rush',
+      aliases: ['rar'],
+      definition: 'A reverse aerial rush, or RAR, allows a character to jump backwards out of a dash. This is performed pushing back while dashing/running, then jump. Many characters can use this to approach with a back aerial (Mario, Ivysaur, etc), or use the startup of an up aerial that starts behind them (Falco, Pichu, etc).'
+   },
+   {
+      name: 'rgr',
+      aliases: ['skid cancel'],
+      definition: 'RGR, also known as a Skid Cancel, stands for Reverse Grounded Rush. It\'s essentially the grounded version of RAR. Due to SSBU\'s new dash mechanics, you can cancel a skid with any move. In turn, you can reverse your direction before any move during a dash.'
+   },
+   {
+      name: 'frame',
+      definition: 'A frame is the smallest unit of time in a video game. In every Smash game, there are 60 frames per second, and the speed of moves is measured in frames. For instance, Little Mac\'s Jab is Frame 1, meaning it has a hitbox instantly. His FSmash is Frame 14, meaning the hitbox takes about a quarter of a second to come out. The speed of a move is often abbreviated to Fx, where x is the frame the move comes out on. For example, Little Mac\'s Jab would be F1 and his FSmash would be F14.'
+   },
+   {
+      name: 'runbrake',
+      definition: 'RunBrake is the technical name for a skid. This occurs when you enter Run, then return the control stick to neutral. Not to be confused with a turnaround skid, also known as a pivot or run turnaround.'
    },
    {
       name: 'anti-air',
       aliases: ['aa',],
-      definition: 'An AA is an anti-air, and it\'s basically a move that counters an aerial approach. It is typically disjointed and/or has a high hitbox. A traditional fighting game example is Ryu\'s Heavy Kick or Shoryuken in Street Fighter. A Smash Bros example is Cloud\'s Cross Slash.',
-      character: 'general'
+      definition: 'An AA is an anti-air, and it\'s basically a move that counters an aerial approach. It is typically disjointed and/or has a high hitbox. For example, Mario\'s USmash is a good anti-air, as his head is intangible during the attack.'
    },
    {
       name: 'rage',
-      definition: 'Rage is a mechanic that increases the knockback dealt slightly by a fighter as their percent increases. It starts taking effect at 35% and gradually became stronger, maxing at 150%. It does not affect moves with WBKB (weight based knockback). See also: wbkb',
-      character: 'general'
-   },
-   {
-      name: 'wbkb',
-      definition: 'WBKB is short for Weight Based Knockback. It is essentially set knockback, and it only changes based on a character\'s weight, hence the name. See also: kb, bkb, kbg',
-      character: 'general'
+      definition: 'Rage is a mechanic that increases the knockback dealt slightly by a fighter as their percent increases. It starts taking effect at 35% and gradually became stronger, maxing at 150%. It does not affect moves with FKB (fixed knockback). See also: fkb'
    },
    {
       name: 'sdi',
-      definition: 'SDI is short for Smash Directional-Influence (oficially called hitstun shuffling). It is NOT DI (Directional Influence) and is a completely different mechanic. It is performed while pressing a direction repeatedly while in hitlag (also known as freeze frames). Each time you press a direction, you will move slightly in that direction **before** knockback. This allows you to escape multihit moves, such as rapid jabs.\n\nA more effective method in Smash 4 on the Gamecube Controller was to push the control stick to the notch of the direction you wanted to SDI in, then move it to the 2 notches beside it. For instance if you wanted to SDI up, you would do an input like this:\n\n⬆ ↖ ⬆ ↗ ⬆ \n\nIt is unknown if this is the most effective SDI method in SSBU.',
-      character: 'general'
+      aliases: ['hitstun shuffling'],
+      definition: 'SDI is short for Smash Directional-Influence (oficially called hitstun shuffling). It is NOT DI (Directional Influence) and is a completely different mechanic. It is performed by pressing a direction repeatedly while in hitlag (also known as freeze frames). Each time you press a direction, you will move slightly in that direction before knockback is applied. This allows you to escape multihit moves, such as rapid jabs.\n\nA more effective method on the Gamecube Controller is to push the control stick to the notch of the direction you wanted to SDI in, then move it to the 2 notches beside it. For instance if you wanted to SDI up, you would do an input like this:\n⬆ ↖ ⬆ ↗ ⬆ \nThis is less effective in Ultimate than previous games due to changes to SDI, though it can still be useful.'
    },
    {
       name: 'ledge grab limit',
-      definition: 'https://www.youtube.com/watch?v=ZG-msKOIR9g',
-      character: 'general'
+      definition: 'https://www.youtube.com/watch?v=ZG-msKOIR9g'
    },
    {
       name: 'shac',
-      definition: 'ShortHop Autocancel. If a move can SHAC, it means it will autocancel in a shorthop. This is generally a good property for a move to have. See also: AC',
-      character: 'general'
-   },
-   {
-      name: 'hitstun shuffling',
-      definition: 'Hitstun Shuffling is the offical name for SDI. See: sdi',
-      character: 'general'
+      definition: 'ShortHop Autocancel. If a move can SHAC, it means it will autocancel in a shorthop. This is generally a good property for a move to have.'
    },
    {
       name: 'kb',
       aliases: ['knockback'],
-      definition: 'Knockback, abbreviated to KB, is the distance you travel when launched by a particular move. Two parts of KB are Base Knockback (BKB) and Knockback Growth (KBG). BKB is the base knockback amount that is always applied at any percent. KBG is a modifier that affects how far you are sent by an attack at higher percents. See also: bkb, kbg, wbkb',
-      character: 'general'
+      definition: 'Knockback, abbreviated to KB, is the distance you travel when launched by a particular move. Two parts of KB are Base Knockback (BKB) and Knockback Growth (KBG). BKB is the base knockback amount that is always applied at any percent. KBG is a modifier that affects how far you are sent by an attack at higher percents.'
+   },
+   {
+      name: 'bkb',
+      definition: 'Base Knockback, or BKB for short, is the baseline knockback for a move. BKB is generally the only form of knockback seen when the opponent is hit at 0%. High BKB means that the move can knock the opponent far even at a low percent, like Marth tippers or Ganon\'s Warlock Punch. Low BKB has very little starting knockback, like Shiek\'s Fair or Most characters\' Jab 1.'
+   },
+   {
+      name: 'kbg',
+      definition: 'Knockback Growth, or KBG, is how much knockback strength grows as the opponent takes more and more damage. High KBG means that the move will knock opponents farther sooner like most smashes. Low KBG means that the move will kill later or has a more consistant knockback, like Shiek\'s Fair or Mario\'s Utilt pre-nerf.'
+   },
+   {
+      name: 'wbkb',
+      definition: 'WBKB is short for Weight Based Knockback. It is essentially set knockback, and it only changes based on a character\'s weight, though it is also affected by rage. This no longer exists in Ultimate, and was replaced by FKB.'
+   },
+   {
+      name: 'fkb',
+      definition: 'FKB is short for Fixed Knockback. Moves with this property will deal the same knockback regardless of percent. It is still affected by weight, like WBKB from previous games, but it is no longer affected by rage.'
    },
    {
       name: 'zac',
-      definition: ' A Z-drop Aerial Catch, or ZAC, is performed by pressing grab while in the air to z-drop an item (like bombs), and then immediately inputting an aerial, which will recatch the bomb. The result will be a somewhat delayed aerial while holding a bomb. This can allow for some more unique combo potential.',
-      character: 'general'
+      definition: ' A Z-drop Aerial Catch, or ZAC, is performed by pressing grab while in the air to z-drop an item (like bombs), and then immediately inputting an aerial, which will recatch the item. The result will be a slightly delayed aerial while holding the item. This grants access to aerials while holding items, and in can also allow for unique combo potential. For example, ROB can combo ZAC NAir into itself, as the Gyro will combo into the NAir, and the NAir will combo into the next z-drop Gyro.'
    },
    {
       name: 'fastfall',
       aliases: ['ff'],
-      definition: 'Fastfall, sometimes shortened to FF, is when you press down on the control stick after reaching the peak of your jump. This will result in you falling faster than you normally would.',
-      character: 'general'
+      definition: 'Fastfall, sometimes shortened to FF, is when you press down on the control stick while falling. This will result in you falling faster than you normally would. After a jump, you cannot perform a fastfall until you have already reached the peak of it. You cannot fastfall at all while in tumble, so you must input an aerial first.'
    },
    {
       name: 'autocancel',
       aliases: ['ac'],
-      definition: 'An Autocancel is the window during which a move can land with no additional landing lag. Most moves have an autocancel window before the move comes out and after the move has completed. If you land during this period, you will land without the aerial\'s extra landing lag. For example, Link\'s down air from very high up can land with no endlag, but if he tries to use it close to the ground, he will have a noticable amount of landing lag.',
-      character: 'general'
+      definition: 'An Autocancel is the window during which a move can land with no additional landing lag. Most moves have an autocancel window before the move comes out and after the move has completed- though there is almost always a break in between these windows and the hitbox where it will not autocancel. If you land during the autocancel period, you will not suffer the aerial\'s extra landing lag. For example, Link\'s down air from very high up can land with no endlag, but if he tries to use it close to the ground, he will have a noticable amount of landing lag. This can be very powerful on moves like Pyra and Mythra\'s Up Aerial, as it autocancels shortly after the hitbox.'
    },
    {
       name: 'b-reverse',
-      definition: 'A B-reverse happens when you do a Special move (such as side-B), and then immediately press the control stick in the opposite direction that you are facing. This will shift all your momentum from the original direction of travel into the new direction. Not all special moves can do this and get the momentum shift. See also: wavebounce, turnaroundspecial',
-      character: 'general'
+      aliases: ['br'],
+      definition: 'A B-reverse happens when you do a special move (such as side-B), and then immediately press the control stick behind you. This will reverse all of your momentum immediately, as well as change the direction you are facing. Not all special moves can do this. For example, Mario\'s FLUDD cannot be B-reversed.'
    },
    {
       name: 'turnaround special',
-      definition: 'A Turnaround Special is performed by  pressing left or right before initiating a special move. This will result in a special move facing the new direction, with no shift in momentum. See also: breverse, wavebounce',
-      character: 'general'
+      aliases: ['rb'],
+      definition: 'A Turnaround Special is performed by pressing behind your character briefly before initiating a special move. This will result in a special move facing the other direction. Unlike B-reverses, this does not reverse your momentum.'
    },
    {
       name: 'wavebounce',
-      definition: 'A Wavebounce combines the effects of a B-Reverse and a Turnaround Special. If you move to the right, for example, and do a turnaround Shorthop Lucas PK Fire to the left, but immediately input to the right after inputting the special, you will end up \'bouncing\' back to the left, while shooting right. The inputs for this are jump to the right > left special > right. The timing for this is precise, and requires practice to perform reliably. See also: breverse, turnaroundspecial',
-      character: 'general'
+      aliases: ['rbr'],
+      definition: 'A Wavebounce combines the effects of a B-Reverse and a Turnaround Special. It is performed by pressing behind your character briefly before performing a special, then pressing back in the original direction after the special has started. This will result in a reverse in momentum while facing the original direction. For example, to wavebounce Samus\' Charge Shot while facing right, you would press left, return the stick to neutral, press B, then press right.'
    },
    {
       name: 'dad',
-      definition: 'Directional Airdodge. Press airdodge while pressing in a direction.',
-      character: 'general'
+      definition: 'Directional Airdodge. Performed by pressing airdodge while pressing in a direction. Only exists in Melee and Ultimate.'
+   },
+   {
+      name: 'wavedash',
+      definition: 'Performed by jumping, then immediately airdoging into the ground. This can be done with a diagonal airdodge to also slide in a direction, allowing for much freedom of movement. Especially powerful considering a directional airdodge has many possible angles, changing the slide distance drastically and ambiguously. However, this technique is only useful in Melee, as you cannot directional airdodge immediately after jumping in Ultimate.'
    },
    {
       name: 'waveland',
-      definition: 'A Waveland is where you airdodge down into a platform or the ground to land more quickly. The name is related to a wavedash, as both can end with you sliding on the ground.',
-      character: 'general'
+      definition: 'A Waveland is performed by airdodging down into a platform or the ground. This allows you to land more quickly, and if performed with a diagonal airdodge, slide at the same time. This is similar to a wavedash, though not done immediately after jumping from the ground. Unlike wavedashing, this is still useful in Ultimate, as for some characters, it is the fastest way to land on a platform above them. In addition, some characters *need* this to land on platforms at all. For example, Pyra cannot reach the platforms on PS2 without wavelanding onto them. This works because airdodges move you slightly in the opposite direction on startup.'
    },
    {
       name: 'jump cancel',
       aliases: ['jc'],
-      definition: '[Smash 4] A Jump Cancel, or JC, is commonly used to refer to when you jump and then cancel that jump into something else before you leave the ground. During Jumpsquat (JS), you can input an Up Special, Up Smash, or Item Toss, and it will cancel your jump into that action. Some techs like JC item toss have, in previous games, caused you to slide while tossing. JC Usmash is how you do an Usmash OOS, and JC UpB is how you can do an UpB OOS, since you can jump straight out of shielding. See also: OOS, JS',
-      character: 'general'
+      definition: 'A Jump Cancel, or JC, is commonly used to refer to cancelling your jumpsquat with another move. In games prior to Ultimate, this can be done with a variety of moves such as Up Smash/Special, item toss, and in Melee, grabs. When used out of a dash, JC moves will slide further than normal. This is also how you would perform Up Smash/Special out of shield, though in Ultimate this is no longer required.'
+   },
+   {
+      name: 'rjcus',
+      definition: 'A Reverse Jump Cancel Up Smash, or RJCUS for short, allows characters to perform Up Smashes facing the other direction out of run. The technique is very similar to RAR, except instead of jumping, you cancel the jump with USmash. Does not exist in Ultimate due to the removal of JC USmashes, though reverse USmashes are still possible without jumping.'
    },
    {
       name: 'jumpsquat',
       aliases: ['js'],
-      definition: 'Jumpsquat, or JS, is the animation that you go into where you are essentially squatting before you leave the ground during a jump. When you input a jump, your character will squat for 3 frames (in ultimate). After these 3 frames you will leave the ground.',
-      character: 'general'
-   },
-   {
-      name: 'bkb',
-      definition: 'Base Knockback, or BKB for short, is the baseline knockback for a move. BKB is generally the only form of knockback seen when the opponent is hit at 0%. High BKB means that the move can knock the opponent far even at a low percent, like Marth tippers or Ganon\'s Warlock Punch. Low BKB has very little starting knockback, like Shiek\'s Fair or Most characters\' Jab 1. See: kb, wbkb, kbg',
-      character: 'general'
-   },
-   {
-      name: 'kbg',
-      definition: 'Knockback Growth, or KBG, is how much knockback strength grows as the opponent takes more and more damage. High KBG means that the move will knock opponents farther sooner like most smashes. Low KBG means that the move will kill later or has a more consistant knockback, like Shiek\'s Fair or Mario\'s Utilt pre-nerf. See also: bkb, wbkb, kb',
-      character: 'general'
+      definition: 'Jumpsquat, or JS, is an animation that occurs before every jump. When you input a jump, your character takes a few frames to essentially wind themselves up for the jump before performing it. In games prior to Ultimate, the time this took was character dependent, though it now only takes 3 frames for every character.'
    },
    {
       name: 'di',
-      definition: 'DI, short for Directional Influence, is a mechanic that allows you to slightly change your launch angle. This is performed by pushing the control stick perpendicular to your launch angle, and will shift it in the direction you push. In Smash 4, you could change your angle by about 9.7 degrees. DIing towards someone is usually referred to as "DI in" and DIing away from someone is usually referred to as "DI out". There are two major applications for DI- combo DI and survival DI\n\nKeep in mind there is a second mechanic you must use in conjunction with DI known as LSI. See also - Combo DI, Survival DI, LSI',
-      character: 'general'
+      definition: 'DI, short for Directional Influence, is a mechanic that allows you to modify your launch angle when being hit. This is performed by pushing the control stick perpendicular to your launch angle, and will shift it in the direction you push. In Ultimate, you can change your angle by about 9.74 degrees. DIing towards someone is usually referred to as "DI in" and DIing away from someone is usually referred to as "DI out". There are two major applications for DI- combo DI and survival DI\n\nKeep in mind there is a second mechanic you must use in conjunction with DI known as LSI. See also - Combo DI, Survival DI, LSI'
    },
    {
       name: 'combo di',
-      definition: 'Combo DI allows you to escape combos by changing your launch angle in a way that you get hit farther from the opponent. For instance, when DK uses an aerial cargo up throw, you can DI it towards him. This will place you farther from him than you would normally be, making it harder for him to connect an up air. See also - DI, Survival DI, LSI',
-      character: 'general'
+      definition: 'Combo DI refers to using DI to escape from combos. This depends heavily on the specific character comboing you, though in many situations DIing out will be the best. There are exceptions though- for example, moves that send up and slightly sideways. DIing in against these moves will place you higher relative to your opponent, and can make it harder for them to followup. In addition, mixing up your DI on each hit of a combo can also be useful in some scenarios. An example is during Pichu\'s Thunder setups, where your opponent will need to predict your DI and change their followup depending on it. See also - DI, Survival DI, LSI'
    },
    {
       name: 'survival di',
-      definition: 'Survival DI allows you to survive kill moves by changing your launch angle in a way that makes you take more time to reach the blast zones. For instance, against Mewtwo\'s up throw, you can DI away from him to survive longer. See also - DI, Combo DI, LSI',
-      character: 'general'
+      definition: 'Survival DI refers to using DI to survive kill moves longer. This is performed by changing your angle so that it takes longer for you to reach the blastzone. For instance, against Mewtwo\'s up throw, you can DI away from him to survive longer. See also - DI, Combo DI, LSI'
    },
    {
       name: 'lsi',
-      definition: 'LSI, short for Launch Speed Influence, is a mechanic that allows you to change the speed you are launched at. It only applies if the launch angle is between 65 and 295 degrees. The method to perform it is simple- hold up to fly faster, hold down to fly slower! However, its applications are much more complicated. This comes from the fact that you can use both DI and LSI at the same time. This matters because *DIing down is not good* in most situations. There\'s 2 reasons for this: 1) DIing down makes it harder to recover, because you have less time to drift and 2) it makes you reach the blast zone quicker.\n\nTo avoid this problem, you must find the angle that takes advantage of both good DI and good LSI. On more horizontal moves, this is usually simply in, which only takes advantage of DI. On diagonal launch angles, however, this is usually down and in. The down part is for LSI, the in part is for DI. Breaking it down further, the down input slows your momentum and the in part makes you take longer to reach the blast zone.\n\nThere is another mechanic related to LSI that makes certain moves kill at much later percents- LSI is applied after DI. This means if a move launches you outside of the LSI range originally (i.e. at 70 degrees) and you DI it into the LSI range, you can also begin to LSI it. For example, Charizard\'s Smash 4 UThrow had an angle of 70 degrees and you could hold down and away to remove most of its kill potential. Not only is this angle perfect to bring it into LSI range, but it also DIs the *vertical* half of it, by DIing away from Charizard as well.\n\nFinally, if you played Melee, you will know the optimal survival DI for diagonal or horizontal moves was up. In SSBU, **this will kill you. Do not do it.** While this angle is the correct *DI*, it is the incorrect *LSI*. In this situation, LSI takes more effect, and you die sooner. Make sure whenever you DI something, your DI "agrees" with your LSI. See also - DI',
-      character: 'general'
+      definition: 'LSI, short for Launch Speed Influence, is a mechanic that allows you to change the speed you are launched at. Although it is a separate mechanic from DI, it is usually referred to in conjunction with it as simply "DI". It only applies if the launch angle is not vertical, or 65 and 295 degrees to be exact. It is performed by holding either up/down- up makes you fly faster, donw makes you fly slower. This mechanic is implemented so that you cannot simply hold up to DI into the corners for horizontal knockback, which was the case in games prior to Smash 4. It is critical you do not DI up horizontal moves, as this will make you die much sooner. Instead, you need to hold in and down.\n\nSince LSI is applied after DI, you can actually LSI moves with angles outside of the LSI range. For example, Charizard\'s UThrow has an angle of 70 degrees, so you can hold down and away to remove most of its kill potential. This is so effective because this angle not only is good DI, but allows you to use LSI in combination with it. Moves with this angle (~70 degrees) usually have very poor kill potential because of this fact, i.e. Pyra Up Special. See also - DI'
    },
    {
       name: 'bnb',
-      definition: 'Short for Bread and Butter, which is a character\'s main damage racking combos.',
-      character: 'general'
+      definition: 'Short for Bread and Butter, which refers to a character\'s main damage racking combos.'
    },
    {
       name: 'cqc',
-      definition: 'Short for close quarters combat, which is the game when two players are close to each other. Some characters are good at CQC, some are not.',
-      character: 'general'
+      definition: 'Short for close quarters combat, which refers to a characters options when up close to their opponent.'
    },
    {
       name: 'matchup',
       aliases: ['mu'],
-      definition: 'The way in which two character\'s attributes change the game when fighting each other, and who has the advantage in such a match. For example, Pikachu is small and fast, allowing him to avoid many of Isabelle\'s tools. This gives him an advantage in the Pika-Isa matchup.\n\nMany players will give a ranking to a matchup, denoting how much of an advantage there are. One method is a ratio, where 50:50 is even, 60:40 is an advantage, and 100:0 would be unloseable. Another method is + or - some number, where +0 is even +1 is an advantage, etc.',
-      character: 'general'
+      definition: 'The matchup refers to the dynamic between each of the player\'s characters. Many aspects of how you play depend on this- the way you move in neutral, the combos you use, the way you edgeguard, etc. Each character needs a change in your gameplan to properly fight, and figuring this out is called "learning the matchup".\n\nMany players will give a ranking to a matchup, denoting how much of an advantage one character has. One method is a ratio, where 50:50 is even, 60:40 is an advantage, and 100:0 would be unloseable. Another method is + or - some number, where +0 is even, +1 is a slight advantage, etc. It is also common to simply describe them with words, such as "winning", "slightly winning", "losing" etc. There is no standard, so this often depends on how each person defines these terms, meaning extra clarification may be needed.'
    },
    {
       name: 'crew battle',
       aliases: ['cb'],
-      definition: 'A crew battle is where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks over against the next opponent. Last team with stocks left wins.',
-      character: 'general'
+      definition: 'A crew battle is where two groups of players play against each other in sequence. The winner of a match carries their remaining stocks from the previous opponent to the next one. Last team with stocks left wins.'
    },
    {
       name: 'dashback',
-      definition: 'When you are facing one way, and then input a dash in the other direction, it is called a dashback.',
-      character: 'general'
+      definition: 'When you are facing one way, and then input a dash in the other direction, it is called a dashback.'
    },
    {
       name: 'attack cancel',
       aliases: ['atkc'],
-      definition: 'An attack cancel is a simple mechanic with many applications. It utilizes the ability to jump out of the startup of tilts and dash attacks, cancelling them. https://youtu.be/v1kjQtMaPkE',
-      character: 'general'
-   },
-   {
-      name: 'attack cancel',
-      definition: 'Attack Cancel. You can jump out of the startup of tilts and dash attacks which can be useful. https://youtu.be/v1kjQtMaPkE',
-      character: 'general'
+      definition: 'An attack cancel is a simple mechanic with many applications. It utilizes the ability to jump out of the startup of tilts and dash attacks, cancelling them. https://youtu.be/v1kjQtMaPkE'
    },
    {
       name: 'sd',
-      definition: 'An SD is a __S__elf __D__estruct, where a player accidentally or intentionally leads themselves into the blast zone. When done intentionally, it is usually with intention to end the game early, either due to an incorrect stage/character pick, button testing, or because the player is simply upset.',
-      character: 'general'
+      definition: 'An SD is a Self Destruct, which refers to when a player accidentally (or intentionally) falls off the stage or jumps into the blast zone, KOing themself.'
    },
    {
-      name: 'edge guard',
-      definition: 'An Edge Guard is the act of preventing a player from returning to the stage after knocking them off of it, usually by using an attack to knock them away/prevent them getting closer to the stage.',
-      character: 'general'
+      name: 'edgeguard',
+      definition: 'An Edgeguard refers to preventing the opponent\'s recovery. This can be done in a variety of ways- beating/trading with their recovery special, sniping with projectiles, 2-framing, or trumping them after they grab the ledge. This is extremely important to learn for any new player, as it can lead to taking stocks early.'
    },
    {
-      name: 'ledge guard',
-      definition: 'A Ledge Guard is done by reacting and acting against someone\'s ledge options in order to deal more damage to them, knock them off of the stage or outright KO them.',
-      character: 'general'
+      name: 'ledge trapping',
+      definition: 'Ledge trapping refers to the situation in which the opponent has grabbed the ledge, and is attempting to get back onstage. This is done by either punishing an opponent\'s ledge options directly, i.e. hitting a ledge jump with an aerial, or punishing what they do after, i.e. punishing a shield after a neutral getup. This usually requires reading your opponent, though many characters have options that can cover multiple ledge options at once. Additionally, characters with a good Up Special OoS can simply hold shield at ledge and use it in reaction to their oppponen\'s options.'
    },
    {
       name: 'jv',
-      definition: 'A JV, coined by and named after the Smash player \'JV3x3\' is where you defeat an opponent with 0% on your currennt stock. JVs are followed up usually by a number, being how many stocks you have remaining + the 0%, so if you have 3 stocks remaining and 0% when you defeat an opponent, it would be considered a JV4.',
-      character: 'general'
-   },
-   {
-      name: 'matchup',
-      definition: 'Matchup, the discussion of and understanding how well one character performs against another character.',
-      character: 'general'
+      definition: 'A JV, named after the Smash player \'JV3x3\' is where you defeat an opponent with 0% on your currennt stock. JVs are followed up usually by a number, being one more than how many stocks you have remaining. For example, if you have 3 stocks remaining and 0% when you defeat an opponent, it would be considered a JV4.'
    },
    {
       name: 'hitbox',
-      definition: 'Hitboxes are a structure used in Smash to cause moves to deal damage to an opponent when it comes into contact with their hurtbox (see: hurtbox). Hitboxes cannot be seen normally without the use of mods or external software.',
-      character: 'general'
+      definition: 'The hitbox of an attack refers to the region where it can deal damage. Most moves will have multiple hitboxes, sometimes dealing different amounts of damage. For example, Marth\'s FSmash has multiple hitboxes for each part of his sword, and the one on the tip does more damage.'
    },
    {
       name: 'hurtbox',
-      definition: 'Hurtboxes are a structure used in Smash that, when comes in contact with a hitbox (see: hitbox), will cause whoever the hurtbox is attached to to take damage. Hurtboxes cannot be seen normally without the use of mods of external software.',
-      character: 'general'
+      definition: 'A character\'s hurtbox refers to the region where they can take damage. This is made up of many small bubbles, forming a sort of skeleton for a character. Generally having smaller hurtboxes is better, as it makes a character harder to hit. The positioning of hurtboxes also matters. For example, Greninja\'s standing pose positions their hurtboxes very low, making them harder to hit.'
+   },
+   {
+      name: 'disjoint',
+      definition: 'A disjoint refers to a move where the attacker\'s hitboxes aren\'t overlayed with their hurtbox. This means that the hitbox can hit the opponent, but cannot be hit back. For example, swords are disjointed, as you can\'t hit someone\'s sword to damage them. Disjoints can still be beaten, either by getting close enough to hit the character themself, or using long ranged moves.'
    },
    {
       name: 'ledge cancel',
-      definition: 'A Ledge Cancel is performed by cancelling an aerial/special or its endlag by using said aerial/special near a ledge and then sliding off of it. These can be used to open up more movement options, making punishes more difficult for opponents if the move misses and possibly opening up combo potential.',
-      character: 'general'
+      definition: 'A Ledge Cancel is a technique that cancels the end of specials by slipping off of the edge of a platform or the stage. Very useful with moves like teleports, as it allows fast movement on stages with platforms.'
    },
    {
       name: 'tech',
-      definition: 'Teching, officially referred to as a \'fall break\' in Smash Ultimate, is performed by pressing the shield button or air-dodging into the ground, a wall or a ceiling before hitting the ground while in the tumble animation, cancelling all knockback and is accompanied with temporary invincibility during the tech animation.\n\nA standard tech is performed by teching into the ground. Teching into the ground while holding down lets you tech in place, and holding forwards or backwards lets you perform a tech roll. Tech rolls vary in length and speed between characters, and some may be faster/slower or cover more/less distance than a regular roll.\n\nTeching into a wall is known as a wall tech. Teching into a wall normally will cancel momentum and cause you to drop down, holding away after teching allows you to perform a tech wall jump, and holding in will allow you to cling to the wall immediately after teching (character dependant).\n\nLastly is ceiling techs, which allow you cancel momentum off of a ceiling. There is only one variation of this tech, which causes you to drop down from the ceiling immediately after teching, however they are still extremely important to prevent being stage-spiked!',
-      character: 'general'
+      definition: 'Teching is a technique that allows you to break your fall out of tumble. As long as you are in a tumble animation (including hitstun) and near to the ground, a wall, or a ceiling, you can press shield to tech. It can also be performed by airdodging into a surface, though you cannot do this while in hitstun. Teching will immediately cancel all knockback and grant intangibility. If a tech is performed on the ground, you can also input left or right to roll in that direction while teching. If teching on a wall, you can input jump to instantly perform a wall jump after the tech.'
    },
    {
       name: 'spike',
-      definition: 'A spike is a move in Smash that launches an opponent downwards. Spikes are unable to be cancelled by a jump or up-b like meteors (see: meteor) and, as a unique feature to Smash Ultimate, opponents are unable to tech spikes if they are hit while grounded, allowing for possible true follow-ups.',
-      character: 'general'
+      definition: 'A spike is a move in Smash that launches an opponent downwards. Spikes are unable to be cancelled by a jump or up-b like meteors (see: meteor). In Ultimate only, opponents are unable to tech spikes if they are hit while grounded, allowing for true follow-ups.'
    },
    {
       name: 'meteor',
-      definition: 'A meteor is a move in Smash that launches an opponent downwards. Meteors are possible to be cancelled by a jump up-b unlike spikes (see: spike) and are exclusive to Melee and Brawl:\n__Melee__\nIn Melee, meteor cancelling is possible to perform 8 frames after the hitlag of a move has ended. In order however to cancel the meteor twice or more in a row while recovering, you must have at least allowed the control stick to return to neutral position, or else the jump/up-b will not come out.\n\n__Brawl__\nBrawl\'s hitlag is unique and slightly more in-depth than Melee\'s. Meteor cancels require the same waiting time universally across all moves, being (for majority of characters) 25 frames. If a jump or up-b is input however just before or during the hitlag of a meteor however, a 40 frame penalty is added.\n\nSome characters in Brawl also have a unique number of frames before they\'re able to cancel the meteor, including:\n**Charizard** with 30 frames.\n**Olimar**, **Ivysaur** and **Zero Suit Samus** with 15 frames.\n**Meta Knight** and **Pit** with 32 frames.\n**Wolf** with 60 frames.\n**Yoshi** with 20 frames.',
-      character: 'general'
+      definition: 'A meteor is a move that launches an opponent downwards. Meteors are different from spikes, as they can be meteor canceled (see: meteor cancel). The difference between a meteor and spike is the angle; meteors exist in between a certain range, and anything outside of it is a spike. In Melee, this range is between 260 and 280 degrees, and in Brawl, it is between 230 and 310. Meteors only exist in Melee and Brawl, as in Smash 4 and Ultimate, meteor canceling has been removed. This makes all meteors effectively spikes.'
+   },
+   {
+      name: 'meteor cancel',
+      definition: 'A meteor cancel is a technique that allows you to cancel the knockback of a meteor using a jump or Up Special. It is only possible in Melee and Brawl, and is different in each game:\n\n__Melee__\nIn Melee, meteor cancelling is possible to perform 8 frames after the hitlag of a move has ended. However, in order to cancel the meteor twice or more in a row while recovering, you must have at least allowed the control stick to return to neutral position, or else the jump/up special will not come out.\n\n__Brawl__\nIn Brawl, the window to perform a meteor cancel is much later, happening after 25 frames for a majority of characters, with exceptions (shown below). If you input a meteor cancel early, you will be locked out of performing it for 40 frames. This penalty can happen even before being hit.\n\n15 frames - Olimar, Ivysaur, and Zero Suit Samus.\n20 frames - Yoshi.\n30 frames - Charizard.\n32 frames- Meta Knight and Pit.\n60 frames - Wolf.'
+   },
+   {
+      name: 'stage spike',
+      definition: 'A stage spike refers to when an attack sends an opponent into the bottom of the stage, causing them to bounce downwards off of it. This is useful for making moves that otherwise wouldn\'t spike function as one. The only downside is the opponent can tech off the bottom of the stage, allowing them to recover even easier, and in some cases punish their attacker.'
    },
    {
       name: 'hitstun',
-      definition: 'Hitstun is a period of time after being hit/launched by a move you are unable to act. Hitstun is dependant on a move\'s knockback, and is essentially for combos as it allows for a move to have a true follow up if the move after is able to hit the opponent while they\'re still in hitstun.\nNot to be confused with: hitlag',
-      character: 'general'
+      definition: 'Hitstun is a period of time after being hit/launched by a move you are unable to act. Hitstun is dependent on a move\'s knockback, and decides the time in which you can combo the opponent. As long as they are in hitstun, your followups will be guaranteed Not to be confused with hitlag.'
    },
    {
       name: 'hitlag',
-      definition: 'Hitlag (also known as a freeze frame) is a period of time after being hit that you, an opponent or both freeze in place. Hitlag can vary between moves or part of certain moves, such as electricity which causes 1.5x what the hitlag would normally be. For more info, read here: <https://www.ssbwiki.com/Freeze_frame>.\nNot to be confused with: hitstun',
-      character: 'general'
+      aliases: ['shieldlag'],
+      definition: 'Hitlag (also known as freeze frames) is the period of time where the game freezes when landing a hit. This is also the period of time in which you can SDI. Hitlag is technically only applied to the entity attacking and the person receiving the hit, so hitlag can vary between players. For example, projectiles do not cause hitlag to the attacker, and in free for alls other opponents who were not hit can move during hitlag. This also happens when hitting shields, known as shieldlag. Certain effects cause more hitlag, such as electricity. Not to be confused with hitstun.'
    },
    {
       name: 'blast zone',
-      definition: "The blast zone is the area of the stage where you will be immediately KO'd if you touch it. It always surrounds the entire stage, off (but not far from) the visible screen. Different stages have differently sized blast zones, affecting a character's kill percents. This is most notable in stages with higher/lower top blast zones, aka ceilings. Other stage elements which can instantly KO you such as lava are not considered blast zones.",
-      character: 'general'
+      definition: 'The blast zone is the area of the stage that causes KOs upon contact. It always surrounds the entire stage, a short distance away from the bounds of the camera. Different stages have differently sized blast zones, affecting the percent a character can kill at. This is most notable in stages with higher or lower top blast zones. Stage elements which can instantly KO you such as lava are not considered blast zones.'
+   },
+   {
+      name: 'walkoff',
+      definition: 'Refers to a part of a stage where the ground goes into the blast zone. This allows characters to walk off the stage into the blast zone, hence the name. Walkoffs are usually a reason for a stage to be banned from competitive play, as standing near a walkoff can lead to extremely early KOs.'
    },
    {
       name: 'rcg',
-      definition: "A Roll Cancel Grab (RCG) is a technique that allows characters to perform an extended version of their dash grab. It is performed by buffering a roll from an initial dash, and then cancelling the first few frames of the roll with an attack or grab input. While on certain characters the range gained is minimal, other characters burst forward a large distance, and can even travel through opponents. This can be used in a variation of this technique- the Roll Cancel Pivot Grab. It is the same input as a normal RCG, but after the grab, hold back to perform a pivot grab. Both of these are viable burst options for certain characters, such as Pichu.",
-      character: 'general'
+      definition: 'A Roll Cancel Grab, or RCG for short, is a technique that allows characters to perform an extended version of their dash grab. It is performed by buffering a roll from an initial dash, and then cancelling the first few frames of the roll with an attack or grab input. While on certain characters the range gained is minimal, other characters burst forward a large distance, and can even travel through opponents. This can also be used to perform Pivot Grabs. This is very notable on characters such as Pichu, as they can use it as a staple burst option.'
    },
    {
-      name:  'footstool',
+      name: 'footstool',
       aliases: ['fs', 'phantom footstool', 'phantom fs'],
-      definition: 'When you input jump on top of another character you can footstool off of them. Footstooling a character in the air will put them into tumble (which they can tech), if the opponent is in the middle of an action you can still footstool them, but it will not put the opponent into a special animation/tumble like normal, this is commonly referred to as a Phantom Footstool. Footstooling also grants a brief period of invincibility.',
-      character: 'general'
+      definition: 'A footstool refers to jumping off an opponents head. When above an opponent you can input jump to footstool them, which will stun them for a short while. If performed in the air, this will them into tumble, which can be used to edgeguard opponents jumping to ledge. On stage, midair footstools will knock the opponent down, forcing a tech situation, or allow for jab locks if the opponent misses their tech. Footstooling also grants a brief period of invincibility. In Smash 4, midair footstools are untechable.\n\nIf the opponent is doing anything other than movement options, you will instead perform a phantom footstool, where you get a large amount of height without stunning the opponent. This can be useful for landing, as you can phantoom footstool an opponent trying to juggle you, dodging the attack retaining your jump.'
+   },
+   {
+      name: 'jab lock',
+      aliases: ['jab reset', 'lock'],
+      definition: 'A jab lock, sometimes referred to as a jab reset, or simply a lock, is a technique used to punish missed techs. When an opponent misses a tech, you can hit them with certain attacks to reset the knockdown animation, adding in quick damage and opening up extra punishes. Jab locking is mainly useful if your attack is too slow to punish a missed tech; locking the oppponent will essentially reset the timer, guaranteeing a punish.\n\nDespite the name, jab locks are possible with any attack that doesn\'t lift the opponent off the ground. Typically, this is a move that has the Sakurai Angle when it deals low knockback. In addition, spikes can be used to lock before they begin to ground bounce. It is just most common to use a jab, as they are a fast and nearly universal option.'
+   },
+   {
+      name: 'uaft',
+      definition: 'Refers to Up Angled Forward Tilt.',
    },
 
    // isabelle
@@ -319,6 +296,13 @@ module.exports = [
       aliases: ['isa wobble', 'soap mouthwasher'],
       definition: 'Methods:\n- Tap A, then move the control stick forward to buffer the walk. You can go completely forward as long as it\'s early enough. After you walk for 2-4 frames, release forward and repeat.\n- There is a sweet spot area of the control stick, near a quarter-way out, that will make you walk but still jab when you press A. It\'s easier to find using a diagonal. If you can find that sweet spot, then hold it there and tap A repeatedly, allowing 2-4 frames of walk after every jab.\n\nVideo - https://youtu.be/S2grkRvHHqI',
       character: 'isabelle'
+   },
+
+   // link
+   {
+      name: 'rr',
+      definition: 'Refers to Returning Rang, which is the hitbox on Link\'s Boomerang as it returns to him. The returning Boomerang hitbox has set knockback and is an excellent pressure and combo tool. Applies to all Links.',
+      character: 'link'
    },
 
    // young link
@@ -340,11 +324,6 @@ module.exports = [
    {
       name: 'soft toss',
       definition: 'A soft toss is where you toss a bomb that does not explode upon hitting the ground, but rather does a little bounce and then sits there, as an item, until it explodes. This is performed by simply tossing a bomb with no directional input in front of you. To soft toss behind you, you can press tilt stick behind you, if you have the cstick set to tilt. This can be useful for a number of reasons. Our relatively short bomb timer can remain as a threat to players who are not actively keeping up with its explosion timer. In addition, if you space yourself perfectly, you can soft toss a bomb such that it bounces right off the edge of the stage, and then falls almost straight down, which can sometimes stage spike.',
-      character: 'young link'
-   },
-   {
-      name: 'rr',
-      definition: 'The hitbox on Young Link\'s Boomerang when it starts to return to him. The Returning Boomerang hitbox has set knockback and is an excellent pressure and combo tool. Applies to all Links.',
       character: 'young link'
    },
    
@@ -626,11 +605,6 @@ module.exports = [
       aliases: ['turn buffer'],
       definition: 'A fast desync done from standing or walking. Turn without dashing, then buffer another turn without dashing with popo that nana will do in 6 frames, then after 6 or more frames have passed, input a dash in the original direction you turned followed by an immediate attack you can do from walk but not run. Nana’s turning animation during this cannot be interrupted by a dash in that direction, so she dashes 4 frames late, creating a window for a nana only input.\nVideo: <https://twitter.com/madmonk12345/status/1144807399854751744?s=21>\nStick movement guide: <https://twitter.com/madmonk12345/status/1140854288517718017?s=21>',
       character: 'ice climbers'
-   },   
-   {
-      name: 'uaft',
-      definition: 'Up angled forward tilt.',
-      character: 'ice climbers'
    },
    {
       name: 'utilt footstool',
@@ -679,5 +653,54 @@ module.exports = [
       name: 'headwhiffing',
       definition: 'This can only occur after coming out of strong hitstun, typically a smash attack. Once you are getting out of hitstun, use Header. Wii Fit Trainer will miss the ball, and you will be able to hit it with another move, typically dair. This is especially useful for reverse edgeguarding. For more information, use the command .headwhiff',
       character: 'wii fit trainer'
+   },
+
+   // aegis
+   {
+      name: 'fn',
+      aliases: ['fn1', 'fn2', 'fn3'],
+      definition: 'Refers to Flame Nova, Pyra\'s Neutral Special. FN has three levels of charge, which are referred to as FN1/FN2/FN3.',
+      character: 'pyra/mythra'
+   },
+   {
+      name: 'be',
+      definition: 'Refers to Blazing End, Pyra\'s Side Special.',
+      character: 'pyra/mythra'
+   },
+   {
+      name: 'pr',
+      definition: 'Refers to Prominence Revolt, Pyra\'s Up Special.',
+      character: 'pyra/mythra'
+   },
+   {
+      name: 'lb',
+      definition: 'Refers to Lightning Buster, Mythra\'s Neutral Special.',
+      character: 'pyra/mythra'
+   },
+   {
+      name: 'pe',
+      definition: 'Refers to Photon Edge, Mythra\'s Side Special.',
+      character: 'pyra/mythra'
+   },
+   {
+      name: 'rop',
+      definition: 'Refers to Ray of Punishment, one of Mythra\'s Up Specials. It is performed by tapping Up Special.',
+      character: 'pyra/mythra'
+   },
+   {
+      name: 'cd',
+      definition: 'Refers to Chroma Dust, one of Mythra\'s Up Specials. It is performed by holding Up Special.',
+      character: 'pyra/mythra'
+   },
+   {
+      name: 'bustersaw',
+      definition: 'Refers to the charging hitbox on Mythra\'s Neutral special. Can combo into the rest of the special if timed right.',
+      character: 'pyra/mythra'
+   },
+   {
+      name: 'beps',
+      aliases: ['pickup skip', 'be pickup skip', 'blazing end pickup skip'],
+      definition: 'Blazing End Pickup Skip, or BEPS for short. Normally, when the sword returns after Blazing End, Pyra is forced into an animation where she can\'t do anything. However, if you are in certain other animations, the pickup animation can be skipped:\n\nJumpsquat, Shield, Roll, Spotdodge, Shield drop, Airdodge, Ledge grab, Ledge options, Ledge teeter, Footstool, and Platform drop\n\nThe most useful of these are shield and shield drop. These allow for combos out of Blazing End, especially the latter, as the shield drop animation continues for a while after you would normally interrupt it. This means if you drop shield and buffer an attack, the attack will come out instantly as soon as your sword returns.',
+      character: 'pyra/mythra'
    }
 ]

@@ -1,14 +1,14 @@
 const terms = require('../terms.js');
-const generalNames = terms.filter(t => t.character === 'general').map(t => t.name);
+const generalNames = terms.filter(t => !t.character).map(t => t.name);
 
 const characters = new Discord.Collection(
     [
-        ['General', { aliases: ['general'] }],
         ['Isabelle', { aliases: ['isabelle', 'isa', 'izzy', 'issy'], id: '489939754021027841' }],
         ['Young Link', { aliases: ['young link', 'ylink', 'yink', 'yoink'], id: '456487360624984076' }],
         ['Pichu', { aliases: ['pichu', 'nerfed'], id: '421442870864510976' }],
         ['Ice Climbers', { aliases: ['ice climbers', 'ics', 'icies'], id: '456665686966796299' }],
-        ['Wii Fit Trainer', { aliases: ['wii fit trainer', 'wiifit', 'wii fit', 'wft'], id: '118192687718334464' }]
+        ['Wii Fit Trainer', { aliases: ['wii fit trainer', 'wiifit', 'wii fit', 'wft'], id: '118192687718334464' }],
+        ['Pyra/Mythra', { aliases: ['pyra/mythra', 'pyra', 'mythra', 'aegis', 'pythra'], id: '858494474748690442' }]
     ]
 );
 
@@ -34,7 +34,7 @@ module.exports = {
             const character = characters.find(c => c.aliases.includes(argsFixed));
             if (!character) msg.channel.send('That is not a valid character!').then(resolve()).catch(e => reject(e));
 
-            const charTerms = terms.filter(t => t.character.toLowerCase()  === character.aliases[0]);
+            const charTerms = terms.filter(t => t.character && t.character.toLowerCase() === character.aliases[0]);
             msg.channel.send(new Discord.MessageEmbed() .setTitle(capitalize(charTerms[0].character, [' ', '-']) + ' Terms') .setColor(isabotColor) .setDescription(charTerms.map(t => t.name).sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp())
             .then(resolve())
             .catch(e => reject(e));
