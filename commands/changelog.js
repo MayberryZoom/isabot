@@ -1,4 +1,7 @@
-const changes = `__7/10/21__
+const changes = `__7/12/2021__
+- Added hitbox data for Mythra specials
+
+__7/10/21__
 - Updated \`>define\`
     - Updated old, out of date terms
     - Improved readability and explanations of old terms

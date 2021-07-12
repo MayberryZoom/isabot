@@ -6110,6 +6110,227 @@ module.exports = [
                 link: 'dair interpolated'
             },
             {
+                name: 'lightning buster (charge)',
+                aliases: [
+                    'neutral b charge',
+                    'neutral special charge',
+                    'lightning buster charging',
+                    'lb charge',
+                    'neutral b charging',
+                    'neutral special charging',
+                    'lb charging'
+                ]
+            },
+            {
+                name: 'lightning buster (minimum)',
+                aliases: [
+                    'lightning buster',
+                    'lightning buster 1',
+                    'lb',
+                    'lb 1',
+                    'neutral b',
+                    'neutral b 1',
+                    'neutral special',
+                    'neutral special 1',
+                    'lightning buster min',
+                    'lb min',
+                    'neutral b min',
+                    'neutral special min',
+                    'lb minimum',
+                    'neutral b minimum',
+                    'neutral special minimum'
+                ],
+                link: 'lightning buster'
+            },
+            {
+                name: 'lightning buster (minimum, aerial)',
+                aliases: [
+                    'lightning buster aerial',
+                    'lightning buster air',
+                    'aerial lightning buster',
+                    'air lightning buster',
+                    'lb aerial',
+                    'lb air',
+                    'aerial lb',
+                    'air lb',
+                    'neutral b aerial',
+                    'neutral b air',
+                    'aerial neutral b',
+                    'air neutral b',
+                    'neutral special aerial',
+                    'neutral special air',
+                    'aerial neutral special',
+                    'air neutral special',
+                    'lightning buster min aerial',
+                    'lightning buster min air',
+                    'lightning buster aerial min',
+                    'lightning buster air min',
+                    'lightning buster minimum aerial',
+                    'lightning buster aerial minimum',
+                    'lightning buster air minimum',
+                    'lb min aerial',
+                    'lb min air',
+                    'lb aerial min',
+                    'lb air min',
+                    'neutral b min aerial',
+                    'neutral b min air',
+                    'neutral b aerial min',
+                    'neutral b air min',
+                    'neutral special min aerial',
+                    'neutral special min air',
+                    'neutral special aerial min',
+                    'neutral special air min',
+                    'lb minimum aerial',
+                    'lb minimum air',
+                    'lb aerial minimum',
+                    'lb air minimum',
+                    'neutral b minimum aerial',
+                    'neutral b minimum air',
+                    'neutral b aerial minimum',
+                    'neutral b air minimum',
+                    'neutral special minimum aerial',
+                    'neutral special minimum air',
+                    'neutral special aerial minimum',
+                    'neutral special air minimum',
+                ],
+                link: 'lightning buster aerial'
+            },
+            {
+                name: 'lightning buster (maximum)',
+                aliases: [
+                    'lightning buster',
+                    'lightning buster 2',
+                    'lb',
+                    'lb 2',
+                    'neutral b',
+                    'neutral b 2',
+                    'neutral special',
+                    'neutral special 2',
+                    'lightning buster max',
+                    'lb max',
+                    'neutral b max',
+                    'neutral special max',
+                    'lb maximum',
+                    'neutral b maximum',
+                    'neutral special maximum'
+                ],
+                link: 'lightning buster max'
+            },
+            {
+                name: 'lightning buster (maximum, aerial)',
+                aliases: [
+                    'lightning buster aerial',
+                    'lightning buster air',
+                    'aerial lightning buster',
+                    'air lightning buster',
+                    'lb aerial',
+                    'lb air',
+                    'aerial lb',
+                    'air lb',
+                    'neutral b aerial',
+                    'neutral b air',
+                    'aerial neutral b',
+                    'air neutral b',
+                    'neutral special aerial',
+                    'neutral special air',
+                    'aerial neutral special',
+                    'air neutral special',
+                    'lightning buster max aerial',
+                    'lightning buster max air',
+                    'lightning buster aerial max',
+                    'lightning buster air max',
+                    'lightning buster maximum aerial',
+                    'lightning buster aerial maximum',
+                    'lightning buster air maximum',
+                    'lb max aerial',
+                    'lb max air',
+                    'lb aerial max',
+                    'lb air max',
+                    'neutral b max aerial',
+                    'neutral b max air',
+                    'neutral b aerial max',
+                    'neutral b air max',
+                    'neutral special max aerial',
+                    'neutral special max air',
+                    'neutral special aerial max',
+                    'neutral special air max',
+                    'lb maximum aerial',
+                    'lb maximum air',
+                    'lb aerial maximum',
+                    'lb air maximum',
+                    'neutral b maximum aerial',
+                    'neutral b maximum air',
+                    'neutral b aerial maximum',
+                    'neutral b air maximum',
+                    'neutral special maximum aerial',
+                    'neutral special maximum air',
+                    'neutral special aerial maximum',
+                    'neutral special air maximum',
+                ],
+                link: 'lightning buster aerial 2'
+            },
+            {
+                name: 'photon edge',
+                aliases: [
+                    'side b',
+                    'side special',
+                    'pe'
+                ],
+                link: 'photon edge mod'
+            },
+            {
+                name: 'photon edge (hitbox)',
+                aliases: [
+                    'side b hitbox',
+                    'side special hitbox',
+                    'pe hurtbox',
+                    'photon edge hitboxes',
+                    'side b hitboxes',
+                    'side special hitboxes',
+                    'pe hitboxes'
+                ],
+                link: 'photon edge'
+            },
+            {
+                name: 'photon edge (hurtbox)',
+                aliases: [
+                    'side b hurtbox',
+                    'side special hurtbox',
+                    'pe hurtbox',
+                    'photon edge hurtboxes',
+                    'side b hurtboxes',
+                    'side special hurtboxes',
+                    'pe hurtboxes'
+                ],
+                link: 'photon edge 2'
+            },
+            {
+                name: 'ray of punishment (start)',
+                aliases: [
+                    'up b',
+                    'up special',
+                    'rop start',
+                    'chroma dust start',
+                    'cd start',
+                    'up b start',
+                    'up special start'
+                ],
+                link: 'up special'
+            },
+            {
+                name: 'ray of punishment',
+                aliases: [
+                    'rop'
+                ]
+            },
+            {
+                name: 'chroma dust',
+                aliases: [
+                    'cd'
+                ],
+                link: 'chroma dust interpolated'
+            },
+            {
                 name: 'swap',
                 aliases: [
                     'down b',
