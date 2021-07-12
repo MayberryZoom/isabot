@@ -1,5 +1,8 @@
 const changes = `__7/12/2021__
 - Added hitbox data for Mythra specials
+- Added hitbox data for Kazuya
+- Added attributes for Kazuya
+- Added Kazuya to \`>render\`
 
 __7/10/21__
 - Updated \`>define\`

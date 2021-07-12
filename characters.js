@@ -4625,7 +4625,7 @@ module.exports = [
             {
                 name: 'fastfall speed increase',
                 aliases: ['ffincrease', 'fastfallincrease', 'ff%'],
-                value: 62.5,
+                value: 60,
             }
         ]
     },
@@ -4673,7 +4673,7 @@ module.exports = [
             {
                 name: 'fastfall speed increase',
                 aliases: ['ffincrease', 'fastfallincrease', 'ff%'],
-                value: 61.678,
+                value: 60,
             }
         ]
     },
@@ -6376,5 +6376,527 @@ module.exports = [
                 value: 60,
             }
         ]
-    }
+    },
+    {
+        name: 'kazuya',
+        aliases: ['kaz', 'tekken'],
+        ufdFile: 'shoto4',
+        color: '#a60807',
+        jabType: 'unique',
+        ftiltType: 'unangled',
+        fsmashType: 'unangled',
+        landingDair: true,
+        moves: [
+            {
+                name: 'jab 1',
+                aliases: [
+                    '10 hit combo 1',
+                    '10 hit 1',
+                    '5a'
+                ]
+            },
+            {
+                name: 'jab 2',
+                aliases: [
+                    '10 hit combo 2',
+                    '10 hit 2',
+                    '5a 2'
+                ]
+            },
+            {
+                name: 'jab 3',
+                aliases: [
+                    '10 hit combo 3',
+                    '10 hit 3',
+                    '5a 3'
+                ]
+            },
+            {
+                name: 'jab 4',
+                aliases: [
+                    '10 hit combo 4',
+                    '10 hit 4',
+                    '5a 4'
+                ]
+            },
+            {
+                name: 'jab 5',
+                aliases: [
+                    '10 hit combo 5',
+                    '10 hit 5',
+                    '5a 5'
+                ]
+            },
+            {
+                name: 'jab 6',
+                aliases: [
+                    '10 hit combo 6',
+                    '10 hit 6',
+                    '5a 6'
+                ]
+            },
+            {
+                name: 'jab 7',
+                aliases: [
+                    '10 hit combo 7',
+                    '10 hit 7',
+                    '5a 7'
+                ]
+            },
+            {
+                name: 'jab 8',
+                aliases: [
+                    '10 hit combo 8',
+                    '10 hit 8',
+                    '5a 8'
+                ]
+            },
+            {
+                name: 'jab 9',
+                aliases: [
+                    '10 hit combo 9',
+                    '10 hit 9',
+                    '5a 9'
+                ]
+            },
+            {
+                name: 'jab 10',
+                aliases: [
+                    '10 hit combo 10',
+                    '10 hit 10',
+                    '5a 10'
+                ]
+            },
+            {
+                name: 'flash punch combo',
+                aliases: [
+                    'gentleman',
+                    'jab gentleman',
+                    'delayed jab',
+                    'delayed jab 3',
+                    'jab 3 delayed',
+                    'jab delayed'
+                ],
+                link: 'jab 3 delayed'
+            },
+            {
+                name: 'forward tilt',
+                aliases: [
+                    'ftilt',
+                    'oni front kick',
+                    '6a'
+                ],
+                link: 'ftilt'
+            },
+            {
+                name: 'down-forward tilt 1',
+                aliases: [
+                    'down forward tilt',
+                    'dftilt',
+                    'tsunami kick',
+                    '3a',
+                    'dftilt 1',
+                    'tsunami kick 1',
+                    '3a 1'
+                ],
+                link: 'dftilt 1'
+            },
+            {
+                name: 'down-forward tilt 2',
+                aliases: [
+                    'dftilt 2',
+                    'tsunami kick 2',
+                    '3a 2'
+                ],
+                link: 'dftilt 2'
+            },
+            {
+                name: 'down tilt',
+                aliases: [
+                    'dtilt',
+                    'neijiri uraken',
+                    '2a'
+                ],
+                link: 'dtilt'
+            },
+            {
+                name: 'down-back tilt',
+                aliases: [
+                    'dbtilt',
+                    'stature smash',
+                    '1a'
+                ],
+                link: 'dbtilt'
+            },
+            {
+                name: 'back tilt',
+                aliases: [
+                    'btilt',
+                    'flash tornado',
+                    '4a'
+                ],
+                link: 'btilt'
+            },
+            {
+                name: 'up-back tilt',
+                aliases: [
+                    'ubtilt',
+                    'jump side kick',
+                    '7a'
+                ],
+                link: 'ubtilt'
+            },
+            {
+                name: 'up tilt 1',
+                aliases: [
+                    'up tilt',
+                    'utilt',
+                    'twin pistons',
+                    '8a',
+                    'utilt 1',
+                    'twin pistons 1',
+                    '8a 1'
+                ],
+                link: 'utilt 1'
+            },
+            {
+                name: 'up tilt 2',
+                aliases: [
+                    'utilt 2',
+                    'twin pistons 2',
+                    '8a 2'
+                ],
+                link: 'utilt 2'
+            },
+            {
+                name: 'up-forward tilt 1',
+                aliases: [
+                    'up-forward tilt',
+                    'uftilt',
+                    'roundhouse to triple spin kicks',
+                    '9a',
+                    'utilt 1',
+                    'roundhouse to triple spin kicks 1',
+                    '9a 1'
+                ],
+                link: 'uftilt 1'
+            },
+            {
+                name: 'up-forward tilt 2',
+                aliases: [
+                    'uftilt 2',
+                    'roundhouse to triple spin kicks 2',
+                    '9a 2'
+                ],
+                link: 'uftilt 2'
+            },
+            {
+                name: 'up-forward tilt 3',
+                aliases: [
+                    'uftilt 3',
+                    'roundhouse to triple spin kicks 3',
+                    '9a 3'
+                ],
+                link: 'uftilt 3'
+            },
+            {
+                name: 'up-forward tilt 4',
+                aliases: [
+                    'uftilt 4',
+                    'roundhouse to triple spin kicks 4',
+                    '9a 4'
+                ],
+                link: 'uftilt 4'
+            },
+            {
+                name: 'crouching down-forward tilt',
+                aliases: [
+                    'crouching dftilt',
+                    'crouch dftilt',
+                    'crouch down-forward tilt',
+                    'c 3a'
+                ],
+                link: 'crouch ftilt'
+            },
+            {
+                name: 'crouch jab',
+                aliases: [
+                    'crouching dtilt',
+                    'crouching down tilt',
+                    'crouch dtilt',
+                    'crouch down tilt',
+                    'tombstone crusher',
+                    'c 2a',
+                    'c a'
+                ],
+                link: 'crouch jab'
+            },
+            {
+                name: 'crouching down-back tilt',
+                aliases: [
+                    'crouching dbtilt',
+                    'crouch dbtilt',
+                    'crouch down-back tilt',
+                    'crouch spin kick',
+                    'c 1a'
+                ],
+                link: 'crouch btilt'
+            },
+            {
+                name: 'double dash attack',
+                aliases: [
+                    'double da',
+                    'left splits kick',
+                    '66a'
+                ]
+            },
+            {
+                name: 'demon god fist',
+                aliases: [
+                    'uncrouching attack',
+                    'uncrouch attack',
+                    'dgf'
+                ],
+                link: 'uncrouching attack'
+            },
+            {
+                name: 'wind god fist',
+                aliases: [
+                    'wgf',
+                    '623a'
+                ]
+            },
+            {
+                name: 'electric wind god fist',
+                aliases: [
+                    'ewgf',
+                    'perfect 623a',
+                    'just 623a'
+                ]
+            },
+            {
+                name: 'dragon uppercut',
+                aliases: [
+                    'hold 623a',
+                    'held 623a',
+                    '623[a]'
+                ]
+            },
+            {
+                name: 'spinning dragon to left hook',
+                aliases: [
+                    '623b'
+                ]
+            },
+            {
+                name: 'devil blaster',
+                aliases: [
+                    'neutral b',
+                    'neutral special'
+                ],
+                link: 'devil blaster g'
+            },
+            {
+                name: 'devil fist (grounded)',
+                aliases: [
+                    'devil fist',
+                    'side b',
+                    'side special',
+                    'side b grounded',
+                    'side special grounded',
+                    'grounded devil fist',
+                    'grounded side b',
+                    'grounded side special'
+                ],
+                link: 'devil fist g'
+            },
+            {
+                name: 'devil fist (aerial)',
+                aliases: [
+                    'side b aerial',
+                    'side special aerial',
+                    'devil fist air',
+                    'side b air',
+                    'side special air',
+                    'air devil fist',
+                    'air side b',
+                    'air side special',
+                    'aerial devil fist',
+                    'aerial side b',
+                    'aerial side special'
+                ],
+                link: 'devil fist a'
+            },
+            {
+                name: 'devil wings',
+                aliases: [
+                    'up b',
+                    'up special'
+                ]
+            },
+            {
+                name: 'heaven\'s door (grounded)',
+                aliases: [
+                    'heavens door',
+                    'grounded heavens door',
+                    'down b',
+                    'down b grounded',
+                    'grounded down b',
+                    'down special',
+                    'down special grounded',
+                    'grounded down special'
+                ],
+                link: 'heavens door g'
+            },
+            {
+                name: 'heaven\'s door (aerial)',
+                aliases: [
+                    'heavens door air',
+                    'air heavens door',
+                    'aerial heavens door',
+                    'down b air',
+                    'air down b',
+                    'down b aerial',
+                    'aerial down b',
+                    'down special air',
+                    'air down special',
+                    'down special aerial',
+                    'aerial down special'
+                ],
+                link: 'heavens door a'
+            },
+            {
+                name: 'heaven\'s door (falling)',
+                aliases: [
+                    'heavens door fall',
+                    'falling heavens door',
+                    'down b fall',
+                    'down b falling',
+                    'falling down b',
+                    'down special fall',
+                    'down special falling',
+                    'faling down special'
+                ],
+                link: 'heavens door falling'
+            },
+            {
+                name: 'heaven\'s door (landing)',
+                aliases: [
+                    'landing heavens door',
+                    'down b landing',
+                    'landing down b',
+                    'down special landing',
+                    'faling down special'
+                ],
+                link: 'heavens door ground'
+            },
+            {
+                name: 'rage drive (non-input)',
+                aliases: [
+                    'rage drive',
+                    'rage grab',
+                    'rage down b'
+                ],
+                link: 'rage drive g'
+            },
+            {
+                name: 'rage drive (non-input landing)',
+                aliases: [
+                    'rage drive landing',
+                    'landing rage drive',
+                    'rage grab landing',
+                    'landing rage grab',
+                    'rage down b landing',
+                    'landing rage down b'
+                ],
+                link: 'rage drive land'
+            },
+            {
+                name: 'rage drive (input)',
+                aliases: [
+                    'true rage drive'
+                ],
+                link: 'rage drive input'
+            },
+            {
+                name: 'rage drive (input landing)',
+                aliases: [
+                    'true rage drive landing',
+                    'landing true rage drive'
+                ],
+                link: 'rage drive input land'
+            },
+            {
+                name: 'rage drive (falling)',
+                aliases: [
+                    'rage drive fall',
+                    'falling rage drive',
+                    'rage grab fall',
+                    'rage grab falling',
+                    'falling rage grab',
+                    'rage down b fall',
+                    'rage down b falling',
+                    'falling rage down b',
+                ],
+                link: 'rage drive falling'
+            },
+            {
+                name: 'gates of hell',
+                aliases: [
+                    'crouch dash grab',
+                    '623z',
+                ],
+                link: 'gates of hell grab'
+            },
+            {
+                name: 'crouch dash',
+                aliases: [
+                    '623'
+                ]
+            },
+            {
+                name: 'side taunt',
+                aliases: [
+                    'staunt',
+                    'demons wrath'
+                ]
+            },
+        ],
+        attributes: [
+            {
+                name: 'weight',
+                value: 113,
+                aliases: ['mass']
+            },
+            {
+                name: 'run speed',
+                aliases: ['run'],
+                value: 1.55,
+            },
+            {
+                name: 'walk speed',
+                aliases: ['walk'],
+                value: 0.66,
+            },
+            {
+                name: 'air speed',
+                aliases: ['drift'],
+                value: 0.89,
+            },
+            {
+                name: 'fall speed',
+                value: 1.7,
+            },
+            {
+                name: 'fastfall speed',
+                aliases: ['fastfall'],
+                value: 2.72,
+            },
+            {
+                name: 'fastfall speed increase',
+                aliases: ['ffincrease', 'fastfallincrease', 'ff%'],
+                value: 60,
+            }
+        ]
+    },
 ]
