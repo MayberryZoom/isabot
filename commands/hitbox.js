@@ -110,12 +110,14 @@ let fsmashes = {
 }
 
 let landingDair = { name: 'landing down aerial', aliases: ['landing down air', 'landing dair'], link: 'dair landing' }
+let zair = { name: 'z-aerial', aliases: ['zair'], link: 'zair' }
 
 charData.map(c => {
     if (c.unreleased) return;
 
     c.moves = normals.concat(jabs[c.jabType]).concat(ftilts[c.ftiltType]).concat(fsmashes[c.fsmashType]).filter(n => !((c.exclude && c.exclude.includes(n.name)) || c.moves.find(m => m.name === n.name))).concat(c.moves);
     if (c.landingDair) c.moves.push(landingDair);
+    if (c.zair) c.moves.push(zair);
 });
 
 module.exports = {
@@ -143,6 +145,8 @@ module.exports = {
             move = character.moves.find(m => toOneWord(m.name) === move || (m.aliases && m.aliases.map(a => toOneWord(a)).includes(move)));
             
             if (move) {
+                if (character.unavailable && character.unavailable.includes(move.name)) return msg.channel.send('No hitbox available for that move!').then(resolve()).catch(e => reject(e));
+
                 const formatted = capitalize(`${character.name} ${move.name}`, [' ', '(', '/', '.', '-']);
 
                 let link = move.url ? move.url : 'https://ultimateframedata.com/hitboxes/' + toUnderscore(character.ufdDir ? character.ufdDir : character.name) + '/' + toOneWord((character.ufdFile ? character.ufdFile : character.name) + (move.link ? move.link : move.name)).replace('&', '_') + (move.png ? '.png' : '.gif');

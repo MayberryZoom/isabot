@@ -240,7 +240,120 @@ module.exports = [
         ftiltType: 'angled',
         fsmashType: 'unangled',
         landingDair: true,
-        moves: [],
+        unavailable: ['fire breath'],
+        moves: [
+            {
+                name: 'fire breath',
+                aliases: [
+                    'neutral b',
+                    'neutral special'
+                ]
+            },
+            {
+                name: 'flying slam (grounded)',
+                aliases: [
+                    'side b',
+                    'side b grounded',
+                    'grounded side b',
+                    'side special',
+                    'side special grounded',
+                    'grounded side special'
+                ],
+                link: 'flying slam g',
+            },
+            {
+                name: 'flying slam (aerial)',
+                aliases: [
+                    'side b aerial',
+                    'aerial side b',
+                    'side b air',
+                    'side special aerial',
+                    'aerial side special',
+                    'side special air'
+                ],
+                link: 'flying slam a',
+            },
+            {
+                name: 'flying slam (falling)',
+                aliases: [
+                    'falling flying slam',
+                    'flying slam fall',
+                    'side b falling',
+                    'falling side b',
+                    'side b fall',
+                    'side special falling',
+                    'falling side special',
+                    'side special fall'
+                ],
+                link: 'flying slam',
+            },
+            {
+                name: 'whirling fortress (grounded)',
+                aliases: [
+                    'grounded whirling fortress',
+                    'up b',
+                    'up b grounded',
+                    'grounded up b',
+                    'up special',
+                    'up special grounded',
+                    'grounded up special'
+                ],
+                link: 'whirling fortress g',
+            },
+            {
+                name: 'whirling fortress (aerial)',
+                aliases: [
+                    'aerial whirling fortress',
+                    'whirling fortress air',
+                    'up b aerial',
+                    'aerial up b',
+                    'up b air',
+                    'up special aerial',
+                    'aerial up special',
+                    'up special air'
+                ],
+                link: 'whirling fortress a',
+            },
+            {
+                name: 'bowser bomb (grounded)',
+                aliases: [
+                    'grounded bowser bomb',
+                    'down b',
+                    'down b grounded',
+                    'grounded down b',
+                    'down special',
+                    'down special grounded',
+                    'grounded down special'
+                ],
+                link: 'bowser bomb'
+            },
+            {
+                name: 'bowser bomb (aerial)',
+                aliases: [
+                    'aerial bowser bomb',
+                    'bowser bomb air',
+                    'down b aerial',
+                    'aerial down b',
+                    'down b air',
+                    'down special aerial',
+                    'aerial down special',
+                    'down special air'
+                ],
+                link: 'bowser bomb',
+                png: true
+            },
+            {
+                name: 'bowser bomb (landing)',
+                aliases: [
+                    'landing bowser bomb',
+                    'down b landing',
+                    'landing down b',
+                    'down special landing',
+                    'landing down special'
+                ],
+                link: 'bowser bomb landing'
+            }
+        ],
         attributes: [
             {
                 name: 'weight',
@@ -850,6 +963,7 @@ module.exports = [
         jabType: '2',
         ftiltType: 'angled',
         fsmashType: 'angled',
+        zair: true,
         moves: [],
         attributes: [
             {
@@ -895,6 +1009,7 @@ module.exports = [
         jabType: '2',
         ftiltType: 'angled',
         fsmashType: 'angled',
+        zair: true,
         moves: [],
         attributes: [
             {
@@ -1801,7 +1916,72 @@ module.exports = [
         ftiltType: 'unangled',
         fsmashType: 'unique',
         exclude: ['forward tilt'],
-        moves: [],
+        unavailable: ['rush coil'],
+        moves: [
+            {
+                name: 'metal blade',
+                aliases: [
+                    'neutral b',
+                    'neutral special',
+                    'blade'
+                ],
+                png: true
+            },
+            {
+                name: 'crash bomber (projectile)',
+                aliases: [
+                    'side b',
+                    'side b projectile',
+                    'side special',
+                    'side special projectile',
+                    'bomb',
+                    'bomb projectile'
+                ],
+                link: 'crash bomber',
+                png: true
+            },
+            {
+                name: 'crash bomber (explosion)',
+                aliases: [
+                    'side b explosion',
+                    'side special explosion',
+                    'bomb explosion'
+                ]
+            },
+            {
+                name: 'rush coil',
+                aliases: [
+                    'up b',
+                    'up special',
+                    'dog'
+                ]
+            },
+            {
+                name: 'leaf shield (shield)',
+                aliases: [
+                    'down b',
+                    'down b shield',
+                    'down special',
+                    'down special shield',
+                    'leaf',
+                    'leaf shield'
+                ],
+                link: 'leaf shield'
+            },
+            {
+                name: 'leaf shield (thrown)',
+                aliases: [
+                    'leaf shield projectile',
+                    'down b projectile',
+                    'down b thrown',
+                    'down special projectile',
+                    'down special thrown',
+                    'leaf projectile',
+                    'leaf thrown'
+                ],
+                link: 'leaf shield fly'
+            }
+        ],
         attributes: [
             {
                 name: 'weight',
@@ -1977,13 +2157,46 @@ module.exports = [
     },
     {
         name: 'mario',
-        aliases: ['maro', 'super mario'], // thanks kip
+        aliases: ['maro', 'super mario'],
         color: '#d04c4a',
         jabType: '3',
         ftiltType: 'angled',
         fsmashType: 'angled',
         landingDair: true,
-        moves: [],
+        moves: [
+            {
+                name: 'fireball',
+                aliases: [
+                    'neutral b',
+                    'neutral special'
+                ],
+                png: true
+            },
+            {
+                name: 'cape',
+                aliases: [
+                    'side b',
+                    'side special'
+                ]
+            },
+            {
+                name: 'super jump punch',
+                aliases: [
+                    'up b',
+                    'up special',
+                    'sjp'
+                ]
+            },
+            {
+                name: 'f.l.u.d.d.',
+                aliases: [
+                    'down b',
+                    'down special'
+                ],
+                link: 'fludd',
+                png: true
+            }
+        ],
         attributes: [
             {
                 name: 'weight',
@@ -2028,7 +2241,101 @@ module.exports = [
         jabType: '3',
         ftiltType: 'angled',
         fsmashType: 'angled',
-        moves: [],
+        moves: [
+            {
+                name: 'z-aerial',
+                aliases: ['zair'],
+                link: 'zair',
+                png: true
+            },
+            {
+                name: 'fireball',
+                aliases: [
+                    'neutral b',
+                    'neutral special'
+                ],
+            },
+            {
+                name: 'green missile',
+                aliases: [
+                    'side b',
+                    'side special'
+                ]
+            },
+            {
+                name: 'green missile (misfire)',
+                aliases: [
+                    'misfire',
+                    'side b misfire',
+                    'side special misfire'
+                ]
+            },
+            {
+                name: 'super jump punch (grounded)',
+                aliases: [
+                    'up b',
+                    'up b grounded',
+                    'grounded up b',
+                    'up special',
+                    'up special grounded',
+                    'grounded up special',
+                    'sjp',
+                    'sjp grounded',
+                    'grounded sjp'
+                ],
+                link: 'super jump punch g'
+            },
+            {
+                name: 'super jump punch (aerial)',
+                aliases: [
+                    'up b aerial',
+                    'aerial up b',
+                    'up b air',
+                    'up special aerial',
+                    'aerial up special',
+                    'up special air',
+                    'sjp aerial',
+                    'aerial sjp',
+                    'sjp air'
+                ],
+                link: 'super jump punch a'
+            },
+            {
+                name: 'luigi cyclone (grounded)',
+                aliases: [
+                    'grounded luigi cyclone',
+                    'cyclone',
+                    'cyclone grounded',
+                    'grounded cyclone',
+                    'down b',
+                    'down b grounded',
+                    'grounded down b',
+                    'down special',
+                    'down special grounded',
+                    'grounded down special'
+                ],
+                link: 'luigi cyclone g',
+                description: 'Model scaling issues'
+            },
+            {
+                name: 'luigi cyclone (aerial)',
+                aliases: [
+                    'aerial luigi cyclone',
+                    'luigi cyclone air',
+                    'cyclone aerial',
+                    'aerial cyclone',
+                    'cyclone air',
+                    'down b aerial',
+                    'aerial down b',
+                    'down b air',
+                    'down special aerial',
+                    'aerial down special',
+                    'down special air'
+                ],
+                link: 'luigi cyclone a',
+                description: 'Model scaling issues'
+            }
+        ],
         attributes: [
             {
                 name: 'weight',
@@ -2477,6 +2784,7 @@ module.exports = [
         jabType: '3',
         ftiltType: 'angled',
         fsmashType: 'unangled',
+        zair: true,
         moves: [],
         attributes: [
             {
@@ -2814,6 +3122,7 @@ module.exports = [
         ftiltType: 'unangled',
         fsmashType: 'unangled',
         landingDair: true,
+        zair: true,
         moves: [],
         attributes: [
             {
@@ -3245,6 +3554,7 @@ module.exports = [
         jabType: 'gentleman',
         ftiltType: 'unangled',
         fsmashType: '2',
+        zair: true,
         moves: [],
         attributes: [
             {
@@ -3697,6 +4007,7 @@ module.exports = [
         ftiltType: 'angled',
         fsmashType: 'unangled',
         landingDair: true,
+        zair: true,
         moves: [],
         attributes: [
             {
@@ -3925,7 +4236,37 @@ module.exports = [
         jabType: 'rapid 1',
         ftiltType: 'angled',
         fsmashType: 'angled',
-        moves: [],
+        unavailable: ['shadow ball', 'teleport'],
+        moves: [
+            {
+                name: 'shadow ball',
+                aliases: [
+                    'neutral b',
+                    'neutral special'
+                ]
+            },
+            {
+                name: 'confusion',
+                aliases: [
+                    'side b',
+                    'side special'
+                ]
+            },
+            {
+                name: 'teleport',
+                aliases: [
+                    'up b',
+                    'up special'
+                ]
+            },
+            {
+                name: 'disable',
+                aliases: [
+                    'down b',
+                    'down special'
+                ]
+            }
+        ],
         attributes: [
             {
                 name: 'weight',
@@ -4291,7 +4632,67 @@ module.exports = [
         jabType: '3',
         ftiltType: 'angled',
         fsmashType: 'angled',
-        moves: [],
+        moves: [
+            {
+                name: 'megavitamin',
+                aliases: [
+                    'neutral b',
+                    'neutral special',
+                    'vitamin',
+                    'pill'
+                ],
+                png: true
+            },
+            {
+                name: 'super sheet',
+                aliases: [
+                    'side b',
+                    'side special',
+                    'cape'
+                ]
+            },
+            {
+                name: 'super jump punch',
+                aliases: [
+                    'up b',
+                    'up special',
+                    'sjp'
+                ]
+            },
+            {
+                name: 'dr. tornado (grounded)',
+                aliases: [
+                    'grounded dr tornado',
+                    'tornado',
+                    'tornado grounded',
+                    'grounded tornado',
+                    'down b',
+                    'down b grounded',
+                    'grounded down b',
+                    'down special',
+                    'down special grounded',
+                    'grounded down special'
+                ],
+                link: 'dr tornado g',
+            },
+            {
+                name: 'dr. tornado (aerial)',
+                aliases: [
+                    'aerial dr tornado',
+                    'dr tornado air',
+                    'tornado aerial',
+                    'aerial tornado',
+                    'tornado air',
+                    'down b aerial',
+                    'aerial down b',
+                    'down b air',
+                    'down special aerial',
+                    'aerial down special',
+                    'down special air'
+                ],
+                link: 'dr tornado a',
+            }
+        ],
         attributes: [
             {
                 name: 'weight',
@@ -6858,7 +7259,8 @@ module.exports = [
                 name: 'side taunt',
                 aliases: [
                     'staunt',
-                    'demons wrath'
+                    'demons wrath',
+                    'taunt'
                 ]
             },
         ],

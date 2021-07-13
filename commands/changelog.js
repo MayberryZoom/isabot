@@ -1,4 +1,7 @@
-const changes = `__7/12/2021__
+const changes = `__7/13/2021__
+- Added special hitbox data for Mario, Luigi, Dr. Mario, Bowser, Mewtwo, and Mega Man
+
+__7/12/2021__
 - Added hitbox data for Mythra specials
 - Added hitbox data for Kazuya
 - Added attributes for Kazuya
