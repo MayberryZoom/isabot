@@ -1,4 +1,9 @@
-const changes = `__7/13/2021__
+const changes = `__7/16/2021__
+- Optimization to parsing algorithm. Now accounts for any permutation of words, meaning it will be easier to find the desired result, and file size is cut down
+- Added special hitbox data for Meta Knight, Bayonetta, Byleth, Ice Climbers, Fox, Falco, Wolf, Captain Falcon, Ganondorf, Corrin, Ike, Jigglypuff
+- Added getup attacks, ledge attacks, ledge hangs, and standard ledge grab ranges for every character
+
+__7/13/2021__
 - Added special hitbox data for Mario, Luigi, Dr. Mario, Bowser, Mewtwo, and Mega Man
 
 __7/12/2021__
@@ -16,11 +21,7 @@ __7/10/21__
 
 __4/4/2021__
 - Updated to discord.js v12
-    - What does this mean? It means the bot is more stable, several bugs were fixed, and just overall optimization. This will also make future updates easier.
-
-__3/15/2021__
-- Added hitbox data for Pyra/Mythra (except Mythra specials)
-- Added attributes for Pyra/Mythra`
+    - What does this mean? It means the bot is more stable, several bugs were fixed, and just overall optimization. This will also make future updates easier.`
 
 module.exports = {
     name: 'changelog',

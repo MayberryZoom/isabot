@@ -1,4 +1,5 @@
 const charData = require('../characters.js');
+const { checkAllPermutations } = require('../globals.js');
 
 const toUnderscore = (text) => {
     ['-', '.', '(', ')', "'"].forEach(x => text = text.split(x).join(''));
@@ -32,6 +33,10 @@ let normals = [
     { name: 'back throw', aliases: ['bthrow'], link: 'bthrow' },
     { name: 'up throw', aliases: ['uthrow'], link: 'uthrow' },
     { name: 'down throw', aliases: ['dthrow'], link: 'dthrow' },
+    { name: 'up facing getup attack', aliases: [ 'getup attack', 'up getup attack', 'getup attack u'], link: 'getup attack u' },
+    { name: 'down facing getup attack', aliases: ['down getup attack', 'getup attack d'], link: 'getup attack d' },
+    { name: 'trip attack', },
+    { name: 'ledge attack' },
 ];
 
 let jabs = {
@@ -49,25 +54,25 @@ let jabs = {
     ],
     'rapid': [
         { name: 'rapid jab', aliases: ['jab'], link: 'jab rapid' },
-        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'jab rapid end'}
+        { name: 'rapid jab finisher', aliases: ['rapid jab ender', 'jab finisher'], link: 'jab rapid end'}
     ],
     'rapid 1': [
         { name: 'jab 1', aliases: ['jab'] },
         { name: 'rapid jab', link: 'jab rapid' },
-        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'jab rapid end'}
+        { name: 'rapid jab finisher', aliases: ['rapid jab ender', 'jab finisher'], link: 'jab rapid end'}
     ],
     'rapid 2': [
         { name: 'jab 1', aliases: ['jab'] },
         { name: 'jab 2'},
         { name: 'rapid jab', link: 'jab rapid' },
-        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'jab rapid end'}
+        { name: 'rapid jab finisher', aliases: ['rapid jab ender', 'jab finisher'], link: 'jab rapid end'}
     ],
     'gentleman': [
         { name: 'jab 1', aliases: ['jab'] },
         { name: 'jab 2'},
         { name: 'jab 3', aliases: ['gentleman']},
         { name: 'rapid jab', link: 'jab rapid' },
-        { name: 'rapid jab finisher', aliases: ['rapid jab ender'], link: 'jab rapid end'}
+        { name: 'rapid jab finisher', aliases: ['rapid jab ender', 'jab finisher'], link: 'jab rapid end'}
     ],
     'unique': []
 };
@@ -118,6 +123,8 @@ charData.map(c => {
     c.moves = normals.concat(jabs[c.jabType]).concat(ftilts[c.ftiltType]).concat(fsmashes[c.fsmashType]).filter(n => !((c.exclude && c.exclude.includes(n.name)) || c.moves.find(m => m.name === n.name))).concat(c.moves);
     if (c.landingDair) c.moves.push(landingDair);
     if (c.zair) c.moves.push(zair);
+    c.moves.push({ name: 'ledge hang', url: 'https://ultimateframedata.com/ledgehangs/' + c.name + 'LedgeHang.gif' })
+    c.moves.push({ name: 'ledge grab', url: 'https://ultimateframedata.com/ledgegrabs/' + c.name + 'LedgeGrab%201.png' })
 });
 
 module.exports = {
@@ -139,10 +146,10 @@ module.exports = {
             if (!character) return msg.channel.send('That character is not valid!').then(resolve()).catch(e => reject(e));
             if (character.unreleasedHitbox) return msg.channel.send('That character is not available yet!').then(resolve()).catch(e => reject(e));
 
-            let move = toOneWord(args.slice(x + 1).join(' ').toLowerCase());
+            let move = getWords(args.slice(x + 1).join(' ').toLowerCase());
             if (!move) return msg.channel.send('Please provide a move!').then(resolve()).catch(e => reject(e));
 
-            move = character.moves.find(m => toOneWord(m.name) === move || (m.aliases && m.aliases.map(a => toOneWord(a)).includes(move)));
+            move = character.moves.find(m => checkAllPermutations(move, m.aliases ? m.aliases.concat(m.name) : [m.name]));
             
             if (move) {
                 if (character.unavailable && character.unavailable.includes(move.name)) return msg.channel.send('No hitbox available for that move!').then(resolve()).catch(e => reject(e));
