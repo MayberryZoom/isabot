@@ -279,6 +279,16 @@ module.exports = [
       name: 'uaft',
       definition: 'Refers to Up Angled Forward Tilt.',
    },
+   {
+      name: 'sharking',
+      aliases: ['shark'],
+      definition: 'Sharking refers to a technique where you hit the opponent from below the platform they\'re standing on. For example, using Link\'s UTilt under the Battlefield platforms. Some characters can also shark through the stage with their Up B, for example Marth and Lucina. When using Up B to ledge, it will hit opponents standing on the ledge.',
+   },
+   {
+      name: 'pancake',
+      aliases: ['pancaking'],
+      definition: 'Pancaking refers to landing lag animations that are very low to the ground. This allows some characters to duck under moves after using an aerial. Pikachu is a very notable example of this.',
+   },
 
    // isabelle
    {
