@@ -1,4 +1,7 @@
-const changes = `__7/17/2021__
+const changes = `__10/20/2021__
+- Added Sora attributes
+
+__7/17/2021__
 - Added terms for sharking and pancaking
 
 __7/16/2021__
@@ -13,18 +16,7 @@ __7/12/2021__
 - Added hitbox data for Mythra specials
 - Added hitbox data for Kazuya
 - Added attributes for Kazuya
-- Added Kazuya to \`>render\`
-
-__7/10/21__
-- Updated \`>define\`
-    - Updated old, out of date terms
-    - Improved readability and explanations of old terms
-    - Added new general terms
-    - Added new terms for Pyra/Mythra
-
-__4/4/2021__
-- Updated to discord.js v12
-    - What does this mean? It means the bot is more stable, several bugs were fixed, and just overall optimization. This will also make future updates easier.`
+- Added Kazuya to \`>render\``
 
 module.exports = {
     name: 'changelog',

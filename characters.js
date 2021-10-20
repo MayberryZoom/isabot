@@ -8540,4 +8540,51 @@ module.exports = [
             }
         ]
     },
+    {
+        name: 'sora',
+        aliases: ['disney'],
+        color: '#a60807',
+        jabType: 'unique',
+        ftiltType: 'unangled',
+        fsmashType: 'unangled',
+        landingDair: true,
+        moves: [],
+        unreleasedHitbox: true,
+        attributes: [
+            {
+                name: 'weight',
+                value: 85,
+                aliases: ['mass']
+            },
+            {
+                name: 'run speed',
+                aliases: ['run'],
+                value: 1.58,
+            },
+            {
+                name: 'walk speed',
+                aliases: ['walk'],
+                value: 0.82,
+            },
+            {
+                name: 'air speed',
+                aliases: ['drift'],
+                value: 0.96,
+            },
+            {
+                name: 'fall speed',
+                value: 1.44,
+            },
+            {
+                name: 'fastfall speed',
+                aliases: ['fastfall'],
+                value: 2.304,
+            },
+            {
+                name: 'fastfall speed increase',
+                aliases: ['ffincrease', 'fastfallincrease', 'ff%'],
+                value: 60,
+            }
+        ]
+    },
 ]
