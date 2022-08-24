@@ -14,7 +14,7 @@ module.exports = {
             }
             if (!text) text = '';
             msg.channel.send(`Welcome${text}! <:isaHeyyy:490255578061602828>`)
-            .then(resolve(msg.author.tag + ' welcomed someone!'))
+            .then(resolve())
             .catch((e) => reject(e));
         });
     }

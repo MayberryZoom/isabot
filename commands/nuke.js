@@ -12,7 +12,7 @@ module.exports = {
                     msg.edit('Activating server nuke' + '.'.repeat(i));
                 }
             })
-            .then(resolve(msg.author.tag + ' launched a nuke!'))
+            .then(resolve())
             .catch((e) => reject(e));
         });
     }

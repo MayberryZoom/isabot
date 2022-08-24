@@ -59,7 +59,7 @@ module.exports = {
     execute: (msg, args) => {
         return new Promise(async (resolve, reject) => {
             const u = await conversions.parseUser(msg, args.join(' '));
-            if (!u) return msg.channel.send('Please provide a valid argument!').then(resolve(msg.author.tag + ' didn\'t provide an argument for user')).catch(e => reject(e));
+            if (!u) return msg.channel.send('Please provide a valid argument!').then(resolve()).catch(e => reject(e));
             const m = await conversions.userToMember(u, msg);
 
             const embed = new Discord.MessageEmbed()
@@ -75,7 +75,7 @@ module.exports = {
                 .setTimestamp();
             if (u.id === client.user.id) embed.addField('Other Information', 'The best! <:isaThonk:537312545682489345>');
             return msg.channel.send(embed)
-            .then(resolve(msg.author.tag + ' got info for ' + u.tag + ' in ' + msg.guild.name))
+            .then(resolve())
             .catch((e) => reject(e));
         });
     }

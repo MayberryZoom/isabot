@@ -9,7 +9,7 @@ module.exports = {
     execute(msg) {
         return new Promise((resolve, reject) => {
             msg.channel.send('Please don\'t pet me! <:isaBadDay:562485951558057984>')
-            .then(resolve(msg.author.tag + " pet me (and I didn't like it!)"))
+            .then(resolve())
             .catch(e => reject(e));
         })
     }

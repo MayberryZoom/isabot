@@ -23,7 +23,7 @@ module.exports = {
     execute(msg) {
         return new Promise((resolve, reject) => {
             msg.channel.send(jokes[Math.floor(Math.random() * jokes.length)])
-            .then(resolve(msg.author.tag + ' asked for a joke'))
+            .then(resolve())
             .catch((e) => reject(e));
         });
     }

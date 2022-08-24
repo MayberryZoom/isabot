@@ -66,7 +66,7 @@ module.exports = {
         return new Promise(async (resolve, reject) => {
             const user = await parseUser(msg, args.join(' '));
             if (!user) return msg.channel.send('Please provide a valid user!')
-            .then(resolve(msg.author.tag + ' didn\'t provide a valid argument for compliment'))
+            .then(resolve())
             .catch((e) => reject(e));
             
             let compliment = compliments[Math.floor(Math.random() * compliments.length)].replace('user', user.username);

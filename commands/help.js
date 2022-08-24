@@ -20,7 +20,7 @@ module.exports = {
 				let mapped = categories.map(x => `__${x.charAt(0).toUpperCase() + x.substring(1)} Commands__\n${commands.filter(c => c.category === x).map(c => c.name + ' - ' + (c.detailedDescription ? 'Use `' + prefix + 'help ' + c.name + '` for more information.' : c.description) + (msg.channel.type !== 'dm' && c.guilds && !owners.includes(msg.author.id) ? ` (Exclusive to ${msg.guild.name}!)` : '') + ((c.hidden && owners.includes(msg.author.id)) ? ' (🔒)' : '')).sort().join('\n')}`);
 				return msg.author.send('List of commands:\n\n' + mapped.sort().join('\n\n'), { split: true })
 				.then(() => { if (msg.channel.type !== 'dm') msg.channel.send("I've sent you a list of my commands! <:isaHeyyy:490255578061602828>") })
-				.then(resolve('Sent ' + msg.author.tag + ' a list of commands'))
+				.then(resolve())
 				.catch((e) => reject(e))
 			}
 
@@ -40,7 +40,7 @@ module.exports = {
 				if (command.cooldown) embed.addField('Cooldown', command.cooldown + ' seconds', true);
 				if (owners.includes(msg.author.id) && command.guilds) embed.addField('Guilds', command.guilds.join(', '), true);
 				return msg.channel.send(embed)
-				.then(resolve(msg.author.tag + ' got help for `' + command.name + '`'))
+				.then(resolve())
 				.catch((e) => reject(e));
 			}
 			else {

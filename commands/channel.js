@@ -19,7 +19,7 @@ module.exports = {
                 .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL())
                 .setTimestamp();
             msg.channel.send(embed)
-            .then(resolve(msg.author.tag + ' got info for ' + c.name + ' in ' + msg.guild.name))
+            .then(resolve())
             .catch((e) => reject(e));
         });
     }

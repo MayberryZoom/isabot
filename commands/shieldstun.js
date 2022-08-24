@@ -19,7 +19,7 @@ module.exports = {
             const mult = args.join(' ');
 
             if (!dmg) return msg.channel.send('Please provide a number!')
-            .then(resolve(msg.author.tag + ' didn\'t provide an argument for shieldstun'))
+            .then(resolve())
             .catch((e) => reject(e));
 
             if (smults.includes(mult)) {

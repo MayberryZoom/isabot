@@ -37,7 +37,7 @@ module.exports = {
                     .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL())
                     .setTimestamp();
                 return msg.channel.send(embed)
-                .then(resolve(msg.author.tag + ' got ' + msg.guild.name + '\'s info'))
+                .then(resolve())
                 .catch((e) => reject(e));
             }
 

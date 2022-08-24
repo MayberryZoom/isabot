@@ -6,7 +6,7 @@ module.exports = {
         return new Promise((resolve, reject) => {
             if (args.length === 0) {
                 return msg.channel.send('I\'m open source, so you can see all my code here!\n<https://github.com/Isachu/isabot>')
-                .then(resolve(msg.author.tag + ' got my source code!')).catch(e => reject(e));
+                .then(resolve()).catch(e => reject(e));
             }
             else {
                 const argsFixed = toOneWord(args.join(' ').toLowerCase());

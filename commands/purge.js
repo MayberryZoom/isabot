@@ -24,19 +24,19 @@ module.exports = {
                 }
                 else if (amount === 1) {
                     msg.channel.bulkDelete(2, true)
-                    .then(resolve(msg.author.tag + ' purged 1 message in ' + msg.guild.name + '.'))
+                    .then(resolve())
                     .catch((e) => reject(e));
                 }
                 else {
                     await msg.delete()
                     msg.channel.bulkDelete(args[0], true)
-                    .then(resolve(msg.author.tag + ' purged ' + args[0] + ' messages in ' + msg.guild.name + '.'))
+                    .then(resolve())
                     .catch((e) => reject(e));
                 }
             }
             else {
                 msg.channel.send('You must have the `MANAGE_MESSAGES` permission to use this command!')
-                .then(resolve(msg.author.tag + ' tried to purge ' + args[0] + ' messages but failed in ' + msg.guild.name))
+                .then(resolve())
                 .catch((e) => reject(e));
             }
         });

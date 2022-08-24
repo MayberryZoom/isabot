@@ -64,7 +64,7 @@ client.on('message', async msg => {
 	}
 
 	command.execute(msg, args)
-	.then(log => { log ? sendLog(log) : sendLog(`${msg.author.tag} used \`${command.name}\`${msg.channel.type === 'dm' ? '' : ` in ${msg.guild.name}`}.`); })
+	.then(log => { log ? sendLog(log) : sendLog(command.name + ' was used'); })
 	.catch(error => {
 		sendLog(
 			'<@&513807019048828929> there was an error!\n\nCommand:```' + command.name +

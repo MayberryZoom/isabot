@@ -8,7 +8,7 @@ module.exports = {
     execute(msg) {
         return new Promise((resolve, reject) => {
             msg.channel.send('*hugs* <:isaGlee:513917768568143882>')
-            .then(resolve(msg.author.tag + ' hugged me in ' + msg.guild.name))
+            .then(resolve())
             .catch(e => reject(e));
         })
     }
