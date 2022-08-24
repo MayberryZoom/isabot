@@ -27,10 +27,10 @@ for (const file of commandFiles) {
 }
 
 client.on('message', async msg => {
-	if (!msg.content.startsWith(prefix || client.user.toString()) || msg.author.bot) return;
+	if (!msg.content.startsWith(prefix) || msg.content === prefix || msg.author.bot) return;
 
 	// variables
-	const args = msg.content.startsWith(client.user.toString()) ? msg.content.slice(client.user.toString().length).split(/ +/) : msg.content.slice(prefix.length).split(/ +/);
+	const args = msg.content.slice(prefix.length).split(/ +/);
 	if (args[0] === '') args.shift();
 	const commandName = args.shift().toLowerCase();
 
