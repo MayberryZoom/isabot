@@ -30,7 +30,7 @@ module.exports = {
             }
 
             embed.addField('Link', e.url) .setImage(e.url);
-            msg.channel.send(embed).then(() => sendLog(msg.author.tag + ' got info for :' + e.name + ': in ' + msg.guild.name));
+            msg.channel.send(embed).then(resolve());
         });
     }
 };
