@@ -1,4 +1,4 @@
-const charData = require('../characters.js');
+const charData = require('../data/characters.js');
 
 const moves = [
     {

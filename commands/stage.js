@@ -1,4 +1,4 @@
-const stages = require('../stagelist.js')
+const stages = require('../data/stagelist.js')
 const games = {
     '64': '<:SSB64:621931677274472459>',
     'Melee': '<:SSBM:621931677253500938>',

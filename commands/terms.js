@@ -1,4 +1,4 @@
-const terms = require('../terms.js');
+const terms = require('../data/terms.js');
 const generalNames = terms.filter(t => !t.character).map(t => t.name);
 
 const characters = new Discord.Collection(

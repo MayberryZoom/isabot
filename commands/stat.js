@@ -1,4 +1,4 @@
-const characters = require('../characters.js');
+const characters = require('../data/characters.js');
 
 const toUnderscore = (text, split) => {
     let newText = text;

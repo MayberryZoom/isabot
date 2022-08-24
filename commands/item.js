@@ -1,4 +1,4 @@
-const items = require('../itemlist.js')
+const items = require('../data/itemlist.js')
 const games = {
     '64': '<:SSB64:621931677274472459>',
     'Melee': '<:SSBM:621931677253500938>',

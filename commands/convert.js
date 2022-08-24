@@ -1,4 +1,4 @@
-const multipliers = require('../multipliers.json');
+const multipliers = require('../data/multipliers.json');
 
 module.exports = {
     name: 'convert',
