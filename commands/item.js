@@ -20,7 +20,14 @@ module.exports = {
     category: 'smash',
     execute (msg, args) {
         return new Promise((resolve, reject) => {
-            if (!args[0]) return msg.channel.send(new Discord.MessageEmbed() .setTitle('List of items') .setDescription(items.map(i => i.name).sort().join(', ')) .setColor(isabotColor)).then(resolve()).catch(e => reject(e));
+            if (!args[0]) {
+                const embed = new Discord.EmbedBuilder()
+                    .setTitle('List of items')
+                    .setDescription(items.map(i => i.name).sort().join(', '))
+                    .setColor(isabotColor);
+
+                return msg.channel.send({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
+            }
 
             let game;
             for (g in games) {
@@ -30,25 +37,27 @@ module.exports = {
                 }
             }
 
-            if (game) return msg.channel.send(new Discord.MessageEmbed() .setTitle('List of items in Smash Bros. ' + game) .setDescription(items.filter(i => i.games.includes(game)).map(i => i.name).sort().join(', ')) .setColor(isabotColor)).then(resolve()).catch(e => reject(e));
+            if (game) return msg.channel.send(new Discord.EmbedBuilder() .setTitle('List of items in Smash Bros. ' + game) .setDescription(items.filter(i => i.games.includes(game)).map(i => i.name).sort().join(', ')) .setColor(isabotColor)).then(resolve()).catch(e => reject(e));
 
             let item = items.find(i => toOneWord(i.name) === toOneWord(args.join(' ').toLowerCase()));
             if (!item) return msg.channel.send('That item is not valid!').then(resolve()).catch(e => reject(e));
             let itemName = capitalize(item.name, [' ']);
 
-            let embed = new Discord.MessageEmbed()
-            .setTitle('__' + itemName + '__ ' + formatSmash(item.games))
-            .setThumbnail(item.url)
-            .setColor(isabotColor)
-            .setDescription(item.description)
-            .addField('__Series of Origin__', '*' + item.series + '*', true)
-            .addField('__Game of Origin__', '*' + item.debut + '*', true)
-            .addField('__Item Class__', item.class, true)
-            .addField('__Heavy__', item.heavy ? '<:yes:621945300843626497>' : '❌', true)
-            .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL());
+            let embed = new Discord.EmbedBuilder()
+                .setTitle('__' + itemName + '__ ' + formatSmash(item.games))
+                .setThumbnail(item.url)
+                .setColor(isabotColor)
+                .setDescription(item.description)
+                .addFields(
+                	{ name: '__Series of Origin__', value: '*' + item.series + '*', inline: true },
+                	{ name: '__Game of Origin__', value: '*' + item.debut + '*', inline: true },
+                	{ name: '__Item Class__', value: item.class, inline: true },
+                	{ name: '__Heavy__', value: item.heavy ? '<:yes:621945300843626497>' : '❌', inline: true }
+                )
+                .setTimestamp();
             if (item.noLink === undefined || !item.noLink) embed.setURL('https://www.ssbwiki.com/' + itemName.split(' ').join('_'));
 
-            return msg.channel.send(embed).then(resolve()).catch(e => reject(e));
+            return msg.channel.send({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
         }
     )}
 };

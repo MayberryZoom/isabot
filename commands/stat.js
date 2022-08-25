@@ -31,8 +31,14 @@ module.exports = {
             const nameToUse = character.ssbuLink ? character.ssbuLink : character.name;
             const charNameFixed = toUnderscore(nameToUse.replace(/\./g, '').replace(/&/g, 'and'), ['-', ' ']);
 
-            const embed = new Discord.MessageEmbed() .setColor(character.color) .setThumbnail(`https://www.smashbros.com/assets_v2/img/fighter/${charNameFixed}/main.png`) .setTitle(capitalize(character.name, [' ', '-', '.']) + ' ' + capitalize(attribute.name, [' '])) .setDescription('Value: ' + attribute.value /*+ '\nRank: ' + attribute.rank*/) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
-            return msg.channel.send(embed).then(resolve()).catch((e) => reject(e));
+            const embed = new Discord.EmbedBuilder()
+                .setColor(character.color)
+                .setThumbnail(`https://www.smashbros.com/assets_v2/img/fighter/${charNameFixed}/main.png`)
+                .setTitle(capitalize(character.name, [' ', '-', '.']) + ' ' + capitalize(attribute.name, [' ']))
+                .setDescription('Value: ' + attribute.value /*+ '\nRank: ' + attribute.rank*/)
+                .setTimestamp();
+
+            return msg.channel.send({ embeds: [embed] }).then(resolve()).catch((e) => reject(e));
         });
     }
 };

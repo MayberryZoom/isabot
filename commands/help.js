@@ -28,20 +28,20 @@ module.exports = {
 			const command = commands.get(cmdName) || commands.find(cmd => cmd.aliases && cmd.aliases.includes(cmdName));
 
 			if (command) {
-				const embed = new Discord.MessageEmbed()
+				const embed = new Discord.EmbedBuilder()
 					.setTitle(prefix + command.name + (msg.channel.type !== 'dm' && command.guilds && !owners.includes(msg.author.id) ? ` (Exclusive to ${msg.guild.name}!)` : '') + ((command.hidden && owners.includes(msg.author.id)) ? ' (🔒)' : ''))
 					.setColor(isabotColor)
-					.addField('Description', command.detailedDescription ? command.detailedDescription : command.description)
-					.addField('Category', command.category.charAt(0).toUpperCase() + command.category.substring(1), true)
-					.addField('Syntax', command.usage ? command.usage.map(u => '`' + prefix + command.name + ' ' + u + '`').join('\n') : '`' + prefix + command.name + '`', true)
-					.setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL())
+					.addFields(
+						{ name: 'Description', value: command.detailedDescription ? command.detailedDescription : command.description },
+						{ name: 'Category', value: command.category.charAt(0).toUpperCase() + command.category.substring(1), inline: true },
+						{ name: 'Syntax', value: command.usage ? command.usage.map(u => '`' + prefix + command.name + ' ' + u + '`').join('\n') : '`' + prefix + command.name + '`', inline: true },
+					)
 					.setTimestamp();
-				if (command.aliases) embed.addField('Aliases', command.aliases.join(', '), true);
-				if (command.cooldown) embed.addField('Cooldown', command.cooldown + ' seconds', true);
-				if (owners.includes(msg.author.id) && command.guilds) embed.addField('Guilds', command.guilds.join(', '), true);
-				return msg.channel.send(embed)
-				.then(resolve())
-				.catch((e) => reject(e));
+				if (command.aliases) embed.addFields({ name: 'Aliases', value: command.aliases.join(', '), inline: true });
+				if (command.cooldown) embed.addFields({ name: 'Cooldown', value: command.cooldown + ' seconds', inline: true });
+				if (owners.includes(msg.author.id) && command.guilds) embed.addFields({ name: 'Guilds', value: command.guilds.join(', '), inline: true });
+
+				return msg.channel.send({ embeds: [embed] }).then(resolve()).catch((e) => reject(e));
 			}
 			else {
 				return msg.channel.send('That\'s not a command!').then(resolve()).catch((e) => reject(e));

@@ -12,15 +12,18 @@ module.exports = {
             const contributors = await g.roles.fetch('518002389366865930');
             const testers = await g.roles.fetch('513813580441714688');
             
-            let embed = new Discord.MessageEmbed()
+            let embed = new Discord.EmbedBuilder()
                 .setTitle('Friends that made me possible!')
-                .addField('Owner', owner.toString())
-                .addField('Developers', developers.members.map(m => m.toString()).join(', '))
-                .addField('Contributors', contributors.members.map(m => m.toString()).join(', '))
-                .addField('Testers', testers.members.map(m => m.toString()).join(', '))
+                .addFields(
+                    { name: 'Owner', value: owner.toString() },
+                    { name: 'Developers', value: developers.members.map(m => m.toString()).join(', ') },
+                    { name: 'Contributors', value: contributors.members.map(m => m.toString()).join(', ') },
+                    { name: 'Testers', value: testers.members.map(m => m.toString()).join(', ') }
+                )
                 .setColor(isabotColor)
-                .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL);;
-            return msg.channel.send(embed).then(resolve()).catch(e => reject(e));
+                .setTimestamp();
+
+            return msg.channel.send({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
         });
     }
 };

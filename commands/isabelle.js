@@ -35,13 +35,14 @@ module.exports = {
             });
 
             const image = cache[Math.floor(Math.random() * cache.length)];
-            const embed = new Discord.MessageEmbed()
+            const embed = new Discord.EmbedBuilder()
                 .setTitle('Random Isabelle!')
                 .setImage(image.link)
                 .setColor(isabotColor)
-                .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL);
+                .setTimestamp();
             if (image.description) embed.setDescription(image.description.replace('Source', '**Source').replace('(18+)', '🔞').replace(/\(suggestive content\)/i, '⚠').replace(':', ':**\n'));
-            return msg.channel.send(embed).then(resolve()).catch(e => reject(e));
+
+            return msg.channel.send({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
         });
     }
 };

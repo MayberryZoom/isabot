@@ -62,21 +62,21 @@ module.exports = {
             if (!u) return msg.channel.send('Please provide a valid argument!').then(resolve()).catch(e => reject(e));
             const m = await conversions.userToMember(u, msg);
 
-            const embed = new Discord.MessageEmbed()
+            const embed = new Discord.EmbedBuilder()
                 .setTitle(u.tag + await getRank(u) + ' (' + u.id + ')')
                 .setColor(m.displayHexColor)
                 .setThumbnail(m.user.avatarURL())
-                .addField('Created At', u.createdAt.toUTCString())
-                .addField('Guild Join Date', m.joinedAt.toUTCString())
-                .addField('Nickname', m.nickname ? m.nickname : 'None', true)
-                .addField('Status', formatPresence(m.presence))
-                .addField(`Roles (${m.roles.cache.size - 1})`, formatRoles(m))
-                .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL())
+                .addFields(
+                    { name: 'Created At', value: u.createdAt.toUTCString() },
+                    { name: 'Guild Join Date', value: m.joinedAt.toUTCString() },
+                    { name: 'Nickname', value: m.nickname ? m.nickname : 'None', inline: true },
+                    // { name: 'Status', value: formatPresence(m.presence) },
+                    { name: `Roles (${m.roles.cache.size - 1})`, value: formatRoles(m) }
+                )
                 .setTimestamp();
-            if (u.id === client.user.id) embed.addField('Other Information', 'The best! <:isaThonk:537312545682489345>');
-            return msg.channel.send(embed)
-            .then(resolve())
-            .catch((e) => reject(e));
+            if (u.id === client.user.id) embed.addFields({ name: 'Other Information', value: 'The best! <:isaThonk:537312545682489345>' });
+
+            return msg.channel.send({ embeds: [embed] }).then(resolve()).catch((e) => reject(e));
         });
     }
 };

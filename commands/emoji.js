@@ -12,25 +12,27 @@ module.exports = {
             const e = await conversions.parseEmoji(client, args.join(' '));
             if (!e) return msg.channel.send('Please provide a custom emoji!');
 
-            let embed = new Discord.MessageEmbed()
+            let embed = new Discord.EmbedBuilder()
                 .setTitle(`:${e.name}: (${e.id})`)
                 .setColor(isabotColor)
-                .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
                 .setTimestamp();
 
             if (e.guild) {
-                embed.addField('Created At', e.createdAt.toUTCString(), true)
-                    .addField('Guild', e.guild.name, true);
+                embed.addFields(
+                    { name: 'Created At', value: e.createdAt.toUTCString(), inline: true },
+                    { name: 'Guild', value: e.guild.name, inline: true }
+                )
 
                 const me = await e.guild.members.fetch(client.user.id);
-                if (me.hasPermission('MANAGE_EMOJIS')) {
+                if (me.permissions.has(Discord.PermissionsBitField.Flags.ManageEmojisAndStickers)) {
                     const u = await e.fetchAuthor();
-                    embed.addField('Created By', u.tag, true);
+                    embed.addFields({ name: 'Created By', value: u.tag, inline: true });
                 }
             }
 
-            embed.addField('Link', e.url) .setImage(e.url);
-            msg.channel.send(embed).then(resolve());
+            embed.addFields({ name: 'Link', value: e.url }).setImage(e.url);
+
+            msg.channel.send({ embeds: [embed] }).then(() => resolve()).catch(e => reject(e));
         });
     }
 };

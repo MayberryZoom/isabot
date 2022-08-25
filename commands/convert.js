@@ -11,26 +11,26 @@ module.exports = {
             args = args.map(a => a.toLowerCase());
 
             if (!args[0]) {
-                return msg.channel.send(new Discord.MessageEmbed()
+                const embed = new Discord.EmbedBuilder()
                     .setTitle('>convert')
                     .setColor(isabotColor)
-                    .addField('Description', 'The convert command takes a value and converts it under the given multiplier.')
-                    .addField('Arguments', '``table`` - See a list of the damage multipliers in SSBU featured in the bot.\n' + Object.keys(multipliers).map(m => '``to ' + m + '`` - ' + multipliers[m].args).join('\n'))
-                    .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
-                    .setTimestamp())
-                .then(resolve())
-                .catch((e) => reject(e));
+                    .addFields(
+                        { name: 'Description', value: 'The convert command takes a value and converts it under the given multiplier.' },
+                        { name: 'Arguments', value: '``table`` - See a list of the damage multipliers in SSBU featured in the bot.\n' + Object.keys(multipliers).map(m => '``to ' + m + '`` - ' + multipliers[m].args).join('\n') }
+                    )
+                    .setTimestamp();
+
+                return msg.channel.send({ embeds: [embed] }).then(resolve()).catch((e) => reject(e));
             }
             else if (args[0] === 'table') {
-                const embed = new Discord.MessageEmbed()
+                const embed = new Discord.EmbedBuilder()
                     .setTitle('SSBU Modifiers')
                     .setColor(isabotColor)
-                    .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
                     .setTimestamp();
-                    Object.keys(multipliers).filter(m => multipliers[m].mname).map(m => embed.addField(multipliers[m].mname, multipliers[m].table));
-                return msg.channel.send(embed)
-                .then(resolve())
-                .catch((e) => reject(e));
+                Object.keys(multipliers).filter(m => multipliers[m].mname).map(m => embed.addFields({ name: multipliers[m].mname, value: multipliers[m].table }));
+
+                return msg.channel.send({ embeds: [embed] })
+                .then(resolve()).catch((e) => reject(e));
             }
             else if (Object.keys(multipliers).includes(args[1])) {
                 if (isNaN(damage)) {

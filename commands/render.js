@@ -27,8 +27,13 @@ module.exports = {
             let alt = args.slice(x + 1);
             alt = alt && alt < 9 && alt > 1 ? 'main' + alt : 'main';
 
-            const embed = new Discord.MessageEmbed() .setColor(character.color) .setImage(`https://www.smashbros.com/assets_v2/img/fighter/${charNameFixed}/${alt}.png`) .setTitle(capitalize(character.name, [' ', '-', '.'])) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
-            return msg.channel.send(embed).then(resolve()).catch((e) => reject(e));
+            const embed = new Discord.EmbedBuilder()
+                .setColor(character.color)
+                .setImage(`https://www.smashbros.com/assets_v2/img/fighter/${charNameFixed}/${alt}.png`)
+                .setTitle(capitalize(character.name, [' ', '-', '.']))
+                .setTimestamp();
+
+            return msg.channel.send({ embeds: [embed] }).then(resolve()).catch((e) => reject(e));
         });
     }
 };

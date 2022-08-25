@@ -77,7 +77,7 @@ module.exports = {
             if (!string) {
                 c = await msg.channel.fetch();
             }
-            else if (msg.mentions.channels.array().length !== 0) {
+            else if (msg.mentions.channels.size !== 0) {
                 c = conversions.channelFromMention(string, msg);
             }
             else if (!isNaN(parseInt(string))) {

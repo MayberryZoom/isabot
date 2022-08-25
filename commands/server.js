@@ -25,42 +25,43 @@ module.exports = {
             const g = msg.guild;
             await g.members.fetch();
             if (!args[0]) {
-                const embed = new Discord.MessageEmbed()
+                const embed = new Discord.EmbedBuilder()
                     .setTitle(g.name + ' (' + g.id + ')')
                     .setColor(isabotColor)
-                    .setThumbnail(g.iconURL)
-                    .addField('Created At', g.createdAt.toUTCString())
-                    .addField('Owner', g.owner.user.tag, true)
-                    .addField('Channels', `📁 ${g.channels.cache.filter(c => c.type === 'category').size}\u2001⌨ ${g.channels.cache.filter(c => c.type === 'text').size}\u2001🔊 ${g.channels.cache.filter(c => c.type === 'voice').size}`, true)
-                    .addField('Members', `${g.memberCount} (👤 ${g.members.cache.filter(m => !m.user.bot).size}\u2001🤖 ${g.members.cache.filter(m => m.user.bot).size})`, true)
-                    .addField('Roles', g.roles.cache.size - 1, true)
-                    .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL())
+                    .setThumbnail(g.iconURL())
+                    .addFields(
+                        { name: 'Created At', value: g.createdAt.toUTCString() },
+                    	{ name: 'Owner', value: g.owner.user.tag, inline: true },
+                    	{ name: 'Channels', value: `📁 ${g.channels.cache.filter(c => c.type === 'category').size}\u2001⌨ ${g.channels.cache.filter(c => c.type === 'text').size}\u2001🔊 ${g.channels.cache.filter(c => c.type === 'voice').size}`, inline: true },
+                    	{ name: 'Members', value: `${g.memberCount} (👤 ${g.members.cache.filter(m => !m.user.bot).size}\u2001🤖 ${g.members.cache.filter(m => m.user.bot).size})`, inline: true },
+                    	{ name: 'Roles', value: g.roles.cache.size - 1, inline: true }
+                    )
                     .setTimestamp();
-                return msg.channel.send(embed)
-                .then(resolve())
-                .catch((e) => reject(e));
+
+                return msg.channel.send({ embeds: [embed] }).then(resolve()).catch((e) => reject(e));
             }
 
             const property = args.map(x => x.toLowerCase()).join(' ');
             if (['avatar', 'icon', 'picture', 'pic'].includes(property)) {
-                return msg.channel.send(new Discord.MessageEmbed()
+                const embed = new Discord.EmbedBuilder()
                     .setTitle(g.name + "'s icon")
                     .setImage(g.iconURL())
                     .setColor(isabotColor)
-                    .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL))
-                .then(resolve())
-                .catch(e => reject(e));
+                    .setTimestamp();
+
+                return msg.channel.send({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
             }
             if (['splash', 'splash image', 'invite image', 'splash picture', 'invite picture', 'splash pic', 'invite pic'].includes(property)) {
-                const splash = g.splashURL;
-                if (!splash) return msg.channel.send(g.name + ' has no splash image.').then(resolve()).catch(e => reject(e));;
-                return msg.channel.send(new Discord.MessageEmbed()
+                const splash = g.splashURL();
+                if (!splash) return msg.channel.send(g.name + ' has no splash image.').then(resolve()).catch(e => reject(e));
+
+                const embed = new Discord.EmbedBuilder()
                     .setTitle(g.name + "'s splash image")
                     .setImage(splash)
                     .setColor(isabotColor)
-                    .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL()))
-                .then(resolve())
-                .catch(e => reject(e));
+                    .setTimestamp();
+
+                return msg.channel.send({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
             }
             else if (['members', 'users', 'member count', 'user count'].includes(property)) {
                 const count = g.members.cache.size;

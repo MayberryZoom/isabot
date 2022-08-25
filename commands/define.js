@@ -24,11 +24,14 @@ module.exports = {
             if (currentChar) charNames = terms.filter(t => t.character === currentChar).map(t => t.name);
 
             if (!args.length) {
-                let termsEmbed = new Discord.MessageEmbed() .setTitle('Terms for `>define`') .setColor(isabotColor) .addField('General Terms', generalNames.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
-                if (charNames) termsEmbed.addField(capitalize(currentChar, [' ']) + ' Terms', charNames.sort().join(', '));
-                return msg.channel.send(termsEmbed)
-                .then(resolve())
-                .catch((e) => reject(e));
+                let termsEmbed = new Discord.EmbedBuilder()
+                    .setTitle('Terms for `>define`')
+                    .setColor(isabotColor)
+                    .addFields({ name: 'General Terms', value: generalNames.sort().join(', ') })
+                    .setTimestamp();
+                if (charNames) termsEmbed.addFields({ name: capitalize(currentChar, [' ']) + ' Terms', value: charNames.sort().join(', ') });
+
+                return msg.channel.send({ embeds: [termsEmbed] }).then(resolve()).catch((e) => reject(e));
             }
 
             const term = terms.find(t => toOneWord(args.join(' ')).toLowerCase() === toOneWord(t.name) ||

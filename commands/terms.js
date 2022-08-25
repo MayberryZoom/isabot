@@ -24,9 +24,14 @@ module.exports = {
                 let charNames;
                 if (currentChar) { currentChar = currentChar.aliases[0]; charNames = terms.filter(t => t.character === currentChar).map(t => t.name); }
 
-                let termsEmbed = new Discord.MessageEmbed() .setTitle('Terms for `>define`') .setColor(isabotColor) .addField('General Terms', generalNames.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
-                if (charNames && charNames.length) termsEmbed .addField(capitalize(currentChar, [' ']) + ' Terms', charNames.sort().join(', '));
-                return msg.channel.send(termsEmbed).then(resolve()).catch(e => reject(e));
+                let termsEmbed = new Discord.EmbedBuilder()
+                    .setTitle('Terms for `>define`')
+                    .setColor(isabotColor)
+                    .addFields({ name: 'General Terms', value: generalNames.sort().join(', ') })
+                    .setTimestamp();
+                if (charNames && charNames.length) termsEmbed.addFields({ name: capitalize(currentChar, [' ']) + ' Terms', value: charNames.sort().join(', ') });
+
+                return msg.channel.send({ embeds: [termsEmbed] }).then(resolve()).catch(e => reject(e));
             }
 
             const argsFixed = args.map(f => f.toLowerCase()).join(' ');
@@ -35,9 +40,13 @@ module.exports = {
             if (!character) msg.channel.send('That is not a valid character!').then(resolve()).catch(e => reject(e));
 
             const charTerms = terms.filter(t => t.character && t.character.toLowerCase() === character.aliases[0]);
-            msg.channel.send(new Discord.MessageEmbed() .setTitle(capitalize(charTerms[0].character, [' ', '-']) + ' Terms') .setColor(isabotColor) .setDescription(charTerms.map(t => t.name).sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp())
-            .then(resolve())
-            .catch(e => reject(e));
+            const embed = new Discord.EmbedBuilder()
+                .setTitle(capitalize(charTerms[0].character, [' ', '-']) + ' Terms')
+                .setColor(isabotColor)
+                .setDescription(charTerms.map(t => t.name).sort().join(', '))
+                .setTimestamp();
+            
+            msg.channel.send({ embeds: [embed ]}).then(resolve()).catch(e => reject(e));
         });
     }
 };

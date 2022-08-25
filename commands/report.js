@@ -1,4 +1,4 @@
-const reportChannel = '513806730204020737';
+const reportChannel = '646067062669836349';
 
 const blacklist = [];
 
@@ -13,15 +13,15 @@ module.exports = {
             if (blacklist.includes(msg.author.id)) return msg.channel.send('You have been blacklisted from reporting issues due to spam or inappropriate reports.')
             if (!args.length) return msg.channel.send('Please provide a report message!');
 
-            const embed = new Discord.MessageEmbed()
-                .setAuthor('Reported by ' + msg.author.tag + ' (' + msg.author.id + ')', msg.author.avatarURL)
+            const embed = new Discord.EmbedBuilder()
+                .setAuthor({ name: 'Reported by ' + msg.author.tag + ' (' + msg.author.id + ')', iconURL: msg.author.avatarURL() })
                 .setDescription(args.join(' '))
                 .setColor(isabotColor)
                 .setTimestamp();
             
             if (msg.attachments.map(x => x.url).length > 0) embed.setImage(msg.attachments.map(x => x.url)[0]);
 
-            return client.channels.cache.get(reportChannel).send(embed).then(msg.channel.send('Report sent successfully!')).then(resolve()).catch(e => reject(e));
+            return client.channels.cache.get(reportChannel).send({ embeds: [embed] }).then(msg.channel.send('Report sent successfully!')).then(resolve()).catch(e => reject(e));
         })
     }
 };

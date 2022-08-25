@@ -158,9 +158,14 @@ module.exports = {
 
                 let link = move.url ? move.url : 'https://ultimateframedata.com/hitboxes/' + toUnderscore(character.ufdDir ? character.ufdDir : character.name) + '/' + toOneWord((character.ufdFile ? character.ufdFile : character.name) + (move.link ? move.link : move.name)).replace('&', '_') + (move.png ? '.png' : '.gif');
 
-                let embed = new Discord.MessageEmbed() .setTitle(formatted) .setImage(link) .setColor(character.color) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
+                let embed = new Discord.EmbedBuilder()
+                    .setTitle(formatted)
+                    .setImage(link)
+                    .setColor(character.color)
+                    .setTimestamp();
                 if (move.description) embed.setDescription(move.description);
-                msg.channel.send(embed).then(resolve()).catch(e => reject(e));
+
+                msg.channel.send({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
             }
             else msg.channel.send('That move is not valid!').then(resolve()).catch(e => reject(e));
         });
