@@ -33,21 +33,14 @@ const formatStatus = (s) => {
     }
 }
 
-const formatActivity = (a) => {
-    switch (a.type) {
-        case 'PLAYING': return 'Playing ' + a.name;
-        case 'STREAMING': return 'Streaming ' + a.name;
-        case 'LISTENING': return 'Listening to ' + a.name;
-        case 'WATCHING': return 'Watching ' + a.name;
-        case 'CUSTOM_STATUS': return a.state;
-        case 'COMPETING': return 'Competing in ' + a.name;
-    }
-}
-
 const formatPresence = (p) => {
     if (p.activities.length === 0) return formatStatus(p.status);
-    let id = p.activities[0].type === 'CUSTOM_STATUS' && p.activities[0].state === null ? 1 : 0;
-    return formatActivity(p.activities[id]);
+
+    let a = p.activities[0];
+
+    if (a.type !== Discord.ActivityType.Custom) return a.toString();
+    else if (a.type === Discord.ActivityType.Custom && a.state) return (a.emoji ? a.emoji.toString() + ' ' : '') + a.state;
+    else return a.emoji.toString();
 }
 
 module.exports = {
@@ -70,7 +63,7 @@ module.exports = {
                     { name: 'Created At', value: u.createdAt.toUTCString() },
                     { name: 'Guild Join Date', value: m.joinedAt.toUTCString() },
                     { name: 'Nickname', value: m.nickname ? m.nickname : 'None', inline: true },
-                    // { name: 'Status', value: formatPresence(m.presence) },
+                    { name: 'Status', value: formatPresence(m.presence) },
                     { name: `Roles (${m.roles.cache.size - 1})`, value: formatRoles(m) }
                 )
                 .setTimestamp();
