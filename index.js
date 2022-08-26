@@ -2,14 +2,18 @@ Discord = require('discord.js');
 fs = require('fs');
 global.client = new Discord.Client({
 	messageCacheMaxSize: 1,
-	disabledEvents: [
-		'TYPING_START',
-		'GUILD_MEMBER_UPDATE',
-		'MESSAGE_REACTION_ADD',
-		'GUILD_MEMBER_ADD',
-		'GUILD_MEMBER_REMOVE'
+	intents: [
+		Discord.GatewayIntentBits.Guilds,
+		Discord.GatewayIntentBits.GuildMessages,
+		Discord.GatewayIntentBits.GuildMembers,
+		Discord.GatewayIntentBits.GuildPresences,
+		Discord.GatewayIntentBits.DirectMessages,
+		Discord.GatewayIntentBits.MessageContent
 	],
-	disableMentions: 'everyone'
+	partials: [
+		Discord.Partials.Channel
+	],
+	allowedMentions: { parse: ['users'], repliedUser: true }
 });
 
 const { prefix } = require('./config.json');
@@ -26,7 +30,7 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command);
 }
 
-client.on('message', async msg => {
+client.on('messageCreate', async msg => {
 	if (!msg.content.startsWith(prefix) || msg.content === prefix || msg.author.bot) return;
 
 	// variables
