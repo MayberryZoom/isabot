@@ -1,14 +1,14 @@
 module.exports = {
-	name: 'cursed',
-	description: 'cursed',
-    usage: ['<text>'],
-    args: true,
-    category: 'fun',
-    execute(msg, args) {
+	data: new Discord.SlashCommandBuilder()
+        .setName('cursed')
+        .setDescription('cursed')
+        .addStringOption(option => 
+            option.setName('text')
+                .setDescription('text to curse-ify')
+                .setRequired(true)),
+    execute(interaction) {
         return new Promise((resolve, reject) => {
-            msg.channel.send('Did you mean:\n' + capitalize(args.join(' '), [' ', '\n', '"', " '", '`', '/', '(', ')', '-', '_', '@', '#', ';', '.', ',', '+', '=', '[', ']', '{', '}', '*', '&', '^', '%', '$', '!', '~', '?', '<', '>', '|', '¿', '\\', '​']))
-			.then(resolve())
-			.catch((e) => reject(e));
+            interaction.reply('Did you mean:\n' + capitalize(interaction.options.getString('text'), [' ', '\n', '"', " '", '`', '/', '(', ')', '-', '_', '@', '#', ';', '.', ',', '+', '=', '[', ']', '{', '}', '*', '&', '^', '%', '$', '!', '~', '?', '<', '>', '|', '¿', '\\', '​'])).then(resolve()).catch((e) => reject(e));
         });
     }
 };
