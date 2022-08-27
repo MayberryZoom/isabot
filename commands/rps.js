@@ -1,50 +1,43 @@
+const choices = ['rock ✊', 'paper ✋', 'scissors ✌️'];
+
 module.exports = {
-    name: 'rps',
+    data: new Discord.SlashCommandBuilder()
+        .setName('rps')
+        .setDescription('Play Rock Paper Scissors with me!')
+        .addStringOption(option => 
+            option.setName('choice')
+                .setDescription('Choose which option to pick')
+                .setRequired(true)
+                .addChoices(
+                    { name: 'Rock', value: 'rock ✊' },
+                    { name: 'Paper', value: 'paper ✋' },
+                    { name: 'Scissors', value: 'scissors ✌️' }
+                )),
     aliases: ['rockpaperscissors'],
-    usage: ['<rock, paper, or scissors>'],
-    description: 'Play Rock Paper Scissors with me! I\'m not too good at it though..',
-    category: 'fun',
-    execute(msg, args) {
+    execute(interaction) {
         return new Promise ((resolve, reject) => {
-            const argsFixed = toOneWord(args.join(' ').toLowerCase());
+            const userChoice = interaction.options.getString('choice');
+            let myChoice = choices[Math.floor(Math.random() * 3)];
 
-            const num = Math.floor(Math.random() * 3);
-            let option;
+            let toSend = 'You picked... ' + userChoice + '!\nI pick... ' + myChoice + '!';
 
-            switch (num) {
-                case 0: option = 'rock ✊'; break;
-                case 1: option = 'paper ✋'; break;
-                case 2: option = 'scissors ✌️'; break;
+            if (userChoice === 'rock ✊') {
+                if (myChoice === 'rock ✊') toSend += '\nIt\'s a tie! <:thinkabelle:562485986379038750>';
+                else if (myChoice === 'paper ✋') toSend += '\nI win! <:isaGlee:513917768568143882>';
+                else if (myChoice === 'scissors ✌️') toSend += '\nYou win! <:isaBadDay:562485951558057984>';
+            }
+            else if (userChoice === 'paper ✋') {
+                if (myChoice === 'paper ✋') toSend += '\nIt\'s a tie! <:thinkabelle:562485986379038750>';
+                else if (myChoice === 'scissors ✌️') toSend += '\nI win! <:isaGlee:513917768568143882>';
+                else if (myChoice === 'rock ✊') toSend += '\nYou win! <:isaBadDay:562485951558057984>';
+            }
+            else if (userChoice === 'scissors ✌️') {
+                if (myChoice === 'scissors ✌️') toSend += '\nIt\'s a tie! <:thinkabelle:562485986379038750>';
+                else if (myChoice === 'rock ✊') toSend += '\nI win! <:isaGlee:513917768568143882>';
+                else if (myChoice === 'paper ✋') toSend += '\nYou win! <:isaBadDay:562485951558057984>';
             }
 
-            if (argsFixed === 'rock') {
-                let toSend = 'I pick... ' + option + '!';
-
-                if (option === 'rock ✊') toSend += '\nIt\'s a tie! <:thinkabelle:562485986379038750>';
-                else if (option === 'paper ✋') toSend += '\nI win! <:isaGlee:513917768568143882>';
-                else if (option === 'scissors ✌️') toSend += '\nYou win! <:isaBadDay:562485951558057984>';
-
-                msg.channel.send(toSend);
-            }
-            else if (argsFixed === 'paper') {
-                let toSend = 'I pick... ' + option + '!';
-
-                if (option === 'paper ✋') toSend += '\nIt\'s a tie! <:thinkabelle:562485986379038750>';
-                else if (option === 'scissors ✌️') toSend += '\nI win! <:isaGlee:513917768568143882>';
-                else if (option === 'rock ✊') toSend += '\nYou win! <:isaBadDay:562485951558057984>';
-
-                msg.channel.send(toSend);
-            }
-            else if (argsFixed === 'scissors') {
-                let toSend = 'I pick... ' + option + '!';
-
-                if (option === 'scissors ✌️') toSend += '\nIt\'s a tie! <:thinkabelle:562485986379038750>';
-                else if (option === 'rock ✊') toSend += '\nI win! <:isaGlee:513917768568143882>';
-                else if (option === 'paper ✋') toSend += '\nYou win! <:isaBadDay:562485951558057984>';
-
-                msg.channel.send(toSend);
-            }
-            else msg.channel.send('Please say a valid option! (Rock, paper, or scissors)').then(resolve()).catch(e => reject(e));
+            interaction.reply(toSend).then(resolve()).catch(e => reject(e));
         });
     }
 };
