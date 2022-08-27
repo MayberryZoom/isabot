@@ -58,52 +58,18 @@ client.on('messageCreate', async msg => {
 
 	// variables
 	const args = msg.content.slice(prefix.length).split(/ +/);
-	if (args[0] === '') args.shift();
-	const commandName = args.shift().toLowerCase();
+	const commandName = args[0] === '' ? args[1].toLowerCase() : args[0].toLowerCase();
 
 	// commands
 	const command = client.commands.get(commandName)
 	        || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 		if (!command) return;
 
-	if (command.ownerOnly && !owners.includes(msg.author.id)) return msg.channel.send('Only the bot owners can use this command!');
-
-	if (command.dmDisabled && msg.channel.type === Discord.ChannelType.DM) {
-		if (command.dmDisabled === 1) {
-			return msg.reply('that command is not available inside DMs!');
-		}
-		else if (command.dmDisabled === 2) {
-			return;
-		}
-	}
-
-	if(command.guilds) {
-		if (!command.guilds.includes(msg.guild.id) && !owners.includes(msg.author.id)) {
-			return;
-		}
-	}
-
-	if (command.args && !args.length) {
-		let reply = 'Please provide an argument!';
-		if (command.usage) reply += `\nThe proper usage is \`\`\`${prefix}${command.name} ${command.usage[0]}\`\`\``;
-
-		return msg.channel.send(reply);
-	}
-
-	command.execute(msg, args)
-	.then(log => { log ? sendLog(log) : sendLog(command.name + ' was used'); })
-	.catch(error => {
-		sendLog(
-			'<@&513807019048828929> there was an error!\n\nCommand:```' + command.name +
-			'```\nError' + (error.lineNumber ? ` (at line ${error.lineNumber}')` : '') + ':```' + error.message + '```');
-		console.error(error);
-		msg.reply('there was an error trying to execute that command! You can report it here: ' + serverLink);
-	});
+	msg.reply('Prefix commands are deprecated! Please use slash commands instead (type `/` to get a list of commands).\nIf you need any help regarding this, please join my server with `/invite`!');
 });
 
 client.once('ready', () => {
     if (client.user.id === '513515391155175424') sendLog('<@&513807019048828929> Ready!');
-	client.user.setActivity('"' + prefix + '" is my prefix!')
 	setInterval(() => {
 		for (const g of client.guilds.cache.values()) {
 			g.members.cache.clear();
