@@ -16,15 +16,13 @@ const jokes = [
 ]
 
 module.exports = {
-    name: 'joke',
-    description: 'Tells a joke!',
-    usage: '',
+    data: new Discord.SlashCommandBuilder()
+        .setName('joke')
+        .setDescription('Tells a joke!'),
     category: 'fun',
-    execute(msg) {
+    execute(interaction) {
         return new Promise((resolve, reject) => {
-            msg.channel.send(jokes[Math.floor(Math.random() * jokes.length)])
-            .then(resolve())
-            .catch((e) => reject(e));
+            interaction.reply(jokes[Math.floor(Math.random() * jokes.length)]).then(resolve()).catch((e) => reject(e));
         });
     }
 };

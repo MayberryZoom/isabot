@@ -22,14 +22,14 @@ const tips = [
 ];
 
 module.exports = {
-    name: 'tip',
+    data: new Discord.SlashCommandBuilder()
+        .setName('tip')
+        .setDescription('Gives a random bit of Smash advice. Most are aimed at Ultimate, but can be applied to other games!'),
     aliases: ['tips', 'advice'],
-    description: 'Gives a random bit of Smash advice. Most tips are geared towards Ultimate, but some have applications in other games.',
     category: 'smash',
-    execute(msg) {
+    execute(interaction) {
         return new Promise((resolve, reject) => {
-            msg.channel.send(tips[Math.floor(Math.random() * tips.length)])
-            .then(resolve()).catch((e) => reject(e));
+            interaction.reply(tips[Math.floor(Math.random() * tips.length)]).then(resolve()).catch((e) => reject(e));
         });
     }
 };
