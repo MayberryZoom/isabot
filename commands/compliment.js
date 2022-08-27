@@ -1,3 +1,5 @@
+const { messageLink } = require("discord.js");
+
 const compliments = [
     'Hi user, I hope you\'re having a wonderful day! Remember that everyone loves you! <:isaHeyyy:490255578061602828>',
     'user, if you\'re ever feeling like a bad day is dreading, just come talk to me, Isabelle! Never shy to talk to a person that\'s wonderful like yourself!',
@@ -54,26 +56,22 @@ const compliments = [
     'I appreciate your kindness, user!',
     'You\'re so nice user... I can\'t think of anyone nicer!'
 ];
-const { parseUser } = require('../conversions.js');
 
 module.exports = {
-    name: 'compliment',
-    description: 'Compliments a user.',
-    usage: ['<user>'],
-    args: true,
-    category: 'fun',
-    execute(msg, args) {
+    data: new Discord.SlashCommandBuilder()
+        .setName('compliment')
+        .setDescription('Compliment someone!')
+        .addUserOption(option => 
+            option.setName('user')
+                .setDescription('The user to compliment')),
+    execute(interaction) {
         return new Promise(async (resolve, reject) => {
-            const user = await parseUser(msg, args.join(' '));
-            if (!user) return msg.channel.send('Please provide a valid user!')
-            .then(resolve())
-            .catch((e) => reject(e));
+            let user = interaction.options.getUser('user');
+            if (!user) user = interaction.user;
             
             let compliment = compliments[Math.floor(Math.random() * compliments.length)].replace('user', user.username);
 
-            return msg.channel.send(user.id !== client.user.id ? compliment : "I don't like to compliment myself...")
-            .then(resolve())
-            .catch((e) => reject(e));
+            interaction.reply(user.id !== client.user.id ? compliment : "I don't like to compliment myself...").then(resolve()).catch((e) => reject(e));
         });
     }
 };

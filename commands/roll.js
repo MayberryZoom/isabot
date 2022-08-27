@@ -1,32 +1,37 @@
 module.exports = {
-    name: 'roll',
+    data: new Discord.SlashCommandBuilder()
+        .setName('roll')
+        .setDescription('Roll the dice!')
+        .addIntegerOption(option => 
+            option.setName('sides')
+                .setDescription('The number of sides on the dice. Defaults to 6')
+                .setMinValue(2)
+                .setMaxValue(100))
+        .addIntegerOption(option => 
+            option.setName('dice')
+                .setDescription('The number of dice to roll. Defaults to 1')
+                .setMinValue(1)
+                .setMaxValue(15)),
     aliases: ['dice'],
-    usage: ['<number>', '<number> <number>'],
-    description: 'Rolls a dice! The number you provide is the number of sides it has. If you provide a second number, it\'ll roll the dice that many times (max 15).',
-    category: 'fun',
-    execute(msg, args) {
-        return new Promise ((resolve, reject) => {
-            if (args.length === 0 || isNaN(parseInt(args[0]))) return msg.channel.send('Please provide a number!').then(resolve()).catch(e => reject(e));
-            const max = parseInt(args[0]);
+    execute(interaction) {
+        return new Promise (async (resolve, reject) => {
+            let max = interaction.options.getInteger('sides');
+            let times = interaction.options.getInteger('dice');
 
-            let times;
-            if (args[1] && !isNaN(parseInt(args[1])) && parseInt(args[1]) > 1 && parseInt(args[1]) <= 15) times = parseInt(args[1]);
-            console.log(times)
+            if (!max) max = 6;
+            if (!times) times = 1;
 
-            return msg.channel.send('Rolling a dice...')
-                .then(async (m) => {
-                    await sleep(1000);
-                    if (times) {
-                        let rolls = [];
-                        for (let i = 0; i < times; i++) rolls.push(Math.floor(Math.random() * max + 1));
+            await interaction.reply('Rolling a dice...');
+            await sleep(1000);
 
-                        let total = rolls.reduce((acc, i) => acc + parseInt(i))
+            if (times > 1) {
+                let rolls = [];
+                for (let i = 0; i < times; i++) rolls.push(Math.floor(Math.random() * max + 1));
+                let total = rolls.reduce((acc, i) => acc + parseInt(i));
 
-
-                        m.edit('You rolled: ' + rolls.join(', ') + '! <a:isaTwirl:490304654454816768> Total: ' + total);
-                    }
-                    else m.edit('You rolled a ' + Math.floor(Math.random() * max + 1) + '! <a:isaTwirl:490304654454816768>');
-                }).then(resolve()).catch(e => reject(e));
+                interaction.editReply('You rolled: ' + rolls.join(', ') + '! <a:isaTwirl:490304654454816768> Total: ' + total).then(resolve()).catch(e => reject(e));
+            }
+            else interaction.editReply('You rolled a ' + Math.floor(Math.random() * max + 1) + '! <a:isaTwirl:490304654454816768>').then(resolve()).catch(e => reject(e));
         });
     }
 };

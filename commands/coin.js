@@ -1,13 +1,13 @@
 module.exports = {
-    name: 'coin',
+    data: new Discord.SlashCommandBuilder()
+        .setName('coin')
+        .setDescription('Flip a coin!'),
     aliases: ['flip', 'coin flip'],
-    description: 'Flips a coin!',
-    category: 'fun',
-    execute(msg) {
-        return new Promise ((resolve, reject) => {
-            return msg.channel.send('Flipping a coin...')
-                .then(async (m) => { await sleep(1000); m.edit('It landed on ' + (Math.round(Math.random()) === 0 ? 'heads' : 'tails') + '! <a:isaCheer:490594617767755776>') })
-                .then(resolve()).catch(e => reject(e));
+    execute(interaction) {
+        return new Promise (async (resolve, reject) => {
+            await interaction.reply('Flipping a coin...');
+            await sleep(1000);
+            interaction.editReply('It landed on ' + (Math.round(Math.random()) === 0 ? 'heads' : 'tails') + '! <a:isaCheer:490594617767755776>').then(resolve()).catch(e => reject(e));
         });
     }
 };
