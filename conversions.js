@@ -1,64 +1,64 @@
 module.exports = {
     // converts a user mention to a user object
-    memberFromMention: (mention, msg) => {
+    memberFromMention: (mention, interaction) => {
         return new Promise(async (resolve) => {
             const matches = mention.match(/^<@!?(\d+)>$/);
             if (matches) {
                 const id = matches[1];
-                resolve(await msg.guild.members.fetch(id));
+                resolve(await interaction.guild.members.fetch(id));
             }
             else resolve(null);
         });
     },
 
     // converts a role mention to a role object
-    roleFromMention: (mention, msg) => {
+    roleFromMention: (mention, interaction) => {
         const matches = mention.match(/^<@&(\d+)>$/);
         if (matches) {
             const id = matches[1];
-            return msg.guild.roles.catch.get(id);
+            return interaction.guild.roles.catch.get(id);
         }
         else return null;
     },
     
     // converts a channel mention to a channel object
-    channelFromMention: (mention, msg) => {
+    channelFromMention: (mention, interaction) => {
         const matches = mention.match(/^<#(\d+)>$/);
         if (matches) {
             const id = matches[1];
-            return msg.guild.channels.cache.get(id);
+            return interaction.guild.channels.cache.get(id);
         }
         else return null;
     },
 
-    // converts a user object to a member object for the given message's guild
-    userToMember: (u, msg) => {
+    // converts a user object to a member object for the given interaction's guild
+    userToMember: (u, interaction) => {
         return new Promise(async (resolve) => {
-            resolve(await msg.guild.members.fetch(u.id));
+            resolve(await interaction.guild.members.fetch(u.id));
         });
     },
 
     // parses a user object from a string. works for ids, names, and user mention.
-    // if string is undefined returns the message's author
-    parseUser: (msg, string) => {
+    // if string is undefined returns the interaction's author
+    parseUser: (interaction, string) => {
         return new Promise(async (resolve) => {
             const conversions = require('./conversions.js');
     
             let user;
             if (!string) {
-                user = msg.author;
+                user = interaction.user;
             }
-            else if (msg.mentions.users.size !== 0) {
-                user = await conversions.memberFromMention(string, msg);
+            else if (interaction.mentions.users.size !== 0) {
+                user = await conversions.memberFromMention(string, interaction);
                 user = user.user
             }
             else if (/^\d+$/.test(string)) {
-                let x = await msg.guild.members.fetch(string);
+                let x = await interaction.guild.members.fetch(string);
                 if (x) user = x.user;
             }
             else {
                 string = string.toLowerCase();
-                let x = await msg.guild.members.fetch().then(members => members.find(m => m.user.username.toLowerCase() === string || m.user.tag.toLowerCase() === string || m.displayName.toLowerCase() === string));
+                let x = await interaction.guild.members.fetch().then(members => members.find(m => m.user.username.toLowerCase() === string || m.user.tag.toLowerCase() === string || m.displayName.toLowerCase() === string));
                 if (x) user = x.user;
             }
             resolve(user);
@@ -66,26 +66,26 @@ module.exports = {
     },
 
     // parses a channel object from a string. works for ids, names, and channel mention.
-    // if string is undefined, returns the message's channel
-    parseChannel: (msg, string) => {
+    // if string is undefined, returns the interaction's channel
+    parseChannel: (interaction, string) => {
         return new Promise(async (resolve) => {
             const conversions = require('./conversions.js');
 
-            await msg.guild.members.fetch();
+            await interaction.guild.members.fetch();
 
             let c;
             if (!string) {
-                c = await msg.channel.fetch();
+                c = await interaction.channel.fetch();
             }
-            else if (msg.mentions.channels.size !== 0) {
-                c = conversions.channelFromMention(string, msg);
+            else if (interaction.mentions.channels.size !== 0) {
+                c = conversions.channelFromMention(string, interaction);
             }
             else if (!isNaN(parseInt(string))) {
-                c = msg.guild.channels.cache.get(string);
+                c = interaction.guild.channels.cache.get(string);
             }
             else {
                 string = string.toLowerCase();
-                c = msg.guild.channels.cache.find(c => c.name === string || c.name.split('-').join(' ') === string);
+                c = interaction.guild.channels.cache.find(c => c.name === string || c.name.split('-').join(' ') === string);
             }
             resolve(c);
         });
