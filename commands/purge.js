@@ -1,44 +1,26 @@
 module.exports = {
-    name: 'purge',
+    data: new Discord.SlashCommandBuilder()
+        .setName('purge')
+        .setDescription('Bulk deletes messages')
+        .setDMPermission(false)
+        .setDefaultMemberPermissions(Discord.PermissionFlagsBits.ManageMessages)
+        .addIntegerOption(option =>
+            option.setName('amount')
+                .setDescription('Number of messages to purge')
+                .setMinValue(2)
+                .setMaxValue(100)
+                .setRequired(true)),
     aliases: ['p', 'delete'],
-    description: 'Purges a certain amount of messages. Requires the manage messages permission.',
-    args: true,
-    usage: ['<limit>'],
-    dmDisabled: 1,
-    category: 'mod',
-/*    botPermissions: ['MANAGE_MESSAGES'],
-    userPermissions: ['MANAGE_MESSAGES'],*/
-    execute(msg, args) {
+    execute(interaction) {
         return new Promise(async (resolve, reject) => {
-            const me = await msg.guild.members.fetch(client.user.id);
-            if (!me.hasPermission('MANAGE_MESSAGES')) return msg.channel.send('I don\'t have the `MANAGE_MESSAGES` permission!').then(resolve()).catch((e) => reject(e));
+            const me = await interaction.guild.members.fetch(client.user.id);
+            if (!me.permissionsIn(interaction.channel).has(Discord.PermissionFlagsBits.ManageMessages)) return interaction.reply('I don\'t have the Manage Messages permission!').then(resolve()).catch((e) => reject(e));
 
-            const user = await msg.guild.members.fetch(msg.author.id);
-            if (user.hasPermission('MANAGE_MESSAGES')) {
-                const amount = parseInt(args[0]);
-                if (isNaN(amount)) msg.channel.send('Please enter a number!').then(resolve()).catch((e) => reject(e));
-                else if (amount < 1 || amount > 100) {
-                    msg.channel.send('Please enter an integer between the limit! (1 - 100)')
-                    .then(resolve())
-                    .catch((e) => reject(e));
-                }
-                else if (amount === 1) {
-                    msg.channel.bulkDelete(2, true)
-                    .then(resolve())
-                    .catch((e) => reject(e));
-                }
-                else {
-                    await msg.delete()
-                    msg.channel.bulkDelete(args[0], true)
-                    .then(resolve())
-                    .catch((e) => reject(e));
-                }
-            }
-            else {
-                msg.channel.send('You must have the `MANAGE_MESSAGES` permission to use this command!')
-                .then(resolve())
-                .catch((e) => reject(e));
-            }
+            const amount = interaction.options.getInteger('amount');
+
+            await interaction.reply({ content: 'Deleting messages...', ephemeral: true });
+            await interaction.channel.bulkDelete(amount, true);
+            interaction.editReply('Done!').then(resolve()).catch((e) => reject(e));
         });
     }
 };
