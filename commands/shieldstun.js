@@ -1,47 +1,38 @@
 const projectile = 29000;
 const aerial = 33000;
 const smash = 72500;
-const smults = ['smash', 'smash attack', 's'];
-const amults = ['aerial', 'a', 'air'];
-const pmults = ['projectile', 'p'];
 
 module.exports = {
-    name: 'shieldstun',
+    data: new Discord.SlashCommandBuilder()
+        .setName('shieldstun')
+        .setDescription('Calculates the shieldstun a move does.')
+        .addNumberOption(option =>
+            option.setName('damage')
+                .setDescription('The damage the move deals (without 1v1 multiplier)')
+                .setRequired(true))
+        .addStringOption(option =>
+            option.setName('type')
+                .setDescription('The type of move being used')
+                .addChoices(
+                    { name: 'Smash Attack', value: 'smash' },
+                    { name: 'Aerial Attack', value: 'aerial' },
+                    { name: 'Projectile', value: 'projectile' },
+                    { name: 'Other', value: 'other' }
+                )
+                .setRequired(true)),
     aliases: ['s'],
-    description: 'Calculates the shieldstun a move does. Please do not include the 1v1 multiplier in the damage value.',
-    usage: ['<damage> <type>'],
-    args: true,
-    arguments: 'A damage value, then a type ("proejctile", "smash", or "aerial")',
-    category: 'smash',
-    execute(msg, args) {
+    execute(interaction) {
         return new Promise((resolve, reject) => {
-            const dmg = !isNaN(args[0]) ? parseInt(args.shift()) : undefined;
-            const mult = args.join(' ');
+            const dmg = interaction.options.getNumber('damage');
+            const mult = interaction.options.getString('type');
+            let result;
 
-            if (!dmg) return msg.channel.send('Please provide a number!')
-            .then(resolve())
-            .catch((e) => reject(e));
+            if (mult === 'smash') result = Math.floor(((dmg * 100000) * 80000 * smash) / 1000000000000000 + 2);
+            else if (mult === 'aerial') result = Math.floor(((dmg * 100000) * 80000 * aerial) / 1000000000000000 + 2);
+            else if (mult === 'projectile') result = Math.floor(((dmg * 100000) * 80000 * projectile) / 1000000000000000 + 2);
+            else result = Math.floor(((dmg * 100000) * 80000) / 10000000000 + 2);
 
-            if (smults.includes(mult)) {
-                return msg.channel.send(Math.floor(((dmg * 100000) * 80000 * smash) / 1000000000000000 + 2))
-                .then(resolve())
-                .catch((e) => reject(e));
-            }
-            else if (amults.includes(mult)) {
-                return msg.channel.send(Math.floor(((dmg * 100000) * 80000 * aerial) / 1000000000000000 + 2))
-                .then(resolve())
-                .catch((e) => reject(e));
-            }
-            else if (pmults.includes(mult)) {
-                return msg.channel.send(Math.floor(((dmg * 100000) * 80000 * projectile) / 1000000000000000 + 2))
-                .then(resolve())
-                .catch((e) => reject(e));
-            }
-            else {
-                return msg.channel.send(Math.floor(((dmg * 100000) * 80000) / 10000000000 + 2))
-                .then(resolve())
-                .catch((e) => reject(e));
-            }
+            interaction.reply(result + ' frames of shieldstun').then(resolve()).catch(e => reject(e));
         });
     }
 };
