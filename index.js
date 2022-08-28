@@ -27,8 +27,31 @@ global.commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith(
 
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
-    client.commands.set(command.name, command);
+    client.commands.set(command.data.name, command);
 }
+
+// Interaction handler
+client.on('interactionCreate', async interaction => {
+	// Slash commands
+	if (interaction.isChatInputCommand()) {
+		// Get local equivalent
+		const command = client.commands.get(interaction.commandName);
+
+		// Restrict owner only commands
+		if (command.ownerOnly && !owners.includes(interaction.user.id)) return interaction.reply('Only the bot owners can use this command!');
+
+		// Execute command
+		command.execute(interaction)
+		.then(log => { log ? sendLog(log) : sendLog(command.data.name + ' was used'); })
+		.catch(error => {
+			sendLog(
+				'<@&513807019048828929> there was an error!\n\nCommand:```' + command.data.name +
+				'```\nError' + (error.lineNumber ? ` (at line ${error.lineNumber}')` : '') + ':```' + error.message + '```');
+			console.error(error);
+			interaction.reply('there was an error trying to execute that command! You can report it here: ' + serverLink);
+		});
+	}
+});
 
 client.on('messageCreate', async msg => {
 	if (!msg.content.startsWith(prefix) || msg.content === prefix || msg.author.bot) return;
@@ -45,7 +68,7 @@ client.on('messageCreate', async msg => {
 
 	if (command.ownerOnly && !owners.includes(msg.author.id)) return msg.channel.send('Only the bot owners can use this command!');
 
-	if (command.dmDisabled && msg.channel.type === 'dm') {
+	if (command.dmDisabled && msg.channel.type === Discord.ChannelType.DM) {
 		if (command.dmDisabled === 1) {
 			return msg.reply('that command is not available inside DMs!');
 		}
