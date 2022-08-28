@@ -8,14 +8,12 @@ const uptime = () => {
     return `${days / 86400000}d ${hours / 3600000}h ${minutes / 60000}m ${seconds / 1000}s ${milliseconds}ms`
 }
 
-
-
 module.exports = {
-    name: 'info',
+    data: new Discord.SlashCommandBuilder()
+        .setName('info')
+        .setDescription('Gets info about me!'),
     aliases: ['botinfo', 'botstats'],
-    description: 'Gets info about me!',
-    category: 'info',
-    execute(msg) {
+    execute(interaction) {
         return new Promise (async (resolve, reject) => {
             let embed = new Discord.EmbedBuilder()
                 .setTitle('Info about me!')
@@ -29,7 +27,7 @@ module.exports = {
                 .setColor(isabotColor)
                 .setTimestamp();
 
-            return msg.channel.send({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
+            interaction.reply({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
         });
     }
 };

@@ -1,19 +1,17 @@
 module.exports = {
-    name: 'nuke',
-    description: 'the most spammable command',
-    hidden: true,
-    category: 'fun',
-    execute(msg) {
-        return new Promise((resolve, reject) => {
-            return msg.channel.send('Activating server nuke')
-            .then(async (msg) => {
-                for (let i = 1; i <= 3; i++) {
-                    await sleep(500);
-                    msg.edit('Activating server nuke' + '.'.repeat(i));
-                }
-            })
-            .then(resolve())
-            .catch((e) => reject(e));
+    data: new Discord.SlashCommandBuilder()
+        .setName('nuke')
+        .setDescription('Take cover!'),
+    execute(interaction) {
+        return new Promise(async (resolve, reject) => {
+            await interaction.reply('Activating server nuke');
+
+            for (let i = 1; i <= 3; i++) {
+                await sleep(500);
+                await interaction.editReply('Activating server nuke' + '.'.repeat(i)).catch(e => reject(e));
+            }
+
+            resolve();
         });
     }
 };

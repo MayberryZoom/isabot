@@ -1,12 +1,11 @@
 module.exports = {
-    name: 'hitboxes',
-    description: 'Gets the Ice Climbers\' hitboxes.',
-    dmDisabled: 2,
+    data: new Discord.SlashCommandBuilder()
+        .setName('hitboxes')
+        .setDescription('Gets the Ice Climbers\' hitboxes.'),
     guilds: ['456665686966796299'],
-    category: 'smash',
-    execute(msg) {
+    execute(interaction) {
         return new Promise((resolve, reject) => {
-            msg.channel.send('https://youtu.be/rjf-8i44DgY').then(resolve()).catch(e => reject(e));
+            interaction.reply('https://youtu.be/rjf-8i44DgY').then(resolve()).catch(e => reject(e));
         })
     }
 };
