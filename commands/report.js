@@ -1,27 +1,34 @@
-const reportChannel = '646067062669836349';
+const reportChannel = '513806730204020737';
 
 const blacklist = [];
 
 module.exports = {
-    name: 'report',
+    data: new Discord.SlashCommandBuilder()
+        .setName('report')
+        .setDescription('Report a bug or issue with the bot. Misuse of this command will result in being blacklisted.')
+        .addStringOption(option =>
+            option.setName('message')
+            .setDescription('The report message')
+            .setRequired(true))
+        .addAttachmentOption(option =>
+            option.setName('image')
+            .setDescription('Image to be sent with report')),
     aliases: ['issue', 'bug'],
-    description: 'Report a bug or issue with the bot. If an image is attached, it will be sent with the report. Please understand that if you abuse this command (spam, inappropriate reports, etc) you may be blacklisted.',
-    usage: ['<report message>'],
-    category: 'utility',
-    execute(msg, args) {
-        return new Promise((resolve, reject) => {
-            if (blacklist.includes(msg.author.id)) return msg.channel.send('You have been blacklisted from reporting issues due to spam or inappropriate reports.')
-            if (!args.length) return msg.channel.send('Please provide a report message!');
+    execute(interaction) {
+        return new Promise(async (resolve, reject) => {
+            if (blacklist.includes(interaction.user.id)) return interaction.reply('You have been blacklisted from reporting issues due to spam or inappropriate reports.')
+
+            const image = interaction.options.getAttachment('image');
 
             const embed = new Discord.EmbedBuilder()
-                .setAuthor({ name: 'Reported by ' + msg.author.tag + ' (' + msg.author.id + ')', iconURL: msg.author.avatarURL() })
-                .setDescription(args.join(' '))
+                .setAuthor({ name: 'Reported by ' + interaction.user.tag + ' (' + interaction.user.id + ')', iconURL: interaction.user.avatarURL() })
+                .setDescription(interaction.options.getString('message'))
                 .setColor(isabotColor)
                 .setTimestamp();
-            
-            if (msg.attachments.map(x => x.url).length > 0) embed.setImage(msg.attachments.map(x => x.url)[0]);
+            if (image) embed.setImage(image.url);
 
-            return client.channels.cache.get(reportChannel).send({ embeds: [embed] }).then(msg.channel.send('Report sent successfully!')).then(resolve()).catch(e => reject(e));
+            await client.channels.cache.get(reportChannel).send({ embeds: [embed] });
+            interaction.reply('Report sent successfully!').then(resolve()).catch(e => reject(e));
         })
     }
 };
