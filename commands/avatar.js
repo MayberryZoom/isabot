@@ -1,16 +1,22 @@
-const { parseUser } = require('../conversions.js');
-
 module.exports = {
-    name: 'avatar',
-    description: "Gets a user's avatar.",
-    usage: ['<user>'],
-    dmDisabled: 1,
-    category: 'info',
-    execute(msg, args) {
+    data: new Discord.SlashCommandBuilder()
+        .setName('avatar')
+        .setDescription('Gets a user\'s avatar')
+        .addUserOption(option => 
+            option.setName('user')
+                .setDescription('The user to fetch the avatar of')),
+    execute(interaction) {
         return new Promise(async (resolve, reject) => {
-            const user = await parseUser(msg, args.join(' '));
-            if (!user) return msg.channel.send('That user is not valid!').then(resolve()).catch(e => reject(e));
-            return msg.channel.send(new Discord.MessageEmbed() .setTitle(user.username + "'s avatar") .setImage(user.avatarURL()) .setColor(isabotColor) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL()) .setTimestamp()).then(resolve()).catch(e => reject(e));
+            let user = interaction.options.getUser('user');
+            if (!user) user = interaction.user;
+
+            const embed = new Discord.EmbedBuilder()
+                .setTitle(user.username + "'s avatar")
+                .setImage(user.avatarURL())
+                .setColor(isabotColor)
+                .setTimestamp();
+            
+            return interaction.reply({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
         })
     }
 };

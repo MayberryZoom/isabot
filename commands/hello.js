@@ -1,10 +1,11 @@
 module.exports = {
-    name: 'hello',
+    data: new Discord.SlashCommandBuilder()
+        .setName('hello')
+        .setDescription('Say hi!'),
     aliases: ['hey', 'greetings', 'hi', 'wassup', 'heyo', 'henlo', 'hiya', 'hoi', 'hewwo', 'oi', 'sup', 'yo', 'hola', 'whats', 'salut', 'ciao', 'salutations', 'bonjour'],
-    description: 'Makes me say "Hey there!"',
-    execute(msg) {
+    execute(interaction) {
         return new Promise((resolve, reject) => {
-            msg.channel.send('Hey there!').then(resolve()).catch(e => reject(e));
+            interaction.reply('Hey there!').then(resolve()).catch(e => reject(e));
         })
     }
 };

@@ -13,31 +13,46 @@ const characters = new Discord.Collection(
 );
 
 module.exports = {
-    name: 'terms',
-    description: 'Gets a character\'s terms.',
-    usage: ['<character>'],
-    category: 'smash',
-    execute(msg, args) {
+    data: new Discord.SlashCommandBuilder()
+        .setName('terms')
+        .setDescription('Gets a list of terms.')
+        .addStringOption(option =>
+            option.setName('character')
+                .setDescription('A specific character to grab terms related to')),
+    execute(interaction) {
         return new Promise((resolve, reject) => {
-            if (!args.length) {
-                let currentChar = msg.channel.type === 'dm' ? undefined : characters.find(c => c.id === msg.guild.id);
-                let charNames;
-                if (currentChar) { currentChar = currentChar.aliases[0]; charNames = terms.filter(t => t.character === currentChar).map(t => t.name); }
+            let character = interaction.options.getString('character');
 
-                let termsEmbed = new Discord.MessageEmbed() .setTitle('Terms for `>define`') .setColor(isabotColor) .addField('General Terms', generalNames.sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
-                if (charNames && charNames.length) termsEmbed .addField(capitalize(currentChar, [' ']) + ' Terms', charNames.sort().join(', '));
-                return msg.channel.send(termsEmbed).then(resolve()).catch(e => reject(e));
+            if (character) {
+                character = characters.find(c => c.aliases.includes(character));
+                if (!character) return interaction.reply('That is not a valid character!').then(resolve()).catch(e => reject(e));
+    
+                const charTerms = terms.filter(t => t.character && t.character.toLowerCase() === character.aliases[0]);
+                const embed = new Discord.EmbedBuilder()
+                    .setTitle(capitalize(charTerms[0].character, [' ', '-']) + ' Terms')
+                    .setColor(isabotColor)
+                    .setDescription(charTerms.map(t => t.name).sort().join(', '))
+                    .setTimestamp();
+                
+                interaction.reply({ embeds: [embed ]}).then(resolve()).catch(e => reject(e));
             }
+            else {
+                let currentChar = interaction.channel.type === Discord.ChannelType.DM ? undefined : characters.find(c => c.id === interaction.guild.id);
+                let charNames;
+                if (currentChar) {
+                    currentChar = currentChar.aliases[0];
+                    charNames = terms.filter(t => t.character === currentChar).map(t => t.name);
+                }
 
-            const argsFixed = args.map(f => f.toLowerCase()).join(' ');
+                let termsEmbed = new Discord.EmbedBuilder()
+                    .setTitle('Terms for `/define`')
+                    .setColor(isabotColor)
+                    .addFields({ name: 'General Terms', value: generalNames.sort().join(', ') })
+                    .setTimestamp();
+                if (charNames && charNames.length) termsEmbed.addFields({ name: capitalize(currentChar, [' ']) + ' Terms', value: charNames.sort().join(', ') });
 
-            const character = characters.find(c => c.aliases.includes(argsFixed));
-            if (!character) msg.channel.send('That is not a valid character!').then(resolve()).catch(e => reject(e));
-
-            const charTerms = terms.filter(t => t.character && t.character.toLowerCase() === character.aliases[0]);
-            msg.channel.send(new Discord.MessageEmbed() .setTitle(capitalize(charTerms[0].character, [' ', '-']) + ' Terms') .setColor(isabotColor) .setDescription(charTerms.map(t => t.name).sort().join(', ')) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp())
-            .then(resolve())
-            .catch(e => reject(e));
+                return interaction.reply({ embeds: [termsEmbed] }).then(resolve()).catch(e => reject(e));
+            }
         });
     }
 };

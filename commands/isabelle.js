@@ -6,16 +6,19 @@ let cache;
 let etag = '';
 
 module.exports = {
-    name: 'isabelle',
+    data: new Discord.SlashCommandBuilder()
+        .setName('isabelle')
+        .setDescription('Gets an Isabelle picture! ⚠/🔞 means the source contains suggestive/explicit content, respectively.'),
     aliases: ['isa', 'izzy', 'belle'],
-    description: 'Gets an Isabelle picture! ⚠ means the source contains suggestive content, 🔞 means the source contains explicit content.',
     cooldown: 3,
-    category: 'fun',
-    execute(msg) {
+    execute(interaction) {
         return new Promise(async (resolve, reject) => {
-            if (disabledChannels.get(msg.channel.id)) return msg.channel.send('That command is on cooldown!').then(resolve()).catch(e => reject(e));
-            disabledChannels.set(msg.channel.id, 'h');
-            setTimeout(() => { disabledChannels.delete(msg.channel.id) }, this.cooldown * 1000)
+            if (disabledChannels.get(interaction.channel.id)) return interaction.reply('That command is on cooldown!').then(resolve()).catch(e => reject(e));
+
+            await interaction.deferReply();
+
+            disabledChannels.set(interaction.channel.id, 'h');
+            setTimeout(() => { disabledChannels.delete(interaction.channel.id) }, this.cooldown * 1000)
 
             const my_id = await client.channels.fetch('621592279919886338');
 
@@ -35,13 +38,14 @@ module.exports = {
             });
 
             const image = cache[Math.floor(Math.random() * cache.length)];
-            const embed = new Discord.MessageEmbed()
+            const embed = new Discord.EmbedBuilder()
                 .setTitle('Random Isabelle!')
                 .setImage(image.link)
                 .setColor(isabotColor)
-                .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL);
+                .setTimestamp();
             if (image.description) embed.setDescription(image.description.replace('Source', '**Source').replace('(18+)', '🔞').replace(/\(suggestive content\)/i, '⚠').replace(':', ':**\n'));
-            return msg.channel.send(embed).then(resolve()).catch(e => reject(e));
+
+            interaction.editReply({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
         });
     }
 };

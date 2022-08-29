@@ -1,15 +1,13 @@
 module.exports = {
-    name: 'ping',
-    description: 'Checks my ping! Hopefully it\'s not too bad...',
-    execute(msg) {
-        return new Promise((resolve, reject) => {
+    data: new Discord.SlashCommandBuilder()
+        .setName('ping')
+        .setDescription('Checks my ping!'),
+    execute(interaction) {
+        return new Promise(async (resolve, reject) => {
             const time = Date.now();
-            msg.channel.send('Pinging...')
-            .then((m) => {
-                m.edit('Ping: ' + (time - msg.createdTimestamp + 'ms'))
-            })
-            .then(resolve('ping used (' + (time - msg.createdTimestamp + 'ms)')))
-            .catch((e) => reject(e));
+            await interaction.reply('Pinging...')
+            interaction.editReply('Ping: ' + (interaction.createdTimestamp - time + 'ms'))
+            .then(resolve('ping used (' + (interaction.createdTimestamp - time + 'ms)'))).catch((e) => reject(e));
         });
     }
 };

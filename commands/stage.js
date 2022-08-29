@@ -1,4 +1,5 @@
-const stages = require('../data/stagelist.js')
+const stages = require('../data/stagelist.js');
+
 const games = {
     '64': '<:SSB64:621931677274472459>',
     'Melee': '<:SSBM:621931677253500938>',
@@ -14,46 +15,72 @@ const formatSmash = (arr) => {
 }
 
 module.exports = {
-    name: 'stage',
+    data: new Discord.SlashCommandBuilder()
+        .setName('stage')
+        .setDescription('Gets information on stages in the Smash series!')
+        .addSubcommand(subcommand =>
+            subcommand.setName('info')
+            .setDescription('Get info on a specific stage')
+            .addStringOption(option =>
+                option.setName('name')
+                .setDescription('The stage to fetch')
+                .setRequired(true)))
+        .addSubcommand(subcommand =>
+            subcommand.setName('list')
+            .setDescription('Get a list of stages')
+            .addStringOption(option =>
+                option.setName('game')
+                .setDescription('The game to fetch stages from. Defaults to all games')
+                .addChoices(
+                    { name: 'Smash 64', value: '64' },
+                    { name: 'Smash Melee', value: 'Melee' },
+                    { name: 'Smash Brawl', value: 'Brawl' },
+                    { name: 'Smash 4', value: '4' },
+                    { name: 'Smash 3DS', value: '3DS' },
+                    { name: 'Smash Wii U', value: 'Wii U' },
+                    { name: 'Smash Ultimate', value: 'Ultimate' }
+                ))),
     aliases: ['stages'],
-    description: 'Gives information on any specific stage. Provide a stage instead to see a list of stages in that game. Provide no argument to see a list of all stages.',
-    usage: ['', '<stage>'],
-    category: 'smash',
-    execute(msg, args) {
+    execute(interaction) {
         return new Promise((resolve, reject) => {
-            if (!args[0]) return msg.channel.send(new Discord.MessageEmbed() .setTitle('List of stages') .setDescription(stages.map(s => s.name).sort().join(', ')) .setColor(isabotColor)).then(resolve()).catch(e => reject(e));
+            const subcommand = interaction.options.getSubcommand();
 
-            const argsFixed = toOneWord(args.join(' ').toLowerCase());
+            if (subcommand === 'list') {
+                let game = interaction.options.getString('game');
 
-            let game;
-            for (g in games) {
-                if (toOneWord(g.toLowerCase()) === argsFixed) {
-                    game = g;
-                    break;
-                }
+                const embed = new Discord.EmbedBuilder()
+                    .setColor(isabotColor);
+                if (game) embed.setTitle('List of stages in Smash Bros. ' + game).setDescription(stages.filter(s => s.games.includes(game)).map(s => s.name).sort().join(', '));
+                else embed.setTitle('List of stages').setDescription(stages.map(s => s.name).sort().join(', '));
+
+                interaction.reply({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
             }
+            else {
+                let stage = toOneWord(interaction.options.getString('name').toLowerCase());
+                stage = stages.find(s => toOneWord(s.name) === stage || (s.aliases && s.aliases.map(x => toOneWord(x)).includes(stage)));
 
-            if (game) return msg.channel.send(new Discord.MessageEmbed() .setTitle('List of stages in Smash Bros. ' + game) .setDescription(stages.filter(s => s.games.includes(game)).map(s => s.name).sort().join(', ')) .setColor(isabotColor)).then(resolve()).catch(e => reject(e));
+                if (!stage) return interaction.reply('That stage is not valid!').then(resolve()).catch(e => reject(e));
 
-            let stage = stages.find(s => toOneWord(s.name) === argsFixed || (s.aliases && s.aliases.map(x => toOneWord(x)).includes(argsFixed)));
-            if (!stage) return msg.channel.send('That stage is not valid!').then(resolve()).catch(e => reject(e));
-            let stageName = stage.formattedName ? stage.formattedName : capitalize(stage.name, [' ', '(', '-']);
+                let stageName = stage.formattedName ? stage.formattedName : capitalize(stage.name, [' ', '(', '-']);
 
-            let embed = new Discord.MessageEmbed()
-            .setTitle('__' + stageName + '__ ' + formatSmash(stage.games))
-            .setThumbnail(stage.url)
-            .setColor(isabotColor)
-            .setDescription(stage.description)
-            .addField('__Series of Origin__', '*' + stage.series + '*', true)
-            .addField('__Stage Type__', stage.type, true)
-            .addField('__Stage Size__', stage.size, true)
-            .addField('__Max Players__', stage.players, true)
-            .addField('__Legality in Singles__', stage.slegality, true)
-            .addField('__Legality in Doubles__', stage.dlegality, true)
-            .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL());
+                let embed = new Discord.EmbedBuilder()
+                .setTitle('__' + stageName + '__ ' + formatSmash(stage.games))
+                .setThumbnail(stage.url)
+                .setColor(isabotColor)
+                .setDescription(stage.description)
+                .addFields(
+                	{ name: '__Series of Origin__', value: '*' + stage.series + '*', inline: true },
+                	{ name: '__Stage Type__', value: stage.type, inline: true },
+                	{ name: '__Stage Size__', value: stage.size, inline: true },
+                	{ name: '__Max Players__', value: stage.players, inline: true },
+                	{ name: '__Legality in Singles__', value: stage.slegality, inline: true },
+                	{ name: '__Legality in Doubles__', value: stage.dlegality, inline: true }
+                )
+                .setTimestamp();
             if (stage.noLink === undefined || !stage.noLink) embed.setURL('https://www.ssbwiki.com/' + stageName.split(' ').join('_'));
 
-            return msg.channel.send(embed).then(resolve()).catch(e => reject(e));
+                interaction.reply({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
+            }
         });
     }
 };

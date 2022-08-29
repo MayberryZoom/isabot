@@ -1,6 +1,6 @@
 {
   "name": "isabot",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -9,8 +9,8 @@
   "author": "Isachu",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.2",
-    "discord.js": "^12.5.1"
+    "axios": "^0.27.2",
+    "discord.js": "^14.3.0"
   },
   "bugs": {
     "url": "https://github.com/Isachu/isabot/issues"

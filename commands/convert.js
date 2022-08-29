@@ -1,54 +1,32 @@
-const multipliers = require('../data/multipliers.json');
+const modifiers = require('../data/multipliers.json');
 
 module.exports = {
-    name: 'convert',
+    data: new Discord.SlashCommandBuilder()
+        .setName('convert')
+        .setDescription('Converts damage values in Smash Ultimate.')
+        .addNumberOption(option => 
+            option.setName('damage')
+                .setDescription('The damage value to convert')
+                .setRequired(true))
+        .addStringOption(option => 
+            option.setName('modifier')
+                .setDescription('The modifier to convert with. Use /modifiers for more info')
+                .addChoices(
+                    { name: 'Short Hop', value: 'sh' },
+                    { name: 'Full Hop', value: 'fh' },
+                    { name: '1v1', value: '1v1' },
+                    { name: 'Free For All', value: 'ffa' },
+                    { name: 'Freshness Bonus', value: 'fresh' },
+                    { name: 'Charged Smash Attack', value: 'charged' }
+                )
+                .setRequired(true)),
     aliases: ['c'],
-    description: 'Converts damage values in SSBU. Use it without arguments for a more in depth description.',
-    category: 'smash',
-    execute(msg, args) {
+    execute(interaction) {
         return new Promise((resolve, reject) => {
-            const damage = isNaN(args[0]) ? Math.floor(args[2] * 1000) : Math.floor(args.shift() * 1000);
-            args = args.map(a => a.toLowerCase());
+            const damage = Math.floor(interaction.options.getNumber('damage') * 1000);
+            const modifier = interaction.options.getString('modifier');
 
-            if (!args[0]) {
-                return msg.channel.send(new Discord.MessageEmbed()
-                    .setTitle('>convert')
-                    .setColor(isabotColor)
-                    .addField('Description', 'The convert command takes a value and converts it under the given multiplier.')
-                    .addField('Arguments', '``table`` - See a list of the damage multipliers in SSBU featured in the bot.\n' + Object.keys(multipliers).map(m => '``to ' + m + '`` - ' + multipliers[m].args).join('\n'))
-                    .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
-                    .setTimestamp())
-                .then(resolve())
-                .catch((e) => reject(e));
-            }
-            else if (args[0] === 'table') {
-                const embed = new Discord.MessageEmbed()
-                    .setTitle('SSBU Modifiers')
-                    .setColor(isabotColor)
-                    .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL)
-                    .setTimestamp();
-                    Object.keys(multipliers).filter(m => multipliers[m].mname).map(m => embed.addField(multipliers[m].mname, multipliers[m].table));
-                return msg.channel.send(embed)
-                .then(resolve())
-                .catch((e) => reject(e));
-            }
-            else if (Object.keys(multipliers).includes(args[1])) {
-                if (isNaN(damage)) {
-                    return msg.channel.send('Please enter a number!')
-                    .then(resolve())
-                    .catch((e) => reject(e));
-                }
-                else {
-                    return msg.channel.send((Math.floor((damage * eval(multipliers[args[1]].multiplier))) / 1000) + '%')
-                    .then(resolve())
-                    .catch((e) => reject(e));
-                }
-            }
-            else {
-                return msg.channel.send('Please enter a valid argument!')
-                .then(resolve())
-                .catch((e) => reject(e));
-            }
+            interaction.reply((Math.floor((damage * eval(modifiers[modifier].multiplier))) / 1000) + '%').then(resolve()).catch((e) => reject(e));
         });
     }
 };

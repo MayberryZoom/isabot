@@ -1,26 +1,27 @@
 module.exports = {
-    name: 'channel',
-    description: 'Shows information about a channel. If no  are provided, information will be shown about the current channel.',
-    usage: ['<channel>'],
-    dmDisabled: 1,
-    category: 'info',
-    execute(msg, args) {
+    data: new Discord.SlashCommandBuilder()
+        .setName('channel')
+        .setDescription('Shows information about a channel. Defaults to current channel')
+        .addChannelOption(option => 
+            option.setName('channel')
+                .setDescription('The channel to fetch info about')),
+    execute(interaction) {
         return new Promise(async (resolve, reject) => {
-            const conversions = require('../conversions.js');
+            let channel = interaction.options.getChannel('channel');
+            if (!channel) channel = interaction.channel;
 
-            const c = await conversions.parseChannel(msg, args.join(' '));
-            const embed = new Discord.MessageEmbed()
-                .setTitle(c.name + ' (' + c.id + ')' + (c.nsfw ? ' ⚠' : ''))
+            const embed = new Discord.EmbedBuilder()
+                .setTitle(channel.name + ' (' + channel.id + ')' + (channel.nsfw ? ' ⚠' : ''))
                 .setColor(isabotColor)
-                .addField('Created At', c.createdAt.toUTCString())
-                .addField('Category', c.parent.name, true)
-                .addField('Channel Topic', c.topic ? c.topic : 'No channel topic', true)
-                .addField('Members', c.members.size, true)
-                .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL())
+                .addFields(
+                    { name: 'Created At', value: channel.createdAt.toUTCString() },
+                    { name: 'Category', value: channel.parent.name, inline: true },
+                    { name: 'Channel Topic', value: channel.topic ? channel.topic : 'No channel topic', inline: true },
+                    { name: 'Members', value: channel.members.size.toString(), inline: true }
+                )
                 .setTimestamp();
-            msg.channel.send(embed)
-            .then(resolve())
-            .catch((e) => reject(e));
+
+            interaction.reply({ embeds: [embed] }).then(resolve()).catch((e) => reject(e));
         });
     }
 };

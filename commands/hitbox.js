@@ -6,14 +6,6 @@ const toUnderscore = (text) => {
     return text.split(' ').join('_');
 }
 
-const twitter = '<:twitter:607841501279420416>';
-const discord = '<:discord:607841509253054464>';
-const www = '<:www:673835229022126101>';
-
-const credits =
-`__Zeckemyro__ (${twitter}@Zeckemyro ${discord}Zeckemyro#9776) - Hitbox visualizations
-__UFD__ (${twitter}@ultframedata ${www}<https://ultimateframedata.com/>) - Having the images uploaded somewhere I can grab them from`;
-
 let normals = [
     { name: 'down tilt', aliases: ['dtilt'], link: 'dtilt' },
     { name: 'up tilt', aliases: ['utilt'], link: 'utilt' },
@@ -128,41 +120,42 @@ charData.map(c => {
 });
 
 module.exports = {
-    name: 'hitbox',
-    description: 'Grabs a hitbox visualization for a move. Currently missing many moves!',
-    usage: ['<character> <move>'],
-    args: true,
-    category: 'smash',
-    execute(msg, args) {
+    data: new Discord.SlashCommandBuilder()
+        .setName('hitbox')
+        .setDescription('Grabs a hitbox visualization for a move in Smash Ultimate. Currently incomplete.')
+        .addStringOption(option =>
+            option.setName('character')
+                .setDescription('Character the move is on')
+                .setRequired(true))
+        .addStringOption(option =>
+            option.setName('move')
+                .setDescription('The move to fetch')
+                .setRequired(true)),
+    execute(interaction) {
         return new Promise((resolve, reject) => {
-            if (args[0] === 'credit' || args[0] === 'credits') return msg.channel.send(credits).then(resolve()).catch(e => reject(e));
+            let character = toOneWord(interaction.options.getString('character').toLowerCase());
+            character = charData.find(c => toOneWord(c.name) === character || (c.aliases && c.aliases.map(x => toOneWord(x)).includes(character)));
+            if (!character) interaction.reply('That character is not valid!').then(resolve()).catch(e => reject(e));
+            if (character.unreleasedHitbox) return interaction.reply('That character is not available yet!').then(resolve()).catch(e => reject(e));
 
-            let character, x = args.length;
-            while (!character && x >= 0) {
-                character = toOneWord(args.slice(0, x).join(' ').toLowerCase());
-                character = charData.find(c => toOneWord(c.name) === character || (c.aliases && c.aliases.map(x => toOneWord(x)).includes(character)));
-                x--;
-            }
-            if (!character) return msg.channel.send('That character is not valid!').then(resolve()).catch(e => reject(e));
-            if (character.unreleasedHitbox) return msg.channel.send('That character is not available yet!').then(resolve()).catch(e => reject(e));
-
-            let move = getWords(args.slice(x + 1).join(' ').toLowerCase());
-            if (!move) return msg.channel.send('Please provide a move!').then(resolve()).catch(e => reject(e));
-
+            let move = getWords(interaction.options.getString('move').toLowerCase());
             move = character.moves.find(m => checkAllPermutations(move, m.aliases ? m.aliases.concat(m.name) : [m.name]));
-            
-            if (move) {
-                if (character.unavailable && character.unavailable.includes(move.name)) return msg.channel.send('No hitbox available for that move!').then(resolve()).catch(e => reject(e));
+            if (!move) interaction.reply('That move is not valid!').then(resolve()).catch(e => reject(e));
 
-                const formatted = capitalize(`${character.name} ${move.name}`, [' ', '(', '/', '.', '-']);
+            if (character.unavailable && character.unavailable.includes(move.name)) return msg.channel.send('No hitbox available for that move!').then(resolve()).catch(e => reject(e));
 
-                let link = move.url ? move.url : 'https://ultimateframedata.com/hitboxes/' + toUnderscore(character.ufdDir ? character.ufdDir : character.name) + '/' + toOneWord((character.ufdFile ? character.ufdFile : character.name) + (move.link ? move.link : move.name)).replace('&', '_') + (move.png ? '.png' : '.gif');
+            const formatted = capitalize(`${character.name} ${move.name}`, [' ', '(', '/', '.', '-']);
 
-                let embed = new Discord.MessageEmbed() .setTitle(formatted) .setImage(link) .setColor(character.color) .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL) .setTimestamp();
-                if (move.description) embed.setDescription(move.description);
-                msg.channel.send(embed).then(resolve()).catch(e => reject(e));
-            }
-            else msg.channel.send('That move is not valid!').then(resolve()).catch(e => reject(e));
+            let link = move.url ? move.url : 'https://ultimateframedata.com/hitboxes/' + toUnderscore(character.ufdDir ? character.ufdDir : character.name) + '/' + toOneWord((character.ufdFile ? character.ufdFile : character.name) + (move.link ? move.link : move.name)).replace('&', '_') + (move.png ? '.png' : '.gif');
+
+            let embed = new Discord.EmbedBuilder()
+                .setTitle(formatted)
+                .setImage(link)
+                .setColor(character.color)
+                .setTimestamp();
+            if (move.description) embed.setDescription(move.description);
+
+            interaction.reply({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
         });
     }
 };

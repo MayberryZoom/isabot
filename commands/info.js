@@ -8,25 +8,26 @@ const uptime = () => {
     return `${days / 86400000}d ${hours / 3600000}h ${minutes / 60000}m ${seconds / 1000}s ${milliseconds}ms`
 }
 
-
-
 module.exports = {
-    name: 'info',
+    data: new Discord.SlashCommandBuilder()
+        .setName('info')
+        .setDescription('Gets info about me!'),
     aliases: ['botinfo', 'botstats'],
-    description: 'Gets info about me!',
-    category: 'info',
-    execute(msg) {
+    execute(interaction) {
         return new Promise (async (resolve, reject) => {
-            let embed = new Discord.MessageEmbed()
+            let embed = new Discord.EmbedBuilder()
                 .setTitle('Info about me!')
                 .setThumbnail(client.user.avatarURL())
-                .addField('Guilds', client.guilds.cache.size, true)
-                .addField('Birthday', client.user.createdAt.toUTCString(), true)
-                .addField('Uptime', uptime(), true)
-                .addField('Current memory usage', Math.floor(process.memoryUsage().heapUsed / 1024 / 1024 * 100) / 100 + ' MB', true)
+                .addFields(
+                	{ name: 'Guilds', value: client.guilds.cache.size.toString(), inline: true },
+                	{ name: 'Birthday', value: client.user.createdAt.toUTCString(), inline: true },
+                	{ name: 'Uptime', value: uptime(), inline: true },
+                	{ name: 'Current memory usage', value: Math.floor(process.memoryUsage().heapUsed / 1024 / 1024 * 100) / 100 + ' MB', inline: true}
+                )
                 .setColor(isabotColor)
-                .setFooter('Requested by ' + msg.author.tag, msg.author.avatarURL);;
-            return msg.channel.send(embed).then(resolve()).catch(e => reject(e));
+                .setTimestamp();
+
+            interaction.reply({ embeds: [embed] }).then(resolve()).catch(e => reject(e));
         });
     }
 };

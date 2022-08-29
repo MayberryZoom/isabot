@@ -19,14 +19,14 @@ __7/12/2021__
 - Added Kazuya to \`>render\``
 
 module.exports = {
-    name: 'changelog',
+    data: new Discord.SlashCommandBuilder()
+        .setName('changelog')
+        .setDescription('List of recent changes!'),
     aliases: ['changes'],
-    description: 'List of my recent changes!',
-    dmDisabled: 2,
     category: 'info',
-    execute(msg) {
+    execute(interaction) {
         return new Promise((resolve, reject) => {
-            msg.channel.send(changes).then(resolve()).catch(e => reject(e));
+            interaction.reply(changes).then(resolve()).catch(e => reject(e));
         })
     }
 };
