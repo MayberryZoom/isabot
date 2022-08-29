@@ -16,7 +16,6 @@ global.client = new Discord.Client({
 	allowedMentions: { parse: ['users'], repliedUser: true }
 });
 
-const { prefix } = require('./config.json');
 const globals = require('./globals.js');
 for (const [k, v] of Object.entries(globals)) global[k] = v;
 
