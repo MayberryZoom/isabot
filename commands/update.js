@@ -7,33 +7,34 @@ const refresh = (module) => {
 }
 
 module.exports = {
-	name: 'update',
-	aliases: ['restart', 'reboot', 'reload'],
-	description: 'Update bot/reload commands',
-	usage: ['<command>'],
-	hidden: true,
+	data: new Discord.SlashCommandBuilder()
+        .setName('update')
+        .setDescription('Update bot/reload commands')
+		.addStringOption(option =>
+			option.setName('command')
+			.setDescription('Command to refresh')),
 	ownerOnly: true,
-	category: 'owner',
-	execute(msg, args) {
+	execute(interaction) {
 		return new Promise(async (resolve, reject) => {
-			if (args.length !== 0) {
-				if (commandFiles.includes(args[0] + '.js')) {
-					client.commands.set(args[0], refresh(`./${args[0]}.js`));
-					return msg.channel.send('Reloaded command `' + args[0] + '` successfully.').then(resolve()).catch((e) => reject(e));
+			let command = interaction.options.getString('command');
+			if (command) {
+				if (commandFiles.includes(command + '.js')) {
+					client.commands.set(command, refresh(`./${command}.js`));
+					return interaction.reply('Reloaded command `' + command + '` successfully.').then(resolve()).catch((e) => reject(e));
 				}
 				else {
-					return msg.channel.send('That is not a valid command!').then(resolve()).catch((e) => reject(e));
+					return interaction.reply('That is not a valid command!').then(resolve()).catch((e) => reject(e));
 				}
 			}
-			const { err, stdout } = await execAsync('git fetch --all && git reset --hard origin/master');
-			if (err) {
-				return msg.channel.send(err.message, { code: '', split: { char: '\n' } })
-				.then(resolve())
-				.catch((e) => reject(e));
-			}
 			else {
-				await msg.channel.send('Rebooting...').then(resolve()).catch((e) => reject(e));
-				process.exit(0);
+				const { err, stdout } = await execAsync('git fetch --all && git reset --hard origin/master');
+				if (err) {
+					return interaction.reply(err.message).then(resolve()).catch((e) => reject(e));
+				}
+				else {
+					await interaction.reply('Rebooting...').then(resolve()).catch((e) => reject(e));
+					process.exit(0);
+				}
 			}
 		});
 	}
