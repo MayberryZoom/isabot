@@ -17,6 +17,7 @@ global.client = new Discord.Client({
 });
 
 const globals = require('./globals.js');
+const prefix = '>';
 for (const [k, v] of Object.entries(globals)) global[k] = v;
 
 const { token } = require('./token.json');
