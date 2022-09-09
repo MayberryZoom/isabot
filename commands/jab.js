@@ -116,7 +116,7 @@ module.exports = {
                 if (!character) return interaction.reply('That character is not valid!').then(resolve()).catch(e => reject(e));
 
                 const rage = interaction.options.getNumber('rage');
-                const movePercents = await findPercents(character, rage);
+                const movePercents = await findPercents(character, rage ? rage : 35);
 
                 return interaction.reply('__Jab follow-ups on ' + capitalize(character.name, [' ', '-']) + '__\n\n' + movePercents.join('\n')).then(resolve()).catch(e => reject(e));
             }
