@@ -32,8 +32,7 @@ module.exports = {
 					return interaction.reply(err.message).then(resolve()).catch((e) => reject(e));
 				}
 				else {
-					await interaction.reply('Rebooting...').then(resolve()).catch((e) => reject(e));
-					process.exit(0);
+					await interaction.reply('Rebooting...').then(process.exit(0)).catch((e) => reject(e));
 				}
 			}
 		});
