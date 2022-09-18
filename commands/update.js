@@ -32,7 +32,7 @@ module.exports = {
 					return interaction.reply(err.message).then(resolve()).catch((e) => reject(e));
 				}
 				else {
-					await interaction.reply('Rebooting...').then(process.exit(0)).catch((e) => reject(e));
+					interaction.reply('Rebooting...').then(() => process.exit(0)).catch((e) => reject(e));
 				}
 			}
 		});
