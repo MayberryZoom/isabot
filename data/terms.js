@@ -298,7 +298,7 @@ module.exports = [
    },
    {
       name: 'eviction notice',
-      definition: '(Thread): https://twitter.com/Spexx_/status/1072250448537677824',
+      definition: '(Thread): https://fxtwitter.com/MayberryZoom/status/1072250448537677824',
       character: 'isabelle'
    },
    {
@@ -372,13 +372,13 @@ module.exports = [
    },
    {
       name: 'blizz confirms',
-      definition: 'Kill Confirms out of a synced blizzard freeze: <https://twitter.com/techyCoder81/status/1119463888410562560>',
+      definition: 'Kill Confirms out of a synced blizzard freeze: https://fxtwitter.com/techyCoder81/status/1119463888410562560',
        character: 'ice climbers'
    },
    {
       name: 'blizzard wavedash',
       aliases: ['blizzdash'],
-      definition: '<https://twitter.com/madmonk12345/status/1089084293241061378>',
+      definition: '<https://twitter.com/MadMonkSmash/status/1089084293241061378>',
       character: 'ice climbers'
    },
    {
@@ -536,7 +536,7 @@ module.exports = [
    },
    {
       name: 'run state storage',
-      definition: 'When forward is held on the control stick, nana and popo maintain their current state of running or walking.\n\nRun state storage is where you get popo to walk and nana to run. In this state, releasing the stick cause only nana to enter skid for 12 frames during which she cannot dash backwards or shield. This allows you to dash backwards or shield with popo and immediately do a nana first desync.\n\nThis state can be achieved from any previous desync.\n\nIf only popo can act, you can quickly mash forward twice quickly and then continue to hold forward 6-12 frames before nana can act to cause popo to do a dashwalk and nana to dash which converts into run state storage.\n\nWhen nana can act, you can simply hold forward more than 6 frames before popo can act. This causes nana to dash and popo to walk.\n\nExamples:\n<https://twitter.com/madmonk12345/status/1188207819780050944?s=21>\n<https://twitter.com/madmonk12345/status/1195622276680433664?s=21>',
+      definition: 'When forward is held on the control stick, nana and popo maintain their current state of running or walking.\n\nRun state storage is where you get popo to walk and nana to run. In this state, releasing the stick cause only nana to enter skid for 12 frames during which she cannot dash backwards or shield. This allows you to dash backwards or shield with popo and immediately do a nana first desync.\n\nThis state can be achieved from any previous desync.\n\nIf only popo can act, you can quickly mash forward twice quickly and then continue to hold forward 6-12 frames before nana can act to cause popo to do a dashwalk and nana to dash which converts into run state storage.\n\nWhen nana can act, you can simply hold forward more than 6 frames before popo can act. This causes nana to dash and popo to walk.\n\nExamples:\n<https://twitter.com/MadMonkSmash/status/1188207819780050944?s=21>\n<https://twitter.com/MadMonkSmash/status/1195622276680433664?s=21>',
       character: 'ice climbers'
    },
    {
@@ -547,7 +547,7 @@ module.exports = [
    },
    {
       name: 'ruri combo',
-      definition: 'A solid conversion off of synced grab at mid percents. <https://twitter.com/ruripikaics/status/1105443229095190529>',
+      definition: 'A solid conversion off of synced grab at mid percents. https://fxtwitter.com/ruripikaics/status/1105443229095190529',
       character: 'ice climbers'
    },
    {
@@ -613,7 +613,7 @@ module.exports = [
    {
       name: 'turn buffer desync',
       aliases: ['turn buffer'],
-      definition: 'A fast desync done from standing or walking. Turn without dashing, then buffer another turn without dashing with popo that nana will do in 6 frames, then after 6 or more frames have passed, input a dash in the original direction you turned followed by an immediate attack you can do from walk but not run. Nana’s turning animation during this cannot be interrupted by a dash in that direction, so she dashes 4 frames late, creating a window for a nana only input.\nVideo: <https://twitter.com/madmonk12345/status/1144807399854751744?s=21>\nStick movement guide: <https://twitter.com/madmonk12345/status/1140854288517718017?s=21>',
+      definition: 'A fast desync done from standing or walking. Turn without dashing, then buffer another turn without dashing with popo that nana will do in 6 frames, then after 6 or more frames have passed, input a dash in the original direction you turned followed by an immediate attack you can do from walk but not run. Nana’s turning animation during this cannot be interrupted by a dash in that direction, so she dashes 4 frames late, creating a window for a nana only input.\nVideo: <https://twitter.com/MadMonkSmash/status/1144807399854751744?s=21>\nStick movement guide: <https://twitter.com/MadMonkSmash/status/1140854288517718017?s=21>',
       character: 'ice climbers'
    },
    {
