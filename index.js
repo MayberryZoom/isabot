@@ -8,7 +8,6 @@ global.client = new Discord.Client({
 		Discord.GatewayIntentBits.GuildMembers,
 		Discord.GatewayIntentBits.GuildPresences,
 		Discord.GatewayIntentBits.DirectMessages,
-		Discord.GatewayIntentBits.MessageContent
 	],
 	partials: [
 		Discord.Partials.Channel
@@ -17,7 +16,6 @@ global.client = new Discord.Client({
 });
 
 const globals = require('./globals.js');
-const prefix = '>';
 for (const [k, v] of Object.entries(globals)) global[k] = v;
 
 const { token } = require('./token.json');
@@ -51,21 +49,6 @@ client.on('interactionCreate', async interaction => {
 			interaction.reply('there was an error trying to execute that command! You can report it here: ' + serverLink);
 		});
 	}
-});
-
-client.on('messageCreate', async msg => {
-	if (!msg.content.startsWith(prefix) || msg.content === prefix || msg.author.bot) return;
-
-	// variables
-	const args = msg.content.slice(prefix.length).split(/ +/);
-	const commandName = args[0] === '' ? args[1].toLowerCase() : args[0].toLowerCase();
-
-	// commands
-	const command = client.commands.get(commandName)
-	        || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
-		if (!command) return;
-
-	msg.reply('Prefix commands are deprecated! Please use slash commands instead (type `/` to get a list of commands).\nIf you need any help regarding this, please join my server with `/invite`!');
 });
 
 client.once('ready', () => {
