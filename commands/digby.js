@@ -10,6 +10,7 @@ module.exports = {
         .setName('digby')
         .setDescription('Gets a Digby picture! ⚠/🔞 means the source contains suggestive/explicit content, respectively.'),
     cooldown: 3,
+    disabled: true,
     execute(interaction) {
         return new Promise(async (resolve, reject) => {
             if (disabledChannels.get(interaction.channel.id)) return interaction.reply('That command is on cooldown!').then(resolve()).catch(e => reject(e));
