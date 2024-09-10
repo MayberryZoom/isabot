@@ -12,7 +12,7 @@ const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('
 
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
-	if (command.data) {
+	if (command.data && !command.disabled) {
 		if (command.guilds) command.guilds.map(g => guildCommands[g] ? guildCommands[g].push(command.data.toJSON()) : guildCommands[g] = [command.data.toJSON()])
 		else globalCommands.push(command.data.toJSON());
 	}
