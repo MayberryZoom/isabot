@@ -218,5 +218,5 @@ util-deprecate@^1.0.1:
   resolved "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz"
 
 ws@^8.8.1:
-  version "8.8.1"
-  resolved "https://registry.npmjs.org/ws/-/ws-8.8.1.tgz"
+  version "8.17.1"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.17.1.tgz#9293da530bb548febc95371d90f9c878727d919b"
